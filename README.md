@@ -81,4 +81,4 @@ La GitHub Action `.github/workflows/deploy-site.yml` appelle le Deploy Hook Verc
 Configuration à faire une fois :
 
 1. Vercel → projet `pilotduty-site` → Settings → Git → **Deploy Hooks** : créer un hook sur la branche `main`.
-2. GitHub → ce dépôt → Settings → Secrets and variables → Actions : ajouter le secret **`VERCEL_DEPLOY_HOOK_URL`** avec l'adresse du hook.
+2. GitHub → ce dépôt → Settings → Environments : environnement **`VERCEL_DEPLOY_HOOK_URL`**, secret d'environnement **`VERCEL_DEPLOY_HOOK_URL`** contenant l'adresse du hook (fait le 2026-11-01). Le job déclare cet environnement ; sans lui, il ne verrait pas le secret.

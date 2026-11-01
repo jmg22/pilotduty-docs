@@ -10,6 +10,8 @@ on:
 jobs:
   deploy-hook:
     runs-on: ubuntu-latest
+    # Le secret est rangé dans l'environnement GitHub du même nom.
+    environment: VERCEL_DEPLOY_HOOK_URL
     steps:
       - name: Appeler le Deploy Hook Vercel
         env:
