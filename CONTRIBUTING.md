@@ -46,3 +46,12 @@ Ces textes sont publics. Ils doivent décrire **ce que les produits font vraimen
 - Noms d'images en anglais, en minuscules et tirets. Texte alternatif dans la langue de la page. Les captures montrent l'interface en anglais.
 - Pas de données personnelles réelles (numéro, courriel, nom, visage, photo de document) : floutez-les.
 - Avec Keystatic (`/keystatic` sur le site), le bouton d'image du texte range le fichier au bon endroit.
+
+### Images du site (accueil, pages App et Manager, boutique)
+
+- Une fiche par image, dans Keystatic (menus « Site · … ») : `site/images/<fiche>.yaml`, fichiers dans `media/site/<fiche>/`.
+  Liste des 30 fiches et de leurs endroits : `CAPTURES.md` du dépôt `pilotduty-site`.
+- Le plus simple : sur le site, connecté à Keystatic, cliquer le crayon de l'image. Le site se republie en 2 à 3 minutes.
+- Une fiche vide garde l'image par défaut. Pour revenir à l'image par défaut, vider le champ et enregistrer.
+- Captures : données de démonstration seulement ; barre d'état avec réseau, Wi-Fi et batterie pleins (règles d'Apple).
+- Badges d'Apple (App Store, iBeacon) : fichiers officiels d'Apple seulement, jamais modifiés.

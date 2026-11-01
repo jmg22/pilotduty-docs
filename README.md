@@ -23,6 +23,8 @@ docs/
 faq/fr/*.mdx, faq/en/*.mdx        Une question par fichier
 blog/fr/*.mdx, blog/en/*.mdx      Un article par fichier (AAAA-MM-JJ-titre.mdx)
 media/                            Images de la documentation et du blogue
+site/images/<fiche>.yaml          Images du site : une fiche par image (photos, captures, badges…)
+media/site/<fiche>/               Fichiers de ces fiches
 ```
 
 Le nom du fichier (sans `.mdx`) devient l'adresse de la page. Le français et l'anglais ont chacun leurs noms ;
