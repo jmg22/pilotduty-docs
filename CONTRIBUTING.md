@@ -17,9 +17,10 @@ Ces textes sont publics. Ils doivent décrire **ce que les produits font vraimen
   - la récupération d'un vol après l'arrêt forcé de l'app (pas encore livrée) ;
   - Google Agenda par connexion (seuls les liens iCal sont acceptés), la connexion par lien ou par SMS, la double authentification.
 - Exception confirmée par JMG : la confirmation « safe » du suivi de vol est active.
-- Exception confirmée par JMG (TOT-419, 2026-11-01) : les cartes d'embarquement Google Wallet sont en service, comme celles
-  d'Apple Wallet (courriel de confirmation réel avec les deux boutons). Le code QR de la carte ouvre la réservation dans le
-  Manager pour un membre connecté : pas d'écran de scan ni d'enregistrement dédié.
+- Décision de JMG (TOT-419, 2026-11-01) : les cartes d'embarquement Apple Wallet et Google Wallet se présentent toutes les deux.
+  Le courriel de confirmation de production montre les deux boutons ; Google Wallet n'y a pas encore été essayé sur un
+  téléphone Android (essai recommandé). Le code QR de la carte ouvre la réservation dans le Manager pour un membre connecté :
+  pas d'écran de scan ni d'enregistrement dédié.
 - Numérisation du carnet papier : comprise dans PilotDuty+ (décision JMG).
 - Un point incertain ne s'écrit pas : il va dans les questions pour JMG.
 
