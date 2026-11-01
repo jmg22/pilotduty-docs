@@ -28,16 +28,23 @@ Une fois le réglage activé :
 
 Un événement est une période de travail, de vol ou de repos. Il a un début, une fin, et un fuseau horaire au début et à la fin. Une option d'acclimatation est offerte.
 
-Pour un événement de vol, indiquez le nombre de vols, le temps total et l'avion. L'app répartit le temps entre les vols.
+Pour un événement de vol, indiquez le nombre de vols, le temps total et l'avion. L'app répartit le temps entre les vols. Ces heures réparties ne sont pas les heures réelles de chaque vol : pour un carnet exact, ajoutez plutôt chaque vol avec ses vraies heures.
 
 - Les événements attendent votre approbation dans le tableau de bord, comme les vols. Seuls les événements approuvés comptent dans les jauges.
-- Dans l'écran d'un événement en cours, vous pouvez l'arrêter, le mettre en pause ou le reprendre. Vous pouvez aussi y ajouter un vol : à la main, par ADS-B ou par scan.
+- Touchez un événement dans le tableau de bord pour le modifier avant de l'approuver : dates, fuseaux horaires, acclimatation, remarque et vols. Pendant l'enregistrement de l'événement, ses champs sont verrouillés.
+- Dans l'écran d'un événement en cours, vous pouvez l'arrêter, le mettre en pause ou le reprendre.
+- Vous pouvez ajouter des vols à un événement de travail ou de vol : à la main, par ADS-B ou par scan. Voir [Ajout manuel et scan ACARS](/fr/docs/app/ajout-manuel-et-scan-acars).
 - Pour corriger un événement approuvé, ouvrez le détail du jour dans l'onglet du temps de service et désapprouvez l'événement. L'app vous demande une raison et l'ajoute à la remarque, avec la date.
 - Pour l'instant, les fuseaux horaires proposés sont ceux des Amériques.
 
 ## Zones de repos et de travail
 
-Dans l'onglet des réglages, définissez une zone de repos et une zone de travail. Quand vous y entrez ou en sortez, l'app ouvre ou ferme d'elle-même l'événement correspondant. Un événement trop court est supprimé automatiquement.
+Dans l'onglet des réglages, définissez une zone de repos et une zone de travail. Quand vous y entrez ou en sortez, l'app ouvre ou ferme d'elle-même l'événement correspondant.
+
+- Les zones demandent la localisation sur « Toujours ».
+- Si plusieurs zones se chevauchent, l'app n'en retient qu'une. La balise d'un avion passe avant les autres balises, et une balise passe avant une zone repérée par GPS.
+- Un événement trop court est supprimé automatiquement : moins de 3 minutes, ou moins d'une heure pour le repos.
+- Si vous revenez dans une zone de travail ou dans un avion moins de 55 minutes après en être sorti, l'app poursuit le même événement au lieu d'en créer un nouveau. Cette règle ne vaut pas pour le repos.
 
 ## Choisir la réglementation
 
@@ -61,7 +68,7 @@ Le gabarit actif est enregistré avec votre compte. Si vous supprimez le gabarit
 
 L'onglet du temps de service affiche des jauges par fenêtre glissante : 24 heures, 7 jours, 28 ou 30 jours, 90 jours et 365 jours. Des courbes comparent votre temps de service et votre temps de vol aux limites.
 
-- Des badges marquent les jours de repos obligatoires.
+- Des badges marquent les jours de repos obligatoires, avec un message qui en donne la raison.
 - Touchez un jour pour voir le détail de ses événements.
 - Des bulles d'information expliquent l'acclimatation, le repos et la légende.
 

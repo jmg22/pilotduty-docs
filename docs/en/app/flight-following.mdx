@@ -33,7 +33,7 @@ Depending on your choices, your follower can receive:
 - a message at takeoff;
 - a message at landing;
 - an arrival confirmation;
-- a delay alert if your arrival isn't confirmed.
+- a delay alert, with your position, if you don't confirm your arrival after landing.
 
 The PilotDuty server writes and sends the messages, not your phone. Your iPhone therefore needs a network to trigger them.
 
@@ -58,14 +58,23 @@ A flight linked to flight following can't be deleted from its event.
 
 For members of an organization that subscribes to PilotDuty Manager.
 
-Turn on the PilotDuty Manager flight following setting. Without a subscribed organization, this setting is turned off.
+Turn on the PilotDuty Manager flight following setting. Without a subscribed organization, this setting is turned off. You must be signed in to your account.
 
-- At takeoff, the app creates the flight's tracking record and adds milestones to it: position, altitude and heading.
-- Your organization follows the flight in Manager: flight sheet, map and delay alerts.
+- At takeoff, the app creates the flight's tracking record. It then adds milestones to it, such as taxi, takeoff, landing and parking, each with its time, position, altitude and heading.
+- If the network drops during the flight, the milestones are sent once the connection is back.
+- Your organization follows the flight in Manager: flight sheet, map and delay alerts. See [Flight following in Manager](/en/docs/manager/flight-following).
 - The tracking is visible in Manager even before you approve the flight.
-- The flight is marked as arrived when you confirm it as safe. At your next takeoff, the app also confirms the previous flight.
+- Until you confirm your arrival, your flight shows in red in Manager, with a timer running since landing.
+- The flight is marked as arrived when you confirm it as safe. At your next takeoff, the app also confirms the previous flight. Staff with the Instructor role or higher can also confirm it from Manager.
 
 Manager following doesn't depend on text message following. You can turn on either one, or both.
+
+### Use the right registration
+
+Manager links your flight to your organization through the aircraft's registration. It must match an aircraft of your organization exactly, for example C-FFFF with its hyphen. Otherwise, your flight may not show on your organization's flight sheet.
+
+- The simplest way is to pick the aircraft from your organization's list. See [With your organization](/en/docs/app/with-your-organization).
+- If the registration doesn't match, you may receive an email suggesting the right spelling.
 
 ## Good to know
 

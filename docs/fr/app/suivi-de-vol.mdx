@@ -33,7 +33,7 @@ Selon vos choix, le suiveur peut recevoir :
 - un message au décollage ;
 - un message à l'atterrissage ;
 - une confirmation d'arrivée ;
-- une alerte de retard si votre arrivée n'est pas confirmée.
+- une alerte de retard, avec votre position, si vous ne confirmez pas votre arrivée après l'atterrissage.
 
 Le serveur PilotDuty rédige et envoie les messages, pas votre téléphone. L'iPhone a donc besoin du réseau pour les déclencher.
 
@@ -58,14 +58,23 @@ Un vol lié au suivi ne peut pas être supprimé de son événement.
 
 Pour les membres d'une organisation abonnée à PilotDuty Manager.
 
-Activez « Suivi de vol sur PilotDuty Manager ». Sans organisation abonnée, ce réglage est désactivé.
+Activez « Suivi de vol sur PilotDuty Manager ». Sans organisation abonnée, ce réglage est désactivé. Vous devez être connecté à votre compte.
 
-- Au décollage, l'app crée le suivi du vol et y ajoute des jalons : position, altitude et cap.
-- Votre organisation suit le vol dans le Manager : feuille de vol, carte et alertes de retard.
+- Au décollage, l'app crée le suivi du vol. Elle y ajoute ensuite des jalons, comme le roulage, le décollage, l'atterrissage et le stationnement, chacun avec son heure, sa position, son altitude et son cap.
+- Si le réseau coupe pendant le vol, les jalons sont envoyés au retour du réseau.
+- Votre organisation suit le vol dans le Manager : feuille de vol, carte et alertes de retard. Voir [Suivi de vol dans le Manager](/fr/docs/manager/suivi-de-vol).
 - Le suivi est visible du Manager avant même que vous approuviez le vol.
-- Le vol est marqué arrivé quand vous le confirmez « safe ». Au décollage suivant, l'app confirme aussi le vol précédent.
+- Tant que vous n'avez pas confirmé votre arrivée, votre vol s'affiche en rouge dans le Manager, avec un compteur du temps écoulé depuis l'atterrissage.
+- Le vol est marqué arrivé quand vous le confirmez « safe ». Au décollage suivant, l'app confirme aussi le vol précédent. Le personnel qui a le rôle Instructeur ou un rôle supérieur peut aussi le confirmer depuis le Manager.
 
 Le suivi dans le Manager ne dépend pas du suivi par SMS. Vous pouvez activer l'un, l'autre ou les deux.
+
+### Utiliser la bonne immatriculation
+
+Le Manager rattache votre vol à votre organisation par l'immatriculation de l'avion. Elle doit correspondre exactement à un avion de votre organisation, par exemple C-FFFF avec son tiret. Sinon, votre vol risque de ne pas s'afficher sur la feuille de vol de votre organisation.
+
+- Le plus simple est de choisir l'avion dans la liste de votre organisation. Voir [Avec votre organisation](/fr/docs/app/avec-votre-organisation).
+- Si l'immatriculation ne correspond pas, vous pouvez recevoir un courriel qui propose la bonne écriture.
 
 ## Bon à savoir
 

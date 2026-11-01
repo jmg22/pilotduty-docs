@@ -39,7 +39,7 @@ Si vous êtes membre d'une organisation, utilisez le même compte que dans Pilot
 
 L'app vous demande ensuite comment vous comptez enregistrer vos vols :
 
-- **Avec un avion.** Vous indiquez d'où vient l'avion : avion de votre organisation, avion avec balise ou avion sans balise. L'app vous dirige vers l'étape utile : choix d'un avion de l'organisation, adoption de la balise ou configuration de l'avion.
+- **Avec un avion.** Vous indiquez d'où vient l'avion : avion de votre organisation, avion avec balise ou avion sans balise. Vous pouvez aussi indiquer que votre balise n'est pas encore arrivée, ou qu'il vous en faut une. L'app vous dirige vers l'étape utile : choix d'un avion de l'organisation, adoption de la balise ou configuration de l'avion. Un abonnement annuel comprend une balise offerte, voir [Balise iBeacon](/fr/docs/app/balise-ibeacon).
 - **Avec l'horaire de votre compagnie.** Vous reliez le lien iCal fourni par votre employeur. Ce choix demande PilotDuty Pro. Voir [Horaire de compagnie](/fr/docs/app/horaire-de-compagnie).
 - **Plus tard.** Vous passez cette étape et configurez l'app quand vous voulez.
 
@@ -47,13 +47,26 @@ L'app vous demande ensuite comment vous comptez enregistrer vos vols :
 
 Pour enregistrer vos vols, l'app demande trois autorisations :
 
-- **Localisation.** Choisissez « Toujours » : l'app doit suivre votre position en arrière-plan, même écran verrouillé. Laissez aussi « Position exacte » activée. Avec une position approximative, l'app ne peut pas détecter vos vols.
+- **Localisation.** Choisissez « Toujours » : l'app doit suivre votre position en arrière-plan, même écran verrouillé. Laissez aussi « Position exacte » activée. Avec une position approximative, l'app ne peut pas détecter vos vols. Votre position permet à l'app de reconnaître la zone de l'avion, de dater chaque étape du vol d'après votre vitesse, de situer le décollage et l'atterrissage, et de savoir si le vol a eu lieu de jour ou de nuit.
 - **Mouvement.** L'app utilise les capteurs de mouvement de l'iPhone pour mieux reconnaître le roulage. Sans cette autorisation, elle se fie au GPS seul.
 - **Notifications.** L'app vous prévient, par exemple quand un mémo arrive ou quand elle a reconstitué un vol.
 
 Si vous avez choisi l'horaire de compagnie, seule l'autorisation des notifications est demandée. Un écran est sauté si vous avez déjà répondu à la question.
 
 Vous pouvez changer ces autorisations plus tard dans les Réglages d'iOS. L'app affiche leur état dans ses réglages généraux. Voir [Réglages et commentaires](/fr/docs/app/reglages-et-commentaires).
+
+### Vérifier vos autorisations
+
+Sans ces autorisations, l'app ne peut pas fonctionner en arrière-plan et risque de manquer vos vols. Vérifiez-les avant votre premier vol :
+
+1. Dans l'app, ouvrez l'onglet des réglages, puis les réglages généraux. L'état des autorisations indique si chacune est accordée.
+2. S'il en manque une, ouvrez l'app Réglages d'iOS, puis PilotDuty. Dans les versions récentes d'iOS, PilotDuty se trouve sous Apps.
+3. Touchez Localisation, choisissez « Toujours » et laissez « Position exacte » activée.
+
+![Réglages de localisation d'iOS pour PilotDuty, avec « Toujours » choisi et « Position exacte » activée](/docs-media/app/getting-started-ios-location-always.png)
+
+4. Activez l'accès aux mouvements et à la forme physique.
+5. Touchez Notifications et activez « Autoriser les notifications ».
 
 ## Votre profil
 

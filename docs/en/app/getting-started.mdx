@@ -39,7 +39,7 @@ If you belong to an organization, use the same account as in PilotDuty Manager. 
 
 The app then asks how you plan to record your flights:
 
-- **With an aircraft.** You say where the aircraft comes from: your organization's aircraft, an aircraft with a beacon, or an aircraft without one. The app takes you to the right step: picking an organization aircraft, adopting the beacon, or setting up the aircraft.
+- **With an aircraft.** You say where the aircraft comes from: your organization's aircraft, an aircraft with a beacon, or an aircraft without one. You can also say that your beacon hasn't arrived yet, or that you need one. The app takes you to the right step: picking an organization aircraft, adopting the beacon, or setting up the aircraft. An annual subscription includes a free beacon; see [iBeacon](/en/docs/app/ibeacon).
 - **With your airline roster.** You connect the iCal link your employer provides. This choice requires PilotDuty Pro. See [Airline roster](/en/docs/app/airline-roster).
 - **Later.** You skip this step and set up the app whenever you like.
 
@@ -47,13 +47,26 @@ The app then asks how you plan to record your flights:
 
 To record your flights, the app asks for three permissions:
 
-- **Location.** Choose “Always”: the app must follow your position in the background, even with the screen locked. Also leave “Precise Location” on. With an approximate location, the app cannot detect your flights.
+- **Location.** Choose “Always”: the app must follow your position in the background, even with the screen locked. Also leave “Precise Location” on. With an approximate location, the app cannot detect your flights. Your position lets the app recognize the aircraft's zone, time each step of the flight from your speed, locate the takeoff and landing, and tell whether the flight was by day or by night.
 - **Motion.** The app uses the iPhone's motion sensors to recognize taxiing more reliably. Without this permission, it relies on GPS alone.
 - **Notifications.** The app lets you know, for example, when a memo arrives or when it has rebuilt a flight.
 
 If you chose the airline roster, the app only asks for notifications. A screen is skipped if you have already answered that question.
 
 You can change these permissions later in iOS Settings. The app shows their status in its general settings. See [Settings and feedback](/en/docs/app/settings-and-feedback).
+
+### Checking your permissions
+
+Without these permissions, the app can't run in the background and may miss your flights. Check them before your first flight:
+
+1. In the app, open the Settings tab, then the general settings. The permission status shows whether each permission is granted.
+2. If a permission is missing, open the iOS Settings app, then PilotDuty. On recent versions of iOS, PilotDuty is listed under Apps.
+3. Tap Location, choose “Always” and leave “Precise Location” on.
+
+![iOS location settings for PilotDuty, with “Always” selected and “Precise Location” turned on](/docs-media/app/getting-started-ios-location-always.png)
+
+4. Turn on Motion & Fitness.
+5. Tap Notifications and turn on “Allow Notifications”.
 
 ## Your profile
 

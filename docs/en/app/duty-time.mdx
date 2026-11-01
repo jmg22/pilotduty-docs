@@ -28,16 +28,23 @@ Once it's on:
 
 An event is a period of work, flight or rest. It has a start, an end, and a time zone at the start and at the end. An acclimatization option is available.
 
-For a flight event, enter the number of flights, the total time and the aircraft. The app splits the time across the flights.
+For a flight event, enter the number of flights, the total time and the aircraft. The app splits the time across the flights. These split times aren't the actual times of each flight: for an accurate logbook, add each flight with its real times instead.
 
 - Events wait for your approval on the dashboard, just like flights. Only approved events count toward the gauges.
-- On the screen of an event in progress, you can stop, pause or resume it. You can also add a flight to it: by hand, by ADS-B or by scan.
+- Tap an event on the dashboard to edit it before approving it: dates, time zones, acclimatization, remark and flights. While the event is recording, its fields are locked.
+- On the screen of an event in progress, you can stop, pause or resume it.
+- You can add flights to a work or flight event: by hand, by ADS-B or by scan. See [Manual entry and ACARS scan](/en/docs/app/manual-entry-and-acars-scan).
 - To correct an approved event, open the day's details in the Duty tab and unapprove the event. The app asks for a reason and adds it to the remark, with the date.
 - For now, the time zones offered are those of the Americas.
 
 ## Rest and work zones
 
-In the Settings tab, set up a rest zone and a work zone. When you enter or leave one, the app opens or closes the matching event on its own. An event that is too short is deleted automatically.
+In the Settings tab, set up a rest zone and a work zone. When you enter or leave one, the app opens or closes the matching event on its own.
+
+- Zones need location set to “Always”.
+- If several zones overlap, the app keeps only one. An aircraft's beacon comes before other beacons, and a beacon comes before a zone located by GPS.
+- An event that is too short is deleted automatically: under 3 minutes, or under 1 hour for rest.
+- If you come back into a work zone or an aircraft less than 55 minutes after leaving it, the app continues the same event instead of creating a new one. This rule doesn't apply to rest.
 
 ## Choosing the regulation
 
@@ -61,7 +68,7 @@ The active template is saved with your account. If you delete the active templat
 
 The Duty tab shows gauges for each rolling window: 24 hours, 7 days, 28 or 30 days, 90 days and 365 days. Curves compare your duty time and flight time with the limits.
 
-- Badges mark required rest days.
+- Badges mark required rest days, with a message that gives the reason.
 - Tap a day to see its events.
 - Info bubbles explain acclimatization, rest and the legend.
 
