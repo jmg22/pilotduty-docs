@@ -42,9 +42,13 @@ Pour un événement de vol, indiquez le nombre de vols, le temps total et l'avio
 Dans l'onglet des réglages, définissez une zone de repos et une zone de travail. Quand vous y entrez ou en sortez, l'app ouvre ou ferme d'elle-même l'événement correspondant.
 
 - Les zones demandent la localisation sur « Toujours ».
-- Si plusieurs zones se chevauchent, l'app n'en retient qu'une. La balise d'un avion passe avant les autres balises, et une balise passe avant une zone repérée par GPS.
-- Un événement trop court est supprimé automatiquement : moins de 3 minutes, ou moins d'une heure pour le repos.
-- Si vous revenez dans une zone de travail ou dans un avion moins de 55 minutes après en être sorti, l'app poursuit le même événement au lieu d'en créer un nouveau. Cette règle ne vaut pas pour le repos.
+- Une seule zone est active à la fois. Quand plusieurs s'appliquent, l'app en retient une : une balise iBeacon passe avant le GPS, et une zone d'aéronef passe avant une zone de travail, qui passe avant une zone de repos.
+- Un événement de repos de moins d'une heure est supprimé.
+- Si vous sortez d'une zone de repos et y revenez en moins de 3 minutes, l'app reprend le même événement de repos.
+- Un événement de travail ou de vol de moins de 3 minutes (0,1 h) est supprimé.
+- Si vous sortez d'une zone de travail ou d'un avion et y revenez en moins de 55 minutes, l'app reprend le même événement.
+- En dehors de ces cas, le temps passé hors d'une zone suivie compte comme hors service.
+- Si un événement de vol démarre parce que vous êtes entré dans la zone d'un avion, mais que vous ne volez pas, l'app le convertit en événement de travail.
 
 ## Choisir la réglementation
 

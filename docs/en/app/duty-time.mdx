@@ -42,9 +42,13 @@ For a flight event, enter the number of flights, the total time and the aircraft
 In the Settings tab, set up a rest zone and a work zone. When you enter or leave one, the app opens or closes the matching event on its own.
 
 - Zones need location set to “Always”.
-- If several zones overlap, the app keeps only one. An aircraft's beacon comes before other beacons, and a beacon comes before a zone located by GPS.
-- An event that is too short is deleted automatically: under 3 minutes, or under 1 hour for rest.
-- If you come back into a work zone or an aircraft less than 55 minutes after leaving it, the app continues the same event instead of creating a new one. This rule doesn't apply to rest.
+- Only one zone is active at a time. When several apply, the app picks one: an iBeacon comes before GPS, and an aircraft zone comes before a work zone, which comes before a rest zone.
+- A rest event shorter than one hour is deleted.
+- If you leave a rest zone and come back within 3 minutes, the app resumes the same rest event.
+- A work or flight event shorter than 3 minutes (0.1 h) is deleted.
+- If you leave a work zone or an aircraft and come back within 55 minutes, the app resumes the same event.
+- Outside these cases, time spent outside a tracked zone counts as off duty.
+- If a flight event starts because you entered an aircraft's zone but you don't fly, the app converts it into a work event.
 
 ## Choosing the regulation
 

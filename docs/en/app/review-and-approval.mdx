@@ -19,11 +19,11 @@ A flight that is still recording can't be approved or deleted.
 
 ## Swipe to approve or delete
 
-- Swipe a flight to the left and tap “Approve”. The app asks you to confirm.
-- Swipe it to the right to delete it.
+- Swipe a flight to the right and tap “Approve”. The app asks you to confirm.
+- Swipe it to the left to delete it.
 - Tap it to open and edit it.
 
-For a followed flight waiting for your arrival confirmation, the left swipe shows “Safe” instead. See [Flight following](/en/docs/app/flight-following).
+For a followed flight waiting for your arrival confirmation, the right swipe shows “Safe” instead. See [Flight following](/en/docs/app/flight-following).
 
 You can approve without a network. The flight is sent once the connection is back.
 
@@ -73,7 +73,7 @@ To correct a flight you have already approved:
 2. Enter the reason.
 3. The flight returns to the approval queue. Correct it, then approve it again.
 
-Approval is recorded on the event that contains the flight. If that event holds several flights, they all return to the approval queue together.
+Unapproving a flight sends its whole event back to the approval queue, with all the flights inside that event.
 
 Unapproving also works offline; it takes effect when the connection is back. A flight that came from your airline roster leaves the logbook and is offered to you again from the roster.
 
