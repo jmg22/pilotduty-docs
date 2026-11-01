@@ -33,12 +33,16 @@ Ces textes sont publics. Ils doivent décrire **ce que les produits font vraimen
 - Phrases courtes, voix active, « vous ».
 - Un fichier = une tâche ou un sujet. Commencer par ce que la fonction permet de faire.
 - Libellés de l'interface entre guillemets français « … » (en anglais : “…”).
-- En-tête YAML : toujours mettre `title`, `description` et `question` entre guillemets doubles (« : » casse le YAML).
+- En-tête YAML écrit à la main : mettre `title`, `description` et `question` entre guillemets doubles (« : » casse le YAML). Keystatic met lui-même les guillemets nécessaires.
 - Pas de JSX ni de HTML dans les fichiers : Markdown simple. Éviter les caractères `{`, `}`, `<` et `>` dans le texte (ils ont un sens en MDX).
 
 ## Images
 
-- Fichiers dans `media/app/` ou `media/manager/`, noms en anglais, en minuscules et tirets : `<guide>-<ce-que-montre-l-image>.png`.
-- Dans un guide : `![Texte alternatif descriptif](/docs-media/app/<fichier>)`, sur sa propre ligne, après l'étape illustrée. Le site sert `media/` à l'adresse `/docs-media/`.
-- Même image en français et en anglais ; texte alternatif traduit. Les captures montrent l'interface en anglais.
-- Une capture n'est publiée que si l'écran correspond à la version actuelle de l'app ou du Manager. Aucune donnée personnelle réelle (numéro, courriel, nom).
+- Une image appartient à une page : `media/<langue>/<section>/<nom-du-fichier-de-la-page>/<image>.png`,
+  par exemple `media/fr/app/carnet-de-vol/logbook-summary.png`. Les versions française et anglaise ont chacune leur copie.
+  Cette organisation est celle de l'éditeur Keystatic du site : il n'affiche et ne garde que les images rangées ainsi.
+- Dans le texte : `![Texte alternatif descriptif](/docs-media/fr/app/carnet-de-vol/logbook-summary.png)`, sur sa propre ligne,
+  après l'étape illustrée. Le site sert `media/` à l'adresse `/docs-media/`.
+- Noms d'images en anglais, en minuscules et tirets. Texte alternatif dans la langue de la page. Les captures montrent l'interface en anglais.
+- Pas de données personnelles réelles (numéro, courriel, nom, visage, photo de document) : floutez-les.
+- Avec Keystatic (`/keystatic` sur le site), le bouton d'image du texte range le fichier au bon endroit.
