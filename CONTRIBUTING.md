@@ -35,3 +35,10 @@ Ces textes sont publics. Ils doivent décrire **ce que les produits font vraimen
 - Libellés de l'interface entre guillemets français « … » (en anglais : “…”).
 - En-tête YAML : toujours mettre `title`, `description` et `question` entre guillemets doubles (« : » casse le YAML).
 - Pas de JSX ni de HTML dans les fichiers : Markdown simple. Éviter les caractères `{`, `}`, `<` et `>` dans le texte (ils ont un sens en MDX).
+
+## Images
+
+- Fichiers dans `media/app/` ou `media/manager/`, noms en anglais, en minuscules et tirets : `<guide>-<ce-que-montre-l-image>.png`.
+- Dans un guide : `![Texte alternatif descriptif](/docs-media/app/<fichier>)`, sur sa propre ligne, après l'étape illustrée. Le site sert `media/` à l'adresse `/docs-media/`.
+- Même image en français et en anglais ; texte alternatif traduit. Les captures montrent l'interface en anglais.
+- Une capture n'est publiée que si l'écran correspond à la version actuelle de l'app ou du Manager. Aucune donnée personnelle réelle (numéro, courriel, nom).
