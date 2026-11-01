@@ -29,9 +29,11 @@ Tout membre voit la page « Abonnement ». Seul le Responsable des opérations s
 ## Souscrire
 
 1. Ouvrez Paramètres › « Abonnement ».
-2. Choisissez le forfait et la période, puis cliquez « Paiement ».
+2. Choisissez la période avec le sélecteur « Mensuel » / « Annuel », puis cliquez « Paiement » sous le forfait voulu.
 3. Payez par carte dans la fenêtre Stripe.
-4. Le message « Terminé ! Vous êtes prêt. » confirme la souscription.
+4. Le message « Terminé ! Vous êtes prêt. » confirme la souscription. « Accéder à l'application » vous ramène au Manager.
+
+La carte d'abonnement affiche ensuite le forfait, son état, le prix et la date de renouvellement ou d'annulation.
 
 ## Sièges du forfait Growth
 
@@ -39,7 +41,7 @@ Au forfait Growth, la quantité facturée suit le nombre de membres. Elle augmen
 
 ## Le portail client Stripe
 
-« Accéder au Portail client » mène au portail Stripe de votre organisation. C'est par lui que se gère la facturation de l'abonnement. Le Manager n'a pas de bouton pour changer de forfait. Quand l'abonnement a pris fin, ce bouton disparaît : gardez une copie de vos factures.
+« Accéder au Portail client » mène au portail Stripe de votre organisation. C'est par lui que se gère la facturation de l'abonnement. Les changements faits dans le portail remontent seuls dans PilotDuty. Le Manager n'a pas de bouton pour changer de forfait. Quand l'abonnement a pris fin, ce bouton disparaît : gardez une copie de vos factures.
 
 ## États et paiement en retard
 
@@ -47,7 +49,7 @@ La carte d'abonnement affiche un badge d'état, par exemple « Actif », « En r
 
 Si l'organisation a plus d'un membre et que l'abonnement n'est plus actif, par exemple après un paiement en retard, tous les membres sont renvoyés à la page « Abonnement ». Il n'y a pas de délai de grâce. Restent ouverts : le profil, les réglages de l'organisation, les membres et les invitations, les réglages du suivi de vol, l'abonnement, les mémos et « Feedback ». Pour continuer gratuitement, l'organisation doit revenir à un seul membre.
 
-Le propriétaire de l'organisation reçoit un courriel à la souscription, aux changements de forfait, à l'annulation et à la réactivation. Aucun courriel PilotDuty n'annonce un paiement échoué : surveillez le badge d'état.
+Un courriel est envoyé à la souscription, aux changements de forfait, à l'annulation et à la réactivation. Il part à l'adresse du moyen de paiement, sinon à celle du client Stripe, sinon à celle de l'organisation. Aucun courriel PilotDuty n'annonce un paiement échoué : surveillez le badge d'état.
 
 ## Les abonnements pilote sont distincts
 

@@ -33,22 +33,47 @@ L'écran de fin liste ce qu'il reste à faire, dont l'import dans l'app iPhone p
 
 Chaque intervalle doit être confirmé par la personne désignée selon votre autorité : votre TEA, un A&P ou IA, ou votre CAMO/CAO. Pour un hélicoptère, le programme proposé est minimal.
 
+## Modifier un aéronef
+
+Dans « Aéronefs », ouvrez le menu d'actions de la ligne et choisissez « Modifier l'aéronef ». La page a cinq onglets : « Infos », « Calendriers », « Éléments par heures », « Éléments par dates » et « Éléments par cycles ». Chaque champ s'enregistre seul quand vous le quittez.
+
+L'onglet « Infos » réunit l'identité et la configuration : type, callsign, temps cellule et cycles initiaux, marque, modèle, numéros de série, catégorie, moteur, hélice, type de vol, IFR, pilote unique et règles d'exploitation. On y trouve aussi :
+
+- **« Liens de référence »** : vos liens vers les consignes de navigabilité, les bulletins de service, les rapports de difficultés en service, le rapport annuel d'information sur la navigabilité et les publications de la cellule, du moteur et de l'hélice. Les liens des consignes et des rapports de difficultés s'ouvrent depuis la pré-vérification d'une inspection.
+- **La balise iBeacon** : son numéro de série, saisi à la main ou lu avec « Scanner QR », et la vitesse de décollage, en nœuds.
+
 ## Heures, cycles et échéances
 
 Le « Temps cellule total » et les « Cycles cellule total » se mettent à jour seuls à partir des vols des pilotes membres de l'organisation.
 
-- « Nouveau calendrier d'inspection » : une visite périodique par dates, par heures, par cycles ou une combinaison, avec intervalle, fenêtre et tolérance.
+- « Nouveau calendrier d'inspection » : une visite périodique par dates, par heures, par cycles ou une combinaison, avec intervalle, fenêtre et tolérance. Dans l'onglet « Calendriers », « Téléverser un fichier de tâche d'inspection » joint la tâche de la visite : la fiche de l'aéronef propose alors « Obtenir la tâche d'inspection ».
 - Éléments par heures, par dates et par cycles : un intervalle propre à chaque composant (révision moteur, hélice, ELT, étalonnages, pièces à vie limitée).
+
+Dans chaque onglet d'éléments, « Nouvel élément par heures », « Nouvel élément par dates » ou « Nouvel élément par cycles » ajoute une ligne : « Élément », « Tâche », dernière exécution (« Heures cellule à la révision », « Date initiale » ou « Cycles cellule à la révision »), intervalle et tolérance. Cochez « Selon condition ? » pour un élément entretenu selon son état plutôt qu'à intervalle fixe. Le menu d'actions de la ligne supprime l'élément.
 
 Les éléments s'affichent en couleur : « En service », « À inspecter », « Sur condition », « En retard » ou « À compléter ». Un élément dont la dernière exécution ou l'intervalle est inconnu reste « À compléter » : aucune échéance n'est inventée. La liste de la flotte montre ce qui reste avant la visite la plus contraignante.
 
 ## Inspections
 
-1. Pour chaque visite, commencez par « Créer une inspection initiale » : la dernière inspection faite et la prochaine cible.
+1. Pour chaque visite, commencez par « Créer une inspection initiale » : la dernière inspection faite et la prochaine cible. Saisissez la date, puis, selon la visite, la date, les heures ou les cycles cibles. Répétez pour chaque visite, la plus longue d'abord : « Démarrer une inspection » n'apparaît qu'ensuite. Ne laissez pas une cible vide : elle vaudrait 0 et l'échéance serait aussitôt dépassée.
 2. « Démarrer une inspection » ouvre quatre étapes : « Pré-vérification », « Atelier », « Éléments » et « Finaliser ». À la soumission, le bon de travail et le rapport d'état sont produits en PDF, et la prochaine échéance avance.
-3. Après les travaux, cliquez « Finaliser l'inspection en cours ». Cochez les éléments faits et « Journal technique vérifié ? ». La carte d'alerte est produite en PDF.
+   - « Pré-vérification » : la visite proposée d'après l'échéance, ou « Tâche personnalisée » pour un bon de travail hors visite, comme la vérification périodique d'un altimètre, d'un transpondeur ou d'une ELT. Indiquez la date, les heures et les cycles, puis cochez les quatre vérifications : consignes de navigabilité, rapports de difficultés en service, publications techniques et défauts récurrents.
+   - « Atelier » : un atelier de votre liste ou « Par le propriétaire ». Les coordonnées se modifient pour cette inspection seulement.
+   - « Éléments » : cochez les éléments faits pendant la visite. Ceux en retard, à inspecter ou sur condition sont proposés ; « Afficher tous les éléments » montre les autres.
+   - « Finaliser » : relisez le récapitulatif, puis cliquez « Soumettre ».
+3. Après les travaux, cliquez « Finaliser l'inspection en cours ». Joignez au besoin le rapport de travail, la tâche d'inspection et le contrôle qualité remis par l'atelier. Cochez les éléments faits et « Journal technique vérifié ? », puis cliquez « Finaliser l'inspection ». La carte d'alerte est produite en PDF. Seuls les éléments cochés avancent.
+
+Une visite remet aussi à zéro les visites à intervalle plus court. Une tâche personnalisée n'en change aucune.
 
 Une seule inspection peut être en attente à la fois. Tout membre peut obtenir la dernière carte d'alerte.
+
+Les trois PDF :
+
+- **Bon de travail** : l'organisation, l'aéronef, les cibles, l'atelier, l'inspection demandée et les éléments à faire, avec une ligne de signature pour le PRM (personne responsable de la maintenance). Tant que l'inspection est en attente, « Obtenir le bon de travail » le télécharge.
+- **Rapport d'état** : l'état des calendriers et des éléments de l'aéronef. « Obtenir le rapport d'état » le télécharge pendant l'attente.
+- **Carte d'alerte** : temps total cellule, cycles, dernière inspection, atelier, prochaines visites et éléments en retard ou à inspecter. « Obtenir la dernière carte d'alerte » la télécharge.
+
+« Historique des inspections » liste les inspections passées. Le détail de chacune donne accès à ses fichiers.
 
 ## Défectuosités
 
@@ -61,6 +86,12 @@ Le parcours va dans un seul sens : Ouvert, En cours, Rectifié, Fermé. Une déf
 ## Ateliers
 
 Dans Paramètres › Organisation › « Ateliers », tenez la liste de vos ateliers (AMO ou AME). Elle est proposée à chaque inspection. L'atelier n'a pas d'accès à PilotDuty.
+
+1. Cliquez « Ajouter un atelier ».
+2. Pour un organisme de maintenance agréé, cochez « C'est un AMO », puis saisissez le nom de l'AMO, le nom du PRM et le numéro d'AMO. Sinon, saisissez le nom et le numéro de l'AME.
+3. Saisissez l'adresse, le téléphone et le courriel, tous obligatoires, puis enregistrez.
+
+Le menu d'actions d'un atelier sert à le modifier ou à le supprimer. Le premier atelier de la liste est présélectionné à l'étape « Atelier » d'une inspection, et chaque inspection garde sa propre copie de ses coordonnées.
 
 ## À savoir
 
