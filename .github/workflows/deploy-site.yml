@@ -1,0 +1,22 @@
+name: Republier le site
+
+# Chaque modification de la documentation, de la FAQ ou du blogue sur main
+# déclenche un nouveau déploiement de pilotduty-site sur Vercel.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy-hook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Appeler le Deploy Hook Vercel
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "::warning::Secret VERCEL_DEPLOY_HOOK_URL absent : le site n'est pas republié (voir README.md)."
+            exit 0
+          fi
+          curl -fsS -X POST "$HOOK"

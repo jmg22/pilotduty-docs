@@ -1,0 +1,36 @@
+---
+title: "Comment l'app enregistre vos vols toute seule"
+description: "Zones suivies, vitesse GPS, balise iBeacon, score de confiance et approbation : ce qui se passe entre le moment où vous montez à bord et celui où le vol entre au carnet."
+date: 2026-11-01
+author: "L'équipe PilotDuty"
+translationKey: blog-automatic-recording
+draft: false
+---
+
+Remplir un carnet de vol, c'est recopier des heures que l'iPhone dans votre poche a déjà vues passer. L'app PilotDuty part de cette idée : elle relève les étapes du vol pendant que vous pilotez, et vous n'avez plus qu'à relire et approuver.
+
+## Tout commence par une zone
+
+L'app ne suit pas tous vos déplacements. Elle surveille les zones que vous avez choisies : un aérodrome, ou un avion équipé d'une balise iBeacon. Quand l'iPhone entre dans une de ces zones, le suivi démarre. Quand il en sort, le suivi s'arrête.
+
+Avec une balise à bord, l'app sait dans quel avion vous êtes. Elle vérifie aussi que la balise est bien présente avant d'accepter un décollage : un trajet en voiture le long de la piste ne devient pas un vol.
+
+## La vitesse raconte le vol
+
+Dans une zone, l'app suit la vitesse GPS de l'iPhone, lissée sur plusieurs mesures, et le mouvement détecté par l'iPhone. Quand l'avion se met à rouler, c'est l'heure hors cales. Quand la vitesse dépasse un seuil calé sur la vitesse de décollage de votre avion, c'est le décollage. Le passage sous un seuil plus bas marque l'atterrissage, puis l'arrêt donne l'heure sur cales.
+
+Tout cela se fait sans réseau : le vol est gardé sur l'iPhone.
+
+## Chaque heure a son score de confiance
+
+Le GPS d'un iPhone n'est pas toujours précis. À la fin du vol, l'app note la fiabilité de chaque heure et des deux aéroports, en vert, en jaune ou en rouge. Quand le GPS a manqué un instant clé, elle propose une heure estimée, avec sa marge. Rien n'est remplacé sans votre accord.
+
+Avec PilotDuty Pro, si un vol se termine sans trace GPS utilisable, l'app peut aussi retrouver ses étapes dans les données ADS-B publiques et vous les proposer en brouillon.
+
+## Vous gardez le dernier mot
+
+Le vol détecté arrive en brouillon dans le tableau de bord. Vous le relisez, vous corrigez ce qui doit l'être, puis un glissement du doigt l'approuve. C'est seulement à ce moment qu'il entre au carnet et, si vous êtes membre d'une organisation, qu'il apparaît dans PilotDuty Manager.
+
+## Pour commencer
+
+L'app est gratuite jusqu'à 3 vols par mois. Le guide [Enregistrement automatique](/fr/docs/app/enregistrement-automatique) explique comment configurer vos zones, et le guide [Balise iBeacon](/fr/docs/app/balise-ibeacon) comment installer une balise.

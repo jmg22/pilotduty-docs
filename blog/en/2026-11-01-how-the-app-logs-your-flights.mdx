@@ -1,0 +1,36 @@
+---
+title: "How the app logs your flights by itself"
+description: "Tracked zones, GPS speed, iBeacon, confidence score and approval: what happens between boarding and the moment the flight enters your logbook."
+date: 2026-11-01
+author: "The PilotDuty team"
+translationKey: blog-automatic-recording
+draft: false
+---
+
+Filling in a logbook means copying times that the iPhone in your pocket already saw go by. The PilotDuty app starts from that idea: it records the steps of the flight while you fly, and all that's left is to review and approve.
+
+## It all starts with a zone
+
+The app doesn't follow all your movements. It watches the zones you choose: an airfield, or an aircraft fitted with an iBeacon. When the iPhone enters one of these zones, tracking starts. When it leaves, tracking stops.
+
+With a beacon on board, the app knows which aircraft you're in. It also checks that the beacon is really there before accepting a takeoff: a car ride along the runway doesn't become a flight.
+
+## Speed tells the story
+
+Inside a zone, the app follows the iPhone's GPS speed, smoothed over several readings, and the motion the iPhone detects. When the aircraft starts to roll, that's off-block time. When speed passes a threshold set from your aircraft's takeoff speed, that's takeoff. Dropping below a lower threshold marks the landing, and the stop gives on-block time.
+
+All of this works without a network: the flight is kept on the iPhone.
+
+## Every time has its confidence score
+
+An iPhone's GPS isn't always precise. When the flight ends, the app rates how reliable each time and both airports are, in green, yellow or red. When GPS missed a key moment, it suggests an estimated time, with its margin. Nothing is replaced without your say.
+
+With PilotDuty Pro, if a flight ends without a usable GPS track, the app can also find its legs in public ADS-B data and offer them to you as a draft.
+
+## You have the last word
+
+The detected flight arrives as a draft on the dashboard. You review it, fix what needs fixing, then one swipe approves it. Only then does it enter your logbook and, if you're a member of an organization, appear in PilotDuty Manager.
+
+## Getting started
+
+The app is free for up to 3 flights a month. The [Automatic recording](/en/docs/app/automatic-recording) guide explains how to set up your zones, and the [iBeacon](/en/docs/app/ibeacon) guide how to install a beacon.
