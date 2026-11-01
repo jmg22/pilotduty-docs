@@ -15,8 +15,11 @@ Ces textes sont publics. Ils doivent décrire **ce que les produits font vraimen
   - que l'app permet de réserver (elle n'a aucune fonction de réservation) ;
   - que le Manager fait un calcul réglementaire du temps de service (repères indicatifs 702 et 703 seulement) ;
   - la récupération d'un vol après l'arrêt forcé de l'app (pas encore livrée) ;
-  - Google Wallet, Google Agenda par connexion (seuls les liens iCal sont acceptés), la connexion par lien ou par SMS, la double authentification.
+  - Google Agenda par connexion (seuls les liens iCal sont acceptés), la connexion par lien ou par SMS, la double authentification.
 - Exception confirmée par JMG : la confirmation « safe » du suivi de vol est active.
+- Exception confirmée par JMG (TOT-419, 2026-11-01) : les cartes d'embarquement Google Wallet sont en service, comme celles
+  d'Apple Wallet (courriel de confirmation réel avec les deux boutons). Le code QR de la carte ouvre la réservation dans le
+  Manager pour un membre connecté : pas d'écran de scan ni d'enregistrement dédié.
 - Numérisation du carnet papier : comprise dans PilotDuty+ (décision JMG).
 - Un point incertain ne s'écrit pas : il va dans les questions pour JMG.
 
@@ -50,8 +53,8 @@ Ces textes sont publics. Ils doivent décrire **ce que les produits font vraimen
 ### Images du site (accueil, pages App et Manager, boutique)
 
 - Une fiche par image, dans Keystatic (menus « Site · … ») : `site/images/<fiche>.yaml`, fichiers dans `media/site/<fiche>/`.
-  Liste des 30 fiches et de leurs endroits : `CAPTURES.md` du dépôt `pilotduty-site`.
+  Liste des 33 fiches et de leurs endroits : `CAPTURES.md` du dépôt `pilotduty-site`.
 - Le plus simple : sur le site, connecté à Keystatic, cliquer le crayon de l'image. Le site se republie en 2 à 3 minutes.
 - Une fiche vide garde l'image par défaut. Pour revenir à l'image par défaut, vider le champ et enregistrer.
 - Captures : données de démonstration seulement ; barre d'état avec réseau, Wi-Fi et batterie pleins (règles d'Apple).
-- Badges d'Apple (App Store, iBeacon) : fichiers officiels d'Apple seulement, jamais modifiés.
+- Badges d'Apple et de Google (App Store, iBeacon, Apple Wallet, Google Wallet) : fichiers officiels seulement, jamais modifiés.
