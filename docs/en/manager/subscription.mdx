@@ -1,20 +1,25 @@
 ---
 title: "Subscription"
-description: "The Growth and Unlimited plans, subscribing, seats, the Stripe customer portal and pilot subscriptions."
+description: "The Growth and Unlimited plans, subscribing, the active subscription, seats, the Stripe customer portal and pilot subscriptions."
 order: 14
 translationKey: mgr-subscription
 updated: 2026-11-01
 draft: false
 ---
 
-The organization's subscription opens the Manager to all its members. It is paid through Stripe and managed under Settings › Subscription.
+The organization's subscription opens the Manager to all its members. PilotDuty Manager uses Stripe to handle subscriptions, and Stripe processes payments securely. All subscription and billing operations are under Settings › “Subscription”.
 
 ## Growth or Unlimited
 
-Two plans, with exactly the same features:
+If no subscription is active, the “Subscription” page shows the two plans:
 
-- Growth: the amount follows the number of members in the organization.
-- Unlimited: a flat amount, whatever the number of members.
+- **Growth**: the amount follows the number of members in the organization.
+- **Unlimited**: a flat amount, for an unlimited number of members.
+
+Both plans have exactly the same features, including duty time benchmarks, flight following, aircraft maintenance management and unlimited events for each member. Only the way the amount is calculated differs.
+
+- Choose **Growth** if you are a small organization just getting started.
+- Choose **Unlimited** if your team is large or growing: the amount no longer changes when you add members.
 
 Both are available monthly or yearly. For prices, see the [Pricing](/en/pricing) page.
 
@@ -28,20 +33,34 @@ Every member can see the subscription page. Only the Operations Manager can subs
 
 ## Subscribe
 
-1. Go to Settings › Subscription.
-2. Choose monthly or yearly billing with the selector, then proceed to payment under the plan you want.
-3. Pay by card in the Stripe window.
-4. A confirmation message tells you that you are all set. Its button takes you back to the Manager.
+1. Go to Settings › “Subscription”.
+2. At the top of the page, choose the billing period with the “Monthly” / “Yearly” toggle:
+   - **Monthly**: you pay every month, for more flexibility;
+   - **Yearly**: you pay once a year.
+3. Under the plan you want, click “Checkout” to begin the subscription process.
+4. A secure Stripe payment window opens. Enter your email, your credit card details, then your billing country and postal code. Click “Subscribe” to confirm your plan.
+5. Once the payment is processed, the “Done! You're all set.” screen confirms your subscription. A confirmation email goes to the address entered at checkout. Click “Proceed to App” to return to PilotDuty Manager.
 
-The subscription card then shows the plan, its status, the price and the renewal or cancellation date.
+![“Done! You're all set.” confirmation screen, with the “Proceed to App” button](/docs-media/manager/subscription-confirmation.png)
+
+## View your active subscription
+
+After subscribing, the “Subscription” tab shows a card with your plan, its status, the price and the renewal or cancellation date. The price shown is the unit price, not the total billed. Under the card, “Go to Customer Portal” opens the customer portal to manage billing.
 
 ## Growth plan seats
 
-On the Growth plan, the billed quantity follows the number of members. It goes up when an invitee accepts their invitation and goes down when you remove a member from member management: see [Members and roles](/en/docs/manager/members-and-roles). Pending invitations do not count. On the subscription page, the price shown is the unit price, not the total billed.
+On the Growth plan, the billed quantity follows the number of members. It goes up when an invitee accepts their invitation and goes down when you remove a member from member management: see [Members and roles](/en/docs/manager/members-and-roles). Pending invitations do not count.
 
 ## The Stripe customer portal
 
-The customer portal button takes you to your organization's Stripe portal. That is where the subscription's billing is managed. Changes made in the portal come back to PilotDuty on their own. The Manager has no button to switch plans. Once the subscription has ended, the portal button disappears: keep a copy of your invoices.
+The customer portal button takes you to your organization's Stripe portal. That is where the subscription's billing is managed. In the customer portal, you can, for example:
+
+- update your payment method;
+- view or download invoices;
+- cancel or change your subscription plan;
+- add a backup card.
+
+Changes made in the portal come back to your PilotDuty account on their own. The Manager itself has no button to switch plans: use the portal. Once the subscription has ended, the portal button disappears: keep a copy of your invoices.
 
 ## Statuses and late payment
 

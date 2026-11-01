@@ -7,11 +7,11 @@ updated: 2026-11-01
 draft: false
 ---
 
-Duty time tracks your work, flight and rest periods and compares them with the limits of a regulation.
+Duty time tracks your work, flight and rest periods and compares them with the limits of a regulation. It helps you keep an eye on your limits and plan your schedule.
 
 With PilotDuty Pro. This feature is in beta.
 
-> PilotDuty is a support tool. It replaces neither the regulations nor your operator's rules. Always check your limits against the official texts.
+> PilotDuty is a support tool for operators and pilots. It is not a regulatory reference: it replaces neither the regulations nor your operator's rules. Always check your limits against the official texts.
 
 ## Turning on duty time
 
@@ -22,33 +22,190 @@ Once it's on:
 - the Duty tab (timer icon) shows your gauges;
 - the dashboard offers a selector between flights and events;
 - the “+” button lets you add an event;
-- the rest zone and work zone settings become available.
+- the “Rest Area” and “Work Area” settings become available.
 
 ## Events
 
 An event is a period of work, flight or rest. It has a start, an end, and a time zone at the start and at the end. An acclimatization option is available.
 
-For a flight event, enter the number of flights, the total time and the aircraft. The app splits the time across the flights. These split times aren't the actual times of each flight: for an accurate logbook, add each flight with its real times instead.
-
 - Events wait for your approval on the dashboard, just like flights. Only approved events count toward the gauges.
 - Tap an event on the dashboard to edit it before approving it: dates, time zones, acclimatization, remark and flights. While the event is recording, its fields are locked.
 - On the screen of an event in progress, you can stop, pause or resume it.
 - You can add flights to a work or flight event: by hand, by ADS-B or by scan. See [Manual entry and ACARS scan](/en/docs/app/manual-entry-and-acars-scan).
-- To correct an approved event, open the day's details in the Duty tab and unapprove the event. The app asks for a reason and adds it to the remark, with the date.
+- To correct an approved event, unapprove it from the day's details in the Duty tab. See “Unapproving an event” below.
 - For now, the time zones offered are those of the Americas.
 
-## Rest and work zones
+## Manually adding an event
 
-In the Settings tab, set up a rest zone and a work zone. When you enter or leave one, the app opens or closes the matching event on its own.
+Sometimes you need to create an event yourself: a flight that wasn't tracked automatically, a ground duty period or a rest break. You add it from the dashboard.
 
-- Zones need location set to “Always”.
-- Only one zone is active at a time. When several apply, the app picks one: an iBeacon comes before GPS, and an aircraft zone comes before a work zone, which comes before a rest zone.
-- A rest event shorter than one hour is deleted.
-- If you leave a rest zone and come back within 3 minutes, the app resumes the same rest event.
-- A work or flight event shorter than 3 minutes (0.1 h) is deleted.
-- If you leave a work zone or an aircraft and come back within 55 minutes, the app resumes the same event.
-- Outside these cases, time spent outside a tracked zone counts as off duty.
-- If a flight event starts because you entered an aircraft's zone but you don't fly, the app converts it into a work event.
+### Step 1: Open the dashboard
+
+Tap “+” at the top right of the screen, then “Add Event”.
+
+![The dashboard, with an arrow pointing to the “+” button at the top right](/docs-media/app/duty-time-dashboard-add-button.png)
+
+### Step 2: Select the event type
+
+Under “Event Type”, choose:
+
+- “Work/Flight Event”: for duty or flight activities;
+- “Rest Event”: for breaks and rest periods;
+- “Quick flight duty Event”: a fast entry mode with basic fields.
+
+For a “Quick flight duty Event”, enter the number of flights, the total time and the aircraft. The app creates a batch of flights and splits the total time across them.
+
+> A “Quick flight duty Event” creates its flights from global flight data. It is meant only for duty tracking. These split times aren't the actual times of each flight: don't use this option if you want an accurate logbook. Add each flight with its real times instead.
+
+![The “Add New Event” screen, with the list of types: “Work/Flight Event”, “Rest Event” and “Quick flight duty Event”](/docs-media/app/duty-time-add-new-event.png)
+
+### Step 3: Fill in the event details
+
+- the start and stop date and time;
+- the start time zone (“Start Time Zone”) and stop time zone (“Stop Time Zone”);
+- the acclimatization option (“Time Zone Acclimatization Option”), if applicable: “Step Acclimatization” or “1h/day per TZ”.
+
+Then tap “Create Event”. You can also add a remark.
+
+![An event's details: start and stop time zones and times, acclimatization option, remarks and flights section](/docs-media/app/duty-time-event-details.png)
+
+### Optional step: Add flights
+
+In the event's “Flights” section, tap “Add Flight”. See [Manual entry and ACARS scan](/en/docs/app/manual-entry-and-acars-scan), section “Adding a flight to an event”.
+
+![An event's “Flights” section, with an arrow pointing to “Add Flight”](/docs-media/app/duty-time-event-add-flight.png)
+
+### Step 4: Review and approve
+
+Once your event and flights are properly entered, return to the dashboard and swipe the event to the right to approve it.
+
+Once approved, the event counts in the Duty tab, and its flights appear in your logbook.
+
+![The “Awaiting Approval” dashboard with the new work event, waiting for approval](/docs-media/app/duty-time-event-awaiting-approval.png)
+
+### Important
+
+All events on the dashboard are pending approval. Once approved:
+
+- the event counts in the Duty tab, and its flights appear in your logbook;
+- the event is locked for editing. To make changes, unapprove it first;
+- if you belong to one or more organizations in PilotDuty Manager, the event shows up on your profile in Manager. See [With your organization](/en/docs/app/with-your-organization).
+
+If the event is modified in PilotDuty Manager, the app receives the changes. If it's deleted there, the app sends it back to your dashboard, awaiting approval.
+
+This system protects the integrity of your flight data. It is your responsibility to check each event before you approve it.
+
+## Adding a work or rest area
+
+PilotDuty can track your flight, work and rest periods on its own through tracked areas. An area is detected either by an iBeacon or by GPS location. It has a type: aircraft area, work area or rest area.
+
+When you enter or leave an area, the app opens or closes the matching event on its own. Work and rest areas require PilotDuty Pro and duty time turned on. Aircraft areas are the aircraft in the Aircraft tab. See [iBeacon](/en/docs/app/ibeacon).
+
+### Understanding detection priority
+
+![Top view of an aerodrome: a small aircraft area around an airplane near the hangar, a large work area covering the apron and the terminal, and a rest area in a corner](/docs-media/app/duty-time-area-types-diagram.jpg)
+
+Only one area is active at a time. When several areas apply, PilotDuty picks one with this logic:
+
+1. Initiator first:
+   - iBeacon;
+   - then GPS location and its radius.
+2. Then area type:
+   - aircraft area;
+   - then work area;
+   - then rest area.
+
+> Example 1: you are inside overlapping work and rest areas, both detected by GPS. PilotDuty picks the area type with the highest importance. Work areas take precedence over rest areas, so your time is logged as work.
+
+> Example 2: you are inside an overlapping work area detected by GPS and rest area detected by iBeacon. PilotDuty picks by initiator first. iBeacon has a higher priority than GPS, so your time is logged as rest.
+
+> With the same initiator, the aircraft area always comes first. If a flight event starts because you entered an aircraft area but you don't actually fly, PilotDuty converts the flight event into a work event to keep your records accurate.
+
+### Event cleanup and resumption rules
+
+To keep tracking accurate and remove false or irrelevant entries, PilotDuty filters the events it creates or resumes based on your movements:
+
+- **Rest shorter than one hour.** If you enter a rest area but stay less than one hour, the rest event is discarded.
+- **Brief exit from a rest area (less than 3 minutes).** If you leave and re-enter a rest area within 3 minutes, the app resumes the previous rest event instead of creating a new one.
+- **Work or flight shorter than 3 minutes (0.1 h).** If you are in a work or aircraft area for a very short time, the event is discarded to avoid false entries.
+- **Exit and re-entry within 55 minutes.** If you leave a work or aircraft area and return within 55 minutes, the app resumes the previous work or flight event to keep continuity.
+
+> Any time spent outside a tracked area is automatically counted as off duty, except in the cases above.
+
+### 1. Open the tracked area settings
+
+Tap the Settings tab at the bottom right of the screen.
+
+![The dashboard, with an arrow pointing to the “Settings” tab at the bottom right](/docs-media/app/duty-time-settings-tab.png)
+
+### 2. Select “Work Area” or “Rest Area”
+
+Tap “Work Area” for a work area, or “Rest Area” for a rest area.
+
+![The Settings tab, with an arrow pointing to the “Rest Area” and “Work Area” rows](/docs-media/app/duty-time-settings-work-rest-area.png)
+
+### 3. Add a new area
+
+Tap “+” at the top right to add a new tracked area.
+
+![The empty “Tracked Work Area” screen, with an arrow pointing to the “+” button](/docs-media/app/duty-time-tracked-area-add.png)
+
+### 4. Select the newly created area
+
+The new area appears in the list as “Unknown”. Tap it to set it up.
+
+![The “Tracked Work Area” list with a new “Unknown”, “User initiated” area](/docs-media/app/duty-time-tracked-area-new.png)
+
+### 5. Choose the initiator type
+
+Under “Initiator”, choose how the area will be detected:
+
+- option A: “iBeacon”;
+- option B: “GPS location”.
+
+![The “Edit Area” screen, with the “Initiator” choice and the name field under “Area Information”](/docs-media/app/duty-time-edit-area-ibeacon.png)
+
+#### Option A: iBeacon
+
+1. Set “Initiator” to “iBeacon”.
+2. Tap “Adopt an iBeacon” to detect the nearest iBeacon.
+3. Stay physically close to the iBeacon you want to assign.
+4. Give the area a name in “Name”, under “Area Information”.
+
+The app then scans for nearby iBeacons. Once an iBeacon is detected (“Near”), tap “Adopt Nearest iBeacon”.
+
+If no iBeacon is found, make sure that:
+
+- the batteries are properly installed;
+- the protective film is removed;
+- you are close to the device.
+
+![The “iBeacon Detection” screen, with the “Adopt Nearest iBeacon” button](/docs-media/app/duty-time-ibeacon-detection.png)
+
+#### Option B: GPS location
+
+1. Set “Initiator” to “GPS location”.
+2. Tap “Get current location” to fill in your coordinates automatically.
+3. Enter the area's radius, in meters, under “Area Radius”.
+
+> GPS detection is a great option when you need to cover a large area.
+
+![The “Edit Area” screen set to “GPS location”, with “Get current location” and the name and radius fields](/docs-media/app/duty-time-edit-area-gps-empty.png)
+
+Then enter a descriptive name in “Name”, for example “CYBC” or “Crew Office”.
+
+![A filled-in GPS area: longitude and latitude, name “CTH3” and a 1000-meter radius](/docs-media/app/duty-time-edit-area-gps-filled.png)
+
+### Final step: Exit
+
+Once configured, the area appears in your tracked area list. PilotDuty now logs your time automatically when you enter or leave this area.
+
+### Notes
+
+- Only one area can be active at a time.
+- If several areas overlap, the app applies the priority rules described above.
+- iBeacon is the preferred method for precise indoor detection, or for an area that moves, such as an aircraft.
+- Areas require location permission set to “Always”.
 
 ## Choosing the regulation
 
@@ -64,16 +221,80 @@ Built-in templates are locked. To adapt one, create a custom template:
 2. Start from a built-in template (CAR, FAR or EASA) or from a blank one.
 3. Name it. The new template becomes active.
 
-The editor lets you set limits (window, hours, rest days), rest rules, acclimatization, compliance badges and the flight time table. Badge messages are written in English and French. Subparts can't be edited yet.
+The editor lets you set limits (window, hours, rest days), rest rules, acclimatization, badges and the flight time table. Badge messages are written in English and French. Subparts can't be edited yet.
 
 The active template is saved with your account. If you delete the active template, the app goes back to the CAR template.
 
-## Gauges and badges
+## Reading duty time information
 
-The Duty tab shows gauges for each rolling window: 24 hours, 7 days, 28 or 30 days, 90 days and 365 days. Curves compare your duty time and flight time with the limits.
+The Duty tab shows your flight time (FT), your work or service time (ST) and your rest. Here is how to read its different views.
 
-- Badges mark required rest days, with a message that gives the reason.
-- Tap a day to see its events.
-- Info bubbles explain acclimatization, rest and the legend.
+### Time range views
+
+Choose a range: “24h”, “7 days”, “28/30 days”, “90 days” or “365 days”. Each range is a rolling window. It applies to your flight time (FT), your service time (ST) and your mandatory rest. Curves compare your duty time and flight time with the limits.
+
+![The Duty tab, with the range selector at the top: 24h, 7 days, 28/30 days, 90 days and 365 days](/docs-media/app/duty-time-range-picker.png)
+
+### Colors
+
+The legend, below the range selector, gives the meaning of each color.
+
+- **Green, rest (“Rest”).** “Day Off” labels show a rest day. The hatched green rectangle in the chart represents a rest period.
+- **Blue, flight time (“FT”).** Flight time is counted when the aircraft moves under its own power with the intent to fly. It shows in blue in the chart on the right and helps you compare it with the flight time limit.
+- **Grey, work time (“ST”).** Work or service time includes every task other than flights: planning, reporting and any other task.
+- **Orange, flight time limit (“FLmt”).** The orange zone shows the flight time limit for the chosen range.
+- **Red, service time limit (“SLmt”).** The red zone shows the service time limit for this period. This limit varies with the chosen regulation, for example with the start time of the first flight duty period.
+
+![The Duty tab legend: Rest in green, FT in blue, ST in grey, FLmt in orange and SLmt in red](/docs-media/app/duty-time-legend.png)
+
+### Mandatory days off
+
+Based on your hours and the chosen regulation, PilotDuty automatically marks mandatory days off with a grey label. The label gives the reason, for example “Mandatory Day Off for 60h Week”.
+
+![Days marked “Mandatory Day Off for 60h Week (703)” and “Mandatory Day Off for 70h Week (703)”](/docs-media/app/duty-time-mandatory-day-off.png)
+
+### Info bubbles
+
+Tap the “i” icon to read the duty and rest requirements. With the CAR template, for example:
+
+- 120 hours free from duty within 30 days;
+- no more than 24 hours of work in any 48 hours;
+- at least 5 consecutive local nights of rest;
+- and so on.
+
+Other bubbles explain acclimatization, rest and the legend.
+
+![The “Informations” bubble, listing the rest requirements behind the marked day](/docs-media/app/duty-time-info-bubble.png)
+
+### Counters
+
+Each event card has a red badge: the number of flights grouped in the duty period. It helps you spot your active periods at a glance.
+
+Example: on August 25, you worked 7.8 hours and completed 2 flights. The August 25 card shows 7.8 and a badge of 2.
+
+![Flight event cards in August, each with its duration and a red badge counting its flights](/docs-media/app/duty-time-flight-counters.png)
+
+### Day details
+
+Tap a day to see a detailed breakdown:
+
+- the service time dial, with its limit (13.0 h in the example; the limit varies);
+- the flight time dial, with its limit (8.0 h in the example; the limit varies);
+- summaries over the last windows, for example 7, 30, 90 and 365 days;
+- the list of the day's events, with their start, end and total.
+
+![A day's details: the “Flight Time” dial, summaries over 7, 30, 90 and 365 days, and the day's flight event](/docs-media/app/duty-time-day-detail.png)
+
+### Unapproving an event
+
+To correct an approved event, swipe it to the left in the day's details, then tap “UnApprove”. The app asks for a reason and adds it to the remark, with the date. The event goes back to the dashboard, where you can edit it and approve it again.
+
+![An event swiped to the left in the day's details, with the “UnApprove” button](/docs-media/app/duty-time-unapprove-event.png)
+
+### Summary
+
+This view helps you keep your hours under the limits of the chosen template and spot potential fatigue. But again:
+
+> Always confirm with your Chief Pilot, your operations manual or the applicable regulations (CARs, FARs). PilotDuty is only a support tool.
 
 Templates and calculations stay in the app: PilotDuty Manager doesn't use them.

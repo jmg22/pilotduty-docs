@@ -1,24 +1,40 @@
 ---
 title: "Enregistrement automatique des vols"
-description: "Comment l'app détecte vos vols, ce qu'elle enregistre et comment l'aider à bien fonctionner."
+description: "Comment l'app crée vos événements et vos vols, ce qu'elle enregistre, comment régler le délai de stationnement et comment l'aider à bien fonctionner."
 order: 2
 translationKey: app-automatic-recording
 updated: 2026-11-01
 draft: false
 ---
 
-PilotDuty enregistre vos vols sans que vous ayez à toucher l'app. Elle reconnaît le roulage, le décollage, l'atterrissage et le stationnement, puis place le vol dans votre file d'approbation.
+PilotDuty enregistre vos vols sans que vous ayez à toucher l'app. Une fois vos avions configurés et le suivi activé, elle surveille votre activité : elle reconnaît le roulage, le décollage, l'atterrissage et le stationnement, puis place le vol dans votre file d'approbation.
+
+## Les événements et les vols
+
+L'app crée d'elle-même des **événements** quand vous entrez dans une zone suivie ou en sortez. Il existe trois types d'événements :
+
+- **Événement de vol.** Il est créé quand l'app détecte votre entrée dans la zone d'un avion. Un événement de vol contient un ou plusieurs **vols**, avec tous leurs détails : début du roulage (off-block), décollage, atterrissage, arrivée au stationnement (on-block), informations sur l'avion, etc.
+- **Événement de travail.** Avec PilotDuty Pro. Il est créé quand vous entrez dans une zone de travail (balise iBeacon ou zone GPS) et que vous ne volez pas.
+- **Événement de repos.** Avec PilotDuty Pro. Il est créé quand vous entrez dans une zone de repos (balise iBeacon ou zone GPS), en général pendant vos périodes hors service.
+
+> Les zones d'avion passent toujours en premier. Avec le temps de service activé, si un événement de vol démarre parce que vous êtes entré dans la zone d'un avion, mais que vous ne volez pas, l'app le convertit en événement de travail.
+
+Tous les événements attendent ensuite votre approbation dans le tableau de bord. Voir [Relecture et approbation](/fr/docs/app/relecture-et-approbation).
 
 ## Les zones suivies
 
-L'app commence à suivre votre activité quand votre iPhone entre dans une zone suivie, et s'arrête quand il en sort. Il existe deux sortes de zones :
+L'app commence à suivre votre activité quand votre iPhone entre dans une zone suivie, et s'arrête quand il en sort. Les zones d'avion sont de deux sortes :
 
 - **Un aérodrome.** Une zone autour de l'aérodrome, repérée par le GPS.
 - **Un avion équipé d'une balise iBeacon.** L'app sait que vous êtes à bord quand elle capte la balise. Le déclenchement par balise demande un abonnement PilotDuty+ ou PilotDuty Pro. Voir [Balise iBeacon](/fr/docs/app/balise-ibeacon).
 
-Vos avions et vos zones se trouvent dans l'onglet des aéronefs (icône d'avion).
+Un avion sans balise peut aussi être configuré en démarrage manuel. Voir plus bas.
 
-Une seule zone est active à la fois. Quand plusieurs s'appliquent, une balise iBeacon passe avant le GPS. Avec le temps de service activé, si un événement de vol démarre parce que vous êtes entré dans la zone d'un avion, mais que vous ne volez pas, l'app le convertit en événement de travail. Voir [Temps de service](/fr/docs/app/temps-de-service).
+Avec PilotDuty Pro et le temps de service activé, vous pouvez aussi définir une zone de travail et une zone de repos. Voir [Temps de service](/fr/docs/app/temps-de-service).
+
+Vos avions et vos zones d'avion se trouvent dans l'onglet des aéronefs (icône d'avion). Pour en ajouter un, voir [Ajouter un avion](/fr/docs/app/balise-ibeacon).
+
+Une seule zone est active à la fois. Quand plusieurs s'appliquent, une balise iBeacon passe avant le GPS, et une zone d'avion passe avant une zone de travail, qui passe avant une zone de repos. Ces zones demandent la localisation sur « Toujours ».
 
 ## Les étapes enregistrées
 
@@ -29,17 +45,56 @@ Dans la zone d'un avion, l'app suit votre vitesse GPS et note quatre heures :
 3. l'atterrissage ;
 4. l'arrivée au stationnement (on-block).
 
-Les durées du vol sont calculées à partir de ces heures. L'app note aussi les positions GPS du décollage et de l'atterrissage quand elles sont assez précises. Elles servent à tracer le vol sur la carte du carnet.
+Les durées du vol sont calculées à partir de ces heures. L'app associe aussi l'aérodrome le plus proche et détermine si le vol a eu lieu de jour ou de nuit. Elle note les positions GPS du décollage et de l'atterrissage quand elles sont assez précises. Elles servent à tracer le vol sur la carte du carnet.
 
 Pendant l'enregistrement, le tableau de bord montre une barre de progression et le nom de la zone. Le vol en cours s'affiche avec un indicateur animé et des chronomètres qui avancent.
 
-Une fois l'avion stationné, l'app attend un délai avant de clore le vol. Ce délai s'exprime en secondes ; le parcours d'accueil le règle à 30 secondes. Tant qu'il n'est pas écoulé, le vol reste ouvert. Il se règle dans les réglages généraux. Le vol rejoint ensuite la file d'approbation, avec son score de confiance. Voir [Relecture et approbation](/fr/docs/app/relecture-et-approbation).
+Une fois l'avion stationné, l'app attend le délai de stationnement avant de clore le vol. Le vol rejoint ensuite la file d'approbation, avec son score de confiance. Voir [Relecture et approbation](/fr/docs/app/relecture-et-approbation).
+
+## Régler le délai de stationnement
+
+Le délai de stationnement (« Parking time limit ») évite de couper un vol en plusieurs entrées lors d'un arrêt bref ou d'un posé-décollé. Grâce à lui, PilotDuty continue d'enregistrer un seul vol quand l'avion s'arrête un court moment, puis repart aussitôt.
+
+### Ce que fait ce délai
+
+C'est un seuil, en secondes, que vous choisissez. Il fixe combien de temps l'avion peut rester arrêté avant que PilotDuty termine le vol en cours et en commence un nouveau.
+
+- Si l'avion reste arrêté **moins longtemps** que le délai, le vol en cours continue.
+- Si l'avion reste arrêté **plus longtemps** que le délai, un nouveau vol est créé.
+
+> Exemple : avec un délai de 30 secondes, un arrêt de moins de 30 secondes ne crée **pas** de nouveau vol.
+
+![Schéma d'un posé-décollé : l'avion atterrit, s'arrête brièvement sur la piste pendant le délai de stationnement, puis redécolle](/docs-media/app/automatic-recording-parking-time-limit-touch-and-go.png)
+
+Dans cet exemple, l'avion atterrit, s'arrête un instant et redécolle. Si l'arrêt dure moins que le délai de stationnement, l'app n'enregistre qu'un seul vol.
+
+### Régler le délai
+
+1. Touchez l'onglet des réglages (icône d'engrenage).
+2. Choisissez Général.
+3. Faites défiler jusqu'à « Flight overlap threshold (in seconds) ».
+4. Entrez la valeur voulue dans « Parking time limit ».
+
+Le parcours d'accueil règle ce délai à 30 secondes.
+
+![Réglages généraux : une flèche descend vers la section « Flight overlap threshold » et le champ « Parking time limit » réglé à 30](/docs-media/app/automatic-recording-parking-time-limit-setting.png)
+
+### Bonnes pratiques
+
+- Pour les **tours de piste** ou les **posés-décollés**, augmentez le délai, par exemple à 60 secondes.
+- Pour le **transport commercial**, gardez la valeur par défaut, par exemple 30 secondes, pour bien séparer les vols.
+
+> Avec PilotDuty Pro : ce réglage ne s'applique qu'aux vols détectés dans les zones d'avion. Il n'a pas d'effet sur les événements des zones de travail ou de repos.
+
+Le délai de stationnement vous donne la main sur la façon dont les vols sont enregistrés lors des arrêts brefs. Adaptez-le à votre activité pour avoir moins de corrections à faire dans votre carnet.
 
 ## Sans réseau
 
 La détection fonctionne sans réseau : le vol est enregistré sur votre iPhone, puis envoyé au serveur quand vous l'approuvez et que le réseau est là. Le suivi de vol et les SMS à votre suiveur, eux, ont besoin du réseau.
 
-## Démarrer et arrêter une session à la main
+## Avion sans balise : démarrer et arrêter une session à la main
+
+Si vous n'utilisez pas de balise, configurez l'avion avec le déclencheur « User initiated » dans l'onglet des aéronefs. Voir [Ajouter un avion](/fr/docs/app/balise-ibeacon). Vous démarrez et arrêtez alors vos vols vous-même.
 
 Pour un avion configuré en démarrage manuel, le tableau de bord affiche un bouton de démarrage :
 
@@ -51,10 +106,10 @@ Ce bouton n'apparaît que si au moins un de vos avions est en démarrage manuel.
 
 ## Conseils
 
-- **Gardez la localisation sur « Toujours »** et laissez « Position exacte » activée dans les Réglages d'iOS.
+- **Gardez la localisation sur « Toujours »** et laissez « Position exacte » activée dans les Réglages d'iOS. Voir [Premiers pas](/fr/docs/app/premiers-pas).
 - **Accordez l'autorisation Mouvement.** Elle aide l'app à distinguer le roulage de l'arrêt. Sans elle, l'app se fie au GPS seul.
 - **Ne forcez pas la fermeture de l'app**, c'est-à-dire ne la balayez pas vers le haut dans le sélecteur d'apps, surtout avant ou pendant un vol. L'app doit rester active en arrière-plan pour suivre le vol.
-- **Vérifiez que le suivi est activé** dans les réglages généraux de l'app.
+- **Vérifiez que le suivi est activé** (« GPS Tracking ») dans les réglages généraux de l'app.
 - **Lisez le bandeau du tableau de bord.** Il signale ce qui peut gêner l'enregistrement : GPS, réseau, autorisations, mode économie d'énergie, mise à jour disponible. Touchez-le pour savoir quoi faire.
 
 ## Si un vol manque ou semble faux
@@ -62,4 +117,4 @@ Ce bouton n'apparaît que si au moins un de vos avions est en démarrage manuel.
 - Un vol non détecté peut être ajouté à la main, ou lu sur un écran du poste avec la caméra. Voir [Ajout manuel et scan ACARS](/fr/docs/app/ajout-manuel-et-scan-acars).
 - Avec PilotDuty Pro, l'app peut retrouver un vol à partir des données ADS-B. Voir [Récupération ADS-B](/fr/docs/app/recuperation-ads-b).
 - Si le GPS a mal capté une étape, l'app peut vous proposer une heure estimée pendant la relecture.
-- Un vol détecté par erreur se supprime d'un glissement dans la file d'approbation.
+- Un vol détecté par erreur se supprime d'un glissement vers la gauche dans la file d'approbation.

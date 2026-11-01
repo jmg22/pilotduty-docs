@@ -1,17 +1,27 @@
 ---
 title: "Flight following"
-description: "Follow flights sent by the iPhone app, confirm safe arrival, alert subscribers by text message and reach emergency contacts."
+description: "Follow flights sent by the iPhone app in real time, understand their statuses and milestones, confirm safe arrival, alert subscribers by text message and reach emergency contacts."
 order: 6
 translationKey: mgr-flight-following
 updated: 2026-11-01
 draft: false
 ---
 
-Flight following gives your staff a safety view of every flight: position, milestones, arrival confirmation, text-message alerts and emergency contacts.
+PilotDuty offers real-time flight following, from the pilot's iPhone app to your organization's web platform, PilotDuty Manager. The system tracks each flight's milestones and status on its own: you can follow your aircraft more easily during operations, for your crews' safety. Your staff get a safety view of every flight: position, milestones, arrival confirmation, text-message alerts and emergency contacts.
 
-## Where tracking comes from
+> The screenshots in this guide date from 2025. They show the Manager's former “FlightFollowing” page and the app's former tab bar. Today, flight following shows on the Flightsheet, with the same statuses.
 
-Tracking is created by the pilot's iPhone app, never by the Manager alone. When flight following to PilotDuty Manager is turned on in the app, the app sends the flight's milestones (taxi, takeoff, landing, parking) with their position. The Manager receives them and shows them on the [Flightsheet](/en/docs/manager/flight-sheet). For the flight to appear, the callsign entered in the app must match an aircraft of your organization, and the pilot must be a member. See [With the iPhone app](/en/docs/manager/with-the-iphone-app).
+## What is flight following?
+
+Tracking is created by the pilot's iPhone app, never by the Manager alone. When flight following to PilotDuty Manager is turned on in the app, the iPhone automatically sends the flight's milestones to the Manager:
+
+- “Off Block” (departure);
+- “Takeoff”;
+- “Low Speed Maneuver”;
+- “Landing”;
+- “On Block” (arrival).
+
+Each milestone carries its GPS position. The Manager receives this information and shows it live on the [Flightsheet](/en/docs/manager/flight-sheet), so you can follow the flight's progress. For the flight to appear, the callsign entered in the app must match an aircraft of your organization, and the pilot must be a member. See [With the iPhone app](/en/docs/manager/with-the-iphone-app) and, for the pilot's side, [flight following in the app](/en/docs/app/flight-following).
 
 ## Who can do it
 
@@ -21,9 +31,75 @@ Tracking is created by the pilot's iPhone app, never by the Manager alone. When 
 - **Archive a tracked flight**: Dispatch and above.
 - **Retry a suspended number**: Co-owner and Operations Manager.
 
-## Map and milestones
+## The four flight statuses
 
-Under each booking, one card per flight changes color with its status: blue while preparing, orange in flight, red once landed without confirmation, green once safety is confirmed. On a red card, a counter shows the time elapsed since landing: you can see how long the aircraft has been on the ground without confirmation. The map view of the Flightsheet shows the aircraft and their tracks. A position only exists if the iPhone sends milestones.
+A tracked flight goes through four statuses. On the Flightsheet, under each booking, the flight card takes the color of its status.
+
+1. **OnBoarding**, in blue: the flight's tracking is created and ready to begin, but the aircraft is not moving yet. The card stays blue as long as no milestone has been received.
+
+![2025 screenshot: a C-FFFF flight in the OnBoarding status, in blue](/docs-media/manager/flight-following-status-onboarding.png)
+
+2. **In Flight**, in orange: the aircraft is airborne. This status begins at takeoff and ends at landing.
+
+![2025 screenshot: a C-FFFF flight in the In Flight status, with the offBlock and Takeoff milestones](/docs-media/manager/flight-following-status-in-flight.png)
+
+3. **On Ground**, in red: the aircraft has landed, but no one has confirmed yet that it is safe. A counter shows the time elapsed since landing: you can see how long the aircraft has been on the ground without confirmation.
+
+![2025 screenshot: a C-FFFF flight in the On Ground status, in red, with its five milestones and the 01:25 counter](/docs-media/manager/flight-following-status-on-ground.png)
+
+4. **Safe**, in green: the safe arrival is confirmed and the flight is completed. No further action is expected.
+
+![2025 screenshot: a C-FFFF flight in the Safe status, in green](/docs-media/manager/flight-following-status-safe.png)
+
+The map view of the Flightsheet shows the aircraft and their tracks. Change the day to see past flights. A position only exists if the iPhone sends milestones.
+
+## Key events detected automatically
+
+PilotDuty uses the iPhone's GPS to detect the following milestones:
+
+- **OffBlock**: the aircraft starts taxiing;
+- **Takeoff**: the speed goes over a threshold, showing that the aircraft has lifted off;
+- **Low Speed Maneuver**: a low-speed phase;
+- **Landing**: the aircraft touches the ground;
+- **OnBlock**: the aircraft is parked and not moving.
+
+These milestones are shown with their time and position, both in the app and in the Manager. On the flight card, the Manager shows the off-block, takeoff, landing and on-block times, the air time and the flight time.
+
+## For pilots: confirm “safe” in the app
+
+When an event appears in red in the app, one of its flights is in progress, is shared with the aircraft's organization, and has not yet been marked as “Safe”.
+
+![2025 app screenshot: a flight event in red, awaiting approval](/docs-media/manager/flight-following-app-event-awaiting-safe.png)
+
+To mark it as safe:
+
+1. Open the event.
+2. Locate the red flight.
+3. Swipe right on the flight to mark it as “Safe”.
+
+The flight must be completed, that is, landed, before it can be marked safe.
+
+![2025 app screenshot: the red flight swiped right, showing the “Safe” button](/docs-media/manager/flight-following-app-swipe-safe.png)
+
+If the pilot lands and does not mark the flight as safe, the app automatically marks the previous flight as safe once a new takeoff is detected, and a new flight is created.
+
+![2025 app animation: at the new takeoff, the previous flight leaves the red status and a new flight starts](/docs-media/manager/flight-following-app-auto-safe-on-takeoff.gif)
+
+Once the aircraft is parked and the parking time limit has passed:
+
+- the pilot must mark the flight as “Safe”;
+- this status is sent to PilotDuty Manager;
+- if needed, staff confirm it themselves from the Manager, as described below.
+
+## For organizations and staff
+
+From PilotDuty Manager, your organization can:
+
+- monitor several aircraft live;
+- view each flight's status in real time;
+- view a map of current or past flights;
+- see how long an aircraft has been on the ground without being marked safe;
+- mark a flight as safe themselves, if needed.
 
 ## Pairing with the booking
 
@@ -33,9 +109,39 @@ The Manager pairs each tracked flight on its own with the confirmed booking of t
 
 Two phones aboard the same aircraft, or an iPhone track and a flight entered in the logbook, count as a single flight. The card shows it as a crew flight, with each member's role and name. This grouping happens once the tracks are confirmed safe. Confirming, archiving or unpairing then applies to the whole group.
 
-## Confirm a safe landing
+## Confirm a safe landing in the Manager
 
-The shield icon on the card asks you to confirm that the pilot has landed and is safe. Confirming resolves the alert and the card turns green. Removing the safe status undoes the confirmation and reactivates the alert. The pilot can also confirm from their iPhone. If they forget, the app confirms their previous flight on its own at the next takeoff. Confirming also sends the pilot confirmed safe text message to subscribers who chose that event. Once the flight is confirmed, Dispatch and above can archive a track of no interest, such as a false start: an undo button appears for a few moments, then the archived track is no longer shown.
+If the pilot has not confirmed, staff do it from the Flightsheet. This action is reserved to Instructors and above, which includes Dispatch.
+
+1. On the flight card, click the shield icon.
+2. Confirm that the pilot has landed and is safe.
+
+Confirming resolves the alert and the card turns green. It also sends the pilot confirmed safe text message to subscribers who chose that event. Removing the safe status undoes the confirmation and reactivates the alert.
+
+![2025 screenshot: a flight confirmed safe, in green, with the “Set Unsafe” and “Archive” buttons; the pilot's name is blurred](/docs-media/manager/flight-following-set-safe.png)
+
+In the 2025 screenshots, the button was called “Set Safe”, and “Set Unsafe” removed the confirmation.
+
+Once the flight is confirmed, Dispatch and above can archive a track of no interest, such as a false start: an undo button appears for a few moments, then the archived track is no longer shown. Archiving does not keep a flight for later reference: an archived track can no longer be viewed.
+
+## Why confirming “safe” matters
+
+In remote regions, where many pilots operate far from traditional infrastructure, real-time confirmation of a safe arrival is not a luxury: it is a necessity. After a hard landing or an incident, minutes matter.
+
+With PilotDuty Manager, safe arrival is confirmed automatically or manually:
+
+- in the app, once the aircraft has landed: the pilot swipes the flight right, or the app confirms the flight at the next takeoff;
+- in the Manager, by staff, Instructor and above.
+
+Confirmation always goes through the app or the Manager: it cannot be done by text message. This feature gives flight training organizations, commercial operators and flying clubs instant peace of mind, especially when their aircraft fly into challenging environments or outside controlled airspace.
+
+When no confirmation comes in, the person following the flight in the Manager notices it right away:
+
+- the flight card stays red, with the time elapsed since landing;
+- once the booking has ended without confirmation, subscribers receive the overdue alert;
+- they can reach the pilot and their emergency contact at once, instead of losing hours before realizing something is wrong.
+
+PilotDuty Manager was built for more than tracking flight hours: it was designed with operator accountability and pilot safety in mind. Safe confirmation, automatic flight event logging and real-time sharing with your staff meet your operational needs.
 
 ## Text messages to subscribers
 

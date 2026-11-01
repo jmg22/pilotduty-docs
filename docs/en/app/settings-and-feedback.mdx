@@ -1,6 +1,6 @@
 ---
 title: "Settings and feedback"
-description: "The app's settings, sending feedback to the team and the ADS-B data attributions."
+description: "The app's settings, your pilot profile and initial hours, sending feedback to the team and the ADS-B data attributions."
 order: 15
 translationKey: app-settings
 updated: 2026-11-01
@@ -11,7 +11,7 @@ The Settings tab (last tab, gear icon) brings together your profile, your prefer
 
 ## The sections
 
-- **Profile.** Name, license, ratings, home time zone, acclimatization preference and active regulation. Its logbook section gives access to initial hours, logbook import (PilotDuty+) and the airline roster (Pro).
+- **Profile.** Name, license, ratings, home time zone, acclimatization preference and active regulation. Its logbook section gives access to initial hours, logbook import (PilotDuty+) and the airline roster (Pro). See below.
 - **General.** Time display, tracking and permissions. See below.
 - **Rest zone and work zone.** With PilotDuty Pro and duty time turned on.
 - **Flight following.** By text message and in PilotDuty Manager. See [Flight following](/en/docs/app/flight-following).
@@ -22,12 +22,72 @@ The Settings tab (last tab, gear icon) brings together your profile, your prefer
 
 The “Duty (Beta)” setting turns on duty time, with PilotDuty Pro. See [Duty time](/en/docs/app/duty-time). The “i” button opens a help video.
 
+Your aircraft are no longer in Settings: they have their own tab, the Aircraft tab (airplane icon). See [iBeacon](/en/docs/app/ibeacon).
+
+## Setting up your pilot profile and initial hours
+
+The pilot profile holds your license information and your ratings. You can also enter your initial flight hours there, so your logbook starts from your current totals.
+
+### Step 1 – Open the Settings tab
+
+From the dashboard, tap the Settings icon (gear) at the bottom right of the screen.
+
+![Dashboard: a red arrow points to the Settings tab at the bottom right](/docs-media/app/settings-and-feedback-settings-tab.png)
+
+### Step 2 – Tap “Pilot Profile”
+
+In the Settings list, choose “Pilot Profile”.
+
+![Settings list: a red arrow points to “Pilot Profile” at the top of the list](/docs-media/app/settings-and-feedback-pilot-profile-menu.png)
+
+### Step 3 – Enter your information
+
+Enter:
+
+- your full name;
+- your pilot license number (for example CA123456).
+
+Then turn on the switches that match your ratings:
+
+- airplane license (“Airplane license”) or helicopter license (“Helicopter license”);
+- professional license (“Professional license”);
+- IFR (“IFR Rated”), multi-engine (“Multi Engine Rated”), seaplane (“Float Rated”), instructor (“Instructor Rated”) and military pilot (“Military Pilot”), as applicable.
+
+This helps the app adapt its features to the way you fly. For example, some choices on a flight's screen depend on your licenses or your instructor rating.
+
+The profile also holds your home time zone, your acclimatization preference and the active regulation. See [Duty time](/en/docs/app/duty-time).
+
+![“Pilot Profile” screen: name John Dow, license CA123456, license and rating switches, and the “Initial flight time” button](/docs-media/app/settings-and-feedback-pilot-profile.png)
+
+### Step 4 – Add your initial flight time
+
+Tap the “Initial flight time” button at the bottom of the profile screen.
+
+A summary screen lets you enter:
+
+- your total flight time (“Total”);
+- your pilot in command (“PIC”), co-pilot (“Co-Pilot”) and student (“Student”) hours;
+- your total number of cycles (“Total Cycles”);
+- your hours by aircraft category (for example “Tricycle Train”, “SkiPlane”, “Tail Wheel”, and so on).
+
+You can also break down your IFR and night hours, by engine, propeller and flight type, and your military hours.
+
+When you're done, tap “Close” to save your initial data.
+
+> This information helps PilotDuty work out accurate totals. It is added to your logbook total. No subscription is required.
+
+![Initial flight time screen: 1,500 hours total, 1,200 cycles, PIC, co-pilot and student hours, hours by category and the “Close” button](/docs-media/app/settings-and-feedback-initial-flight-time.png)
+
+Your profile is now set up and your starting hours are saved. You can come back to “Pilot Profile” at any time to update your ratings or your hours.
+
+To bring in flights from another app or a paper logbook, see [Importing an existing logbook](/en/docs/app/logbook-import). For how initial hours count in your totals, see [Logbook](/en/docs/app/logbook).
+
 ## General settings
 
-- **Local time or UTC.** Choose how times are displayed in the app.
-- **Tracking.** Turns on the location tracking that automatic recording depends on. When it's off, the app doesn't record your flights. You can turn it off when you aren't flying, for example on vacation. Remember to turn it back on.
-- **Parking delay.** How long the app waits, in seconds, once the aircraft is parked, before closing the flight. See [Automatic recording](/en/docs/app/automatic-recording).
-- **Permission status.** Shows whether each permission is granted. A declined permission is changed in iOS Settings.
+- **Local time or UTC (“Use local time”).** Choose how times are displayed in the app.
+- **Tracking (“GPS Tracking”).** Turns on the location tracking that automatic recording depends on. When it's off, the app doesn't record your flights. You can turn it off when you aren't flying, for example on vacation, to save battery. Remember to turn it back on.
+- **Parking time limit (“Parking time limit”).** How long the app waits, in seconds, once the aircraft is parked, before closing the flight. You set it under “Flight overlap threshold”. See [Automatic recording](/en/docs/app/automatic-recording).
+- **Permission status (“Authorization Status”).** Shows whether each permission is granted. A declined permission is changed in iOS Settings: the “Open app settings” button takes you there. See [Getting started](/en/docs/app/getting-started).
 
 ## Account and organizations
 

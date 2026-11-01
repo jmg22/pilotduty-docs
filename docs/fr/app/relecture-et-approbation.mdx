@@ -1,33 +1,96 @@
 ---
 title: "Relecture et approbation des vols"
-description: "Relire, corriger et approuver les vols détectés avant qu'ils entrent dans votre carnet."
+description: "Relire, corriger, approuver ou désapprouver les événements et les vols avant qu'ils entrent dans votre carnet."
 order: 4
 translationKey: app-review-approval
 updated: 2026-11-01
 draft: false
 ---
 
-Chaque vol détecté attend votre approbation avant d'entrer dans votre carnet. Vous le relisez, le corrigez au besoin, puis vous l'approuvez.
+Chaque vol et chaque événement détecté attend votre approbation avant d'entrer dans votre carnet. Vous le relisez, le corrigez au besoin, puis vous l'approuvez.
+
+## Avant d'approuver : ce qu'il faut savoir
+
+Tous les événements listés dans le tableau de bord attendent votre approbation. Ils doivent être approuvés pour figurer dans votre carnet de vol et dans votre temps de service.
+
+Si vous êtes membre d'une ou de plusieurs organisations qui utilisent PilotDuty Manager, vos événements y remontent une fois approuvés : l'app et le Manager partagent la même base.
+
+**Une fois approuvé :**
+
+- l'événement est verrouillé : vous ne pouvez plus le modifier ni le supprimer ;
+- pour le changer, désapprouvez-le d'abord, modifiez-le, puis approuvez-le de nouveau. Voir « Désapprouver un vol » plus bas.
+
+**Avec PilotDuty Manager :**
+
+- si un événement est modifié dans PilotDuty Manager, l'app reçoit la modification ;
+- si un événement est supprimé dans PilotDuty Manager, l'app le désapprouve, vous explique pourquoi et le remet dans le tableau de bord, parmi les éléments à approuver.
+
+Supprimez-le si la suppression était voulue, ou approuvez-le de nouveau si c'était une erreur.
+
+> Ce fonctionnement préserve l'intégrité et la traçabilité de vos données.
+
+> **Responsabilité du pilote.** L'app enregistre, mais vous restez responsable de ce qui entre dans votre carnet. C'est à vous de vérifier l'exactitude de toutes les données enregistrées automatiquement, en relisant et en approuvant chaque événement.
 
 ## Le tableau de bord
 
-Le tableau de bord (premier onglet, icône de compteur) est votre file d'approbation. Il liste par ordre chronologique les vols et les événements en attente. L'icône de l'onglet porte un badge avec le nombre d'éléments à traiter.
+Le tableau de bord (premier onglet, icône de compteur) est votre file d'approbation. Les éléments que vous n'avez pas encore relus y apparaissent sous « Awaiting Approval », par ordre chronologique. L'icône de l'onglet porte un badge avec le nombre d'éléments à traiter.
+
+![Tableau de bord « Awaiting Approval » avec un « Flight Event » du 28 mars, de 17 h 06 à 21 h 38, d'une durée de 4,5 heures](/docs-media/app/review-and-approval-awaiting-approval.png)
 
 Si le temps de service est activé, un sélecteur permet de passer des vols aux événements de service. Voir [Temps de service](/fr/docs/app/temps-de-service).
 
 Un vol en cours d'enregistrement ne peut être ni approuvé ni supprimé.
 
-## Glisser pour approuver ou supprimer
+## Approuver un vol ou un événement
 
-- Glissez un vol vers la droite pour l'approuver. L'app demande une confirmation.
-- Glissez-le vers la gauche pour le supprimer.
-- Touchez-le pour l'ouvrir et le modifier.
+1. Glissez le vol ou l'événement vers la droite.
+2. Touchez « Approve ». L'app demande une confirmation.
+
+![Événement glissé vers la droite, avec le bouton bleu « Approve » à gauche](/docs-media/app/review-and-approval-approve-event.png)
 
 Pour un vol suivi qui attend votre confirmation d'arrivée, le glissement vers la droite sert à le confirmer « safe ». Voir [Suivi de vol](/fr/docs/app/suivi-de-vol).
 
 Vous pouvez approuver sans réseau. Le vol est envoyé quand le réseau revient.
 
-L'app enregistre, mais vous restez responsable de ce qui entre dans votre carnet. Vérifiez chaque vol avant de l'approuver.
+## Supprimer un vol ou un événement
+
+1. Glissez le vol ou l'événement vers la gauche.
+2. Touchez « Delete ».
+
+![Événement glissé vers la gauche, avec le bouton rouge « Delete » à droite](/docs-media/app/review-and-approval-delete-event.png)
+
+Un vol détecté par erreur se supprime de cette façon.
+
+## Modifier un événement
+
+Touchez un événement pour l'ouvrir et voir ses détails. L'écran d'un événement de vol permet de modifier :
+
+- la date, l'heure et le fuseau horaire du début (« Event Start Date », « Start Time Zone ») ;
+- la date, l'heure et le fuseau horaire de la fin (« Event Stop Date », « Stop Time Zone ») ;
+- l'option d'acclimatation (« Time Zone Acclimatization Option ») : « Step Acclimatization » ou « 1h/day per TZ » ;
+- les remarques (« Remarks »).
+
+![Écran d'un événement : dates et fuseaux de début et de fin, option d'acclimatation, remarques et début de la liste des vols](/docs-media/app/review-and-approval-edit-event.png)
+
+Pendant l'enregistrement de l'événement, ses champs sont verrouillés. Dans l'écran d'un événement en cours, vous pouvez l'arrêter, le mettre en pause ou le reprendre.
+
+### La liste des vols
+
+Pour un événement de vol, la section « Flights » montre une vignette par vol (une par étape). Le bouton « Add Flight » ajoute un vol à l'événement : à la main, par ADS-B (PilotDuty Pro) ou par scan. Voir [Ajout manuel et scan ACARS](/fr/docs/app/ajout-manuel-et-scan-acars).
+
+![Écran d'un événement avec un seul vol dans la section « Flights », de CYBG à CYQB, et le bouton « Add Flight »](/docs-media/app/review-and-approval-event-flights.png)
+
+### Supprimer un vol de l'événement
+
+Glissez le vol vers la gauche, puis touchez « Delete ».
+
+![Vol glissé vers la gauche dans la liste de l'événement, avec le bouton rouge « Delete »](/docs-media/app/review-and-approval-delete-flight.png)
+
+Un vol en cours, ou lié au suivi de vol, ne peut pas être supprimé de son événement.
+
+### Modifier un vol de l'événement
+
+Touchez un vol pour le modifier. Voir « Modifier un vol » plus bas.
 
 ## Le score de confiance
 
@@ -47,7 +110,21 @@ Si le GPS a mal capté le moment d'une étape, l'app estime l'heure réelle et v
 
 ## Modifier un vol
 
-L'écran du vol permet de modifier :
+Touchez un vol pour l'ouvrir dans l'écran « Edit Flight ».
+
+En haut de l'écran, vous trouvez l'immatriculation et le type de l'avion (« Aircraft Info »), l'aérodrome de départ (« Departure Airport »), puis les heures de début du roulage (« Off Block Time »), de décollage (« Take Off Time ») et d'atterrissage (« Landing Time »), et ainsi de suite.
+
+![Écran « Edit Flight » : immatriculation C-FFFF, type C172, départ CYBG, heures de début du roulage, de décollage et d'atterrissage](/docs-media/app/review-and-approval-edit-flight-times.png)
+
+Plus bas, vous trouvez les détails du vol :
+
+- le type de vol (« Flight Type ») : IFR, nuit (« Night »), règle d'exploitation (« Operating Rule »), type de vol (par exemple « Cross Country ») et « Single Pilot » ;
+- le nombre de décollages et d'atterrissages (« Number of cycles ») ;
+- les caractéristiques de l'avion : catégorie, moteur et hélice.
+
+![Bas de l'écran « Edit Flight » : IFR, « Night », « Operating Rule », « Flight Type », « Single Pilot », nombre de cycles, catégorie, moteur et hélice](/docs-media/app/review-and-approval-edit-flight-details.png)
+
+En résumé, l'écran du vol permet de modifier :
 
 - les quatre heures (début du roulage, décollage, atterrissage, stationnement) ;
 - les aérodromes de départ et d'arrivée ;
@@ -67,15 +144,38 @@ Dans le carnet, le trombone d'un vol affiche ses pièces jointes et ses remarque
 
 ## Désapprouver un vol
 
-Pour corriger un vol déjà approuvé :
+Désapprouver un vol se fait en quelques gestes. Faites-le quand un vol ou ses détails doivent être corrigés, ou quand il doit être retiré du calcul de votre temps de service. Désapprouver un vol désapprouve tout son événement, avec tous les autres vols de cet événement.
 
-1. Dans le carnet, glissez le vol vers la gauche et désapprouvez-le.
-2. Indiquez la raison.
-3. Le vol revient dans la file d'approbation. Corrigez-le, puis approuvez-le de nouveau.
+### Étape 1 – Ouvrir le carnet de vol
 
-Désapprouver un vol renvoie tout son événement dans la file d'approbation, avec tous les vols qu'il contient.
+Touchez l'onglet du carnet de vol, dans la barre du bas.
 
-La désapprobation fonctionne aussi sans réseau ; elle s'applique au retour du réseau. Un vol venu de votre horaire de compagnie quitte le carnet et vous est proposé de nouveau à partir de l'horaire.
+### Étape 2 – Trouver le vol
+
+Repérez dans la liste le vol à désapprouver. Glissez-le vers la gauche : un bouton jaune « UnApprove » apparaît à droite du vol.
+
+### Étape 3 – Toucher « UnApprove »
+
+Touchez « UnApprove ». Un écran de confirmation vous demande la raison de la désapprobation.
+
+![Carnet de vol avec un vol glissé vers la gauche et le bouton jaune « UnApprove » à droite](/docs-media/app/review-and-approval-unapprove-flight.png)
+
+### Étape 4 – Indiquer la raison
+
+1. Entrez la raison dans la zone de texte.
+2. Touchez « Submit Reason » pour confirmer.
+
+> **Important.** Quand vous désapprouvez un vol, l'événement qui le contient et tous les vols de cet événement sont désapprouvés. L'événement désapprouvé se retrouve dans le tableau de bord, parmi les éléments à approuver. Corrigez-le, puis approuvez-le de nouveau.
+
+![Écran « You are about to disapprove an event, please provide the reason », avec la zone « Reason » et le bouton « Submit Reason »](/docs-media/app/review-and-approval-unapprove-reason.png)
+
+> Si vous avez désapprouvé un vol par erreur, approuvez-le de nouveau depuis le tableau de bord, parmi les éléments à approuver.
+
+### Bon à savoir
+
+- La désapprobation fonctionne aussi sans réseau ; elle s'applique au retour du réseau.
+- Un vol venu de votre horaire de compagnie quitte le carnet et vous est proposé de nouveau à partir de l'horaire.
+- Avec le temps de service, vous pouvez aussi désapprouver un événement depuis le détail d'un jour, dans l'onglet du temps de service. Voir [Temps de service](/fr/docs/app/temps-de-service).
 
 ## Historique des versions
 

@@ -1,6 +1,6 @@
 ---
 title: "Getting started"
-description: "Install PilotDuty, create your account and get the app ready for your first flight."
+description: "Install PilotDuty, go through the welcome flow step by step, check your iOS permissions and understand the app's screens."
 order: 1
 translationKey: app-getting-started
 updated: 2026-11-01
@@ -23,54 +23,368 @@ You can use the app on your own, without an organization.
 
 Download PilotDuty to your iPhone from the App Store. The app is available in English and French.
 
-## Create your account
+## The welcome flow, step by step
 
-The first time you open the app, a short welcome flow guides you. You create your account in one of three ways:
+The first time you open the app, a short welcome flow guides you. In a few steps, you set up your account, your aircraft and your preferences. The flow gets the app ready for automatic flight recording (with an iBeacon or GPS), flight-following text messages, and tracking of your flight, duty and rest time.
 
-- with an email address and a password (you must accept the terms of use);
-- with your Apple ID;
-- with your Google account.
+Whether you are a student pilot, a flight instructor or a professional pilot, PilotDuty adapts to the way you fly from day one.
+
+### Step 1 – Create your account
+
+You create your account in one of three ways:
+
+1. **“Sign Up with Email”.** Enter a valid email address and choose a password.
+2. **“Sign in with Apple”.** Quick and secure sign-up with your Apple ID.
+3. **“Sign in with Google”.** Sign-up with your Google account.
+
+With Apple or Google, you don't need to type an email address or a password.
+
+Before you continue, check the box to accept the Terms of Use and the Privacy Policy. This step is required for every sign-up method. Then tap the method you prefer to move on to the next step.
+
+![“Welcome” screen: email and password fields, the terms checkbox checked and outlined, and the “Sign Up with Email”, “Sign in with Apple” and “Sign in with Google” buttons](/docs-media/app/getting-started-sign-up.png)
 
 If your email address already has an account, the app switches to sign-in on its own.
 
 If you belong to an organization, use the same account as in PilotDuty Manager. The app and Manager share the same database.
 
-## Choose your setup
+### Step 2 – Choose your setup
 
 The app then asks how you plan to record your flights:
 
-- **With an aircraft.** You say where the aircraft comes from: your organization's aircraft, an aircraft with a beacon, or an aircraft without one. You can also say that your beacon hasn't arrived yet, or that you need one. The app takes you to the right step: picking an organization aircraft, adopting the beacon, or setting up the aircraft. An annual subscription includes a free beacon; see [iBeacon](/en/docs/app/ibeacon).
+- **With an aircraft.** The next steps help you set up the aircraft, with or without a beacon.
 - **With your airline roster.** You connect the iCal link your employer provides. This choice requires PilotDuty Pro. See [Airline roster](/en/docs/app/airline-roster).
-- **Later.** You skip this step and set up the app whenever you like.
+- **Later.** You skip the aircraft setup and do it later from the Aircraft tab (airplane icon).
 
-## Grant permissions
+### Step 3 – Allow location access
 
-To record your flights, the app asks for three permissions:
+For automatic recording to work, the next screen asks for access to your location.
 
-- **Location.** Choose “Always”: the app must follow your position in the background, even with the screen locked. Also leave “Precise Location” on. With an approximate location, the app cannot detect your flights. Your position lets the app recognize the aircraft's zone, time each step of the flight from your speed, locate the takeoff and landing, and tell whether the flight was by day or by night.
-- **Motion.** The app uses the iPhone's motion sensors to recognize taxiing more reliably. Without this permission, it relies on GPS alone.
-- **Notifications.** The app lets you know, for example, when a memo arrives or when it has rebuilt a flight.
+PilotDuty uses your location for several features that automate your logbook:
+
+- **Finding nearby aircraft.** With an iBeacon installed in the aircraft, the app detects that you are on board and starts tracking.
+- **Locating your takeoff and landing.** Your position lets the app log the aerodromes or coordinates on its own.
+- **Working out flight times from your speed.** The app recognizes the phases of flight (taxi, airborne, landing) from changes in GPS speed.
+- **Telling whether the flight is by day or by night.** This matters for some regulatory requirements and for an accurate logbook.
+
+At the bottom of the screen, tap “Allow”. Then choose “Always”: the app must follow your position in the background, even with the screen locked. Also leave “Precise Location” on. With an approximate location, the app cannot detect your flights. This permission is required for PilotDuty's core features.
+
+![“Location” screen of the welcome flow, with the four reasons for location access and the “Allow” button](/docs-media/app/getting-started-location-permission.png)
+
+### Step 4 – Allow notifications
+
+PilotDuty then asks for permission to send you notifications. They keep you informed and help make sure your flights are recorded, even when the app isn't on screen:
+
+- **With an iBeacon:** if iOS detects your aircraft while the app isn't running in the background, PilotDuty asks you to reopen the app so tracking can resume.
+- **With a subscription:** when you land, PilotDuty asks you to confirm your arrival to your flight follower. See [Flight following](/en/docs/app/flight-following).
+
+The app also lets you know, for example, when a memo arrives or when it has rebuilt a flight.
+
+Tap “Allow” to grant the permission. That way you won't miss important updates about your flights or arrival confirmations.
+
+![“Notifications” screen of the welcome flow, with the two notification cases and the “Allow” button](/docs-media/app/getting-started-notifications-permission.png)
+
+### Step 5 – Allow motion access
+
+The app uses the iPhone's motion sensors to recognize taxiing more reliably. Without this permission, it relies on GPS alone.
 
 If you chose the airline roster, the app only asks for notifications. A screen is skipped if you have already answered that question.
 
-You can change these permissions later in iOS Settings. The app shows their status in its general settings. See [Settings and feedback](/en/docs/app/settings-and-feedback).
+### Step 6 – Say where your aircraft comes from
 
-### Checking your permissions
+If you chose to record your flights with an aircraft, the app asks where it comes from and whether you have an iBeacon:
 
-Without these permissions, the app can't run in the background and may miss your flights. Check them before your first flight:
+- **Your organization's aircraft.** You pick the aircraft from your organization's list. The app takes over its setup. See [With your organization](/en/docs/app/with-your-organization).
+- **Aircraft with a beacon.** A beacon is already installed in your aircraft and you are ready to pair it with the app.
+- **Beacon ordered, not yet received.** You are waiting for delivery. You can adopt the beacon later, once it arrives.
+- **I need a beacon.** You don't have one yet but want one for fully automatic recording. An annual subscription includes a free beacon; see [iBeacon](/en/docs/app/ibeacon).
+- **Aircraft without a beacon.** You prefer not to use a beacon: you will start and stop your flights yourself in the app. See [Automatic recording](/en/docs/app/automatic-recording).
 
-1. In the app, open the Settings tab, then the general settings. The permission status shows whether each permission is granted.
-2. If a permission is missing, open the iOS Settings app, then PilotDuty. On recent versions of iOS, PilotDuty is listed under Apps.
-3. Tap Location, choose “Always” and leave “Precise Location” on.
+Tap “Next” to continue. The app takes you to the right step: picking an organization aircraft, adopting the beacon, or setting up the aircraft.
+
+![Earlier “Aircraft Configuration” screen of the welcome flow: “Do you have an iBeacon?”, with “Yes” checked and the “Next” button](/docs-media/app/getting-started-aircraft-choice.png)
+
+### Step 7 – Adopt the beacon and link it to the aircraft
+
+If your aircraft has a beacon, the app offers to pair it with that aircraft.
+
+1. Enter the aircraft's registration (“CallSign”, for example C-FFFF) and its type (“Aircraft Type”, for example C172).
+2. Bring your iPhone close to the beacon. When the app detects it nearby (“Near”), tap “Adopt Nearest iBeacon”: the beacon is now linked to the aircraft you just described. A message at the top of the screen reminds you: “Press the 'Adopt Nearest iBeacon' button to pair it with the desired aircraft”.
+3. If the screen asks for the beacon's identifiers instead, enter its UUID, major and minor.
+4. Tap “Next” once the beacon is adopted, or “Back” to return to the previous step.
+
+This step assigns each beacon to a single aircraft, so detection is reliable on your future flights.
+
+![Adoption screen: registration C-FFFF, type C172, beacon detected “Near” and the orange “Adopt Nearest iBeacon” button](/docs-media/app/getting-started-ibeacon-adoption.png)
+
+### Step 8 – Set up the aircraft
+
+Once the beacon is paired and the aircraft named, the app asks for its technical characteristics.
+
+“Aircraft Type” section:
+
+- **“Aircraft Type Category”.** The landing gear configuration, for example “Tricycle Train”.
+- **“Engine Type”.** The engine configuration, for example “Mono Piston”.
+- **“Propeller Type”.** Fixed pitch (“Fixed pitch”), variable pitch or another configuration.
+
+A picture of the aircraft adapts to your choices to help you check them.
+
+“Common Use” section:
+
+- **IFR.** Turn this switch on if the aircraft is equipped and approved for instrument flight.
+- **“Single Pilot”.** Turn it on if the aircraft is usually flown by one pilot.
+
+This information is used to fill in the flights recorded with this aircraft and to adapt recording to its actual characteristics. Tap “Next” to continue, or “Back” to review the previous steps.
+
+![“Aircraft Configuration” screen: “Tricycle Train” category, “Mono Piston” engine, “Fixed pitch” propeller, IFR and “Single Pilot” switches](/docs-media/app/getting-started-aircraft-configuration.png)
+
+### Step 9 – Choose a plan
+
+The welcome flow then presents the plans, so you can pick one that suits the way you fly.
+
+PilotDuty is free, but limited to 3 flights per month and to the basic features. An annual PilotDuty+ or PilotDuty Pro subscription includes a free iBeacon in the first year, for fully automatic recording, on top of the subscription's other features.
+
+You can choose:
+
+- **an annual subscription with a free beacon**, the best choice if you fly often;
+- **a monthly subscription**, if you prefer to pay month to month;
+- **free use**, limited to 3 flights per month and the basic features, ideal for getting to know the app or if you fly rarely.
+
+If you choose a subscription, two plans are offered:
+
+- **PilotDuty+**: unlimited flights, automatic flight-following text messages, logbook export to PDF or CSV.
+- **PilotDuty Pro**: everything in PilotDuty+, plus tracking of flight, duty and rest time, and tracking of the validity of your medical, licenses and competencies.
+
+Tap “Subscribe” to confirm the plan you chose. “Redeem Code” lets you use a code, and “Restore Subscription” restores a subscription you already bought on the App Store.
+
+> Your subscription renews automatically unless you cancel it in your Apple ID settings.
+
+Prices are on the [Pricing](/en/pricing) page. The plans are detailed in [Subscriptions](/en/docs/app/subscriptions).
+
+### Step 10 – Enter your shipping address
+
+With a first annual subscription, you receive a free iBeacon. So that it can be sent to you, enter your shipping address:
+
+- “Address (Line 1)”, required;
+- “Address (Line 2, optional)”, for an apartment, suite or unit number;
+- “City”, required;
+- “Postal Code”, required;
+- “Country”, required.
+
+The “Next” button becomes active once all required fields are filled in. If you skip this step, a dashboard banner reminds you later that the address is missing.
+
+![“Shipping Address” screen: address, city, postal code and country fields, and the “Next” button](/docs-media/app/getting-started-shipping-address.png)
+
+### Step 11 – Enter your pilot information
+
+The last screen personalizes your pilot profile: license, ratings and preferences.
+
+Required field:
+
+- **“Full Name”.** Your name as you want it to appear in the app and in your reports.
+
+Optional settings:
+
+- **“Total Flight Time”.** Your total flight hours before PilotDuty. That total is the starting point of your career total.
+- **“Professional license”.** Turn it on if you hold a commercial or airline transport license.
+- **“IFR Rated”.** Turn it on if you hold an instrument rating.
+- **“Multi Engine Rated”.** Turn it on if you are rated on multi-engine aircraft.
+- **“Float Rated”.** Turn it on if you hold a seaplane rating.
+- **“Instructor Rated”.** Turn it on if you are a flight instructor.
+- **“Use local time”.** Choose whether times are shown in local time rather than UTC by default.
+
+A message below the form reminds you that the Settings tab offers a more detailed setup. For example, you can break down your initial hours there; see [Settings and feedback](/en/docs/app/settings-and-feedback).
+
+Tap “Go to the app” to finish the welcome flow and open the app. You then receive a welcome email.
+
+![“Pilot informations” screen: name John Dow, 300 hours total, license and rating switches, “Use local time” and the “Go to the app” button](/docs-media/app/getting-started-pilot-information.png)
+
+### Welcome flow complete
+
+You're all set. Your account is set up, your aircraft is paired (if you use a beacon) and your pilot profile is filled in. From automatic detection of your taxi, takeoff, landing and parking times to logbook export and duty time tracking, PilotDuty is ready to follow you.
+
+> **Important.** Before your first flight, check your location and notification permissions in the Settings tab, under General. PilotDuty needs location set to “Always” and notifications turned on to work reliably in the background, especially to detect your flights with a beacon. See the next section.
+
+You can always fine-tune your preferences in the Settings tab.
+
+## Checking your iOS permissions
+
+To get the most out of automatic recording, GPS tracking and beacon detection, PilotDuty needs the right permissions on your iPhone. Without them, the app can't run in the background or detect your flights accurately. Follow these steps so PilotDuty works even when your phone is in your pocket or locked.
+
+### Step 1 – Open the app's general settings
+
+1. Open PilotDuty.
+2. Tap the Settings tab (last tab, gear icon).
+3. Choose General.
+
+At the top of the screen, the “Authorization Status” section shows the permissions granted to the app.
+
+![PilotDuty general settings: “Autorisation Status” section with location “Restricted/Denied”, notifications “Denied” and the “Open app settings” button](/docs-media/app/getting-started-general-settings-permissions.png)
+
+### Step 2 – Check location and notifications
+
+**Location**
+
+- It is essential for background tracking.
+- It must not say “Restricted” or “Denied”.
+- If it does, tap “Open app settings” to fix it directly in iOS.
+
+**Notifications**
+
+- They should be on, so you receive tracking alerts and app messages.
+- If they show “Denied”, open iOS Settings to turn them on.
+
+> For tracking to work in the background, location must be set to “Always” in iOS. PilotDuty can then detect the aircraft over Bluetooth (iBeacon) and log its movements with GPS, even when the app isn't on screen.
+
+### Step 3 – Open iOS Settings for PilotDuty
+
+To change a permission by hand:
+
+1. Open your iPhone's Settings app.
+2. Scroll down and tap PilotDuty. On recent versions of iOS, PilotDuty is listed under Apps.
+
+This is where you adjust location and notifications.
+
+![iOS Settings for PilotDuty: Location set to “Always”, Notifications, Background App Refresh and Cellular Data](/docs-media/app/getting-started-ios-settings-pilotduty.png)
+
+### Step 4 – Set location access to “Always”
+
+1. Tap Location.
+2. Choose “Always”.
+3. Leave “Precise Location” on, so GPS tracking is accurate.
+
+With “While Using the App” or “Never”, the app can't detect your flights in the background or log them on its own. With “Always”, your logbook fills in as you fly, without you having to open the app.
 
 ![iOS location settings for PilotDuty, with “Always” selected and “Precise Location” turned on](/docs-media/app/getting-started-ios-location-always.png)
 
-4. Turn on Motion & Fitness.
-5. Tap Notifications and turn on “Allow Notifications”.
+### Step 5 – Turn on notifications
 
-## Your profile
+1. In the same menu, tap Notifications.
+2. Turn on “Allow Notifications”.
+3. Turn on alerts, sounds and badges as needed, so you don't miss reminders or safety alerts.
 
-The welcome flow also presents the plans. The last step asks for your name, your ratings (CPL, IFR, multi-engine, seaplane, instructor) and your total hours before PilotDuty. That total is the starting point of your career total. You can break it down later; see [Logbook](/en/docs/app/logbook). You then receive a welcome email.
+![iOS notification settings for PilotDuty, with “Allow Notifications” on, alerts, sounds and badges](/docs-media/app/getting-started-ios-notifications.png)
+
+### Step 6 – Allow motion access
+
+Also turn on Motion & Fitness. It helps the app recognize taxiing.
+
+### Why permissions matter
+
+PilotDuty uses Bluetooth Low Energy (BLE) and GPS to detect the aircraft and log time on its own. Whether you have an iBeacon in the aircraft or rely on GPS alone, the app has to run in the background.
+
+Without the right permissions, you may get:
+
+- missed flights or steps (takeoff, landing);
+- incomplete duty and rest time tracking;
+- an inaccurate logbook.
+
+For safety and an accurate logbook, keep your permissions up to date.
+
+> **Final tip.** If you turn off “GPS Tracking” in the app's general settings, PilotDuty stops logging your flights. This is only useful when you aren't flying, for example on vacation. Keep it on the rest of the time.
+
+## Understanding the screens
+
+The tab bar at the bottom gives access to five tabs: Dashboard, Logbook, Aircraft, Duty and Settings. The screenshots below were taken in 2025, before the Aircraft tab was added.
+
+### The badge on the app icon
+
+A badge may appear on the PilotDuty icon. It is linked to the zones the app monitors, called detected regions:
+
+- aircraft;
+- the work or rest areas set up in the app.
+
+PilotDuty uses these zones to detect on its own when you arrive in a monitored zone and when you leave it.
+
+If the detected zone is an aircraft, GPS tracking starts on its own to log:
+
+- the start of taxi (off-block);
+- the takeoff time;
+- the landing time;
+- the arrival at parking (on-block).
+
+The app also picks the nearest airport and works out whether the flight took place by day or by night.
+
+You don't need to do anything. The badge simply shows that the app is monitoring your position to track your flights and duty. If the number stays high or looks wrong:
+
+1. open the app so it can refresh the detected regions;
+2. check the Dashboard or the Settings tab;
+3. make sure Location Services are on.
+
+![PilotDuty icon on the iPhone home screen, with a red “1” badge](/docs-media/app/getting-started-app-icon-badge.png)
+
+### The dashboard
+
+The Dashboard (first tab, speedometer icon) lists the events and flights, recorded automatically or by hand, that are waiting for your approval. Each block is one event.
+
+![Annotated dashboard: aircraft state, validity status, number of flights, event type, start and stop times, duration, “+” button, event actions and the tab badge](/docs-media/app/getting-started-dashboard-explained.png)
+
+- **Number of events to approve.** The red badge on the Dashboard tab shows how many items need your attention (approval or deletion).
+- **Type of event.** The label, such as “Flight Event”, tells you what kind of activity was recorded: flight, work or rest.
+- **Number of flights in the event.** This number, for example 1, shows how many flights are grouped in the event.
+- **Start and stop times.** They show when the event started and ended.
+- **Duration.** The event's total duration, in hours.
+- **Medical, license and competency validity.** With PilotDuty Pro, the button at the top left shows how many days are left before the first of your documents (medical, license or competency) expires, for example 62. When a memo from your organization needs your attention, it shows an envelope and a counter instead. See [Pilot health](/en/docs/app/pilot-health).
+- **Aircraft state.** While recording, a bar shows the state of the tracked aircraft: parked (“Parked”), taxiing (“Taxiing”) or flying (“Flying”). This is useful when several aircraft are tracked.
+- **Adding by hand.** Tap “+” to add a flight, or a work, flight or rest event, that was missed or needs correcting. See [Manual entry and ACARS scan](/en/docs/app/manual-entry-and-acars-scan).
+- **Event actions.** Swipe an event to the right to reveal the blue “Approve” button: it confirms the event and adds it to your logbook. Swipe it to the left to reveal the red “Delete” button: it deletes the event permanently. A red background means flight following is active and the flight is in progress or waiting for your “Safe” confirmation.
+
+See [Review and approval](/en/docs/app/review-and-approval).
+
+### The logbook
+
+The Logbook tab shows your personal logbook: the detailed list of your approved flights and your total flight time.
+
+![Annotated logbook: pilot name, total hours, “Logbook summary” button, “Export” button, date picker, day filters and the yellow “UnApprove” button](/docs-media/app/getting-started-logbook-explained.png)
+
+- **Pilot name.** Your name appears at the top of the screen: this logbook is yours.
+- **Total flight time.** The cumulative total of your approved flights, plus your initial hours.
+- **Logbook summary.** Tap “Logbook summary” for a breakdown of your hours by category (day and night, PIC, aircraft type, and so on).
+- **Range shown.** Choose the last day, the last 7 or 30 days, or all flights. The date button next to it shows the flights of a specific date.
+- **Export.** Tap the export button to create and share your logbook as a PDF or CSV file, for example as a backup or for your operator. Export requires a PilotDuty+ or PilotDuty Pro subscription.
+
+The logbook also offers filters, sorting and a flight map. See [Logbook](/en/docs/app/logbook).
+
+**The flight card**
+
+Each card sums up one flight:
+
+- flight time and air time, with the times of off-block, takeoff, landing and on-block;
+- the flight date;
+- the departure and arrival aerodromes;
+- when the flight took place (day or night);
+- the flight rules (VFR, IFR, multi-IFR, multi-VFR);
+- the aircraft type;
+- the registration;
+- your role, for example pilot in command (PIC).
+
+![Annotated flight card: off-block, takeoff, landing and on-block times, flight and air time, date, aerodromes, day or night, flight rules, type, registration and pilot status](/docs-media/app/getting-started-flight-widget-explained.png)
+
+**Unapproving a flight**
+
+If you notice a mistake in a flight, swipe it to the left and tap “UnApprove”. The flight goes back to the Dashboard, with the items awaiting approval.
+
+> **Important.** All flights in the same event are unapproved together. You can then edit or delete them from the Dashboard. See [Review and approval](/en/docs/app/review-and-approval).
+
+### The Duty tab
+
+The Duty tab helps you follow your flight time, duty time and rest periods over several days, against the limits of the regulation template you chose. It requires PilotDuty Pro and the “Duty (Beta)” setting turned on. See [Duty time](/en/docs/app/duty-time).
+
+![Annotated Duty tab: period picker, color legend, event types, times and durations, acclimatized time zone, rest, flight and duty curves, limits and rest day](/docs-media/app/getting-started-duty-explained.png)
+
+- **Period shown.** At the top, choose how much to show: 24 h, 7 days, 28 or 30 days, 90 days or 365 days.
+- **Color legend.** Rest (“Rest”, green), flight time (“FT”, purple), duty time (“ST”, grey), flight time limit (“FLmt”, beige) and duty time limit (“SLmt”, red).
+- **Event types.** The icons on the left show each event's type: flight, rest or work.
+- **Times and duration.** Each event shows its start time, its stop time and its total duration.
+- **Acclimatized time zone.** The time zone offset you are acclimatized to, adjusted from your recent locations and time zones.
+- **Rest time.** The time recorded as rest in the selected period.
+- **Flight time.** The day's total flight time.
+- **Flight time limit.** It shows where you stand against the flight time limit of the template you chose.
+- **Duty time.** Your total duty time, including flights and other duties.
+- **Duty time limit.** It shows whether you are nearing, or have reached, the maximum duty time set by the template you chose.
+- **Number of flights in the event.** The red badge shows how many flights the event groups.
+- **Rest day.** A label such as “Day Off” means no duty activity was recorded that day: it is a full rest day.
+
+> This view gives you and your organization reference points. It doesn't replace the regulations or your operator's rules: always check your limits in the official texts.
 
 ## The free version limit
 

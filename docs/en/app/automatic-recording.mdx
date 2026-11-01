@@ -1,24 +1,40 @@
 ---
 title: "Automatic flight recording"
-description: "How the app detects your flights, what it records and how to help it work well."
+description: "How the app creates your events and flights, what it records, how to set the parking time limit and how to help it work well."
 order: 2
 translationKey: app-automatic-recording
 updated: 2026-11-01
 draft: false
 ---
 
-PilotDuty records your flights without you touching the app. It recognizes taxi, takeoff, landing and parking, then places the flight in your approval queue.
+PilotDuty records your flights without you touching the app. Once your aircraft are set up and tracking is on, it monitors your activity: it recognizes taxi, takeoff, landing and parking, then places the flight in your approval queue.
+
+## Events and flights
+
+The app automatically creates **events** when you enter or leave a tracked zone. There are three types of events:
+
+- **Flight event.** Created when the app detects that you entered an aircraft's zone. A flight event contains one or more **flights**, with all their details: start of taxi (off-block), takeoff, landing, arrival at parking (on-block), aircraft information, and so on.
+- **Work event.** With PilotDuty Pro. Created when you enter a work area (iBeacon or GPS zone) and you are not flying.
+- **Rest event.** With PilotDuty Pro. Created when you enter a rest area (iBeacon or GPS zone), usually during your off-duty time.
+
+> Aircraft zones always come first. With duty time turned on, if a flight event starts because you entered an aircraft's zone but you don't fly, the app converts it into a work event.
+
+Every event then waits for your approval on the Dashboard. See [Review and approval](/en/docs/app/review-and-approval).
 
 ## Tracked zones
 
-The app starts following your activity when your iPhone enters a tracked zone, and stops when it leaves. There are two kinds of zones:
+The app starts following your activity when your iPhone enters a tracked zone, and stops when it leaves. Aircraft zones come in two kinds:
 
 - **An aerodrome.** A zone around the aerodrome, located by GPS.
 - **An aircraft fitted with an iBeacon.** The app knows you are on board when it picks up the beacon. Beacon-triggered recording requires a PilotDuty+ or PilotDuty Pro subscription. See [iBeacon](/en/docs/app/ibeacon).
 
-Your aircraft and zones are in the Aircraft tab (airplane icon).
+An aircraft without a beacon can also be set up for manual start. See below.
 
-Only one zone is active at a time. When several apply, an iBeacon comes before GPS. With duty time turned on, if a flight event starts because you entered an aircraft's zone but you don't fly, the app converts it into a work event. See [Duty time](/en/docs/app/duty-time).
+With PilotDuty Pro and duty time turned on, you can also define a work area and a rest area. See [Duty time](/en/docs/app/duty-time).
+
+Your aircraft and aircraft zones are in the Aircraft tab (airplane icon). To add one, see [Adding an aircraft](/en/docs/app/ibeacon).
+
+Only one zone is active at a time. When several apply, an iBeacon comes before GPS, and an aircraft zone comes before a work area, which comes before a rest area. These zones require location set to “Always”.
 
 ## The steps recorded
 
@@ -29,17 +45,56 @@ In an aircraft's zone, the app follows your GPS speed and notes four times:
 3. landing;
 4. arrival at parking (on-block).
 
-The flight's durations are calculated from these times. The app also notes the GPS positions of the takeoff and landing when they are accurate enough. They are used to draw the flight on the logbook map.
+The flight's durations are calculated from these times. The app also picks the nearest aerodrome and works out whether the flight took place by day or by night. It notes the GPS positions of the takeoff and landing when they are accurate enough. They are used to draw the flight on the logbook map.
 
 While recording, the dashboard shows a progress bar and the zone's name. The flight in progress appears with an animated indicator and running timers.
 
-Once the aircraft is parked, the app waits for a set delay before closing the flight. This delay is in seconds; the welcome flow sets it to 30 seconds. Until it has passed, the flight stays open. You can adjust it in the general settings. The flight then joins the approval queue, with its confidence score. See [Review and approval](/en/docs/app/review-and-approval).
+Once the aircraft is parked, the app waits for the parking time limit before closing the flight. The flight then joins the approval queue, with its confidence score. See [Review and approval](/en/docs/app/review-and-approval).
+
+## Setting the parking time limit
+
+The parking time limit (“Parking time limit”) keeps a flight from being split into several entries during a short stop or a touch-and-go. With it, PilotDuty keeps logging a single flight when the aircraft stops briefly and is quickly airborne again.
+
+### What the limit does
+
+It is a threshold, in seconds, that you choose. It sets how long the aircraft can stay stopped before PilotDuty ends the current flight and starts a new one.
+
+- If the aircraft is stopped for **less** than the limit, the current flight continues.
+- If the aircraft is stopped for **longer** than the limit, a new flight is created.
+
+> Example: with a limit of 30 seconds, any stop shorter than 30 seconds does **not** create a new flight.
+
+![Touch-and-go diagram: the aircraft lands, stops briefly on the runway during the parking time limit, then takes off again](/docs-media/app/automatic-recording-parking-time-limit-touch-and-go.png)
+
+In this example, the aircraft lands, stops briefly and takes off again. If the stop is shorter than the parking time limit, the app logs a single flight.
+
+### Setting the limit
+
+1. Tap the Settings tab (gear icon).
+2. Choose General.
+3. Scroll down to “Flight overlap threshold (in seconds)”.
+4. Enter the value you want in “Parking time limit”.
+
+The welcome flow sets this limit to 30 seconds.
+
+![General settings: an arrow points down to the “Flight overlap threshold” section and the “Parking time limit” field set to 30](/docs-media/app/automatic-recording-parking-time-limit-setting.png)
+
+### Best practices
+
+- For **training circuits** or **touch-and-go exercises**, increase the limit, for example to 60 seconds.
+- For **commercial operations**, keep the default, for example 30 seconds, to separate flights clearly.
+
+> With PilotDuty Pro: this setting only applies to flights detected in aircraft zones. It does not affect work or rest area events.
+
+The parking time limit gives you control over how flights are logged during short stops. Adjust it to your flying to reduce manual corrections in your logbook.
 
 ## Without a network
 
 Detection works without a network: the flight is saved on your iPhone, then sent to the server when you approve it and a connection is available. Flight following and text messages to your follower do need a network.
 
-## Starting and stopping a session by hand
+## Aircraft without a beacon: starting and stopping a session by hand
+
+If you don't use a beacon, set up the aircraft with the “User initiated” initiator in the Aircraft tab. See [Adding an aircraft](/en/docs/app/ibeacon). You then start and stop your flights yourself.
 
 For an aircraft set up for manual start, the dashboard shows a start button:
 
@@ -51,10 +106,10 @@ This button only appears if at least one of your aircraft is set up for manual s
 
 ## Tips
 
-- **Keep location on “Always”** and leave “Precise Location” on in iOS Settings.
+- **Keep location on “Always”** and leave “Precise Location” on in iOS Settings. See [Getting started](/en/docs/app/getting-started).
 - **Allow Motion access.** It helps the app tell taxiing from stopping. Without it, the app relies on GPS alone.
 - **Don't force-quit the app**, meaning don't swipe it away in the app switcher, especially before or during a flight. The app has to stay active in the background to follow the flight.
-- **Check that tracking is on** in the app's general settings.
+- **Check that tracking is on** (“GPS Tracking”) in the app's general settings.
 - **Read the dashboard banner.** It flags anything that can get in the way of recording: GPS, network, permissions, Low Power Mode, an available update. Tap it to see what to do.
 
 ## If a flight is missing or looks wrong
@@ -62,4 +117,4 @@ This button only appears if at least one of your aircraft is set up for manual s
 - You can add a missed flight by hand, or read it from a cockpit screen with the camera. See [Manual entry and ACARS scan](/en/docs/app/manual-entry-and-acars-scan).
 - With PilotDuty Pro, the app can recover a flight from ADS-B data. See [ADS-B recovery](/en/docs/app/ads-b-recovery).
 - If GPS missed the moment of a step, the app may suggest an estimated time during review.
-- A flight detected by mistake can be deleted with a swipe in the approval queue.
+- A flight detected by mistake can be deleted with a swipe to the left in the approval queue.

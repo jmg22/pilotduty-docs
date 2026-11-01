@@ -7,24 +7,49 @@ updated: 2026-11-01
 draft: false
 ---
 
-Flight following lets someone know about your takeoffs and arrivals. There are two separate kinds: by text message, to a person you choose, and in PilotDuty Manager, for your organization.
+Flight following is a safety feature: it automatically shares your flight status with a person or a system you choose. That way, someone is always aware of your flight activity, in case of emergency or delay.
 
-Both are set in the Settings tab, on the flight following row. A dot on that row shows your coverage status.
+There are two separate kinds:
+
+- by text message, to a person you choose;
+- in PilotDuty Manager, for your organization.
+
+Both are set in the Settings tab, on the “Flight Following” row. A dot on that row shows your coverage status.
 
 ## Text message following
 
 With PilotDuty+ or PilotDuty Pro.
 
-Your follower receives text messages at key moments of the flight. They don't need the app.
+Once turned on, this feature automatically sends text messages to your follower at key moments of your flight. Your follower doesn't need the app.
+
+### How it works
+
+- **Takeoff.** A text message is sent when you take off.
+- **Landing.** A text message is sent when you land. Once your aircraft has been parked longer than the parking time limit (“Parking time limit”), confirm your arrival as safe in the app: your follower receives the arrival confirmation. The steps are further down, in the section on safe confirmation.
+- **Delay.** If you don't confirm your arrival after landing, your follower receives a delay alert, with your position.
+
+The parking time limit is set in the general settings. See [Automatic recording](/en/docs/app/automatic-recording).
 
 ### Setting up your follower
 
-1. Enter your follower's name and phone number, in international format.
-2. Ask for their consent, then confirm in the app that you have it. This confirmation is required for each new number. Nothing is checked in advance.
-3. Choose which messages to send: takeoff, landing, delay.
-4. Turn following on. The app asks for permission to send notifications.
+1. Open the Settings tab.
+2. Tap “Flight Following”.
+3. Enter your follower's name, then their mobile number: choose the country code (“Country Code”) and enter the number. It must be valid in international format.
+4. Ask your follower for their consent, then confirm in the app that you have it. This confirmation is required for each new number. Nothing is checked in advance.
+5. Choose which messages to send: takeoff, landing, delay.
+6. Turn on “Enable SMS Flight Following”. The app asks for permission to send notifications.
 
 Once you confirm consent, your follower receives a welcome message.
+
+![The “Flight Following” settings: the “Enable SMS Flight Following” switch, the country code and the follower's mobile number](/docs-media/app/flight-following-sms-settings.png)
+
+This screenshot dates from 2025. The current screen also asks for the follower's name, their consent and the messages to send.
+
+Sample messages, as sent in 2025 (the wording may have changed since):
+
+> At takeoff: “John Dow took off from CYQB at 2025-02-28 10:42 GMT -5 with C-FFFF.”
+
+> At landing: “John Dow landed at CYBG at 2025-02-28 11:42 GMT -5 with C-FFFF.”
 
 ### The messages
 
@@ -48,34 +73,102 @@ A follower who replies STOP no longer receives messages. You can't turn followin
 
 A dashboard banner may also flag a coverage problem. Tap it to open the flight following settings.
 
-## Confirming your arrival as safe
-
-After landing, a followed flight waits for your arrival confirmation on the dashboard. Swipe it to the right and tap “Safe”. You can also confirm it from the event's screen by swiping the flight to the right.
-
-A flight linked to flight following can't be deleted from its event.
-
 ## Following in PilotDuty Manager
 
 For members of an organization that subscribes to PilotDuty Manager.
 
-Turn on the PilotDuty Manager flight following setting. Without a subscribed organization, this setting is turned off. You must be signed in to your account.
+PilotDuty Manager is a web platform that lets operators follow several aircraft in real time. This kind of following suits operators who manage several pilots or aircraft.
 
-- At takeoff, the app creates the flight's tracking record. It then adds milestones to it, such as taxi, takeoff, landing and parking, each with its time, position, altitude and heading.
+![Flight following in PilotDuty Manager in 2025: counters by status and two C-FFFF flights with their milestones (names blurred)](/docs-media/app/flight-following-manager-view.webp)
+
+This Manager screenshot dates from 2025. Today, tracking shows on the Flightsheet. See [Flight following in Manager](/en/docs/manager/flight-following).
+
+### How it works
+
+Once this option is on, the app automatically sends Manager:
+
+- the flight's milestones: leaving the gate and start of taxi, takeoff, landing, arrival at parking;
+- the time of each milestone;
+- the aircraft identification;
+- the altitude, heading and position.
+
+The app detects these milestones with the iPhone's GPS:
+
+- **Off-block (“offBlock”)**: when the aircraft starts taxiing.
+- **Takeoff (“Takeoff”)**: when the speed goes above a threshold.
+- **Landing (“Landing”)**: when the aircraft touches the ground and slows down.
+- **On-block (“onBlock”)**: when the aircraft is parked and no longer moving.
+
+These milestones show with their time and position in Manager. Your organization sees the flight there with a status and a color: blue while preparing, orange in flight, red once landed without confirmation, green once the arrival is confirmed as safe.
+
+### Turning on following in Manager
+
+1. Open the Settings tab.
+2. Tap “Flight Following”.
+3. Turn on “Enable flight Following on PilotDuty Manager”.
+
+> The app must be signed in to your PilotDuty account, the same one as in Manager. See [With your organization](/en/docs/app/with-your-organization). Without a subscribed organization, this setting is turned off.
+
+![The “Flight Following” settings, with an arrow pointing to the “Enable flight Following on PilotDuty Manager” switch](/docs-media/app/flight-following-manager-setting.png)
+
+### What your organization sees
+
+- At takeoff, the app creates the flight's tracking record, then adds the milestones to it.
 - If the network drops during the flight, the milestones are sent once the connection is back.
 - Your organization follows the flight in Manager: flight sheet, map and delay alerts. See [Flight following in Manager](/en/docs/manager/flight-following).
 - The tracking is visible in Manager even before you approve the flight.
 - Until you confirm your arrival, your flight shows in red in Manager, with a timer running since landing.
-- The flight is marked as arrived when you confirm it as safe. At your next takeoff, the app also confirms the previous flight. Staff with the Instructor role or higher can also confirm it from Manager.
+- The flight is marked as arrived when you confirm it as safe. Staff with the Instructor role or higher can also confirm it from Manager.
 
-Manager following doesn't depend on text message following. You can turn on either one, or both.
+Manager following doesn't depend on text message following. You can turn on either one, or both at the same time.
 
 ### Use the right registration
 
-Manager links your flight to your organization through the aircraft's registration. It must match an aircraft of your organization exactly, for example C-FFFF with its hyphen. Otherwise, your flight may not show on your organization's flight sheet.
+Manager links your flight to your organization through the aircraft's registration. It must be complete, in capital letters and identical in the app and in Manager, for example C-FFFF with its hyphen. Otherwise, your flight may not show on your organization's flight sheet.
 
 - The simplest way is to pick the aircraft from your organization's list. See [With your organization](/en/docs/app/with-your-organization).
 - If the registration doesn't match, you may receive an email suggesting the right spelling.
 
+## Confirming your arrival as safe
+
+After landing, a followed flight waits for your arrival confirmation.
+
+When an event shows in red on the dashboard, one of its flights is in progress or awaiting your confirmation: it is shared with the aircraft's organization and hasn't been marked as safe yet.
+
+![The dashboard during a followed flight: the flight event in progress shows in red](/docs-media/app/flight-following-event-not-safe.png)
+
+To mark it as safe:
+
+1. Open the event.
+2. Find the red flight.
+3. Swipe the flight to the right and tap “Safe”.
+
+You can also confirm the flight directly on the dashboard, by swiping it to the right.
+
+The flight must be completed before it can be marked as safe: once the aircraft is parked and the parking time limit has passed, mark the flight as safe. This confirmation goes to Manager, if Manager following is on, and to your follower, if text message following is on.
+
+![A red flight on the event screen, swiped to the right to reveal the “Safe” button](/docs-media/app/flight-following-swipe-safe.png)
+
+If you land without marking the flight as safe, the app automatically marks the previous flight as safe as soon as it detects a new takeoff, and creates the new flight.
+
+![Animation: at the new takeoff, the previous flight turns white, confirmed as safe, and a new red flight begins](/docs-media/app/flight-following-auto-safe-takeoff.gif)
+
+A flight linked to flight following can't be deleted from its event.
+
+### Why confirming matters
+
+After a landing far from anywhere, on a remote strip or off-airport, the safe confirmation tells your organization you're fine. A missing confirmation shows right away in Manager: your organization can reach you quickly or start an emergency response, instead of losing hours before realizing something is wrong.
+
 ## Good to know
 
-Following starts at the detected takeoff. If automatic recording isn't working, following won't either. See [Automatic recording](/en/docs/app/automatic-recording).
+- Following starts at the detected takeoff. If automatic recording isn't working, following won't either. See [Automatic recording](/en/docs/app/automatic-recording).
+- Keep location set to “Always” and notifications turned on.
+- If your iPhone loses signal during the flight, the data is sent as soon as the connection is back. If an error occurs, the app lets you know.
+
+## Privacy and safety
+
+- Your tracking isn't public: your follower sees it, for text message following, and so do the members of your organization, for Manager following.
+- The text messages your organization sends to its own subscribers can contain a public link to the flight's map. That map doesn't show your name. See [Flight following in Manager](/en/docs/manager/flight-following).
+- The data sent to Manager is encrypted in transit.
+
+Flight following is designed for your safety and peace of mind, whether you fly solo or as part of a team.

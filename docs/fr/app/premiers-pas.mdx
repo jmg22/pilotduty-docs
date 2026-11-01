@@ -1,6 +1,6 @@
 ---
 title: "Premiers pas"
-description: "Installer PilotDuty, créer votre compte et préparer l'app pour votre premier vol."
+description: "Installer PilotDuty, suivre le parcours d'accueil pas à pas, vérifier les autorisations d'iOS et comprendre les écrans de l'app."
 order: 1
 translationKey: app-getting-started
 updated: 2026-11-01
@@ -23,54 +23,368 @@ Vous pouvez utiliser l'app seul, sans organisation.
 
 Téléchargez PilotDuty sur votre iPhone depuis l'App Store. L'app existe en français et en anglais.
 
-## Créer votre compte
+## Le parcours d'accueil pas à pas
 
-Au premier lancement, un court parcours d'accueil vous guide. Vous y créez votre compte de l'une de ces trois façons :
+Au premier lancement, un court parcours d'accueil vous guide. En quelques étapes, vous configurez votre compte, votre avion et vos préférences. Ce parcours prépare l'enregistrement automatique des vols (par balise iBeacon ou par GPS), les SMS de suivi de vol et le suivi du temps de vol, de service et de repos.
 
-- avec une adresse courriel et un mot de passe (vous devez accepter les conditions d'utilisation) ;
-- avec votre identifiant Apple ;
-- avec votre compte Google.
+Que vous soyez élève pilote, instructeur ou pilote professionnel, PilotDuty s'adapte à votre façon de voler dès le premier jour.
+
+### Étape 1 – Créer votre compte
+
+Vous créez votre compte de l'une de ces trois façons :
+
+1. **« Sign Up with Email ».** Entrez une adresse courriel valide et choisissez un mot de passe.
+2. **« Sign in with Apple ».** Inscription rapide et sûre avec votre identifiant Apple.
+3. **« Sign in with Google ».** Inscription avec votre compte Google.
+
+Avec Apple ou Google, vous n'avez ni adresse courriel ni mot de passe à saisir.
+
+Avant de continuer, cochez la case qui accepte les conditions d'utilisation et la politique de confidentialité. Cette étape est obligatoire, quelle que soit la méthode choisie. Touchez ensuite la méthode qui vous convient pour passer à l'étape suivante.
+
+![Écran d'accueil « Welcome » : champs de courriel et de mot de passe, case d'acceptation des conditions cochée et encadrée, boutons « Sign Up with Email », « Sign in with Apple » et « Sign in with Google »](/docs-media/app/getting-started-sign-up.png)
 
 Si votre adresse courriel a déjà un compte, l'app passe d'elle-même à la connexion.
 
 Si vous êtes membre d'une organisation, utilisez le même compte que dans PilotDuty Manager : l'app et le Manager partagent la même base.
 
-## Choisir votre configuration
+### Étape 2 – Choisir votre configuration
 
 L'app vous demande ensuite comment vous comptez enregistrer vos vols :
 
-- **Avec un avion.** Vous indiquez d'où vient l'avion : avion de votre organisation, avion avec balise ou avion sans balise. Vous pouvez aussi indiquer que votre balise n'est pas encore arrivée, ou qu'il vous en faut une. L'app vous dirige vers l'étape utile : choix d'un avion de l'organisation, adoption de la balise ou configuration de l'avion. Un abonnement annuel comprend une balise offerte, voir [Balise iBeacon](/fr/docs/app/balise-ibeacon).
+- **Avec un avion.** Les étapes suivantes vous aident à configurer l'avion, avec ou sans balise.
 - **Avec l'horaire de votre compagnie.** Vous reliez le lien iCal fourni par votre employeur. Ce choix demande PilotDuty Pro. Voir [Horaire de compagnie](/fr/docs/app/horaire-de-compagnie).
-- **Plus tard.** Vous passez cette étape et configurez l'app quand vous voulez.
+- **Plus tard.** Vous passez la configuration de l'avion et la faites plus tard, depuis l'onglet des aéronefs (icône d'avion).
 
-## Accorder les autorisations
+### Étape 3 – Autoriser la localisation
 
-Pour enregistrer vos vols, l'app demande trois autorisations :
+Pour que l'enregistrement automatique fonctionne, l'écran suivant vous demande l'accès à votre position.
 
-- **Localisation.** Choisissez « Toujours » : l'app doit suivre votre position en arrière-plan, même écran verrouillé. Laissez aussi « Position exacte » activée. Avec une position approximative, l'app ne peut pas détecter vos vols. Votre position permet à l'app de reconnaître la zone de l'avion, de dater chaque étape du vol d'après votre vitesse, de situer le décollage et l'atterrissage, et de savoir si le vol a eu lieu de jour ou de nuit.
-- **Mouvement.** L'app utilise les capteurs de mouvement de l'iPhone pour mieux reconnaître le roulage. Sans cette autorisation, elle se fie au GPS seul.
-- **Notifications.** L'app vous prévient, par exemple quand un mémo arrive ou quand elle a reconstitué un vol.
+PilotDuty se sert de votre position pour plusieurs fonctions essentielles de votre carnet :
+
+- **Trouver les avions à proximité.** Avec une balise iBeacon installée dans l'avion, l'app détecte que vous êtes à bord et commence le suivi.
+- **Situer votre décollage et votre atterrissage.** La position permet de noter les aérodromes ou les coordonnées d'elle-même.
+- **Calculer les heures du vol d'après votre vitesse.** L'app reconnaît les phases du vol (roulage, vol, atterrissage) d'après les variations de la vitesse GPS.
+- **Savoir si le vol a lieu de jour ou de nuit.** Cette information compte pour certaines exigences réglementaires et pour l'exactitude du carnet.
+
+En bas de l'écran, touchez « Allow ». Choisissez ensuite « Toujours » : l'app doit suivre votre position en arrière-plan, même écran verrouillé. Laissez aussi « Position exacte » activée. Avec une position approximative, l'app ne peut pas détecter vos vols. Cette autorisation est indispensable aux fonctions principales de PilotDuty.
+
+![Écran « Location » du parcours d'accueil, avec les quatre raisons de l'accès à la position et le bouton « Allow »](/docs-media/app/getting-started-location-permission.png)
+
+### Étape 4 – Autoriser les notifications
+
+PilotDuty vous demande ensuite le droit de vous envoyer des notifications. Elles vous tiennent informé et aident à bien enregistrer vos vols, même quand l'app n'est pas ouverte à l'écran :
+
+- **Avec une balise iBeacon :** si iOS détecte votre avion alors que l'app ne tourne pas en arrière-plan, PilotDuty vous invite à rouvrir l'app pour reprendre le suivi.
+- **Avec un abonnement :** à l'atterrissage, PilotDuty vous invite à confirmer votre arrivée auprès de votre suiveur. Voir [Suivi de vol](/fr/docs/app/suivi-de-vol).
+
+L'app vous prévient aussi, par exemple, quand un mémo arrive ou quand elle a reconstitué un vol.
+
+Touchez « Allow » pour accorder l'autorisation. Vous ne manquerez ainsi aucune information importante sur vos vols ni aucune confirmation d'arrivée.
+
+![Écran « Notifications » du parcours d'accueil, avec les deux cas de notification et le bouton « Allow »](/docs-media/app/getting-started-notifications-permission.png)
+
+### Étape 5 – Autoriser l'accès aux mouvements
+
+L'app utilise les capteurs de mouvement de l'iPhone pour mieux reconnaître le roulage. Sans cette autorisation, elle se fie au GPS seul.
 
 Si vous avez choisi l'horaire de compagnie, seule l'autorisation des notifications est demandée. Un écran est sauté si vous avez déjà répondu à la question.
 
-Vous pouvez changer ces autorisations plus tard dans les Réglages d'iOS. L'app affiche leur état dans ses réglages généraux. Voir [Réglages et commentaires](/fr/docs/app/reglages-et-commentaires).
+### Étape 6 – Indiquer d'où vient votre avion
 
-### Vérifier vos autorisations
+Si vous avez choisi d'enregistrer vos vols avec un avion, l'app vous demande d'où il vient et si vous avez une balise iBeacon :
 
-Sans ces autorisations, l'app ne peut pas fonctionner en arrière-plan et risque de manquer vos vols. Vérifiez-les avant votre premier vol :
+- **Avion de votre organisation.** Vous choisissez l'avion dans la liste de votre organisation. L'app reprend sa configuration. Voir [Avec votre organisation](/fr/docs/app/avec-votre-organisation).
+- **Avion avec balise.** Une balise est déjà installée dans votre avion et vous êtes prêt à l'associer à l'app.
+- **Balise commandée, pas encore reçue.** Vous attendez la livraison. Vous pourrez adopter la balise plus tard, une fois arrivée.
+- **Il me faut une balise.** Vous n'avez pas encore de balise, mais vous voulez en obtenir une pour un enregistrement entièrement automatique. Un abonnement annuel comprend une balise offerte, voir [Balise iBeacon](/fr/docs/app/balise-ibeacon).
+- **Avion sans balise.** Vous préférez ne pas utiliser de balise : vous démarrerez et arrêterez vos vols vous-même dans l'app. Voir [Enregistrement automatique](/fr/docs/app/enregistrement-automatique).
 
-1. Dans l'app, ouvrez l'onglet des réglages, puis les réglages généraux. L'état des autorisations indique si chacune est accordée.
-2. S'il en manque une, ouvrez l'app Réglages d'iOS, puis PilotDuty. Dans les versions récentes d'iOS, PilotDuty se trouve sous Apps.
-3. Touchez Localisation, choisissez « Toujours » et laissez « Position exacte » activée.
+Touchez « Next » pour continuer. L'app vous dirige vers l'étape utile : choix d'un avion de l'organisation, adoption de la balise ou configuration de l'avion.
+
+![Ancien écran « Aircraft Configuration » du parcours : « Do you have an iBeacon? », avec la réponse « Yes » cochée et le bouton « Next »](/docs-media/app/getting-started-aircraft-choice.png)
+
+### Étape 7 – Adopter la balise et la relier à l'avion
+
+Si votre avion a une balise, l'app vous propose de l'associer à cet avion.
+
+1. Entrez l'immatriculation de l'avion (« CallSign », par exemple C-FFFF) et son type (« Aircraft Type », par exemple C172).
+2. Approchez votre iPhone de la balise. Quand l'app la détecte tout près (« Near »), touchez « Adopt Nearest iBeacon » : la balise est alors reliée à l'avion que vous venez de décrire. Un message en haut de l'écran le rappelle : « Press the 'Adopt Nearest iBeacon' button to pair it with the desired aircraft ».
+3. Si l'écran vous demande plutôt les identifiants de la balise, entrez son UUID, son major et son minor.
+4. Touchez « Next » une fois la balise adoptée, ou « Back » pour revenir à l'étape précédente.
+
+Cette étape attribue chaque balise à un seul avion. La détection est ainsi fiable lors de vos prochains vols.
+
+![Écran d'adoption : immatriculation C-FFFF, type C172, balise détectée « Near » et bouton orange « Adopt Nearest iBeacon »](/docs-media/app/getting-started-ibeacon-adoption.png)
+
+### Étape 8 – Configurer l'avion
+
+Une fois la balise associée et l'avion nommé, l'app vous demande ses caractéristiques techniques.
+
+Section « Aircraft Type » :
+
+- **« Aircraft Type Category ».** La configuration du train d'atterrissage, par exemple « Tricycle Train ».
+- **« Engine Type ».** Le type de moteur, par exemple « Mono Piston ».
+- **« Propeller Type ».** Hélice à pas fixe (« Fixed pitch »), à pas variable ou autre.
+
+Une illustration de l'avion s'adapte à vos choix pour vous aider à les vérifier.
+
+Section « Common Use » :
+
+- **IFR.** Activez cet interrupteur si l'avion est équipé et approuvé pour le vol aux instruments.
+- **« Single Pilot ».** Activez-le si l'avion est en général exploité par un seul pilote.
+
+Ces informations servent à remplir les vols enregistrés avec cet avion et à adapter l'enregistrement à ses caractéristiques réelles. Touchez « Next » pour continuer, ou « Back » pour revoir les étapes précédentes.
+
+![Écran « Aircraft Configuration » : catégorie « Tricycle Train », moteur « Mono Piston », hélice « Fixed pitch », interrupteurs IFR et « Single Pilot »](/docs-media/app/getting-started-aircraft-configuration.png)
+
+### Étape 9 – Choisir un forfait
+
+Le parcours vous présente ensuite les forfaits, selon votre façon de voler.
+
+PilotDuty est gratuit, mais limité à 3 vols par mois et aux fonctions de base. Un abonnement annuel à PilotDuty+ ou à PilotDuty Pro comprend une balise iBeacon offerte la première année, pour un enregistrement entièrement automatique, en plus des autres fonctions de l'abonnement.
+
+Vous pouvez choisir :
+
+- **un abonnement annuel avec balise offerte**, le meilleur choix si vous volez souvent ;
+- **un abonnement mensuel**, si vous préférez payer au mois ;
+- **l'usage gratuit**, limité à 3 vols par mois et aux fonctions de base, idéal pour découvrir l'app ou si vous volez peu.
+
+Si vous choisissez un abonnement, deux forfaits vous sont proposés :
+
+- **PilotDuty+** : vols illimités, SMS de suivi de vol automatiques, export du carnet en PDF ou en CSV.
+- **PilotDuty Pro** : tout PilotDuty+, plus le suivi du temps de vol, de service et de repos, et le suivi de la validité du médical, des licences et des compétences.
+
+Touchez « Subscribe » pour confirmer le forfait choisi. « Redeem Code » permet d'utiliser un code, et « Restore Subscription » rétablit un abonnement déjà acheté sur l'App Store.
+
+> L'abonnement se renouvelle automatiquement, sauf si vous l'annulez dans les réglages de votre identifiant Apple.
+
+Les prix figurent sur la page [Tarifs](/fr/tarifs). Le détail des forfaits est dans [Abonnements](/fr/docs/app/abonnements).
+
+### Étape 10 – Entrer votre adresse de livraison
+
+Avec un premier abonnement annuel, vous recevez une balise iBeacon offerte. Pour qu'elle vous soit envoyée, entrez votre adresse de livraison :
+
+- « Address (Line 1) », obligatoire ;
+- « Address (Line 2, optional) », pour un numéro d'appartement ou de bureau ;
+- « City », obligatoire ;
+- « Postal Code », obligatoire ;
+- « Country », obligatoire.
+
+Le bouton « Next » devient actif quand tous les champs obligatoires sont remplis. Si vous passez cette étape, un bandeau du tableau de bord vous rappelle plus tard qu'il manque l'adresse.
+
+![Écran « Shipping Address » : champs d'adresse, ville, code postal et pays, et bouton « Next »](/docs-media/app/getting-started-shipping-address.png)
+
+### Étape 11 – Entrer vos informations de pilote
+
+Le dernier écran personnalise votre profil de pilote : licence, qualifications et préférences.
+
+Champ obligatoire :
+
+- **« Full Name ».** Votre nom, tel qu'il doit apparaître dans l'app et dans vos rapports.
+
+Réglages facultatifs :
+
+- **« Total Flight Time ».** Votre total d'heures de vol avant PilotDuty. Ce total sert de point de départ à votre total de carrière.
+- **« Professional license ».** Activez-le si vous détenez une licence professionnelle (pilote professionnel ou de ligne).
+- **« IFR Rated ».** Activez-le si vous avez la qualification de vol aux instruments.
+- **« Multi Engine Rated ».** Activez-le si vous êtes qualifié sur multimoteur.
+- **« Float Rated ».** Activez-le si vous avez la qualification hydravion.
+- **« Instructor Rated ».** Activez-le si vous êtes instructeur.
+- **« Use local time ».** Choisissez si les heures s'affichent par défaut en heure locale plutôt qu'en UTC.
+
+Un message sous le formulaire vous rappelle que l'onglet des réglages permet une configuration plus détaillée. Vous pourrez par exemple y détailler vos heures initiales, voir [Réglages et commentaires](/fr/docs/app/reglages-et-commentaires).
+
+Touchez « Go to the app » pour terminer le parcours et ouvrir l'app. Vous recevez ensuite un courriel d'accueil.
+
+![Écran « Pilot informations » : nom John Dow, total de 300 heures, interrupteurs de licence et de qualifications, « Use local time » et bouton « Go to the app »](/docs-media/app/getting-started-pilot-information.png)
+
+### Parcours terminé
+
+Tout est prêt. Votre compte est configuré, votre avion est associé (si vous utilisez une balise) et votre profil de pilote est rempli. De la détection automatique des heures de roulage, de décollage, d'atterrissage et de stationnement à l'export du carnet et au suivi du temps de service, PilotDuty est prêt à vous suivre.
+
+> **Important.** Avant votre premier vol, vérifiez les autorisations de localisation et de notifications dans l'onglet des réglages, sous Général. PilotDuty a besoin de la localisation sur « Toujours » et des notifications activées pour fonctionner de façon fiable en arrière-plan, surtout pour détecter vos vols avec une balise. Voir la section suivante.
+
+Vous pourrez toujours affiner vos préférences dans l'onglet des réglages.
+
+## Vérifier les autorisations d'iOS
+
+Pour profiter pleinement de l'enregistrement automatique, du suivi GPS et de la détection par balise, PilotDuty a besoin des bonnes autorisations sur votre iPhone. Sans elles, l'app ne peut pas fonctionner en arrière-plan ni détecter vos vols avec précision. Suivez ces étapes pour que PilotDuty fonctionne même quand votre téléphone est dans votre poche ou verrouillé.
+
+### Étape 1 – Ouvrir les réglages généraux de l'app
+
+1. Ouvrez PilotDuty.
+2. Touchez l'onglet des réglages (dernier onglet, icône d'engrenage).
+3. Choisissez Général.
+
+En haut de l'écran, la section « Authorization Status » montre les autorisations accordées à l'app.
+
+![Réglages généraux de PilotDuty : section « Autorisation Status » avec la localisation « Restricted/Denied », les notifications « Denied » et le bouton « Open app settings »](/docs-media/app/getting-started-general-settings-permissions.png)
+
+### Étape 2 – Vérifier la localisation et les notifications
+
+**Localisation**
+
+- Elle est indispensable au suivi en arrière-plan.
+- Elle ne doit pas afficher « Restricted » ni « Denied ».
+- Si c'est le cas, touchez « Open app settings » pour corriger le réglage directement dans iOS.
+
+**Notifications**
+
+- Elles doivent être activées pour recevoir les alertes de suivi et les messages de l'app.
+- Si elles affichent « Denied », ouvrez les réglages d'iOS pour les activer.
+
+> Pour que le suivi fonctionne en arrière-plan, la localisation doit être réglée sur « Toujours » dans iOS. PilotDuty peut alors détecter l'avion par Bluetooth (balise iBeacon) et enregistrer ses mouvements par GPS, même quand vous n'avez pas l'app à l'écran.
+
+### Étape 3 – Ouvrir les réglages d'iOS pour PilotDuty
+
+Pour modifier une autorisation à la main :
+
+1. Ouvrez l'app Réglages de votre iPhone.
+2. Faites défiler la liste et touchez PilotDuty. Dans les versions récentes d'iOS, PilotDuty se trouve sous Apps.
+
+C'est là que vous réglez la localisation et les notifications.
+
+![Réglages d'iOS pour PilotDuty : Localisation sur « Always », Notifications, Actualisation en arrière-plan et Données cellulaires](/docs-media/app/getting-started-ios-settings-pilotduty.png)
+
+### Étape 4 – Régler la localisation sur « Toujours »
+
+1. Touchez Localisation.
+2. Choisissez « Toujours ».
+3. Laissez « Position exacte » activée, pour que le suivi GPS soit précis.
+
+Avec « Lorsque l'app est active » ou « Jamais », l'app ne peut ni détecter vos vols en arrière-plan ni les enregistrer d'elle-même. Avec « Toujours », votre carnet se remplit au fil de vos vols, sans que vous ayez à ouvrir l'app.
 
 ![Réglages de localisation d'iOS pour PilotDuty, avec « Toujours » choisi et « Position exacte » activée](/docs-media/app/getting-started-ios-location-always.png)
 
-4. Activez l'accès aux mouvements et à la forme physique.
-5. Touchez Notifications et activez « Autoriser les notifications ».
+### Étape 5 – Activer les notifications
 
-## Votre profil
+1. Dans le même menu, touchez Notifications.
+2. Activez « Autoriser les notifications ».
+3. Activez au besoin les alertes, les sons et les pastilles, pour ne manquer aucun rappel ni aucune alerte de sécurité.
 
-Le parcours présente aussi les forfaits. La dernière étape vous demande votre nom, vos qualifications (CPL, IFR, multimoteur, hydravion, instructeur) et votre total d'heures avant PilotDuty. Ce total sert de point de départ à votre total de carrière. Vous pourrez le détailler plus tard, voir [Carnet de vol](/fr/docs/app/carnet-de-vol). Vous recevez ensuite un courriel d'accueil.
+![Réglages des notifications d'iOS pour PilotDuty, avec « Allow Notifications » activé, les alertes, les sons et les pastilles](/docs-media/app/getting-started-ios-notifications.png)
+
+### Étape 6 – Autoriser les mouvements
+
+Activez aussi l'accès aux mouvements et à la forme physique. Il aide l'app à reconnaître le roulage.
+
+### Pourquoi ces autorisations comptent
+
+PilotDuty utilise le Bluetooth basse consommation (BLE) et le GPS pour détecter la présence de l'avion et noter les heures d'elle-même. Que vous ayez une balise iBeacon dans l'avion ou que vous comptiez seulement sur le GPS, l'app doit fonctionner en arrière-plan.
+
+Sans les bonnes autorisations, vous risquez :
+
+- des vols ou des étapes manqués (décollage, atterrissage) ;
+- un suivi incomplet du temps de service et de repos ;
+- un carnet inexact.
+
+Pour la sécurité et l'exactitude de votre carnet, gardez vos autorisations à jour.
+
+> **Dernier conseil.** Si vous désactivez « GPS Tracking » dans les réglages généraux de l'app, PilotDuty n'enregistre plus vos vols. Ce n'est utile que si vous ne volez pas, par exemple en vacances. Laissez-le activé le reste du temps.
+
+## Comprendre l'écran
+
+La barre d'onglets, en bas, donne accès à cinq onglets : tableau de bord, carnet de vol, aéronefs, temps de service et réglages. Sur les captures ci-dessous, prises en 2025, l'onglet des aéronefs n'apparaît pas encore.
+
+### Le badge sur l'icône de l'app
+
+Un badge peut apparaître sur l'icône de PilotDuty. Il est lié aux zones que l'app surveille, appelées zones détectées :
+
+- les avions ;
+- les zones de travail ou de repos configurées dans l'app.
+
+PilotDuty se sert de ces zones pour détecter d'elle-même votre arrivée dans une zone surveillée et votre départ de cette zone.
+
+Si la zone détectée est un avion, le suivi GPS démarre de lui-même pour noter :
+
+- l'heure de début du roulage (off-block) ;
+- l'heure du décollage ;
+- l'heure de l'atterrissage ;
+- l'heure d'arrivée au stationnement (on-block).
+
+L'app associe aussi l'aérodrome le plus proche et détermine si le vol a eu lieu de jour ou de nuit.
+
+Vous n'avez rien à faire. Ce badge indique simplement que l'app surveille votre position pour le suivi de vos vols et de votre service. Si le nombre reste élevé ou semble faux :
+
+1. ouvrez l'app pour qu'elle actualise les zones détectées ;
+2. consultez le tableau de bord ou l'onglet des réglages ;
+3. vérifiez que le service de localisation est activé.
+
+![Icône de PilotDuty sur l'écran d'accueil de l'iPhone, avec un badge rouge « 1 »](/docs-media/app/getting-started-app-icon-badge.png)
+
+### Le tableau de bord
+
+Le tableau de bord (premier onglet, icône de compteur) montre la liste des événements et des vols enregistrés, automatiquement ou à la main, qui attendent votre approbation. Chaque bloc représente un événement.
+
+![Tableau de bord annoté : état de l'avion, statut de validité, nombre de vols, type d'événement, heures de début et de fin, durée, bouton « + », actions d'un événement et badge de l'onglet](/docs-media/app/getting-started-dashboard-explained.png)
+
+- **Nombre d'événements à approuver.** Le badge rouge sur l'onglet du tableau de bord indique combien d'éléments demandent votre attention (approbation ou suppression).
+- **Type d'événement.** L'étiquette, par exemple « Flight Event », indique le type d'activité enregistrée : vol, travail ou repos.
+- **Nombre de vols dans l'événement.** Ce nombre, par exemple 1, indique combien de vols sont regroupés dans l'événement.
+- **Heures de début et de fin.** Elles indiquent quand l'événement a commencé et s'est terminé.
+- **Durée.** La durée totale de l'événement, en heures.
+- **Validité du médical, des licences et des compétences.** Avec PilotDuty Pro, le bouton en haut à gauche affiche le nombre de jours qui restent avant l'expiration du premier de vos documents (médical, licence ou compétence), par exemple 62. Quand un mémo de votre organisation attend votre attention, il affiche plutôt une enveloppe et un compteur. Voir [Santé pilote](/fr/docs/app/sante-pilote).
+- **État de l'avion.** Pendant l'enregistrement, une barre indique l'état de l'avion suivi : stationné (« Parked »), au roulage (« Taxiing ») ou en vol (« Flying »). C'est utile quand plusieurs avions sont suivis.
+- **Ajouter à la main.** Touchez « + » pour ajouter un vol ou un événement de travail, de vol ou de repos manqué ou à corriger. Voir [Ajout manuel et scan ACARS](/fr/docs/app/ajout-manuel-et-scan-acars).
+- **Actions sur un événement.** Glissez un événement vers la droite pour faire apparaître le bouton bleu « Approve » : il confirme l'événement et l'ajoute à votre carnet. Glissez-le vers la gauche pour faire apparaître le bouton rouge « Delete » : il supprime l'événement définitivement. Un fond rouge indique que le suivi de vol est actif et que le vol est en cours ou attend votre confirmation « safe ».
+
+Voir [Relecture et approbation](/fr/docs/app/relecture-et-approbation).
+
+### Le carnet de vol
+
+L'onglet du carnet de vol affiche votre carnet personnel : la liste détaillée de vos vols approuvés et votre total d'heures de vol.
+
+![Carnet de vol annoté : nom du pilote, total d'heures, bouton « Logbook summary », bouton « Export », choix de la date, filtres de jours et bouton jaune « UnApprove »](/docs-media/app/getting-started-logbook-explained.png)
+
+- **Nom du pilote.** Votre nom apparaît en haut de l'écran : ce carnet est le vôtre.
+- **Total des heures de vol.** Le total cumulé de vos vols approuvés, auquel s'ajoutent vos heures initiales.
+- **Résumé du carnet.** Touchez « Logbook summary » pour voir vos heures réparties par catégorie (jour et nuit, commandant de bord, type d'avion, etc.).
+- **Plage affichée.** Choisissez le dernier jour, les 7 ou les 30 derniers jours, ou tous les vols. Le bouton de date, à côté, affiche les vols d'une date précise.
+- **Exporter.** Touchez le bouton d'export pour produire et partager votre carnet en PDF ou en CSV, par exemple pour une sauvegarde ou pour votre exploitant. L'export demande un abonnement PilotDuty+ ou PilotDuty Pro.
+
+Le carnet propose aussi des filtres, un tri et une carte des vols. Voir [Carnet de vol](/fr/docs/app/carnet-de-vol).
+
+**La vignette d'un vol**
+
+Chaque vignette résume un vol :
+
+- le temps de vol et le temps dans les airs, avec les heures de début du roulage, de décollage, d'atterrissage et d'arrivée au stationnement ;
+- la date du vol ;
+- les aérodromes de départ et d'arrivée ;
+- le moment du vol (jour ou nuit) ;
+- la règle de vol (VFR, IFR, multi-IFR, multi-VFR) ;
+- le type d'avion ;
+- l'immatriculation ;
+- votre rôle, par exemple commandant de bord (PIC).
+
+![Vignette d'un vol annotée : heures de roulage, de décollage, d'atterrissage et de stationnement, temps de vol et dans les airs, date, aérodromes, jour ou nuit, règle de vol, type, immatriculation et statut du pilote](/docs-media/app/getting-started-flight-widget-explained.png)
+
+**Désapprouver un vol**
+
+Si vous remarquez une erreur dans un vol, glissez-le vers la gauche et touchez « UnApprove ». Le vol revient dans le tableau de bord, parmi les éléments à approuver.
+
+> **Important.** Tous les vols du même événement sont désapprouvés ensemble. Vous pouvez ensuite les modifier ou les supprimer depuis le tableau de bord. Voir [Relecture et approbation](/fr/docs/app/relecture-et-approbation).
+
+### L'onglet du temps de service
+
+L'onglet du temps de service vous aide à suivre votre temps de vol, votre temps de service et vos périodes de repos sur plusieurs jours, par rapport aux limites du gabarit de réglementation choisi. Il demande PilotDuty Pro et le réglage « Duty (Beta) » activé. Voir [Temps de service](/fr/docs/app/temps-de-service).
+
+![Onglet du temps de service annoté : choix de la période, légende des couleurs, types d'événements, heures et durées, fuseau d'acclimatation, courbes de repos, de vol et de service, limites et jour de repos](/docs-media/app/getting-started-duty-explained.png)
+
+- **Période affichée.** En haut, choisissez la durée à afficher : 24 h, 7 jours, 28 ou 30 jours, 90 jours ou 365 jours.
+- **Légende des couleurs.** Repos (« Rest », vert), temps de vol (« FT », violet), temps de service (« ST », gris), limite de temps de vol (« FLmt », beige) et limite de temps de service (« SLmt », rouge).
+- **Types d'événements.** Les icônes à gauche indiquent le type de chaque événement : vol, repos ou travail.
+- **Heures et durée.** Chaque événement affiche son heure de début, son heure de fin et sa durée totale.
+- **Fuseau d'acclimatation.** Le décalage horaire auquel vous êtes acclimaté, ajusté d'après vos lieux et fuseaux récents.
+- **Temps de repos.** Le temps enregistré comme repos sur la période choisie.
+- **Temps de vol.** Le total du temps de vol de la journée.
+- **Limite de temps de vol.** Elle montre où vous en êtes par rapport à la limite de temps de vol du gabarit choisi.
+- **Temps de service.** Le total du temps de service, vols et autres tâches compris.
+- **Limite de temps de service.** Elle montre si vous approchez du temps de service maximal prévu par le gabarit choisi, ou si vous l'avez atteint.
+- **Nombre de vols de l'événement.** Le badge rouge indique combien de vols l'événement regroupe.
+- **Jour de repos.** Une étiquette comme « Day Off » indique qu'aucune activité de service n'a été enregistrée ce jour-là : c'est un jour de repos complet.
+
+> Cette vue donne des repères pour vous et votre organisation. Elle ne remplace ni la réglementation ni les règles de votre exploitant : vérifiez toujours vos limites dans les textes officiels.
 
 ## Limite de la version gratuite
 

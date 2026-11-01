@@ -1,13 +1,15 @@
 ---
 title: "Fleet and maintenance"
-description: "Add your aircraft and track their maintenance due dates, inspections and snags."
+description: "Add your aircraft, set up their maintenance program, take an inspection from start to finish, track snags and manage your workshops."
 order: 8
 translationKey: mgr-maintenance
 updated: 2026-11-01
 draft: false
 ---
 
-The Fleet module brings together your aircraft, their hours and cycles, their maintenance program, their inspections and their snags. It keeps you informed: it never blocks a booking or a flight.
+The Fleet module lets you register and manage your fleet directly in PilotDuty Manager: your aircraft, their hours and cycles, their maintenance program, their inspections and their snags. It keeps you informed: it never blocks a booking or a flight.
+
+> The screenshots in this guide date from 2025 and show the older menu. The “Aircrafts” menu entry has not changed.
 
 ## Who can do it
 
@@ -19,61 +21,231 @@ The Fleet module brings together your aircraft, their hours and cycles, their ma
 
 ## Add an aircraft
 
-1. Open the aircraft list and start a new aircraft.
-2. Go through the wizard: identity, aircraft type, operations, counters, maintenance, booking and summary. At the counters step, enter the current airframe time and cycles.
-3. Create the aircraft.
+1. In the left-hand menu, go to “Aircrafts”.
+2. Click “New Aircraft” to start adding a new aircraft to your organization.
 
-The booking step (seats, fuel, hourly rate, empty weight and arm) only appears for the Operations Manager. An aircraft created without it can be made bookable later: see [Bookings](/en/docs/manager/bookings).
+![Empty “Aircrafts” list, with the “New Aircraft” button highlighted](/docs-media/manager/fleet-and-maintenance-aircraft-list-empty.png)
 
-The final screen lists what is left to do, including having pilots import the aircraft into the iPhone app. Write it down: the screen disappears when you leave the page. Duplicating an aircraft copies its configuration and maintenance program, but the copy is not bookable.
+3. Go through the wizard's steps:
+   - identity: the callsign (for example, C-FFFF), the aircraft type (for example, C-172), the make, the model and the airframe, engine and propeller serial numbers;
+   - aircraft type: airplane, helicopter or glider, engines, landing gear, propeller and takeoff speed;
+   - operations: the activity, the flight type, the operating rules, IFR and single pilot;
+   - counters: the current airframe time and cycles;
+   - maintenance: the generic maintenance program, described below;
+   - booking: seats, fuel, hourly rate, empty weight and arm;
+   - summary: review each step, and edit it if needed.
+4. Create the aircraft.
+
+![Former “Create Aircraft” window from 2025, with the C-172 type and the C-FFFF callsign](/docs-media/manager/fleet-and-maintenance-create-aircraft-2025.png)
+
+In 2025, a simple window only asked for the aircraft type and the callsign. The current wizard has the seven steps above. A callsign belongs to a single aircraft across all of PilotDuty: the wizard checks that it is available.
+
+The booking step only appears for the Operations Manager. An aircraft created without it can be made bookable later: see [Bookings](/en/docs/manager/bookings).
+
+Once created, the aircraft appears in the list with its type, its callsign and its next inspection indicators: the hours, days and cycles remaining before the most restrictive inspection.
+
+![“Aircrafts” list: the C-172 C-FFFF, 99.0 hours and 365 days from its next inspection](/docs-media/manager/fleet-and-maintenance-aircraft-list.png)
+
+The wizard's final screen lists what is left to do, including having pilots import the aircraft into the iPhone app. Write it down: the screen disappears when you leave the page. Duplicating an aircraft copies its configuration and maintenance program, but the copy is not bookable.
 
 ## The generic maintenance program
 
-At the maintenance step, PilotDuty suggests a generic program that fits the aircraft's profile: inspections (100-hour/annual, 50-hour, or annual for a glider) and common items. You can also start from an empty list.
+At the maintenance step, PilotDuty suggests a generic program that fits the aircraft's profile, based on common general aviation practices: inspections (100-hour/annual, 50-hour, or annual for a glider) and common items. You can also start from an empty list. Once the aircraft is created, you can customize or remove each inspection and each item on its record.
 
 Each interval must be confirmed by the person your authority designates: your AME, an A&P or IA, or your CAMO/CAO. For a helicopter, the suggested program is minimal.
 
 ## Edit an aircraft
 
-In the aircraft list, open the row's action menu and choose to edit the aircraft. The page has five tabs: info, inspection schedules, items by hours, items by date and items by cycles. Each field is saved on its own when you leave it.
+1. In “Aircrafts”, click the three-dot menu beside the aircraft.
+2. Select “Edit Aircrafts”.
 
-The info tab holds the aircraft's identity and configuration: type, callsign, initial airframe time and cycles, make, model, serial numbers, category, engine, propeller, flight type, IFR, single pilot and operating rules. It also holds:
+![An aircraft's three-dot menu: Aircraft details, Edit Aircrafts, Duplicate Aircraft and Delete Aircraft](/docs-media/manager/fleet-and-maintenance-edit-aircraft-menu.png)
+
+This brings you to the full aircraft profile, where you manage all its technical and operational information. The page has five tabs: “Infos”, “Schedules”, “Timed items”, “Dated items” and “Cycled items”. Each field is saved on its own when you leave it.
+
+### The “Infos” tab
+
+On the “Infos” tab, you can configure:
+
+- the initial airframe time and cycles;
+- the aircraft configuration: landing gear, engine type, propeller type;
+- the usual flight type, such as cross-country or training;
+- IFR and single-pilot capabilities;
+- the operating rules, offered according to your organization's authority: for example, Private, 702 or 703 for Transport Canada, Part 91 or Part 135 for the FAA;
+- optional links to publications and support documents;
+- the optional iBeacon settings: its serial number and the takeoff speed.
+
+![“Infos” tab: primary information, configuration, common use, support links and iBeacon](/docs-media/manager/fleet-and-maintenance-info-tab.jpg)
+
+The tab also holds the type, callsign, make, model, serial numbers and category.
 
 - **Reference links**: your links to airworthiness directives, service bulletins, service difficulty reports, the annual airworthiness information report, and the airframe, engine and propeller publications. The directive and service difficulty links open from an inspection's pre-check.
 - **The iBeacon**: its serial number, entered by hand or read from its QR code, and the takeoff speed, in knots.
+
+### The “Schedules” tab
+
+The “Schedules” tab holds the maintenance inspections, for example:
+
+- the 100-hour/annual inspection;
+- the 50-hour inspection.
+
+These inspections are preconfigured when the aircraft is created, from the generic program. Adjust each inspection's date, time or cycle intervals, window and tolerance as needed. Intervals are counted in months, hours or cycles; windows and tolerances in days, hours or cycles.
+
+- “New Inspection Schedule” adds another recurring inspection: name it, then check whether it is dated, timed or cycled.
+- “Upload Inspection Task File” attaches the inspection's task file: the aircraft page then offers it for download.
+- “Delete” removes an inspection.
+
+![“Schedules” tab: the 100-Hour / Annual inspection (12 months and 100 hours) and the 50-Hour inspection (50 hours)](/docs-media/manager/fleet-and-maintenance-inspection-schedules.jpg)
+
+### The items tabs
+
+Items are the maintenance tasks specific to each component: engine overhaul, propeller, ELT, calibrations, life-limited parts. They are created with the aircraft, from the generic program. You can customize or remove them as needed.
+
+**“Timed items”**: tasks triggered by total airframe time, in hours. Each line includes:
+
+- “Item”: the part or system, such as Engine or Magneto;
+- “Task”: the type of maintenance, such as Overhaul or Inspect;
+- the airframe hours at the last completion, which serve as the starting point;
+- the interval, in hours: how many hours until the task comes due again;
+- the tolerance: the accepted leeway before or after the due time;
+- “Is On Condition?”: check it if the item is maintained on condition rather than on a strict interval.
+
+![“Timed items” tab: engine, propeller, magnetos and other items, with the interval in hours and the tolerance](/docs-media/manager/fleet-and-maintenance-timed-items.jpg)
+
+**“Dated items”**: calendar-based recurring tasks, such as ELT recertification or altimeter checks. Each line includes the item, the task, the initial date of the last completion, the interval and tolerance in months, and “Is On Condition?”.
+
+![“Dated items” tab: engine, propeller, altimeter, transponder, ELT and other items, with the interval and tolerance in months](/docs-media/manager/fleet-and-maintenance-dated-items.jpg)
+
+**“Cycled items”**: tasks tracked by flight cycles, such as gear inspections. Set the item (such as gear or brakes), the task (such as Overhaul or Inspect), the airframe cycles at the last completion, the interval and tolerance in cycles, and the on-condition flag if applicable.
+
+![Empty “Cycled items” tab, with the “New Cycled Item” button](/docs-media/manager/fleet-and-maintenance-cycled-items.png)
+
+On each tab, the new item button adds a line. Use the three-dot menu to delete an item if needed.
+
+![An item's three-dot menu on the cycled items tab, with “Delete cycled Item”](/docs-media/manager/fleet-and-maintenance-delete-item.png)
+
+Everything is counted in airframe hours and cycles. For an engine or a propeller, enter the airframe time at the overhaul: the current airframe time minus the hours since the overhaul.
 
 ## Hours, cycles and due dates
 
 Total airframe time and total airframe cycles update on their own from flights flown by members of the organization.
 
-- Inspection schedules: a recurring inspection by date, by hours, by cycles or a combination, with an interval, a window and a tolerance. On the inspection schedules tab, you can upload the inspection's task file: the aircraft page then offers it for download.
-- Items by hours, by date and by cycles: each component gets its own interval (engine overhaul, propeller, ELT, calibrations, life-limited parts).
+On the aircraft page, items are color-coded: serviceable, due next inspection, on condition, overdue, or to complete. An item whose last completion or interval is unknown stays “to complete”: no due date is ever made up. The fleet list shows what remains before each aircraft's most restrictive inspection.
 
-On each items tab, add a line for each new item: item, task, last completion (airframe hours, date or airframe cycles at that time), interval and tolerance. Check the on-condition box for an item maintained according to its condition rather than at a fixed interval. The row's action menu deletes the item.
+## Create the initial inspection
 
-Items are color-coded: in service, due for inspection, on condition, overdue, or to complete. An item whose last completion or interval is unknown stays “to complete”: no due date is ever made up. The fleet list shows what remains before each aircraft's most restrictive inspection.
+Once your aircraft has been configured, create an initial inspection for each schedule, such as the 100-hour and the 50-hour. It defines the starting point from which all future inspections are calculated.
 
-## Inspections
+1. Open the aircraft page: in “Aircrafts”, click its type or callsign, or choose “Aircraft details” from the three-dot menu.
+2. On the inspection tile, click “Create Initial Inspection”.
+3. Enter the date of the last inspection performed, then, depending on the inspection, the hours and cycles at that inspection and the next targets: date, hours or cycles. Do not leave a target empty: it would count as 0 and the inspection would be overdue at once.
+4. Repeat for each schedule, longest interval first. The button to start an inspection only appears afterward.
 
-1. For each inspection type, start by creating an initial inspection: the last inspection performed and the next target. Enter the date, then, depending on the inspection, the target date, hours or cycles. Repeat for each inspection, longest interval first: the button to start an inspection only appears afterward. Do not leave a target empty: it would count as 0 and the inspection would be overdue at once.
-2. Starting an inspection opens four steps: pre-check, workshop, items and finalize. When you submit, the work order and the status report are generated as PDFs, and the next due date moves forward.
-   - Pre-check: the inspection suggested from the due dates, or a custom task for a work order outside an inspection, such as the periodic check of an altimeter, a transponder or an ELT. Enter the date, hours and cycles, then check the four reviews: airworthiness directives, service difficulty reports, technical publications and recurring defects.
-   - Workshop: a workshop from your list, or the owner instead. The details can be changed for this inspection only.
-   - Items: check the items done during the inspection. Overdue, due and on-condition items are offered; you can show all the others.
-   - Finalize: review the summary, then submit.
-3. Once the work is done, finalize the pending inspection. Attach, if needed, the work report, the inspection task and the quality control report from the workshop. Check the items completed and confirm the technical log was reviewed, then finalize. The alert card is generated as a PDF. Only the checked items move forward.
+![“Aircraft details” page with no inspection: the “No inspections found” message and the “Create Initial Inspection” button highlighted](/docs-media/manager/fleet-and-maintenance-create-initial-inspection.jpg)
 
-An inspection also resets the inspections with a shorter interval. A custom task changes none of them.
+Once saved, the initial inspection becomes the reference point for the due dates shown for future maintenance.
 
-Only one inspection can be pending at a time. Any member can download the latest alert card.
+## Start a new inspection
 
-The three PDFs:
+To keep your aircraft safely maintained, create and log each inspection from the aircraft page.
 
-- **Work order**: the organization, the aircraft, the targets, the workshop, the inspection requested and the items to do, with a signature line for the person responsible for maintenance (PRM). While the inspection is pending, you can download it from the inspection tile.
-- **Status report**: the status of the aircraft's inspection schedules and items. You can also download it while the inspection is pending.
-- **Alert card**: total airframe time, cycles, last inspection, workshop, next inspections and the items that are overdue or due for inspection.
+1. In “Aircrafts”, open the aircraft page. It shows the last inspection, the upcoming scheduled inspections and the list of timed, dated and cycled items with their statuses.
+2. On the inspection tile, click “Start Inspection” to launch the four-step process.
 
-The inspection history lists past inspections. Each inspection's details give access to its files.
+![“Aircraft details” page: last inspection 50-Hour, inspection tiles and the “Start Inspection” button highlighted](/docs-media/manager/fleet-and-maintenance-start-inspection.jpg)
+
+### Step 1: pre-check
+
+PilotDuty Manager suggests the upcoming inspection based on the due dates, but you can choose another one. You can also choose a custom task to produce a work order for specific tasks outside an inspection, such as altimeter, transponder or ELT recertification.
+
+Confirm:
+
+- the inspection type;
+- the inspection date, hours and cycles;
+- that all required documentation has been reviewed: airworthiness directives, service difficulty reports, technical publications and recurrent defects. The four boxes are required.
+
+Click “Next”.
+
+![Step 1 “Pre-inspection check”: the 100-Hour / Annual inspection, the date and the four boxes checked](/docs-media/manager/fleet-and-maintenance-inspection-step-1-pre-check.png)
+
+### Step 2: workshop
+
+Fill in the maintenance provider: select a workshop from your list, or the owner. The AMO or AME name, address, phone and email are prefilled if the workshop is already registered. You can change them for this inspection only. Click “Next”.
+
+![Step 2 “Workshop details”: the Acme Shop workshop and its contact details](/docs-media/manager/fleet-and-maintenance-inspection-step-2-workshop.png)
+
+### Step 3: items
+
+Select the timed, dated or cycled items that were also completed during this inspection: this lets you update several items in a single submission. Overdue, due and on-condition items are offered. “Show all items” shows the others.
+
+![Step 3 “Special items selection”: the items offered and the “Show all items” button](/docs-media/manager/fleet-and-maintenance-inspection-step-3-items.png)
+
+![Step 3 with all items shown: one item due for inspection is checked](/docs-media/manager/fleet-and-maintenance-inspection-step-3-all-items.png)
+
+### Step 4: finalize and submit
+
+A full summary is shown: the aircraft (type, callsign, airframe time, cycles), the workshop, the inspection type, the next targets and the selected items. Click “Submit”.
+
+![Step 4 “Finalize and Submit Inspection”: the summary and the “Submit” button](/docs-media/manager/fleet-and-maintenance-inspection-step-4-submit.png)
+
+When you submit, the work order and the status report are generated as PDFs, and the inspection's next due date moves forward. The selected items only move forward when you complete the inspection. An inspection also resets the inspections with a shorter interval. A custom task changes none of them.
+
+## Get the work order and the status report
+
+Once the inspection is submitted, two new buttons appear on the inspection tile: “Get work order” and “Get status report”. They stay available while the inspection is pending.
+
+1. Click “Get work order” to download the work order for the workshop.
+
+![Tile of a pending inspection: the “Get work order” button highlighted](/docs-media/manager/fleet-and-maintenance-get-work-order.jpg)
+
+The work order lists the organization, the aircraft, the targets, the workshop, the inspection requested and the items to do in three columns, with a signature line for the person responsible for maintenance (PRM).
+
+![Sample work order for C-FFFF: 100-Hour / Annual inspection requested, one timed item and the PRM signature line](/docs-media/manager/fleet-and-maintenance-work-order-pdf.jpg)
+
+2. Click “Get status report” to download the status of the aircraft's inspection schedules and items.
+
+![Tile of a pending inspection: the “Get status report” button highlighted](/docs-media/manager/fleet-and-maintenance-get-status-report.jpg)
+
+![Sample status report for C-FFFF: color-coded tables of the inspections, timed items and dated items](/docs-media/manager/fleet-and-maintenance-status-report-pdf.jpg)
+
+Once the work is done, go to the next step: complete the pending inspection.
+
+## Complete the pending inspection
+
+Once your workshop has physically completed the inspection, finalize it in PilotDuty Manager and store the required documentation.
+
+1. On the aircraft page, click the orange “Complete the pending inspection” button. It only appears if an inspection was started but not finalized.
+
+![Inspection tile: the orange “Complete the pending inspection” button highlighted](/docs-media/manager/fleet-and-maintenance-complete-pending-inspection.jpg)
+
+2. In the window that opens, upload if needed the three files provided by your workshop: “Work Report File”, “Inspection Task File” and “Quality Control”.
+3. Confirm the completion of each item task: one box per selected item, such as “Confirm Inspection at 97 hrs”.
+4. Check “Technical Log Checked?”. This box is required.
+5. Click “Complete Inspection”.
+
+![“Complete the pending inspection” window: three files to attach, one item to confirm, the “Technical Log Checked?” box and the “Complete Inspection” button](/docs-media/manager/fleet-and-maintenance-complete-inspection-window.png)
+
+Completing the inspection:
+
+- generates the alert card as a PDF;
+- saves the inspection to the aircraft's history;
+- moves the checked items forward, and only those. The inspection's next due date already moved forward when you submitted it.
+
+Only one inspection can be pending at a time.
+
+## Get the latest alert card
+
+Once the inspection is completed, click “Get latest alert card” on the inspection tile to download it. Any member can download it.
+
+![Inspection tile after completion: the “Get lastest alert card” button highlighted, below “Start Inspection”](/docs-media/manager/fleet-and-maintenance-get-alert-card.jpg)
+
+The alert card shows total airframe time, cycles, the last inspection, the workshop, the next inspections with their targets, and the items that are overdue or due for inspection.
+
+![Sample maintenance alert card for C-FFFF: aircraft and workshop information, next inspections and next dated items](/docs-media/manager/fleet-and-maintenance-alert-card-pdf.jpg)
+
+## Inspection history
+
+“Inspection history”, on the inspection tile, lists past inspections from the most recent to the oldest. Each inspection's details give access to its files: work order, status report, work report, quality control report, alert card and inspection task.
 
 ## Snags
 
@@ -83,21 +255,31 @@ The inspection history lists past inspections. Each inspection's details give ac
 
 Snags only move forward: open, in progress, rectified, closed. A snag cannot be deleted. An email goes out when a snag is reported (to maintenance leads), when it is rectified (to the reporter) and when it is signed off.
 
-## Workshops
+## Manage workshops
 
-Under Settings › Organization, keep your list of workshops (AMO or AME). It is offered at each inspection. Workshops have no access to PilotDuty.
+You can register and manage your supplier workshops directly in your organization's settings. Workshops have no access to PilotDuty.
 
-1. Add a workshop.
-2. For an approved maintenance organization, check the AMO box, then enter the AMO name, the PRM name and the AMO number. Otherwise, enter the AME name and number.
-3. Enter the address, phone number and email, which are all required, then save.
+1. Go to Settings › Organization › “Workshops”.
+2. Click “Add Workshop” to register an approved maintenance organization (AMO), internal or third-party, or an aircraft maintenance engineer (AME).
 
-A workshop's action menu lets you edit or delete it. The first workshop in the list is preselected at an inspection's workshop step, and each inspection keeps its own copy of the workshop's details.
+![Settings, Organization tab, Workshops section: the Acme Shop workshop (AMO) and the “Add Workshop” button highlighted](/docs-media/manager/fleet-and-maintenance-workshops.png)
+
+3. Fill in the form:
+   - “isAMO”: check this box if the workshop is an approved maintenance organization;
+   - for an AMO: the name of the maintenance shop (“amoName”), the name of the person responsible for maintenance (“prmName”) and the AMO certificate number (“amoNumber”);
+   - otherwise: the AME's name and number;
+   - the workshop's address (“shopAddress”), phone (“shopPhone”) and email (“shopEmail”), all three required.
+4. Click “submit” to save and register the workshop.
+
+![Filled-in “Add Workshop” form: isAMO checked, Acme Shop, the PRM, number 23-23, address, phone and email](/docs-media/manager/fleet-and-maintenance-add-workshop.jpg)
+
+Once saved, the workshop is offered at the workshop step of each inspection, where the first one in the list is preselected. Its details are copied into the inspection and appear on the work order and the alert card: each inspection keeps its own copy. A workshop's three-dot menu lets you edit or delete it.
 
 ## Good to know
 
 - The module blocks nothing. A No-Go snag or an overdue item does not take the aircraft off the booking calendar. To block it, add an unavailability to the calendar: see [Bookings](/en/docs/manager/bookings).
 - No due-date alert is sent, by email or text message. Due dates are shown on screen.
 - Everything is counted in airframe hours and cycles. There is no separate engine or propeller counter.
-- Inspection PDFs are in English. Inspections are not signed electronically.
+- Inspection PDFs are in English, with the organization's logo if there is one. Inspections are not signed electronically.
 - MEL item deferral is still in development.
 - An inspection schedule cannot be renamed: deleting and recreating it erases its due dates.

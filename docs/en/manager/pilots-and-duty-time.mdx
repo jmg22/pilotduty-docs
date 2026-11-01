@@ -1,6 +1,6 @@
 ---
 title: "Pilots and duty time"
-description: "Pilot profile, medical and competencies, logbook, flight statistics and duty time benchmarks."
+description: "Pilot profile, medical and competencies, logbook, creating events and flights, flight statistics and duty time benchmarks."
 order: 10
 translationKey: mgr-pilots
 updated: 2026-11-01
@@ -30,24 +30,98 @@ Every certificate and competency shows a countdown: expires in N days, expires t
 
 ## Logbook
 
-On the duty tab, the event list shows work, flight and rest days with their flights. It is the same logbook as in the iPhone app: a flight approved in the app shows up here. You can filter the list by date range (the current month by default, or this month, last month, the quarter, the year or all), sort it, and filter it by event type, aircraft and flight rules.
+On the duty tab, the event list shows work, flight and rest days with their flights. It is the same logbook as in the iPhone app: a flight approved in the app shows up here.
 
-- A new event can be a work/flight event, a quick flight duty event or a rest event.
 - The flights tab lists flights and lets you add one.
 - Disapproving an event moves it to the archives, where you can restore it.
 - The history shows who changed what, and why: every change creates a version. The integrity check verifies the chain and reports it as intact, broken at a given version, or incomplete.
 
-## Enter an event in your logbook
+## Create events and flights
 
-You can only enter events in your own logbook.
+You can manually create work, flight and rest events, then add your flight details to them. You can only enter events in your own logbook.
+
+> The screenshots in this section date from 2025, when the logbook had its own “Events” menu entry. It is now in your pilot file. The “Delete Event” button in the screenshots has become disapprove event: the event moves to the archives instead of being deleted.
+
+### Step 1: open the event creation window
 
 1. Open the Pilots menu, then your own profile. On the duty tab, open the event list.
-2. Create a new event. Choose its type, then its start and end dates.
-3. Depending on the type, also enter the fleet aircraft, operating rules, flight rules, number of flights, total flight time, crew and your pilot status. The flights created are spread evenly over the period, with “Unknown” airports to complete.
-4. Open the event to complete it: type, start, end and remark. You can add a new flight to it. Save the event.
-5. Open each flight to enter the aircraft, airports, times, rules, your status and counters. Attach photos, PDFs or other files if needed.
+2. Click “New Event” at the top of the list.
 
-If the flight time is longer than the event, the event is created without flights.
+![Former “Events” page from 2025, with the “New Event” button highlighted](/docs-media/manager/pilots-and-duty-time-new-event-2025.png)
+
+### Step 2: choose the event type
+
+In the “Create Event” window, open the “Event Type” list and choose:
+
+- “Work/Flight Event”, the default;
+- “Quick Flight Duty Event”;
+- “Rest Event”.
+
+![“Create Event” window: the “Event Type” list open, with Work/Flight Event, Quick Flight Duty Event and Rest Event](/docs-media/manager/pilots-and-duty-time-event-type.png)
+
+### Step 3: set the event time
+
+1. Select the “Event Start Date” and the “Event Stop Date”.
+2. Depending on the type, also enter the fleet aircraft, operating rules, flight rules, number of flights, total flight time, crew and your pilot status. The flights created are spread evenly over the period, with “Unknown” airports to complete.
+3. Click “Create Event” to proceed.
+
+![“Create Event” window: the Work/Flight Event type, the start and stop dates and the “Create Event” button](/docs-media/manager/pilots-and-duty-time-create-event.png)
+
+Once created, the event appears in the list. If the flight time is longer than the event, the event is created without flights.
+
+### Step 4: edit the event (optional)
+
+1. Click the event in the list.
+2. In the “Edit Event” column, you can change:
+   - the event type, for example switch between work, flight and rest;
+   - the start and stop time;
+   - the remark.
+3. Don't forget to click “Save” after making changes.
+
+![“Edit Event” column: the event type list open, with Work Event, Flight Event and Rest Event](/docs-media/manager/pilots-and-duty-time-edit-event.jpg)
+
+### Step 5: add a flight to a flight event
+
+A flight event can hold one or more flights.
+
+1. Click “New Flight” and select the aircraft.
+
+![Flight event: the “New Flight” button and the C-FFFF aircraft choice highlighted](/docs-media/manager/pilots-and-duty-time-new-flight.jpg)
+
+2. The “Edit Flight” column opens on the right.
+3. Fill in the flight details:
+   - “Call Sign” and “Aircraft Type”;
+   - the departure and arrival airports;
+   - the “OffBlock”, “TakeOff”, “Landing” and “OnBlock” times;
+   - “T/L Cycles”;
+   - the flight rules, night flight, operating rules, flight type and “Single Pilot?”;
+   - your pilot status.
+4. Attach photos, PDFs or other files if needed.
+5. Click “Save Flight” once done.
+
+![Filled-in “Edit Flight” column: C-FFFF, C-172, from CYBG to CYQB, the four times, one cycle, VFR and the “Save Flight” button](/docs-media/manager/pilots-and-duty-time-edit-flight.png)
+
+If no flight information is entered, the flight shows as a blank placeholder, with “Unknown” airports:
+
+![Flight event with a blank flight: “From: Unknown” and “To: Unknown”](/docs-media/manager/pilots-and-duty-time-empty-flight.jpg)
+
+### Step 6: sort and filter events
+
+You can sort and filter the event list:
+
+- **Sort order**: by date, ascending or descending.
+
+![Sort list open: Ascending Date and Descending Date](/docs-media/manager/pilots-and-duty-time-sort-order.jpg)
+
+- **Date range**: the current month by default, or this month, last month, the quarter, the year or all. The event type, aircraft and flight rules filters narrow the list.
+
+![Former duration filter from 2025: all events, or the last 7, 28 or 90 days](/docs-media/manager/pilots-and-duty-time-duration-filter-2025.jpg)
+
+In 2025, a duration filter offered the last 7, 28 or 90 days. The date range has replaced it.
+
+You have now created an event and added its flight data in PilotDuty Manager.
+
+### Add a single flight
 
 For a single flight, adding a flight from the flights tab asks for a fleet aircraft or a manual entry, the airports, the four times (off-block, takeoff, landing, on-block), cycles, flight rules, night flight, single pilot and your status. The four times are required. An event is created around the flight, with a 15-minute margin on each side.
 

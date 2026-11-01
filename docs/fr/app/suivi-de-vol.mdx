@@ -7,24 +7,49 @@ updated: 2026-11-01
 draft: false
 ---
 
-Le suivi de vol prévient quelqu'un de vos décollages et de vos arrivées. Il existe deux suivis distincts : par SMS, vers une personne de votre choix, et dans PilotDuty Manager, pour votre organisation.
+Le suivi de vol est une fonction de sécurité : il partage d'office l'état de votre vol avec une personne ou un système de votre choix. Ainsi, quelqu'un sait toujours où vous en êtes, en cas d'urgence ou de retard.
 
-Les deux se règlent dans l'onglet des réglages, à la ligne du suivi de vol. Une pastille sur cette ligne indique l'état de la couverture.
+Il existe deux suivis distincts :
+
+- par SMS, vers une personne de votre choix ;
+- dans PilotDuty Manager, pour votre organisation.
+
+Les deux se règlent dans l'onglet des réglages, à la ligne « Flight Following ». Une pastille sur cette ligne indique l'état de la couverture.
 
 ## Suivi par SMS
 
 Avec PilotDuty+ ou PilotDuty Pro.
 
-Votre suiveur reçoit des SMS aux moments clés du vol. Il n'a pas besoin de l'app.
+Une fois activé, ce suivi envoie d'office des SMS à votre suiveur aux moments clés du vol. Votre suiveur n'a pas besoin de l'app.
+
+### Comment ça marche
+
+- **Décollage.** Un SMS part quand vous décollez.
+- **Atterrissage.** Un SMS part quand vous atterrissez. Une fois l'avion stationné plus longtemps que le délai de stationnement (« Parking time limit »), confirmez votre arrivée « safe » dans l'app : votre suiveur reçoit la confirmation d'arrivée. La marche à suivre est plus bas, dans la section sur la confirmation « safe ».
+- **Retard.** Si vous ne confirmez pas votre arrivée après l'atterrissage, votre suiveur reçoit une alerte de retard, avec votre position.
+
+Le délai de stationnement se règle dans les réglages généraux. Voir [Enregistrement automatique](/fr/docs/app/enregistrement-automatique).
 
 ### Configurer le suiveur
 
-1. Entrez le nom et le numéro de téléphone du suiveur, au format international.
-2. Demandez-lui son accord, puis touchez « J'ai son accord ». Cette attestation est demandée pour chaque nouveau numéro. Rien n'est coché d'avance.
-3. Choisissez les messages à envoyer : décollage, atterrissage, retard.
-4. Activez le suivi. L'app vous demande l'autorisation d'envoyer des notifications.
+1. Ouvrez l'onglet des réglages.
+2. Touchez « Flight Following ».
+3. Entrez le nom de votre suiveur, puis son numéro de mobile : choisissez l'indicatif du pays (« Country Code ») et entrez le numéro. Il doit être valide au format international.
+4. Demandez son accord à votre suiveur, puis touchez « J'ai son accord ». Cette attestation est demandée pour chaque nouveau numéro. Rien n'est coché d'avance.
+5. Choisissez les messages à envoyer : décollage, atterrissage, retard.
+6. Activez « Enable SMS Flight Following ». L'app vous demande l'autorisation d'envoyer des notifications.
 
 Après votre attestation, le suiveur reçoit un message de bienvenue.
+
+![Les réglages « Flight Following » : l'interrupteur « Enable SMS Flight Following », l'indicatif du pays et le numéro de mobile du suiveur](/docs-media/app/flight-following-sms-settings.png)
+
+Cette capture date de 2025. L'écran actuel demande aussi le nom du suiveur, son accord et les messages à envoyer.
+
+Exemples de messages, tels qu'envoyés en 2025 (la formulation peut avoir changé depuis) :
+
+> Au décollage : « John Dow took off from CYQB at 2025-02-28 10:42 GMT -5 with C-FFFF. »
+
+> À l'atterrissage : « John Dow landed at CYBG at 2025-02-28 11:42 GMT -5 with C-FFFF. »
 
 ### Les messages
 
@@ -48,34 +73,102 @@ Un suiveur qui répond STOP ne reçoit plus de messages. Vous ne pouvez pas réa
 
 Un bandeau du tableau de bord peut aussi vous signaler un problème de couverture. Touchez-le pour ouvrir les réglages du suivi.
 
-## Confirmer votre arrivée « safe »
-
-Après l'atterrissage, un vol suivi attend votre confirmation d'arrivée dans le tableau de bord. Glissez-le vers la droite pour le confirmer « safe ». Vous pouvez aussi le confirmer depuis l'écran de l'événement, en glissant le vol vers la droite.
-
-Un vol lié au suivi ne peut pas être supprimé de son événement.
-
 ## Suivi dans PilotDuty Manager
 
 Pour les membres d'une organisation abonnée à PilotDuty Manager.
 
-Activez « Suivi de vol sur PilotDuty Manager ». Sans organisation abonnée, ce réglage est désactivé. Vous devez être connecté à votre compte.
+PilotDuty Manager est une plateforme web qui permet à un exploitant de suivre plusieurs aéronefs en temps réel. Ce suivi convient bien aux exploitants qui gèrent plusieurs pilotes ou plusieurs aéronefs.
 
-- Au décollage, l'app crée le suivi du vol. Elle y ajoute ensuite des jalons, comme le roulage, le décollage, l'atterrissage et le stationnement, chacun avec son heure, sa position, son altitude et son cap.
+![Le suivi de vol dans PilotDuty Manager en 2025 : les compteurs par statut et deux vols de C-FFFF avec leurs jalons (noms floutés)](/docs-media/app/flight-following-manager-view.webp)
+
+Cette capture du Manager date de 2025. Aujourd'hui, le suivi s'affiche sur la feuille de vol. Voir [Suivi de vol dans le Manager](/fr/docs/manager/suivi-de-vol).
+
+### Comment ça marche
+
+Une fois ce suivi activé, l'app envoie d'office au Manager :
+
+- les jalons du vol : départ du poste et début du roulage, décollage, atterrissage, arrivée au stationnement ;
+- l'heure de chaque jalon ;
+- l'identification de l'aéronef ;
+- l'altitude, le cap et la position.
+
+L'app détecte ces jalons avec le GPS de l'iPhone :
+
+- **Départ du poste (« offBlock »)** : quand l'avion commence à rouler.
+- **Décollage (« Takeoff »)** : quand la vitesse dépasse un seuil.
+- **Atterrissage (« Landing »)** : quand l'avion touche le sol et ralentit.
+- **Arrivée au poste (« onBlock »)** : quand l'avion est stationné et ne bouge plus.
+
+Ces jalons s'affichent avec leur heure et leur position dans le Manager. Votre organisation y voit le vol avec un statut et une couleur : en bleu pendant la préparation, en orange en vol, en rouge une fois posé sans confirmation, en vert une fois l'arrivée confirmée « safe ».
+
+### Activer le suivi dans le Manager
+
+1. Ouvrez l'onglet des réglages.
+2. Touchez « Flight Following ».
+3. Activez « Enable flight Following on PilotDuty Manager ».
+
+> L'app doit être connectée à votre compte PilotDuty, le même que dans le Manager. Voir [Avec votre organisation](/fr/docs/app/avec-votre-organisation). Sans organisation abonnée, ce réglage est désactivé.
+
+![Les réglages « Flight Following », avec une flèche vers l'interrupteur « Enable flight Following on PilotDuty Manager »](/docs-media/app/flight-following-manager-setting.png)
+
+### Ce que voit votre organisation
+
+- Au décollage, l'app crée le suivi du vol, puis y ajoute les jalons.
 - Si le réseau coupe pendant le vol, les jalons sont envoyés au retour du réseau.
 - Votre organisation suit le vol dans le Manager : feuille de vol, carte et alertes de retard. Voir [Suivi de vol dans le Manager](/fr/docs/manager/suivi-de-vol).
 - Le suivi est visible du Manager avant même que vous approuviez le vol.
 - Tant que vous n'avez pas confirmé votre arrivée, votre vol s'affiche en rouge dans le Manager, avec un compteur du temps écoulé depuis l'atterrissage.
-- Le vol est marqué arrivé quand vous le confirmez « safe ». Au décollage suivant, l'app confirme aussi le vol précédent. Le personnel qui a le rôle Instructeur ou un rôle supérieur peut aussi le confirmer depuis le Manager.
+- Le vol est marqué arrivé quand vous le confirmez « safe ». Le personnel qui a le rôle Instructeur ou un rôle supérieur peut aussi le confirmer depuis le Manager.
 
-Le suivi dans le Manager ne dépend pas du suivi par SMS. Vous pouvez activer l'un, l'autre ou les deux.
+Le suivi dans le Manager ne dépend pas du suivi par SMS. Vous pouvez activer l'un, l'autre ou les deux en même temps.
 
 ### Utiliser la bonne immatriculation
 
-Le Manager rattache votre vol à votre organisation par l'immatriculation de l'avion. Elle doit correspondre exactement à un avion de votre organisation, par exemple C-FFFF avec son tiret. Sinon, votre vol risque de ne pas s'afficher sur la feuille de vol de votre organisation.
+Le Manager rattache votre vol à votre organisation par l'immatriculation de l'avion. Elle doit être complète, en majuscules et identique dans l'app et dans le Manager, par exemple C-FFFF avec son tiret. Sinon, votre vol risque de ne pas s'afficher sur la feuille de vol de votre organisation.
 
 - Le plus simple est de choisir l'avion dans la liste de votre organisation. Voir [Avec votre organisation](/fr/docs/app/avec-votre-organisation).
 - Si l'immatriculation ne correspond pas, vous pouvez recevoir un courriel qui propose la bonne écriture.
 
+## Confirmer votre arrivée « safe »
+
+Après l'atterrissage, un vol suivi attend votre confirmation d'arrivée.
+
+Quand un événement s'affiche en rouge dans le tableau de bord, un de ses vols est en cours ou attend votre confirmation : il est partagé avec l'organisation de l'avion et n'a pas encore été marqué « safe ».
+
+![Le tableau de bord pendant un vol suivi : l'événement de vol en cours s'affiche en rouge](/docs-media/app/flight-following-event-not-safe.png)
+
+Pour le marquer « safe » :
+
+1. Ouvrez l'événement.
+2. Repérez le vol en rouge.
+3. Glissez le vol vers la droite et touchez « Safe ».
+
+Vous pouvez aussi confirmer le vol directement dans le tableau de bord, en le glissant vers la droite.
+
+Le vol doit être terminé pour être marqué « safe » : une fois l'avion stationné et le délai de stationnement écoulé, marquez le vol « safe ». Cette confirmation part vers le Manager, si le suivi dans le Manager est activé, et vers votre suiveur, si le suivi par SMS est activé.
+
+![Un vol en rouge dans l'écran de l'événement, glissé vers la droite pour faire apparaître le bouton « Safe »](/docs-media/app/flight-following-swipe-safe.png)
+
+Si vous atterrissez sans marquer le vol « safe », l'app marque d'elle-même le vol précédent « safe » dès qu'elle détecte un nouveau décollage, et crée le nouveau vol.
+
+![Animation : au nouveau décollage, le vol précédent repasse au blanc, confirmé « safe », et un nouveau vol en rouge commence](/docs-media/app/flight-following-auto-safe-takeoff.gif)
+
+Un vol lié au suivi ne peut pas être supprimé de son événement.
+
+### Pourquoi confirmer votre arrivée
+
+Après un atterrissage loin de tout, sur une piste isolée ou hors aérodrome, la confirmation « safe » dit à votre organisation que tout va bien. Une confirmation qui manque se voit tout de suite dans le Manager : votre organisation peut vous joindre rapidement ou lancer les secours, au lieu de perdre des heures avant de se rendre compte d'un problème.
+
 ## Bon à savoir
 
-Le suivi commence au décollage détecté. Si l'enregistrement automatique ne fonctionne pas, le suivi non plus. Voir [Enregistrement automatique](/fr/docs/app/enregistrement-automatique).
+- Le suivi commence au décollage détecté. Si l'enregistrement automatique ne fonctionne pas, le suivi non plus. Voir [Enregistrement automatique](/fr/docs/app/enregistrement-automatique).
+- Gardez la localisation sur « Toujours » et les notifications activées.
+- Si l'iPhone perd le signal pendant le vol, les données sont envoyées dès le retour de la connexion. Si une erreur survient, l'app vous le signale.
+
+## Confidentialité et sécurité
+
+- Votre suivi n'est pas public : il est visible de votre suiveur, pour le suivi par SMS, et des membres de votre organisation, pour le suivi dans le Manager.
+- Les SMS que votre organisation envoie à ses propres abonnés peuvent contenir un lien public vers la carte du vol. Cette carte ne montre pas votre nom. Voir [Suivi de vol dans le Manager](/fr/docs/manager/suivi-de-vol).
+- Les données envoyées au Manager sont chiffrées pendant le transfert.
+
+Le suivi de vol est conçu pour votre sécurité et votre tranquillité d'esprit, que vous voliez seul ou en équipe.

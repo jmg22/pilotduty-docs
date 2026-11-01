@@ -1,13 +1,15 @@
 ---
 title: "Members and roles"
-description: "Invite your organization's members, give them a role and keep your profile up to date."
+description: "Invite your organization's members, manage invitations, give them a role and keep your profile up to date."
 order: 2
 translationKey: mgr-members
 updated: 2026-11-01
 draft: false
 ---
 
-The Manager lets you invite your members, give them a role and manage your own profile.
+The Manager lets you invite your members, give them a role and manage your own profile, so your organization runs smoothly.
+
+> The screenshots in this guide date from 2025 and show the older menu. The Settings › Organization path has not changed.
 
 ## Who can do it
 
@@ -15,25 +17,50 @@ The Manager lets you invite your members, give them a role and manage your own p
 - **See pending invitations**: Dispatch and above. Delete them: Chief Instructor and above.
 - **Change a role, remove a member**: Chief Instructor and above, on a member whose role is strictly lower than their own.
 
-## The member list
+## Manage organization members
 
-Under Settings › Organization, the member list shows the organization's members from the highest role to the lowest, with their photo, their name and a role badge. A badge marks your own row. The search field finds a member by name or email. Each row's action menu lets you change the member's role or remove them.
+To add and manage your organization's members, go to Settings › Organization › “Members”. In this view:
 
-## Invite members
+- “Invite Members” lets you add members;
+- the “You” label marks your own account;
+- you see all current members of the organization, from the highest role to the lowest, with their photo, their name and a role badge;
+- the search field finds a member by name or email;
+- the three-dot menu on each row lets you change a member's role or remove them.
 
-The organization needs an active subscription. See [Subscription](/en/docs/manager/subscription).
+![Settings, Organization tab, Members section: search field, “Invite Members” button and a member's three-dot menu](/docs-media/manager/members-and-roles-member-list.png)
 
-1. In your organization settings, open the member list and choose to invite members.
-2. For each person, enter the email address and choose the role (Pilot by default). Add as many lines as you need.
-3. Choose the language of the invitation, then send.
+## Invite a new member
 
-The invitation email carries your organization's logo. A preview window then shows how the new members affect your subscription invoice. Billing changes when the invitee accepts.
+1. In Settings › Organization › “Members”, click “Invite Members”.
+2. Enter the person's email address.
+3. Select their role (Pilot by default). You can give any role strictly lower than your own, except Operations Manager. Add another line to invite another person.
+4. Choose the language of the invitation, then click “Send Invites”.
 
-An invitation is valid for 7 days. The pending invitations tab lists those not yet accepted, and lets you delete one. To resend an invitation, invite the same address again: a new link replaces the old one.
+![“Invite Members” form: the invitee's email, the Pilot role and the “Send Invites” button](/docs-media/manager/members-and-roles-invite-members.png)
+
+Invited users receive an email and join your organization as soon as they accept the invitation. The email shows your organization's name and logo, and a direct link to accept the invitation: a button, or an address to copy into the browser.
+
+After sending, an invoice preview window shows how the new members affect your subscription invoice. Billing changes when the invitee accepts.
+
+### A subscription is required to add members
+
+To invite users, your organization must have an active subscription. If you try to invite someone without a subscription, the form prompts you to go to the subscription page (“Go to the subscription page”). See [Subscription](/en/docs/manager/subscription).
+
+![“You need a subscription to add users” message and the “Go to the subscription page” button](/docs-media/manager/members-and-roles-subscription-required.png)
+
+## Manage pending invites
+
+Invitations that have not been accepted yet appear under Settings › Organization › “Pending Invites”, with each invitee's email and role badge.
+
+- To cancel an invitation, delete it (the cross in the screenshot), then confirm.
+- An invitation is valid for 7 days. Neither its status nor its expiry date is shown, and an expired invitation stays in the list.
+- To resend an invitation, invite the same address again: a new link, valid for 7 days, replaces the old one.
+
+![Pending Invites section: one invitation for the Pilot role, with the cross to delete it](/docs-media/manager/members-and-roles-pending-invites.png)
 
 ## Accept an invitation
 
-Open the link in the email. Sign in or create your account with the invited address: only that account can accept. Enter your name, then continue. You land on the Flightsheet. If the link has expired, ask for a new invitation.
+Open the link in the email. Sign in or create your account with the invited address: only that account can accept. Enter your name, then continue. You are now part of the team and land on the Flightsheet. If the link has expired, ask for a new invitation.
 
 ## The eleven roles
 
@@ -55,33 +82,64 @@ Each member has one role per organization. Most rights add up from one role to t
 
 ## Change a role
 
-In the member list, open the row's action menu, choose to change the role, then confirm. The new role must be strictly lower than yours, and you cannot change your own role. The member is not notified by email.
+In the member list, open the row's three-dot menu, choose to change the role, then confirm. The new role must be strictly lower than yours, and you cannot change your own role. The member is not notified by email.
 
 The Operations Manager role cannot be given through an invitation or a role change: only the Operations Manager can transfer ownership.
 
 ## Remove a member
 
-Open the row's action menu, choose to remove the member, then confirm. The person loses access to the organization but keeps their PilotDuty account. No email notifies them.
+Open the row's three-dot menu, choose to remove the member, then confirm. The person loses access to the organization but keeps their PilotDuty account. No email notifies them.
 
-## Your profile
+## Edit your user profile
 
-In your profile settings, under your information:
+After creating your account, you can update your profile at any time from the settings.
 
-- **Your name and photo**, shown in member lists.
+1. In the left-hand menu, click “Settings”. Make sure you are on the “Profile” tab, in the “My Details” section.
+2. Personalize your profile:
+   - “Your Name”: how your name appears to other members;
+   - your avatar picture: click the avatar icon to upload a profile picture. It is saved as soon as you upload it.
+3. Click “Update Profile” to save your name.
+
+![Settings, Profile tab, My Details section: avatar icon, “Your Name” field and the “Update Profile” button](/docs-media/manager/members-and-roles-my-details.jpg)
+
+The same section also holds:
+
 - **A phone number**, verified by a code sent by text message. It is not used to sign in.
 - **Communication language**: the language of the booking notifications you receive, separate from the interface language.
 - **Emergency contact**: the person to reach in case of an incident or an overdue flight. Instructors and above can see it.
 
-The update button saves your name. Your photo is saved as soon as you upload it.
+### Manage your sign-in methods
 
-The email and password tabs are for password accounts. The authentication tab lists your sign-in methods.
+On the “Authentication” tab, you can manage your sign-in methods or add more:
 
-- **Change your email**: on the email tab, enter the new address twice, then your current password, and save.
-- **Change your password**: on the password tab, enter your current password, then the new one twice, and save. It must have at least 6 characters and differ from the current one.
-- **Manage your sign-in methods**: on the authentication tab, you can unlink a sign-in method if you have another one left. An account without a password can add one here.
+- Sign in with Google;
+- Sign in with Apple;
+- email and password.
+
+Linking more than one sign-in method gives you a choice when you sign in. You can unlink a sign-in method if you have another one left. An account without a password can add one here.
+
+### Change your email
+
+On the “Email” tab:
+
+1. Enter your new email.
+2. Repeat your new email.
+3. Enter your current password.
+4. Confirm and save the change.
+
+This tab is for password accounts. An account that only signs in with Google or Apple cannot change its address here.
+
+### Change your password
+
+On the “Password” tab:
+
+1. Enter your current password.
+2. Choose a new password: at least 6 characters, different from the current one.
+3. Repeat your new password.
+4. Confirm and save the change.
 
 ## Good to know
 
 - Below the Pilot role, the member list only shows staff (Pilot and above) and yourself. Other members' email, phone and address are reserved to Instructors and above.
 - The emergency contact is saved per organization: enter it again in each one.
-- An invitation's expiry date is not shown.
+- Nothing stops you from inviting the address of an existing member, but the acceptance will be refused.

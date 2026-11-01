@@ -7,11 +7,11 @@ updated: 2026-11-01
 draft: false
 ---
 
-Le temps de service suit vos périodes de travail, de vol et de repos, et les compare aux limites d'une réglementation.
+Le temps de service suit vos périodes de travail, de vol et de repos, et les compare aux limites d'une réglementation. Il vous aide à garder un œil sur vos limites et à organiser votre horaire.
 
 Avec PilotDuty Pro. Cette fonction est en bêta.
 
-> PilotDuty est un outil d'aide. Il ne remplace ni la réglementation ni les règles de votre exploitant. Vérifiez toujours vos limites dans les textes officiels.
+> PilotDuty est un outil d'aide pour les exploitants et les pilotes. Ce n'est pas une référence réglementaire : il ne remplace ni la réglementation ni les règles de votre exploitant. Vérifiez toujours vos limites dans les textes officiels.
 
 ## Activer le temps de service
 
@@ -19,36 +19,193 @@ Dans l'onglet des réglages, activez « Duty (Beta) ». Ce réglage n'est pas di
 
 Une fois le réglage activé :
 
-- l'onglet du temps de service (icône de minuterie) affiche vos jauges ;
+- l'onglet du temps de service (icône de minuterie, « Duty ») affiche vos jauges ;
 - le tableau de bord propose un sélecteur entre vols et événements ;
 - le bouton « + » permet d'ajouter un événement ;
-- les réglages de zone de repos et de zone de travail deviennent disponibles.
+- les réglages « Rest Area » et « Work Area » (zones de repos et de travail) deviennent disponibles.
 
 ## Les événements
 
 Un événement est une période de travail, de vol ou de repos. Il a un début, une fin, et un fuseau horaire au début et à la fin. Une option d'acclimatation est offerte.
 
-Pour un événement de vol, indiquez le nombre de vols, le temps total et l'avion. L'app répartit le temps entre les vols. Ces heures réparties ne sont pas les heures réelles de chaque vol : pour un carnet exact, ajoutez plutôt chaque vol avec ses vraies heures.
-
 - Les événements attendent votre approbation dans le tableau de bord, comme les vols. Seuls les événements approuvés comptent dans les jauges.
 - Touchez un événement dans le tableau de bord pour le modifier avant de l'approuver : dates, fuseaux horaires, acclimatation, remarque et vols. Pendant l'enregistrement de l'événement, ses champs sont verrouillés.
 - Dans l'écran d'un événement en cours, vous pouvez l'arrêter, le mettre en pause ou le reprendre.
 - Vous pouvez ajouter des vols à un événement de travail ou de vol : à la main, par ADS-B ou par scan. Voir [Ajout manuel et scan ACARS](/fr/docs/app/ajout-manuel-et-scan-acars).
-- Pour corriger un événement approuvé, ouvrez le détail du jour dans l'onglet du temps de service et désapprouvez l'événement. L'app vous demande une raison et l'ajoute à la remarque, avec la date.
+- Pour corriger un événement approuvé, désapprouvez-le depuis le détail du jour, dans l'onglet du temps de service. Voir plus bas, « Désapprouver un événement ».
 - Pour l'instant, les fuseaux horaires proposés sont ceux des Amériques.
 
-## Zones de repos et de travail
+## Ajouter un événement à la main
 
-Dans l'onglet des réglages, définissez une zone de repos et une zone de travail. Quand vous y entrez ou en sortez, l'app ouvre ou ferme d'elle-même l'événement correspondant.
+Il arrive que vous deviez créer un événement vous-même : un vol qui n'a pas été suivi automatiquement, une période de service au sol ou une pause. Vous l'ajoutez depuis le tableau de bord.
 
+### Étape 1 : ouvrir le tableau de bord
+
+Touchez « + » en haut à droite de l'écran, puis « Add Event ».
+
+![Le tableau de bord, avec une flèche vers le bouton « + » en haut à droite](/docs-media/app/duty-time-dashboard-add-button.png)
+
+### Étape 2 : choisir le type d'événement
+
+Dans « Event Type », choisissez :
+
+- « Work/Flight Event » : pour une période de travail ou de vol ;
+- « Rest Event » : pour une pause ou une période de repos ;
+- « Quick flight duty Event » : une saisie rapide, avec les champs de base.
+
+Pour un « Quick flight duty Event », indiquez le nombre de vols, le temps total et l'avion. L'app crée un lot de vols et répartit le temps total entre eux.
+
+> Le « Quick flight duty Event » crée ses vols à partir de données globales. Il sert seulement au suivi du temps de service. Ces heures réparties ne sont pas les heures réelles de chaque vol : ne l'utilisez pas si vous voulez un carnet exact. Ajoutez plutôt chaque vol avec ses vraies heures.
+
+![L'écran « Add New Event », avec la liste des types : « Work/Flight Event », « Rest Event » et « Quick flight duty Event »](/docs-media/app/duty-time-add-new-event.png)
+
+### Étape 3 : remplir les détails de l'événement
+
+- la date et l'heure de début et de fin ;
+- le fuseau horaire de début (« Start Time Zone ») et de fin (« Stop Time Zone ») ;
+- l'option d'acclimatation (« Time Zone Acclimatization Option »), s'il y a lieu : « Step Acclimatization » ou « 1h/day per TZ ».
+
+Touchez ensuite « Create Event ». Vous pouvez aussi ajouter une remarque.
+
+![Le détail d'un événement : fuseaux et heures de début et de fin, option d'acclimatation, remarques et section des vols](/docs-media/app/duty-time-event-details.png)
+
+### Étape facultative : ajouter des vols
+
+Dans la section « Flights » de l'événement, touchez « Add Flight ». Voir [Ajout manuel et scan ACARS](/fr/docs/app/ajout-manuel-et-scan-acars), section « Ajouter un vol à un événement ».
+
+![La section « Flights » d'un événement, avec une flèche vers « Add Flight »](/docs-media/app/duty-time-event-add-flight.png)
+
+### Étape 4 : vérifier et approuver
+
+Une fois l'événement et ses vols bien entrés, revenez au tableau de bord et glissez l'événement vers la droite pour l'approuver.
+
+Une fois approuvé, l'événement compte dans l'onglet du temps de service, et ses vols apparaissent dans le carnet.
+
+![Le tableau de bord « Awaiting Approval » avec le nouvel événement de travail, en attente d'approbation](/docs-media/app/duty-time-event-awaiting-approval.png)
+
+### Important
+
+Tous les événements du tableau de bord attendent votre approbation. Une fois approuvé :
+
+- l'événement compte dans l'onglet du temps de service, et ses vols apparaissent dans le carnet ;
+- l'événement est verrouillé. Pour le modifier, désapprouvez-le d'abord ;
+- si vous êtes membre d'une ou de plusieurs organisations dans PilotDuty Manager, l'événement remonte sur votre fiche dans le Manager. Voir [Avec votre organisation](/fr/docs/app/avec-votre-organisation).
+
+Si l'événement est modifié dans PilotDuty Manager, l'app reçoit les changements. S'il y est supprimé, l'app le renvoie dans votre tableau de bord, en attente d'approbation.
+
+Ce fonctionnement protège l'intégrité de vos données de vol. Il vous revient de vérifier chaque événement avant de l'approuver.
+
+## Ajouter une zone de travail ou de repos
+
+PilotDuty peut suivre d'office vos périodes de vol, de travail et de repos grâce à des zones suivies. Une zone est détectée par une balise iBeacon ou par la position GPS. Elle a un type : zone d'aéronef, zone de travail ou zone de repos.
+
+Quand vous entrez dans une zone ou en sortez, l'app ouvre ou ferme d'elle-même l'événement correspondant. Les zones de travail et de repos demandent PilotDuty Pro et le temps de service activé. Les zones d'aéronef sont les avions de l'onglet des aéronefs. Voir [Balise iBeacon](/fr/docs/app/balise-ibeacon).
+
+### Comprendre la priorité de détection
+
+![Schéma d'un aérodrome vu de haut : une petite zone d'aéronef autour d'un avion près du hangar, une grande zone de travail qui couvre l'aire de trafic et l'aérogare, et une zone de repos dans un coin](/docs-media/app/duty-time-area-types-diagram.jpg)
+
+Une seule zone est active à la fois. Quand plusieurs zones s'appliquent, PilotDuty en retient une selon cette logique :
+
+1. Le déclencheur d'abord :
+   - la balise iBeacon ;
+   - puis la position GPS et son rayon.
+2. Puis le type de zone :
+   - la zone d'aéronef ;
+   - puis la zone de travail ;
+   - puis la zone de repos.
+
+> Exemple 1 : vous êtes dans une zone de travail et une zone de repos qui se chevauchent, toutes deux détectées par GPS. PilotDuty retient le type le plus important. La zone de travail passe avant la zone de repos : votre temps est compté comme du travail.
+
+> Exemple 2 : vous êtes dans une zone de travail détectée par GPS et une zone de repos détectée par iBeacon, qui se chevauchent. PilotDuty retient d'abord le déclencheur. L'iBeacon passe avant le GPS : votre temps est compté comme du repos.
+
+> À déclencheur égal, la zone d'aéronef passe toujours en premier. Si un événement de vol démarre parce que vous êtes entré dans la zone d'un aéronef, mais que vous ne volez pas, PilotDuty le convertit en événement de travail, pour garder un relevé exact.
+
+### Règles de nettoyage et de reprise des événements
+
+Pour garder un suivi exact et retirer les entrées fausses ou inutiles, PilotDuty filtre les événements qu'il crée ou reprend selon vos déplacements :
+
+- **Repos de moins d'une heure.** Si vous entrez dans une zone de repos mais y restez moins d'une heure, l'événement de repos est supprimé.
+- **Courte sortie d'une zone de repos (moins de 3 minutes).** Si vous sortez d'une zone de repos et y revenez en moins de 3 minutes, l'app reprend l'événement de repos précédent au lieu d'en créer un nouveau.
+- **Travail ou vol de moins de 3 minutes (0,1 h).** Si vous n'entrez que très peu de temps dans une zone de travail ou d'aéronef, l'événement est supprimé, pour éviter les fausses entrées.
+- **Sortie et retour en moins de 55 minutes.** Si vous sortez d'une zone de travail ou d'aéronef et y revenez en moins de 55 minutes, l'app reprend l'événement de travail ou de vol précédent, pour garder la continuité.
+
+> Le temps passé hors d'une zone suivie compte d'office comme hors service, sauf dans les cas ci-dessus.
+
+### 1. Ouvrir les réglages des zones suivies
+
+Touchez l'onglet des réglages (« Settings »), en bas à droite de l'écran.
+
+![Le tableau de bord, avec une flèche vers l'onglet « Settings » en bas à droite](/docs-media/app/duty-time-settings-tab.png)
+
+### 2. Choisir « Work Area » ou « Rest Area »
+
+Touchez « Work Area » pour une zone de travail, ou « Rest Area » pour une zone de repos.
+
+![L'onglet des réglages, avec une flèche vers les lignes « Rest Area » et « Work Area »](/docs-media/app/duty-time-settings-work-rest-area.png)
+
+### 3. Ajouter une zone
+
+Touchez « + » en haut à droite pour ajouter une zone suivie.
+
+![L'écran « Tracked Work Area » vide, avec une flèche vers le bouton « + »](/docs-media/app/duty-time-tracked-area-add.png)
+
+### 4. Ouvrir la nouvelle zone
+
+La nouvelle zone apparaît dans la liste, sous le nom « Unknown ». Touchez-la pour la régler.
+
+![La liste « Tracked Work Area » avec une nouvelle zone « Unknown », « User initiated »](/docs-media/app/duty-time-tracked-area-new.png)
+
+### 5. Choisir le déclencheur
+
+Dans « Initiator », choisissez comment la zone sera détectée :
+
+- option A : « iBeacon » ;
+- option B : « GPS location ».
+
+![L'écran « Edit Area », avec le choix du déclencheur « Initiator » et le champ du nom sous « Area Information »](/docs-media/app/duty-time-edit-area-ibeacon.png)
+
+#### Option A : iBeacon
+
+1. Réglez « Initiator » sur « iBeacon ».
+2. Touchez « Adopt an iBeacon » pour détecter la balise la plus proche.
+3. Restez tout près de la balise que vous voulez associer.
+4. Donnez un nom à la zone dans « Name », sous « Area Information ».
+
+L'app cherche alors les balises à proximité. Quand une balise est détectée (« Near »), touchez « Adopt Nearest iBeacon ».
+
+Si aucune balise n'est trouvée, vérifiez :
+
+- que les piles sont bien en place ;
+- que le film protecteur est retiré ;
+- que vous êtes tout près de la balise.
+
+![L'écran « iBeacon Detection », avec le bouton « Adopt Nearest iBeacon »](/docs-media/app/duty-time-ibeacon-detection.png)
+
+#### Option B : position GPS
+
+1. Réglez « Initiator » sur « GPS location ».
+2. Touchez « Get current location » : vos coordonnées se remplissent d'elles-mêmes.
+3. Entrez le rayon de la zone, en mètres, dans « Area Radius ».
+
+> La détection GPS est une bonne option quand vous devez couvrir une grande zone.
+
+![L'écran « Edit Area » réglé sur « GPS location », avec « Get current location » et les champs du nom et du rayon](/docs-media/app/duty-time-edit-area-gps-empty.png)
+
+Entrez ensuite un nom descriptif dans « Name », par exemple « CYBC » ou « Crew Office ».
+
+![Une zone GPS remplie : longitude et latitude, nom « CTH3 » et rayon de 1000 mètres](/docs-media/app/duty-time-edit-area-gps-filled.png)
+
+### Dernière étape : quitter
+
+Une fois réglée, la zone apparaît dans la liste de vos zones suivies. PilotDuty enregistre désormais d'office votre temps quand vous entrez dans cette zone ou en sortez.
+
+### Notes
+
+- Une seule zone est active à la fois.
+- Si plusieurs zones se chevauchent, l'app applique les règles de priorité décrites plus haut.
+- L'iBeacon est la méthode à préférer pour une détection précise à l'intérieur, ou dans une zone qui bouge, comme un avion.
 - Les zones demandent la localisation sur « Toujours ».
-- Une seule zone est active à la fois. Quand plusieurs s'appliquent, l'app en retient une : une balise iBeacon passe avant le GPS, et une zone d'aéronef passe avant une zone de travail, qui passe avant une zone de repos.
-- Un événement de repos de moins d'une heure est supprimé.
-- Si vous sortez d'une zone de repos et y revenez en moins de 3 minutes, l'app reprend le même événement de repos.
-- Un événement de travail ou de vol de moins de 3 minutes (0,1 h) est supprimé.
-- Si vous sortez d'une zone de travail ou d'un avion et y revenez en moins de 55 minutes, l'app reprend le même événement.
-- En dehors de ces cas, le temps passé hors d'une zone suivie compte comme hors service.
-- Si un événement de vol démarre parce que vous êtes entré dans la zone d'un avion, mais que vous ne volez pas, l'app le convertit en événement de travail.
 
 ## Choisir la réglementation
 
@@ -64,16 +221,80 @@ Les gabarits intégrés sont verrouillés. Pour en adapter un, créez un gabarit
 2. Partez d'un gabarit intégré (RAC, FAR ou EASA) ou d'un gabarit vierge.
 3. Nommez-le. Le nouveau gabarit devient actif.
 
-L'éditeur permet de régler les limites (fenêtre, heures, jours de repos), les règles de repos, l'acclimatation, les badges de conformité et la table de temps de vol. Les messages des badges s'écrivent en français et en anglais. Les sous-parties ne sont pas encore modifiables.
+L'éditeur permet de régler les limites (fenêtre, heures, jours de repos), les règles de repos, l'acclimatation, les badges et la table de temps de vol. Les messages des badges s'écrivent en français et en anglais. Les sous-parties ne sont pas encore modifiables.
 
 Le gabarit actif est enregistré avec votre compte. Si vous supprimez le gabarit actif, l'app revient au gabarit RAC.
 
-## Jauges et badges
+## Lire les informations du temps de service
 
-L'onglet du temps de service affiche des jauges par fenêtre glissante : 24 heures, 7 jours, 28 ou 30 jours, 90 jours et 365 jours. Des courbes comparent votre temps de service et votre temps de vol aux limites.
+L'onglet du temps de service présente votre temps de vol (FT), votre temps de travail ou de service (ST) et vos repos. Voici comment lire ses différentes vues.
 
-- Des badges marquent les jours de repos obligatoires, avec un message qui en donne la raison.
-- Touchez un jour pour voir le détail de ses événements.
-- Des bulles d'information expliquent l'acclimatation, le repos et la légende.
+### Les plages de temps
+
+Choisissez une plage : « 24h », « 7 days », « 28/30 days », « 90 days » ou « 365 days ». Chaque plage est une fenêtre glissante. Elle s'applique à votre temps de vol (FT), à votre temps de service (ST) et à vos repos obligatoires. Des courbes comparent votre temps de service et votre temps de vol aux limites.
+
+![L'onglet « Duty », avec le sélecteur de plage en haut : 24h, 7 days, 28/30 days, 90 days et 365 days](/docs-media/app/duty-time-range-picker.png)
+
+### Les couleurs
+
+La légende, sous le sélecteur de plage, donne le sens de chaque couleur.
+
+- **Vert, repos (« Rest »).** Les étiquettes « Day Off » marquent un jour de repos. Le rectangle vert hachuré, dans le graphique, représente une période de repos.
+- **Bleu, temps de vol (« FT »).** Le temps de vol compte quand l'aéronef se déplace par ses propres moyens en vue du vol. Il s'affiche en bleu dans le graphique de droite et vous aide à le comparer à la limite de temps de vol.
+- **Gris, temps de travail (« ST »).** Le temps de travail ou de service comprend toutes les tâches autres que les vols : la préparation, les comptes rendus et toute autre tâche.
+- **Orange, limite de temps de vol (« FLmt »).** La zone orange indique la limite de temps de vol pour la plage choisie.
+- **Rouge, limite de temps de service (« SLmt »).** La zone rouge indique la limite de temps de service pour cette période. Cette limite varie selon la réglementation choisie, par exemple selon l'heure de début de la première période de service de vol.
+
+![La légende de l'onglet « Duty » : Rest en vert, FT en bleu, ST en gris, FLmt en orange et SLmt en rouge](/docs-media/app/duty-time-legend.png)
+
+### Les jours de repos obligatoires
+
+Selon vos heures et la réglementation choisie, PilotDuty marque d'office les jours de repos obligatoires d'une étiquette grise. L'étiquette en donne la raison, par exemple « Mandatory Day Off for 60h Week ».
+
+![Des jours marqués « Mandatory Day Off for 60h Week (703) » et « Mandatory Day Off for 70h Week (703) »](/docs-media/app/duty-time-mandatory-day-off.png)
+
+### Les bulles d'information
+
+Touchez l'icône « i » pour lire les exigences de service et de repos. Avec le gabarit RAC, par exemple :
+
+- 120 heures libres de service sur 30 jours ;
+- pas plus de 24 heures de travail sur toute période de 48 heures ;
+- au moins 5 nuits locales de repos consécutives ;
+- et ainsi de suite.
+
+D'autres bulles expliquent l'acclimatation, le repos et la légende.
+
+![La bulle « Informations », qui liste les exigences de repos liées au jour marqué](/docs-media/app/duty-time-info-bubble.png)
+
+### Les compteurs
+
+Chaque carte d'événement porte une pastille rouge : le nombre de vols regroupés dans la période de service. Elle vous aide à repérer d'un coup d'œil vos périodes actives.
+
+Exemple : le 25 août, vous avez travaillé 7,8 heures et fait 2 vols. La carte du 25 août affiche 7,8 et une pastille 2.
+
+![Des cartes d'événements de vol en août, chacune avec sa durée et une pastille rouge qui compte ses vols](/docs-media/app/duty-time-flight-counters.png)
+
+### Le détail d'un jour
+
+Touchez un jour pour en voir le détail :
+
+- le cadran du temps de service, avec sa limite (13,0 h dans l'exemple ; la limite varie) ;
+- le cadran du temps de vol, avec sa limite (8,0 h dans l'exemple ; la limite varie) ;
+- des résumés sur les dernières fenêtres, par exemple 7, 30, 90 et 365 jours ;
+- la liste des événements du jour, avec leur début, leur fin et leur total.
+
+![Le détail d'un jour : le cadran « Flight Time », les résumés sur 7, 30, 90 et 365 jours, et l'événement de vol du jour](/docs-media/app/duty-time-day-detail.png)
+
+### Désapprouver un événement
+
+Pour corriger un événement approuvé, glissez-le vers la gauche dans le détail du jour, puis touchez « UnApprove ». L'app vous demande une raison et l'ajoute à la remarque, avec la date. L'événement retourne dans le tableau de bord, où vous pouvez le modifier, puis l'approuver de nouveau.
+
+![Un événement glissé vers la gauche dans le détail du jour, avec le bouton « UnApprove »](/docs-media/app/duty-time-unapprove-event.png)
+
+### En résumé
+
+Cette vue vous aide à garder vos heures sous les limites du gabarit choisi et à repérer un risque de fatigue. Mais, encore une fois :
+
+> Confirmez toujours auprès de votre chef pilote, dans votre manuel d'exploitation ou dans la réglementation applicable (RAC, FAR). PilotDuty n'est qu'un outil d'aide.
 
 Les gabarits et les calculs restent dans l'app : PilotDuty Manager ne les utilise pas.

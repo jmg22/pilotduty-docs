@@ -11,7 +11,7 @@ The logbook holds all your approved flights. It shows your totals, your currency
 
 ## Total flight time
 
-The “Total Flight Time” card at the top of the logbook shows the sum of your approved flights, each rounded to the nearest tenth of an hour, plus your initial hours. This total ignores filters and the date range. Tap it to open the summary.
+The “Total Flight Time” card at the top of the logbook shows the sum of your approved flights, each rounded to the nearest tenth of an hour, plus your initial hours. This total ignores filters and the date range. Tap it to open the summary: see “Getting a summary of your logbook” below.
 
 ## The flight list
 
@@ -42,33 +42,88 @@ Within one criterion, you can check several values: a flight passes if it matche
 
 A button switches between the list and the map. The map draws each flight from departure to arrival. The app uses actual GPS positions when it has them, and otherwise the aerodrome's position. A flight with no position and no known aerodrome code isn't drawn. Your current location appears if you've allowed location access. The base map needs a network.
 
-## Summary and currency
+## Getting a summary of your logbook
 
-The summary shows:
+The summary gives you a detailed view of your cumulative flight experience at a glance.
+
+### 1. Open the Logbook tab
+
+Tap the Logbook icon in the tab bar at the bottom of the screen.
+
+### 2. Tap the total card
+
+Tap the “Total Flight Time” card at the top of the logbook.
+
+![The Logbook tab, with an arrow pointing to the “Logbook summary” button in the total card](/docs-media/app/logbook-summary-button.png)
+
+In this 2025 screenshot, a “Logbook summary” button sat in the total card. Today, tap the card itself.
+
+### 3. Review your flight data
+
+A window shows a full breakdown of your flight hours:
 
 - your night currency: night takeoffs and landings over the last 6 months;
 - your IFR currency: IFR departures and arrivals over the last 6 months;
 - your hours by aircraft type and by registration;
-- your IFR and night totals, and totals by engine, propeller, flight type, status and category;
+- your totals by category, such as “Mono Piston”, “Cross Country”, IFR or night;
+- your totals by flight type, such as “Patrol”, “Photography” or “Training”;
+- your totals by propeller type and aircraft configuration, as well as by engine and status;
 - your total hours and total cycles.
 
-The night and IFR badges show two counts over the last 6 months: takeoffs and landings, or departures and arrivals. A badge turns green from 5 and 5. These badges are a guide only: check the currency rules that apply to you.
+The bubbles at the top of the summary show your currency: for example “0-0 in 6 months” for night takeoffs and landings, and for IFR. Each bubble shows two counts over the last 6 months: takeoffs and landings, or departures and arrivals. It turns green from 5 and 5. These bubbles are a guide only: check the currency rules that apply to you.
 
 ![The logbook summary, with the night and IFR currency badges, hours by aircraft type and cumulative totals](/docs-media/app/logbook-summary.png)
 
+The summary is ideal for quickly checking your experience or filling out paperwork without exporting your whole logbook. For a full export, see the next section.
+
 ## Exporting your logbook
 
-With PilotDuty+ or PilotDuty Pro.
+With PilotDuty+ or PilotDuty Pro. You can export your personal logbook as a PDF or CSV file.
 
-1. Tap the logbook's share button.
-2. Choose “Export to CSV” or “Export to PDF”.
-3. For the PDF, choose the month and year, then tap “Get my PDF Logbook”.
-4. The iOS share sheet opens: save or send the file.
+### Step 1: Open the Logbook tab
 
-Only approved flights are exported: approve your pending flights first. The PDF suits a monthly record. The CSV keeps all your flights in one file.
+Tap the Logbook icon at the bottom of the screen.
 
-- **CSV.** Exports all your approved flights, regardless of the date range or filters. Columns: date, category, type, registration, status, from, to, time, remarks, day or night, flight rules, engine, propeller, flight type, takeoffs and landings.
-- **PDF.** Produces the logbook for a month you choose. It includes a cover page (cumulative, 12-month and 6-month totals), hours by type, a detailed flight table and an appendix summarizing the version history. Your name and license number come from your profile.
+### Step 2: Tap the export button
+
+Tap the logbook's share button to start the export.
+
+![The Logbook tab, with an arrow pointing to the “Export” button](/docs-media/app/logbook-export-button.png)
+
+In this 2025 screenshot, the button was called “Export”. Today, it's the logbook's share button.
+
+### Step 3: Choose the export format
+
+Select “Export to PDF”.
+
+> For a CSV file, select “Export to CSV”: you get all your approved flights in a spreadsheet file you can open in Excel.
+
+![The export format choice: “Export to .csv” or “Export to PDF”](/docs-media/app/logbook-export-format.png)
+
+### Step 4: Select the month and year
+
+Scroll through the picker to choose the month and year for your PDF logbook.
+
+### Step 5: Tap “Get my PDF Logbook”
+
+Tap the “Get my PDF Logbook for” link, followed by the month and year, to generate the PDF. The iOS share sheet opens: save or send the file.
+
+![The month and year picker, with the “Get my PDF Logbook for March 2025” link](/docs-media/app/logbook-pdf-month-picker.png)
+
+### What the export contains
+
+- **PDF.** The logbook for a month you choose. It includes a cover page with your flight time by aircraft type and your cumulative, 12-month and 6-month totals (PIC, night, IFR, VFR and so on). A detailed flight table follows: date, registration, route, time and remarks. An appendix summarizes the version history. Your name and license number come from your profile.
+- **CSV.** All your approved flights, regardless of the date range or filters. Columns: date, category, type, registration, status, from, to, time, remarks, day or night, flight rules, engine, propeller, flight type, takeoffs and landings.
+
+![Sample cover page of a PDF logbook: flight time by aircraft type, cumulative flight information and last 12 months' flight information](/docs-media/app/logbook-pdf-sample-summary.png)
+
+![Sample flight table of a PDF logbook: date, category, type, registration, status, from, to, time and other columns](/docs-media/app/logbook-pdf-sample-flights.png)
+
+### Notes
+
+- Approve your flights before exporting: only approved flights are exported.
+- PDF export suits a monthly record and paper archiving.
+- CSV export suits a full record, for archiving.
 
 ## Initial hours
 

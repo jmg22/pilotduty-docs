@@ -1,17 +1,27 @@
 ---
 title: "Suivi de vol"
-description: "Suivre les vols envoyés par l'app iPhone, confirmer l'arrivée en sécurité, prévenir des abonnés par SMS et joindre les contacts d'urgence."
+description: "Suivre en temps réel les vols envoyés par l'app iPhone, comprendre leurs états et leurs jalons, confirmer l'arrivée en sécurité, prévenir des abonnés par SMS et joindre les contacts d'urgence."
 order: 6
 translationKey: mgr-flight-following
 updated: 2026-11-01
 draft: false
 ---
 
-Le suivi de vol donne à votre personnel une vue de sécurité sur chaque vol : position, jalons, confirmation d'arrivée, alertes SMS et contacts d'urgence.
+PilotDuty offre un suivi de vol en temps réel, de l'app iPhone du pilote jusqu'à la plateforme web de votre organisation, PilotDuty Manager. Le système suit seul les jalons et l'état de chaque vol : vous suivez plus facilement vos aéronefs pendant les opérations, pour la sécurité de vos équipages. Votre personnel y trouve une vue de sécurité sur chaque vol : position, jalons, confirmation d'arrivée, alertes SMS et contacts d'urgence.
 
-## D'où vient le suivi
+> Les captures de ce guide datent de 2025. Elles montrent l'ancienne page « FlightFollowing » du Manager et l'ancienne barre d'onglets de l'app. Aujourd'hui, le suivi s'affiche sur la Feuille de vol, avec les mêmes états.
 
-Le suivi est créé par l'app iPhone du pilote, jamais par le Manager seul. Quand le suivi vers PilotDuty Manager est activé dans l'app, celle-ci envoie les jalons du vol (roulage, décollage, atterrissage, stationnement) avec leur position. Le Manager les reçoit et les affiche sur la [Feuille de vol](/fr/docs/manager/feuille-de-vol). Pour que le vol paraisse, l'indicatif saisi dans l'app doit correspondre à un aéronef de votre organisation, et le pilote doit en être membre. Voir [Avec l'app iPhone](/fr/docs/manager/avec-l-app-iphone).
+## Qu'est-ce que le suivi de vol ?
+
+Le suivi est créé par l'app iPhone du pilote, jamais par le Manager seul. Quand le suivi vers PilotDuty Manager est activé dans l'app, l'iPhone transmet seul les jalons du vol au Manager :
+
+- le départ des cales (« Off Block ») ;
+- le décollage (« Takeoff ») ;
+- la manœuvre à basse vitesse (« Low Speed Maneuver ») ;
+- l'atterrissage (« Landing ») ;
+- l'arrivée aux cales (« On Block »).
+
+Chaque jalon porte sa position GPS. Le Manager reçoit ces informations et les affiche en direct sur la [Feuille de vol](/fr/docs/manager/feuille-de-vol), pour suivre la progression du vol. Pour que le vol paraisse, l'indicatif saisi dans l'app doit correspondre à un aéronef de votre organisation, et le pilote doit en être membre. Voir [Avec l'app iPhone](/fr/docs/manager/avec-l-app-iphone) et, côté pilote, le [suivi de vol dans l'app](/fr/docs/app/suivi-de-vol).
 
 ## Qui peut le faire
 
@@ -21,9 +31,75 @@ Le suivi est créé par l'app iPhone du pilote, jamais par le Manager seul. Quan
 - **Archiver un suivi** : Dispatch et plus.
 - **Relancer un numéro suspendu (« Réessayer »)** : Copropriétaire et Responsable des opérations.
 
-## Carte et jalons
+## Les quatre états d'un vol
 
-Sous chaque réservation, une carte par vol change de couleur selon l'état : bleu en préparation, orange en vol, rouge une fois posé sans confirmation, vert une fois la sécurité confirmée. Sur une carte rouge, un compteur indique le temps écoulé depuis l'atterrissage : vous voyez depuis combien de temps l'avion est au sol sans confirmation. L'affichage « Carte » de la Feuille de vol montre les avions et leurs trajectoires. La position n'existe que si l'iPhone envoie des jalons.
+Un vol suivi passe par quatre états. Sur la Feuille de vol, sous chaque réservation, la carte du vol prend la couleur de son état.
+
+1. **En préparation** (« OnBoarding »), en bleu : le suivi du vol est créé et prêt à commencer, mais l'avion ne bouge pas encore. La carte reste bleue tant qu'aucun jalon n'est reçu.
+
+![Capture de 2025 : un vol de C-FFFF à l'état OnBoarding, en bleu](/docs-media/manager/flight-following-status-onboarding.png)
+
+2. **En vol** (« In Flight »), en orange : l'avion est en l'air. Cet état commence au décollage et se termine à l'atterrissage.
+
+![Capture de 2025 : un vol de C-FFFF à l'état In Flight, avec les jalons offBlock et Takeoff](/docs-media/manager/flight-following-status-in-flight.png)
+
+3. **Au sol** (« On Ground »), en rouge : l'avion s'est posé, mais personne n'a encore confirmé qu'il est en sécurité. Un compteur affiche le temps écoulé depuis l'atterrissage : vous voyez depuis combien de temps l'avion est au sol sans confirmation.
+
+![Capture de 2025 : un vol de C-FFFF à l'état On Ground, en rouge, avec ses cinq jalons et le compteur 01:25](/docs-media/manager/flight-following-status-on-ground.png)
+
+4. **Safe**, en vert : l'arrivée en sécurité est confirmée et le vol est terminé. Aucune autre action n'est attendue.
+
+![Capture de 2025 : un vol de C-FFFF à l'état Safe, en vert](/docs-media/manager/flight-following-status-safe.png)
+
+L'affichage « Carte » de la Feuille de vol montre les avions et leurs trajectoires. En changeant de jour, vous retrouvez les vols passés. La position n'existe que si l'iPhone envoie des jalons.
+
+## Les jalons détectés automatiquement
+
+PilotDuty se sert du GPS de l'iPhone pour détecter les jalons suivants :
+
+- **Départ des cales** (OffBlock) : l'avion commence à rouler ;
+- **Décollage** (Takeoff) : la vitesse dépasse un seuil, signe que l'avion a quitté le sol ;
+- **Manœuvre à basse vitesse** (Low Speed Maneuver) : un passage à basse vitesse ;
+- **Atterrissage** (Landing) : l'avion touche le sol ;
+- **Arrivée aux cales** (OnBlock) : l'avion est stationné et ne bouge plus.
+
+Ces jalons s'affichent avec leur heure et leur position, dans l'app comme dans le Manager. Sur la carte du vol, le Manager affiche les heures « Off-block », « Décollage », « Atterrissage » et « On-block », le temps en l'air et le temps de vol.
+
+## Côté pilote : confirmer « safe » dans l'app
+
+Quand un événement s'affiche en rouge dans l'app, un de ses vols est en cours, partagé avec l'organisation de l'aéronef, et pas encore confirmé « safe ».
+
+![Capture de l'app en 2025 : un événement de vol en rouge, en attente d'approbation](/docs-media/manager/flight-following-app-event-awaiting-safe.png)
+
+Pour le confirmer « safe » :
+
+1. Ouvrez l'événement.
+2. Repérez le vol en rouge.
+3. Glissez le vol vers la droite pour indiquer qu'il est « Safe ».
+
+Le vol doit être terminé, c'est-à-dire posé, avant de pouvoir être confirmé « safe ».
+
+![Capture de l'app en 2025 : le vol rouge glissé vers la droite, qui révèle le bouton « Safe »](/docs-media/manager/flight-following-app-swipe-safe.png)
+
+Si le pilote se pose sans confirmer « safe », l'app confirme seule le vol précédent dès qu'elle détecte un nouveau décollage, et un nouveau vol est créé.
+
+![Animation de l'app en 2025 : au nouveau décollage, le vol précédent quitte le rouge et un nouveau vol commence](/docs-media/manager/flight-following-app-auto-safe-on-takeoff.gif)
+
+Une fois l'avion stationné et le délai de stationnement écoulé :
+
+- le pilote doit confirmer le vol « safe » ;
+- cet état est envoyé à PilotDuty Manager ;
+- au besoin, le personnel confirme lui-même depuis le Manager, comme décrit plus bas.
+
+## Pour l'organisation et le personnel
+
+Depuis PilotDuty Manager, votre organisation peut :
+
+- suivre plusieurs aéronefs en direct ;
+- voir l'état de chaque vol en temps réel ;
+- voir sur une carte les vols en cours ou passés ;
+- voir depuis combien de temps un avion est au sol sans être confirmé « safe » ;
+- confirmer elle-même qu'un vol est « safe », au besoin.
 
 ## Appariement avec la réservation
 
@@ -33,9 +109,39 @@ Le Manager rattache seul chaque vol suivi à la réservation confirmée du même
 
 Deux téléphones à bord du même avion, ou un suivi iPhone et un vol saisi au carnet, ne comptent que pour un seul vol. La carte affiche « Vol d'équipage · N membres suivis », avec le rôle et le nom de chacun. Ce regroupement se fait une fois les suivis confirmés en sécurité. Confirmer, archiver ou désapparier agit alors sur tout le groupe.
 
-## Confirmer « posé en sécurité »
+## Confirmer « posé en sécurité » dans le Manager
 
-L'icône de bouclier de la carte ouvre « Confirmer que ce pilote a atterri et est en sécurité ? ». La confirmation résout l'alerte et la carte passe au vert. « Retirer le statut safe » annule la confirmation et réactive l'alerte. Le pilote peut aussi confirmer depuis son iPhone. S'il oublie, l'app confirme d'elle-même son vol précédent au décollage suivant. La confirmation envoie aussi « Pilote confirmé sain et sauf » aux abonnés SMS qui ont choisi cet événement. Une fois le vol confirmé, Dispatch et plus peuvent archiver un suivi sans intérêt, comme un faux départ : un bouton « Annuler » s'affiche quelques instants, puis le suivi archivé ne s'affiche plus.
+Si le pilote n'a pas confirmé, le personnel le fait depuis la Feuille de vol. Cette action est réservée à Instructeur et plus, ce qui comprend Dispatch.
+
+1. Sur la carte du vol, cliquez l'icône de bouclier.
+2. Confirmez « Confirmer que ce pilote a atterri et est en sécurité ? ».
+
+La confirmation résout l'alerte et la carte passe au vert. Elle envoie aussi « Pilote confirmé sain et sauf » aux abonnés SMS qui ont choisi cet événement. « Retirer le statut safe » annule la confirmation et réactive l'alerte.
+
+![Capture de 2025 : un vol confirmé safe, en vert, avec les boutons « Set Unsafe » et « Archive » ; le nom du pilote est flouté](/docs-media/manager/flight-following-set-safe.png)
+
+Sur les captures de 2025, le bouton s'appelait « Set Safe », et « Set Unsafe » servait à retirer la confirmation.
+
+Une fois le vol confirmé, Dispatch et plus peuvent archiver un suivi sans intérêt, comme un faux départ : un bouton « Annuler » s'affiche quelques instants, puis le suivi archivé ne s'affiche plus. L'archivage ne sert pas à garder un vol pour plus tard : un suivi archivé ne se consulte plus.
+
+## Pourquoi confirmer « safe »
+
+Dans les régions isolées, où beaucoup de pilotes volent loin des infrastructures, confirmer en temps réel l'arrivée en sécurité n'est pas un luxe : c'est une nécessité. Après un atterrissage difficile ou un incident, les minutes comptent.
+
+Avec PilotDuty Manager, l'arrivée en sécurité se confirme automatiquement ou à la main :
+
+- dans l'app, une fois l'avion posé : le pilote glisse son vol vers la droite, ou l'app confirme le vol au décollage suivant ;
+- dans le Manager, par le personnel, Instructeur et plus.
+
+La confirmation passe toujours par l'app ou par le Manager : elle ne se fait pas par SMS. Cette fonction donne aux organisations de formation, aux exploitants commerciaux et aux aéroclubs une tranquillité d'esprit immédiate, surtout quand leurs aéronefs volent dans des environnements difficiles ou hors de l'espace aérien contrôlé.
+
+Quand la confirmation n'arrive pas, la personne qui suit le vol dans le Manager le remarque aussitôt :
+
+- la carte du vol reste rouge, avec le temps écoulé depuis l'atterrissage ;
+- une fois la réservation terminée sans confirmation, les abonnés reçoivent l'alerte « En retard sur la réservation » ;
+- elle peut joindre tout de suite le pilote et son contact d'urgence, au lieu de perdre des heures avant de s'apercevoir que quelque chose ne va pas.
+
+PilotDuty Manager ne sert pas seulement à compter les heures de vol : il est conçu pour la responsabilité de l'exploitant et la sécurité des pilotes. La confirmation « safe », l'enregistrement automatique des événements de vol et le partage en temps réel avec votre personnel répondent à vos besoins opérationnels.
 
 ## SMS aux abonnés
 

@@ -11,7 +11,7 @@ Le carnet regroupe tous vos vols approuvés. Vous y trouvez vos totaux, votre r�
 
 ## Le total des heures
 
-La carte en haut du carnet affiche votre total d'heures de vol : la somme de vos vols approuvés, chacun arrondi au dixième d'heure, et de vos heures initiales. Ce total ne tient compte ni des filtres ni de la plage de dates. Touchez-le pour ouvrir le résumé.
+La carte en haut du carnet affiche votre total d'heures de vol : la somme de vos vols approuvés, chacun arrondi au dixième d'heure, et de vos heures initiales. Ce total ne tient compte ni des filtres ni de la plage de dates. Touchez-le pour ouvrir le résumé : voir « Obtenir le résumé du carnet », plus bas.
 
 ## La liste des vols
 
@@ -42,33 +42,88 @@ Dans un même critère, vous pouvez cocher plusieurs valeurs : un vol passe s'il
 
 Un bouton bascule entre la liste et la carte. La carte trace chaque vol du départ à l'arrivée. L'app utilise les positions GPS réelles quand elle les a, et sinon la position de l'aérodrome. Un vol sans position ni code d'aérodrome connu n'est pas tracé. Votre position actuelle s'affiche si vous avez autorisé la localisation. Le fond de carte demande le réseau.
 
-## Résumé et récence
+## Obtenir le résumé du carnet
 
-Le résumé présente :
+Le résumé présente en un coup d'œil le détail de votre expérience de vol cumulée.
+
+### 1. Ouvrir l'onglet du carnet
+
+Touchez l'icône du carnet (« Logbook ») dans la barre d'onglets, en bas de l'écran.
+
+### 2. Toucher la carte du total
+
+Touchez la carte du total d'heures (« Total Flight Time »), en haut du carnet.
+
+![L'onglet du carnet, avec une flèche vers le bouton « Logbook summary » de la carte du total](/docs-media/app/logbook-summary-button.png)
+
+Sur cette capture de 2025, un bouton « Logbook summary » se trouvait dans la carte du total. Aujourd'hui, touchez la carte elle-même.
+
+### 3. Lire vos données de vol
+
+Une fenêtre affiche le détail complet de vos heures :
 
 - votre récence de nuit : décollages et atterrissages de nuit des 6 derniers mois ;
 - votre récence IFR : départs et arrivées IFR des 6 derniers mois ;
 - vos heures par type d'aéronef et par immatriculation ;
-- vos totaux IFR, de nuit, par moteur, hélice, type de vol, statut et catégorie ;
+- vos totaux par catégorie, comme monomoteur à pistons (« Mono Piston »), vol de voyage (« Cross Country »), IFR ou nuit ;
+- vos totaux par type de vol, comme patrouille (« Patrol »), photographie (« Photography ») ou formation (« Training ») ;
+- vos totaux par type d'hélice et par configuration de l'avion, ainsi que par moteur et par statut ;
 - votre total d'heures et votre total de cycles.
 
-Les badges de nuit et IFR affichent deux nombres sur les 6 derniers mois : décollages et atterrissages, ou départs et arrivées. Un badge passe au vert à partir de 5 et 5. Ces badges sont un simple repère : vérifiez les règles de récence qui s'appliquent à vous.
+Les bulles en haut du résumé indiquent votre récence : par exemple « 0-0 in 6 months » pour les décollages et atterrissages de nuit, et pour l'IFR. Chaque bulle affiche deux nombres sur les 6 derniers mois : décollages et atterrissages, ou départs et arrivées. Elle passe au vert à partir de 5 et 5. Ces bulles sont un simple repère : vérifiez les règles de récence qui s'appliquent à vous.
 
 ![Le résumé du carnet, avec les badges de récence de nuit et IFR, les heures par type d'aéronef et les totaux cumulés](/docs-media/app/logbook-summary.png)
 
+Le résumé est idéal pour vérifier rapidement votre expérience ou remplir un formulaire, sans exporter tout votre carnet. Pour un export complet, voir la section suivante.
+
 ## Exporter le carnet
 
-Avec PilotDuty+ ou PilotDuty Pro.
+Avec PilotDuty+ ou PilotDuty Pro. Vous pouvez exporter votre carnet personnel en PDF ou en CSV.
 
-1. Touchez le bouton de partage du carnet.
-2. Choisissez l'export CSV ou l'export PDF.
-3. Pour le PDF, choisissez le mois et l'année, puis touchez le lien qui produit le carnet PDF de ce mois.
-4. La feuille de partage d'iOS s'ouvre : enregistrez ou envoyez le fichier.
+### Étape 1 : ouvrir l'onglet du carnet
 
-Seuls les vols approuvés sont exportés : approuvez d'abord vos vols en attente. Le PDF convient à un relevé mensuel. Le CSV garde tous vos vols dans un seul fichier.
+Touchez l'icône du carnet (« Logbook ») en bas de l'écran.
 
-- **CSV.** Exporte tous vos vols approuvés, sans tenir compte de la plage ni des filtres. Colonnes : date, catégorie, type, immatriculation, statut, départ, arrivée, temps, remarques, jour ou nuit, règle de vol, moteur, hélice, type de vol, décollages et atterrissages.
-- **PDF.** Produit le carnet d'un mois que vous choisissez. Il comprend une page de garde (totaux cumulés, sur 12 mois et sur 6 mois), les heures par type, le tableau détaillé des vols et une annexe qui résume l'historique des versions. Le nom et le numéro de licence viennent de votre profil.
+### Étape 2 : toucher le bouton d'export
+
+Touchez le bouton de partage du carnet pour commencer l'export.
+
+![L'onglet du carnet, avec une flèche vers le bouton « Export »](/docs-media/app/logbook-export-button.png)
+
+Sur cette capture de 2025, le bouton s'appelait « Export ». Aujourd'hui, c'est le bouton de partage du carnet.
+
+### Étape 3 : choisir le format
+
+Choisissez « Export to PDF ».
+
+> Pour un fichier CSV, choisissez « Export to CSV » : vous obtenez tous vos vols approuvés dans un fichier de tableur, que vous pouvez ouvrir dans Excel.
+
+![Le choix du format d'export : « Export to .csv » ou « Export to PDF »](/docs-media/app/logbook-export-format.png)
+
+### Étape 4 : choisir le mois et l'année
+
+Faites défiler le sélecteur pour choisir le mois et l'année de votre carnet PDF.
+
+### Étape 5 : toucher « Get my PDF Logbook »
+
+Touchez le lien « Get my PDF Logbook for » suivi du mois et de l'année pour produire le PDF. La feuille de partage d'iOS s'ouvre : enregistrez ou envoyez le fichier.
+
+![Le sélecteur de mois et d'année, avec le lien « Get my PDF Logbook for March 2025 »](/docs-media/app/logbook-pdf-month-picker.png)
+
+### Ce que contient l'export
+
+- **PDF.** Le carnet d'un mois que vous choisissez. Il comprend une page de garde avec votre temps de vol par type d'aéronef et vos totaux cumulés, sur 12 mois et sur 6 mois (commandant de bord, nuit, IFR, VFR, et ainsi de suite). Suit le tableau détaillé des vols : date, immatriculation, route, temps et remarques. Une annexe résume l'historique des versions. Le nom et le numéro de licence viennent de votre profil.
+- **CSV.** Tous vos vols approuvés, sans tenir compte de la plage ni des filtres. Colonnes : date, catégorie, type, immatriculation, statut, départ, arrivée, temps, remarques, jour ou nuit, règle de vol, moteur, hélice, type de vol, décollages et atterrissages.
+
+![Exemple de page de garde d'un carnet PDF : temps de vol par type d'aéronef, informations cumulées et informations des 12 derniers mois](/docs-media/app/logbook-pdf-sample-summary.png)
+
+![Exemple de tableau des vols d'un carnet PDF : date, catégorie, type, immatriculation, statut, départ, arrivée, temps et autres colonnes](/docs-media/app/logbook-pdf-sample-flights.png)
+
+### À noter
+
+- Approuvez vos vols avant d'exporter : seuls les vols approuvés sont exportés.
+- L'export PDF convient à un relevé mensuel et à l'archivage sur papier.
+- L'export CSV convient à un relevé complet, pour l'archivage.
 
 ## Heures initiales
 

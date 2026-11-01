@@ -1,6 +1,6 @@
 ---
 title: "Balise iBeacon"
-description: "Associer une balise à votre avion pour que l'app sache quand vous êtes à bord."
+description: "Ajouter un avion, lui associer une balise pour que l'app sache quand vous êtes à bord, ou le configurer en démarrage manuel."
 order: 3
 translationKey: app-ibeacon
 updated: 2026-11-01
@@ -9,31 +9,90 @@ draft: false
 
 Une balise iBeacon placée dans l'avion permet à l'app de savoir que vous êtes à bord. L'enregistrement du vol démarre quand votre iPhone capte la balise.
 
-Avec PilotDuty+ ou PilotDuty Pro pour le déclenchement par balise.
+Le déclenchement de l'enregistrement par balise demande PilotDuty+ ou PilotDuty Pro.
 
-## Adopter une balise
+## Ajouter un avion
 
-Adopter une balise, c'est l'associer à un avion dans l'app.
+Suivez ces étapes pour ajouter un avion à votre carnet PilotDuty et le configurer pour la détection automatique des vols par balise iBeacon. Sans balise, vous pouvez aussi configurer l'avion en démarrage manuel. Préparez à l'avance les informations de l'avion pour l'ajouter sans délai.
 
-1. Pendant le parcours d'accueil, indiquez que votre avion a une balise. Vous pouvez aussi le faire plus tard depuis l'onglet des aéronefs (icône d'avion).
-2. Entrez les identifiants de la balise : UUID, major et minor.
-3. Entrez l'immatriculation et le type de l'avion.
-4. Terminez la configuration de l'avion.
+### Étape 1 – Ouvrir l'onglet des aéronefs
 
-## Configurer l'avion
+Dans la barre du bas, touchez l'onglet des aéronefs (icône d'avion). Il affiche la liste de vos avions suivis (« Tracked Aircraft »).
 
-L'écran de configuration demande :
+### Étape 2 – Toucher « + »
 
-- l'immatriculation et le type, tous deux obligatoires ;
-- la catégorie de train d'atterrissage ;
-- le moteur et l'hélice ;
-- l'indication IFR ;
-- si l'avion est exploité en monopilote ;
-- votre statut à bord.
+En haut à droite de l'écran « Tracked Aircraft », touchez « + » pour créer un avion.
 
-Une image de l'avion s'adapte à la catégorie et au nombre de moteurs. Ces informations servent à remplir les vols enregistrés avec cet avion.
+Tant qu'aucun avion n'est suivi, l'écran rappelle qu'il faut une balise compatible pour profiter pleinement de l'enregistrement automatique, avec un bouton « Buy an iBeacon ».
+
+![Écran « Tracked Aircraft » vide : une flèche montre le bouton « + » en haut à droite, sous le message « Improve your flight tracking experience » et le bouton « Buy an iBeacon »](/docs-media/app/ibeacon-tracked-aircraft-add.png)
+
+### Étape 3 – Entrer les informations de l'avion
+
+Remplissez les champs suivants :
+
+- **« Initiator ».** Choisissez « User initiated » si vous n'utilisez pas de balise, ou « iBeacon » si vous en utilisez une. Vous l'assignerez à l'étape suivante.
+- **« CallSign ».** L'immatriculation, par exemple C-FFFF. Champ obligatoire.
+- **« Aircraft Type ».** Le modèle, par exemple C172. Champ obligatoire.
+- **« Takeoff speed (Knots) ».** La vitesse moyenne de rotation de l'avion, en nœuds. L'app s'en sert pour reconnaître le décollage.
+
+Définissez ensuite la configuration de l'avion :
+
+- **« Aircraft Type Category ».** La catégorie de train d'atterrissage, par exemple « Tricycle Train ».
+- **« Engine Type ».** Le moteur, par exemple « Mono Piston ».
+- **« Propeller Type ».** L'hélice, par exemple « Fixed pitch ».
+- **IFR et « Single Pilot ».** Activez ou non ces interrupteurs selon les capacités de l'avion : vol aux instruments, exploitation par un seul pilote.
+
+L'app demande aussi votre statut à bord. Une image de l'avion s'adapte à la catégorie et au nombre de moteurs. Ces informations servent à remplir les vols enregistrés avec cet avion.
+
+![Écran « Edit Area » : « Initiator » réglé sur « User initiated », champs « CallSign » et « Aircraft Type », « Takeoff speed (Knots) » à 30, catégorie, moteur, hélice, IFR et « Single Pilot »](/docs-media/app/ibeacon-edit-aircraft.png)
+
+### Étape 4 – Assigner une balise
+
+Si vous avez choisi « iBeacon » comme déclencheur :
+
+1. Touchez « Adopt an iBeacon ».
+2. L'app commence à rechercher les balises iBeacon à proximité.
+3. Quand une balise est détectée tout près (« Near »), touchez « Adopt Nearest iBeacon ».
+
+Si l'écran vous demande plutôt les identifiants de la balise, entrez son UUID, son major et son minor.
+
+Si aucune balise n'est détectée, vérifiez que :
+
+- les piles sont bien en place ;
+- le film protecteur est retiré ;
+- vous êtes tout près de la balise.
+
+![Écran « iBeacon Detection » : balise détectée « Near », message d'aide, bouton orange « Adopt Nearest iBeacon » et bouton rouge « Close »](/docs-media/app/ibeacon-detection.png)
+
+### Étape 5 – Terminer
+
+Une fois tous les champs remplis :
+
+- l'avion apparaît dans la liste « Tracked Aircraft » ;
+- vous pouvez toujours revenir modifier sa configuration, ou lui assigner une balise plus tard.
+
+![Liste « Tracked Aircraft » avec l'avion C-FFFF, de type C172, et l'icône de sa balise](/docs-media/app/ibeacon-tracked-aircraft-list.png)
+
+Vous êtes prêt. PilotDuty utilise maintenant cette fiche pour enregistrer votre temps de vol : automatiquement avec une balise, ou à la main si vous avez choisi « User initiated ». Voir [Enregistrement automatique](/fr/docs/app/enregistrement-automatique).
+
+N'oubliez pas de régler les autorisations de localisation et de notifications, dans l'onglet des réglages, sous Général, pour que l'app fonctionne bien en arrière-plan. Voir [Premiers pas](/fr/docs/app/premiers-pas).
+
+Ajouter vos avions vous permet de tenir un historique complet de vos vols.
+
+### Avion de votre organisation
 
 Si l'avion appartient à votre organisation et qu'une balise lui est associée dans PilotDuty Manager, choisissez-le plutôt dans la liste des avions de l'organisation. L'app reprend sa configuration et règle la détection par balise d'office. Voir [Avec votre organisation](/fr/docs/app/avec-votre-organisation).
+
+## Adopter une balise pendant le parcours d'accueil
+
+Vous pouvez aussi adopter votre balise dès le parcours d'accueil :
+
+1. Indiquez que votre avion a une balise.
+2. Entrez l'immatriculation et le type de l'avion, puis adoptez la balise.
+3. Configurez l'avion.
+
+Le détail de ces écrans figure dans [Premiers pas](/fr/docs/app/premiers-pas).
 
 ## La garde anti-faux vol
 
@@ -43,7 +102,7 @@ Une balise reste parfois dans l'avion au sol, et votre iPhone peut passer à cô
 - Une fois en vol, cette confirmation reste valable jusqu'au stationnement. Un posé-décollé, ou une perte du signal de la balise en vol, n'interrompt pas le vol.
 - L'app apprend le signal habituel de chaque balise. Ces données restent sur votre iPhone et ne sont jamais envoyées.
 - La vérification se fait sur l'iPhone, sans réseau.
-- Si l'app manque de données pour trancher, elle laisse passer le vol plutôt que de risquer d'en manquer un vrai. Un faux vol se supprime d'un glissement dans la file d'approbation.
+- Si l'app manque de données pour trancher, elle laisse passer le vol plutôt que de risquer d'en manquer un vrai. Un faux vol se supprime d'un glissement vers la gauche dans la file d'approbation.
 
 ## Abonnement requis
 
@@ -56,6 +115,8 @@ Un abonnement annuel à PilotDuty+ ou à PilotDuty Pro comprend une balise iBeac
 1. Après l'achat, l'app vous demande votre adresse de livraison.
 2. Si vous passez cette étape, un bandeau du tableau de bord vous rappelle qu'il manque l'adresse.
 3. Touchez le bandeau pour ouvrir le formulaire et entrer l'adresse.
+
+![Écran « Shipping Address » : champs d'adresse, ville, code postal et pays, et bouton « Next »](/docs-media/app/getting-started-shipping-address.png)
 
 ## Bon à savoir
 

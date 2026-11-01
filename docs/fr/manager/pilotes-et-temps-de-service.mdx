@@ -1,6 +1,6 @@
 ---
 title: "Pilotes et temps de service"
-description: "Fiche pilote, médical et compétences, carnet de vol, statistiques et repères de temps de service."
+description: "Fiche pilote, médical et compétences, carnet de vol, création d'événements et de vols, statistiques et repères de temps de service."
 order: 10
 translationKey: mgr-pilots
 updated: 2026-11-01
@@ -30,24 +30,98 @@ Chaque certificat et chaque compétence porte un compte à rebours : « Expire d
 
 ## Carnet de vol
 
-Onglet « Service », « Liste des événements » : les journées de travail, de vol et de repos, avec leurs vols. C'est le même carnet que dans l'app iPhone : un vol approuvé dans l'app y apparaît. La liste se filtre par plage de dates (le mois en cours par défaut, ce mois, le mois dernier, le trimestre, l'année ou tout), avec un tri et les filtres « Type d'événement », « Aéronef » et « Règle de vol ».
+Onglet « Service », « Liste des événements » : les journées de travail, de vol et de repos, avec leurs vols. C'est le même carnet que dans l'app iPhone : un vol approuvé dans l'app y apparaît.
 
-- « Nouvel événement » : « Événement Travail/Vol », « Événement de service de vol rapide » ou « Événement de repos ».
 - Onglet « Vols » : « Liste des vols » et « Ajouter un vol ».
 - « Désapprouver l'événement » le place aux archives, d'où « Restaurer » le rétablit.
 - « Historique » montre qui a changé quoi, et pourquoi : chaque modification crée une version. « Vérifier l'intégrité » contrôle la chaîne : « Chaîne intacte », « Chaîne rompue à la vN » ou « Chaîne incomplète ».
 
-## Saisir un événement au carnet
+## Créer des événements et des vols
 
-Vous ne saisissez que dans votre propre carnet.
+Vous pouvez créer à la main des événements de travail, de vol et de repos, puis y ajouter le détail de vos vols. Vous ne saisissez que dans votre propre carnet.
+
+> Les captures de cette section datent de 2025, quand le carnet avait sa propre entrée « Events » dans le menu. Il se trouve maintenant dans votre dossier de pilote. Le bouton « Delete Event » des captures est devenu « Désapprouver l'événement » : l'événement passe aux archives au lieu d'être supprimé.
+
+### Étape 1 : ouvrir la création d'un événement
 
 1. Ouvrez « Pilotes », puis « Mon profil ». Dans l'onglet « Service », ouvrez « Liste des événements ».
-2. Cliquez « Nouvel événement ». Choisissez le type, puis les dates de début et de fin.
-3. Selon le type, indiquez aussi l'aéronef de la flotte, la règle d'exploitation, la règle de vol, le « Nombre de vols », le « Temps de vol total », l'équipage et votre statut de pilote. Les vols créés sont répartis également dans la plage, avec des aéroports « Unknown » à compléter.
-4. Ouvrez l'événement pour le compléter : type, début, fin et remarque. « Nouveau vol » y ajoute un vol. Cliquez « Enregistrer l'événement ».
-5. Ouvrez chaque vol pour saisir l'aéronef, les aéroports, les heures, les règles, votre statut et les compteurs. Joignez au besoin des photos, des PDF ou d'autres fichiers.
+2. Cliquez « Nouvel événement » (« New Event ») en haut de la liste.
 
-Si le temps de vol dépasse la durée de l'événement, l'événement est créé sans vol.
+![Ancienne page « Events » de 2025, avec le bouton « New Event » encadré](/docs-media/manager/pilots-and-duty-time-new-event-2025.png)
+
+### Étape 2 : choisir le type d'événement
+
+Dans la fenêtre « Create Event », ouvrez la liste « Event Type » et choisissez :
+
+- « Événement Travail/Vol » (« Work/Flight Event »), le choix par défaut ;
+- « Événement de service de vol rapide » (« Quick Flight Duty Event ») ;
+- « Événement de repos » (« Rest Event »).
+
+![Fenêtre « Create Event » : la liste « Event Type » ouverte, avec Work/Flight Event, Quick Flight Duty Event et Rest Event](/docs-media/manager/pilots-and-duty-time-event-type.png)
+
+### Étape 3 : régler les dates de l'événement
+
+1. Choisissez la date et l'heure de début (« Event Start Date ») et de fin (« Event Stop Date »).
+2. Selon le type, indiquez aussi l'aéronef de la flotte, la règle d'exploitation, la règle de vol, le « Nombre de vols », le « Temps de vol total », l'équipage et votre statut de pilote. Les vols créés sont répartis également dans la plage, avec des aéroports « Unknown » à compléter.
+3. Cliquez « Create Event » pour continuer.
+
+![Fenêtre « Create Event » : le type Work/Flight Event, les dates de début et de fin et le bouton « Create Event »](/docs-media/manager/pilots-and-duty-time-create-event.png)
+
+Une fois créé, l'événement paraît dans la liste. Si le temps de vol dépasse la durée de l'événement, l'événement est créé sans vol.
+
+### Étape 4 : modifier l'événement (facultatif)
+
+1. Cliquez l'événement dans la liste.
+2. Dans la colonne de modification (« Edit Event »), vous pouvez changer :
+   - le type d'événement, par exemple passer de travail à vol ou à repos ;
+   - l'heure de début et de fin ;
+   - la remarque.
+3. N'oubliez pas de cliquer « Enregistrer l'événement » (« Save ») après vos changements.
+
+![Colonne « Edit Event » : la liste du type d'événement ouverte, avec Work Event, Flight Event et Rest Event](/docs-media/manager/pilots-and-duty-time-edit-event.jpg)
+
+### Étape 5 : ajouter un vol à un événement de vol
+
+Un événement de vol peut contenir un ou plusieurs vols.
+
+1. Cliquez « Nouveau vol » (« New Flight ») et choisissez l'aéronef.
+
+![Événement de vol : le bouton « New Flight » et le choix de l'aéronef C-FFFF encadrés](/docs-media/manager/pilots-and-duty-time-new-flight.jpg)
+
+2. La colonne de modification du vol (« Edit Flight ») s'ouvre à droite.
+3. Remplissez les détails du vol :
+   - l'indicatif (« Call Sign ») et le type d'aéronef (« Aircraft Type ») ;
+   - les aéroports de départ et d'arrivée ;
+   - les heures de départ des cales, de décollage, d'atterrissage et d'arrivée aux cales (« OffBlock », « TakeOff », « Landing », « OnBlock ») ;
+   - les cycles (« T/L Cycles ») ;
+   - la règle de vol, le vol de nuit, la règle d'exploitation, le type de vol et le pilote unique (« Single Pilot? ») ;
+   - votre statut de pilote.
+4. Joignez au besoin des photos, des PDF ou d'autres fichiers.
+5. Cliquez « Save Flight » une fois terminé.
+
+![Colonne « Edit Flight » remplie : C-FFFF, C-172, de CYBG à CYQB, les quatre heures, un cycle, VFR et le bouton « Save Flight »](/docs-media/manager/pilots-and-duty-time-edit-flight.png)
+
+Tant qu'aucune information n'est saisie, le vol s'affiche vide, avec des aéroports « Unknown » :
+
+![Événement de vol avec un vol vide : « From: Unknown » et « To: Unknown »](/docs-media/manager/pilots-and-duty-time-empty-flight.jpg)
+
+### Étape 6 : trier et filtrer les événements
+
+Vous pouvez trier et filtrer la liste des événements :
+
+- **Tri** : par date, croissante ou décroissante.
+
+![Liste de tri ouverte : Ascending Date et Descending Date](/docs-media/manager/pilots-and-duty-time-sort-order.jpg)
+
+- **Plage de dates** : le mois en cours par défaut, ou ce mois, le mois dernier, le trimestre, l'année ou tout. Les filtres « Type d'événement », « Aéronef » et « Règle de vol » affinent la liste.
+
+![Ancien filtre de durée de 2025 : tous les événements, ou les 7, 28 ou 90 derniers jours](/docs-media/manager/pilots-and-duty-time-duration-filter-2025.jpg)
+
+En 2025, un filtre de durée proposait les 7, 28 ou 90 derniers jours. La plage de dates l'a remplacé.
+
+Vous avez maintenant créé un événement et ajouté ses données de vol dans PilotDuty Manager.
+
+### Ajouter un vol isolé
 
 Pour un vol isolé, « Ajouter un vol » de l'onglet « Vols » demande un aéronef de la flotte ou une saisie manuelle, les aéroports, les quatre heures (départ des cales, décollage, atterrissage, arrivée aux cales), les cycles, la règle de vol, le vol de nuit, le monopilote et votre statut. Les quatre heures sont obligatoires. Un événement est créé autour du vol, avec 15 minutes de marge de chaque côté.
 

@@ -13,14 +13,14 @@ Quand un vol n'a pas été détecté, vous pouvez l'ajouter vous-même ou lire s
 
 Le bouton « + » du tableau de bord propose :
 
-- l'ajout d'un vol ;
-- l'ajout d'un événement de service, si le temps de service est activé ;
-- la récupération d'un vol par ADS-B, avec PilotDuty Pro ;
-- le scan d'un journal de vol (ACARS).
+- « Add Flight » : l'ajout d'un vol ;
+- « Add Event » : l'ajout d'un événement de service, si le temps de service est activé ;
+- « Recover Flight ADS-B » : la récupération d'un vol par ADS-B, avec PilotDuty Pro ;
+- « Scan Flight log » : le scan d'un journal de vol (ACARS).
 
 ## Ajouter un vol à la main
 
-1. Touchez « + », puis choisissez l'ajout d'un vol.
+1. Touchez « + », puis « Add Flight ».
 2. Choisissez un de vos avions, ou entrez toutes les informations de l'avion.
 3. Entrez les heures et les aérodromes. L'app pré-remplit les aérodromes à partir de votre position actuelle.
 4. Vérifiez les codes d'aérodrome, puis validez.
@@ -31,39 +31,104 @@ L'ajout manuel fonctionne sans réseau et ne demande aucun abonnement.
 
 ## Ajouter un événement de service
 
-Avec le temps de service activé (PilotDuty Pro, en bêta), le bouton « + » permet aussi d'ajouter un événement de travail, de vol ou de repos. Voir [Temps de service](/fr/docs/app/temps-de-service).
+Avec le temps de service activé (PilotDuty Pro, en bêta), le bouton « + » permet aussi d'ajouter un événement de travail, de vol ou de repos. Le pas à pas se trouve dans [Temps de service](/fr/docs/app/temps-de-service), section « Ajouter un événement à la main ».
 
 ## Ajouter un vol à un événement
 
-Avec le temps de service activé, vous pouvez ajouter un ou plusieurs vols à un événement de travail ou de vol, par exemple pour noter chaque étape d'une période de service. L'événement ne doit pas encore être approuvé : pour modifier un événement approuvé, désapprouvez-le d'abord.
+Quand vous modifiez un événement de vol, vous pouvez y ajouter un ou plusieurs vols, pour noter le temps de vol, l'avion et les données d'exploitation de chacun. Cela demande le temps de service activé. L'événement ne doit pas encore être approuvé : pour modifier un événement approuvé, désapprouvez-le d'abord.
 
-1. Dans le tableau de bord, touchez l'événement pour l'ouvrir.
-2. Dans la section des vols, ajoutez un vol.
-3. Choisissez la méthode : à la main, par récupération ADS-B (PilotDuty Pro) ou par scan. Le scan n'est proposé que si un avion est choisi.
-4. Remplissez ou vérifiez le vol, comme pour tout autre vol.
+### Ajouter un vol
 
-Recommencez pour chaque vol. Pour retirer un vol de l'événement, glissez-le vers la gauche. Un vol en cours d'enregistrement, ou lié au suivi de vol, ne peut pas être retiré.
+1. Dans le tableau de bord, touchez un événement de vol existant.
+2. Faites défiler jusqu'à la section « Flights ».
+3. Touchez « Add Flight ».
+4. Choisissez la méthode :
+   - « Add Flight Manually » : à la main ;
+   - la récupération ADS-B, avec PilotDuty Pro ;
+   - « Scan Flight log (ACARS, IPAD) » : par scan. Le scan n'est proposé que si un avion est choisi.
+
+> Astuce : le scan utilise la caméra pour lire les données du vol sur un écran de FMS ou sur un journal de vol affiché sur iPad.
+
+![Le menu « Add Flight » d'un événement, avec les choix « Add Flight Manually » et « Scan Flight log (ACARS, IPAD) »](/docs-media/app/manual-entry-add-flight-options.png)
+
+Cette capture date de 2025 : la récupération ADS-B s'ajoute aujourd'hui à ces deux choix.
+
+### Ajouter un vol à la main
+
+Une fois la méthode choisie, remplissez les champs suivants.
+
+**Informations sur l'avion (« Aircraft Info »)**
+
+- l'immatriculation ;
+- le type d'avion.
+
+**Heures du vol**
+
+- l'heure de départ du poste (« Off Block Time ») ;
+- l'heure de décollage (« Take Off Time ») ;
+- l'heure d'atterrissage (« Landing Time ») ;
+- l'heure d'arrivée au poste (« On Block Time »), facultative.
+
+**Détails**
+
+- l'aérodrome de départ (« Departure Airport »), en code OACI ;
+- l'aérodrome d'arrivée (« Arrival Airport »), en code OACI ;
+- le nombre de cycles (décollages et atterrissages) ;
+- IFR, nuit, vol de voyage (« Cross-Country ») et règle d'exploitation ;
+- monopilote (« Single Pilot ») : activez-le si vous volez seul.
+
+> Vérifiez que toutes les heures se trouvent entre le début et la fin de l'événement.
+
+![L'écran « Edit Flight » : immatriculation et type sous « Aircraft Info », aérodrome de départ, heures « Off Block », « Take Off » et « Landing »](/docs-media/app/manual-entry-edit-flight.png)
+
+### Scanner un journal de vol depuis l'événement
+
+1. Touchez « Add Flight ».
+2. Choisissez « Scan Flight log (ACARS, IPAD) ».
+3. Avec la caméra, scannez votre écran, par exemple un écran de FMS ou un journal sur iPad.
+4. Confirmez les valeurs lues.
+5. Touchez « Add this Flight » pour enregistrer le vol.
+
+Le scan est décrit en détail plus bas, dans « Scanner un écran ACARS ».
+
+### Supprimer un vol
+
+Glissez un vol de la liste vers la gauche pour faire apparaître le bouton « Delete ». Un vol en cours d'enregistrement, ou lié au suivi de vol, ne peut pas être retiré.
+
+### Ajouter plusieurs vols
+
+Répétez « Add Flight » autant de fois que nécessaire dans un même événement de vol, pour noter chaque étape d'une période de service.
 
 Un événement de repos ne contient pas de vols.
 
+### Notes
+
+- Les événements et leurs vols doivent être approuvés dans le tableau de bord avant d'apparaître dans le carnet ou dans l'onglet du temps de service.
+- Si vous êtes membre d'une organisation dans PilotDuty Manager, les vols remontent dans le Manager quand vous approuvez l'événement.
+- Un vol approuvé ne peut pas être modifié tant que son événement n'a pas été désapprouvé.
+
 ## Scanner un écran ACARS
 
-Le scan lit avec la caméra un écran ACARS, EFIS ou iPad du poste de pilotage. Il reconnaît :
+PilotDuty lit avec la caméra les écrans de journal de vol des systèmes de bord : le FMS (par exemple Airbus Honeywell, ou ACARS sur Boeing), un écran EFIS, une app EFB sur iPad, ou un journal de vol imprimé. La reconnaissance optique de caractères (OCR) trouve d'elle-même les heures clés et la route du vol. Elle reconnaît :
 
 - les quatre heures OOOI : OUT (départ du poste), OFF (décollage), ON (atterrissage) et IN (arrivée au poste) ;
-- la route, de l'aérodrome de départ à celui d'arrivée ;
+- la route : FROM et TO, les codes OACI des aérodromes de départ et de destination ;
 - le numéro de vol ;
 - l'immatriculation.
 
 ### Étapes
 
-1. Touchez « + », puis choisissez le scan du journal de vol.
+1. Touchez « + », puis « Scan Flight log ».
 2. Choisissez l'avion.
 3. Cadrez l'écran dans le réticule. L'app capture d'elle-même quand elle lit les quatre heures de façon stable. Vous pouvez aussi capturer à la main.
 4. Relisez l'écran de revue. Chaque champ affiche une jauge de confiance. Corrigez ce qui doit l'être.
-5. Ajoutez le vol. Il arrive dans la file d'approbation, non approuvé.
+5. Touchez « Add this Flight ». Le vol arrive dans la file d'approbation, non approuvé.
 
-Vous pouvez aussi lancer le scan depuis l'écran d'un événement de service.
+![Le scan d'un écran « FLT LOG » d'un FMS Airbus Honeywell : la fenêtre « ACARS Data » affiche OUT, OFF, ON, IN, FROM et TO, avec le bouton « Add this Flight »](/docs-media/app/manual-entry-acars-scan.png)
+
+Sur cette capture de 2025, les valeurs lues s'affichaient dans une fenêtre simple. L'écran de revue actuel ajoute une jauge de confiance à chaque champ.
+
+Vous pouvez aussi lancer le scan depuis l'écran d'un événement de service : voir « Scanner un journal de vol depuis l'événement », plus haut.
 
 ### Bon à savoir
 
@@ -73,6 +138,7 @@ Vous pouvez aussi lancer le scan depuis l'écran d'un événement de service.
 - L'app demande l'accès à la caméra. Si vous l'avez refusé, elle vous propose d'ouvrir les Réglages d'iOS pour l'accorder.
 - Cadrez un écran net et bien éclairé. Plus le texte est lisible, meilleure est la lecture.
 - Relisez toujours les valeurs dont la jauge de confiance est basse avant d'ajouter le vol.
+- Vous pouvez toujours corriger à la main les données scannées une fois le vol ajouté.
 
 ## Quelle méthode choisir
 

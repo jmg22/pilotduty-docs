@@ -1,13 +1,15 @@
 ---
 title: "Flotte et maintenance"
-description: "Ajouter vos aéronefs, suivre leurs échéances d'entretien, leurs inspections et leurs défectuosités."
+description: "Ajouter vos aéronefs, régler leur programme d'entretien, mener une inspection du début à la fin, suivre les défectuosités et gérer vos ateliers."
 order: 8
 translationKey: mgr-maintenance
 updated: 2026-11-01
 draft: false
 ---
 
-Le module Flotte réunit vos aéronefs, leurs heures et cycles, leur programme d'entretien, leurs inspections et leurs défectuosités. Il vous informe : il ne bloque aucune réservation ni aucun vol.
+Le module Flotte vous permet d'enregistrer et de gérer votre flotte directement dans PilotDuty Manager : vos aéronefs, leurs heures et cycles, leur programme d'entretien, leurs inspections et leurs défectuosités. Il vous informe : il ne bloque aucune réservation ni aucun vol.
+
+> Les captures de ce guide datent de 2025 et montrent l'ancien menu. L'entrée « Aéronefs » (« Aircrafts ») du menu n'a pas changé.
 
 ## Qui peut le faire
 
@@ -19,61 +21,231 @@ Le module Flotte réunit vos aéronefs, leurs heures et cycles, leur programme d
 
 ## Ajouter un aéronef
 
-1. Ouvrez « Aéronefs », puis cliquez « Nouvel aéronef ».
-2. Suivez les étapes « Identité », « Type d'appareil », « Exploitation », « Compteurs », « Maintenance », « Réservation » et « Récapitulatif ». À l'étape « Compteurs », saisissez le temps cellule et les cycles actuels.
-3. Cliquez « Créer l'aéronef ».
+1. Dans le menu de gauche, ouvrez « Aéronefs » (« Aircrafts »).
+2. Cliquez « Nouvel aéronef » (« New Aircraft ») pour ajouter un aéronef à votre organisation.
 
-L'étape « Réservation » (sièges, carburant, tarif horaire, masse et bras à vide) n'apparaît qu'au Responsable des opérations. Un aéronef créé sans elle se rend réservable plus tard : voir [Réservations](/fr/docs/manager/reservations).
+![Liste « Aircrafts » vide, avec le bouton « New Aircraft » encadré](/docs-media/manager/fleet-and-maintenance-aircraft-list-empty.png)
 
-L'écran de fin liste ce qu'il reste à faire, dont l'import dans l'app iPhone par les pilotes. Notez-le : il disparaît quand vous quittez la page. « Dupliquer l'aéronef » reprend la configuration et le programme d'entretien, mais la copie n'est pas réservable.
+3. Suivez les étapes de l'assistant :
+   - « Identité » : l'indicatif (par exemple C-FFFF), le type (par exemple C-172), la marque, le modèle et les numéros de série de la cellule, du moteur et de l'hélice ;
+   - « Type d'appareil » : avion, hélicoptère ou planeur, moteurs, train, hélice et vitesse de décollage ;
+   - « Exploitation » : l'activité, le type de vol, les règles d'exploitation, IFR et pilote unique ;
+   - « Compteurs » : le temps cellule et les cycles actuels ;
+   - « Maintenance » : le programme d'entretien générique, décrit plus bas ;
+   - « Réservation » : sièges, carburant, tarif horaire, masse et bras à vide ;
+   - « Récapitulatif » : relisez chaque étape, et corrigez-la au besoin avec « Modifier ».
+4. Cliquez « Créer l'aéronef ».
+
+![Ancienne fenêtre « Create Aircraft » de 2025, avec le type C-172 et l'indicatif C-FFFF](/docs-media/manager/fleet-and-maintenance-create-aircraft-2025.png)
+
+En 2025, une simple fenêtre ne demandait que le type et l'indicatif. L'assistant actuel compte les sept étapes ci-dessus. Un indicatif n'appartient qu'à un seul aéronef dans tout PilotDuty : l'assistant vérifie qu'il est libre.
+
+L'étape « Réservation » n'apparaît qu'au Responsable des opérations. Un aéronef créé sans elle se rend réservable plus tard : voir [Réservations](/fr/docs/manager/reservations).
+
+Une fois créé, l'aéronef paraît dans la liste avec son type, son indicatif et les indicateurs de sa prochaine inspection : les heures, les jours et les cycles restants avant la visite la plus contraignante.
+
+![Liste « Aircrafts » : l'aéronef C-172 C-FFFF, à 99,0 h et 365 jours de sa prochaine inspection](/docs-media/manager/fleet-and-maintenance-aircraft-list.png)
+
+L'écran de fin de l'assistant liste ce qu'il reste à faire, dont l'import dans l'app iPhone par les pilotes. Notez-le : il disparaît quand vous quittez la page. « Dupliquer l'aéronef » reprend la configuration et le programme d'entretien, mais la copie n'est pas réservable.
 
 ## Le programme d'entretien générique
 
-À l'étape « Maintenance », PilotDuty propose un programme générique adapté au profil de l'appareil : des visites (« Visite 100 h / annuelle », « Visite 50 h », ou « Visite annuelle » pour un planeur) et les éléments courants. Vous pouvez aussi « Partir d'une liste vide ».
+À l'étape « Maintenance », PilotDuty propose un programme générique adapté au profil de l'appareil, d'après les pratiques courantes de l'aviation générale : des visites (« Visite 100 h / annuelle », « Visite 50 h », ou « Visite annuelle » pour un planeur) et les éléments courants. Vous pouvez aussi « Partir d'une liste vide ». Une fois l'aéronef créé, vous adaptez ou retirez chaque visite et chaque élément sur sa fiche.
 
 Chaque intervalle doit être confirmé par la personne désignée selon votre autorité : votre TEA, un A&P ou IA, ou votre CAMO/CAO. Pour un hélicoptère, le programme proposé est minimal.
 
 ## Modifier un aéronef
 
-Dans « Aéronefs », ouvrez le menu d'actions de la ligne et choisissez « Modifier l'aéronef ». La page a cinq onglets : « Infos », « Calendriers », « Éléments par heures », « Éléments par dates » et « Éléments par cycles ». Chaque champ s'enregistre seul quand vous le quittez.
+1. Dans « Aéronefs », cliquez le menu à trois points à côté de l'aéronef.
+2. Choisissez « Modifier l'aéronef » (« Edit Aircrafts »).
 
-L'onglet « Infos » réunit l'identité et la configuration : type, callsign, temps cellule et cycles initiaux, marque, modèle, numéros de série, catégorie, moteur, hélice, type de vol, IFR, pilote unique et règles d'exploitation. On y trouve aussi :
+![Menu à trois points d'un aéronef : Aircraft details, Edit Aircrafts, Duplicate Aircraft et Delete Aircraft](/docs-media/manager/fleet-and-maintenance-edit-aircraft-menu.png)
+
+Vous arrivez sur le profil complet de l'aéronef, où vous gérez toute son information technique et opérationnelle. La page a cinq onglets : « Infos », « Calendriers » (« Schedules »), « Éléments par heures » (« Timed items »), « Éléments par dates » (« Dated items ») et « Éléments par cycles » (« Cycled items »). Chaque champ s'enregistre seul quand vous le quittez.
+
+### L'onglet « Infos »
+
+Dans l'onglet « Infos », vous réglez :
+
+- le temps cellule et les cycles initiaux ;
+- la configuration de l'aéronef : train d'atterrissage, type de moteur, type d'hélice ;
+- le type de vol habituel, par exemple voyage ou formation ;
+- les capacités IFR et pilote unique ;
+- les règles d'exploitation, proposées selon l'autorité de votre organisation : par exemple Privé, 702 ou 703 pour Transports Canada, Part 91 ou Part 135 pour la FAA ;
+- des liens facultatifs vers les publications et les documents de référence ;
+- la balise iBeacon, facultative : son numéro de série et la vitesse de décollage.
+
+![Onglet « Infos » : informations principales, configuration, usage, liens de référence et iBeacon](/docs-media/manager/fleet-and-maintenance-info-tab.jpg)
+
+L'onglet porte aussi le type, l'indicatif, la marque, le modèle, les numéros de série et la catégorie.
 
 - **« Liens de référence »** : vos liens vers les consignes de navigabilité, les bulletins de service, les rapports de difficultés en service, le rapport annuel d'information sur la navigabilité et les publications de la cellule, du moteur et de l'hélice. Les liens des consignes et des rapports de difficultés s'ouvrent depuis la pré-vérification d'une inspection.
 - **La balise iBeacon** : son numéro de série, saisi à la main ou lu avec « Scanner QR », et la vitesse de décollage, en nœuds.
+
+### L'onglet « Calendriers »
+
+L'onglet « Calendriers » (« Schedules ») contient les visites d'entretien, par exemple :
+
+- la visite 100 h / annuelle ;
+- la visite 50 h.
+
+Ces visites sont préréglées à la création de l'aéronef, à partir du programme générique. Ajustez au besoin, pour chaque visite, les intervalles par dates, par heures ou par cycles, la fenêtre et la tolérance. Les intervalles se comptent en mois, en heures ou en cycles ; la fenêtre et la tolérance, en jours, en heures ou en cycles.
+
+- « Nouveau calendrier d'inspection » (« New Inspection Schedule ») ajoute une autre visite périodique : donnez-lui un nom, puis cochez « Par dates », « Par heures » ou « Par cycles ».
+- « Téléverser un fichier de tâche d'inspection » (« Upload Inspection Task File ») joint la tâche de la visite : la fiche de l'aéronef propose alors « Obtenir la tâche d'inspection ».
+- « Supprimer » retire une visite.
+
+![Onglet « Schedules » : la visite 100-Hour / Annual (12 mois et 100 h) et la visite 50-Hour (50 h)](/docs-media/manager/fleet-and-maintenance-inspection-schedules.jpg)
+
+### Les onglets d'éléments
+
+Les éléments sont les tâches d'entretien propres à chaque composant : révision moteur, hélice, ELT, étalonnages, pièces à vie limitée. Ils sont créés avec l'aéronef, d'après le programme générique. Vous pouvez les adapter ou les retirer.
+
+**Éléments par heures** (« Timed items ») : les tâches déclenchées par le temps cellule total, en heures. Chaque ligne comporte :
+
+- « Élément » (« Item ») : la pièce ou le système, par exemple Engine ou Magneto ;
+- « Tâche » (« Task ») : le type d'entretien, par exemple Overhaul ou Inspect ;
+- « Heures cellule à la révision » : le temps cellule à la dernière exécution, qui sert de point de départ ;
+- l'intervalle, en heures : après combien d'heures la tâche revient ;
+- la tolérance : la marge acceptée avant ou après l'échéance ;
+- « Selon condition ? » (« Is On Condition? ») : cochez-la si l'élément est entretenu selon son état plutôt qu'à intervalle fixe.
+
+![Onglet « Timed items » : moteur, hélice, magnétos et autres éléments, avec l'intervalle en heures et la tolérance](/docs-media/manager/fleet-and-maintenance-timed-items.jpg)
+
+**Éléments par dates** (« Dated items ») : les tâches périodiques au calendrier, par exemple la recertification de l'ELT ou la vérification de l'altimètre. Chaque ligne comporte l'élément, la tâche, la « Date initiale » de la dernière exécution, l'intervalle et la tolérance en mois, et « Selon condition ? ».
+
+![Onglet « Dated items » : moteur, hélice, altimètre, transpondeur, ELT et autres éléments, avec l'intervalle et la tolérance en mois](/docs-media/manager/fleet-and-maintenance-dated-items.jpg)
+
+**Éléments par cycles** (« Cycled items ») : les tâches suivies au nombre de cycles, par exemple l'inspection du train. Réglez l'élément (par exemple le train ou les freins), la tâche (par exemple Overhaul ou Inspect), les « Cycles cellule à la révision », l'intervalle et la tolérance en cycles, et « Selon condition ? » au besoin.
+
+![Onglet « Cycled items » vide, avec le bouton « New Cycled Item »](/docs-media/manager/fleet-and-maintenance-cycled-items.png)
+
+Dans chaque onglet, « Nouvel élément par heures », « Nouvel élément par dates » ou « Nouvel élément par cycles » ajoute une ligne. Pour supprimer un élément, ouvrez le menu à trois points de sa ligne.
+
+![Menu à trois points d'un élément par cycles, avec « Delete cycled Item »](/docs-media/manager/fleet-and-maintenance-delete-item.png)
+
+Tout se compte en heures et cycles cellule. Pour un moteur ou une hélice, saisissez le temps cellule au moment de la révision : le temps cellule actuel moins les heures depuis la révision.
 
 ## Heures, cycles et échéances
 
 Le « Temps cellule total » et les « Cycles cellule total » se mettent à jour seuls à partir des vols des pilotes membres de l'organisation.
 
-- « Nouveau calendrier d'inspection » : une visite périodique par dates, par heures, par cycles ou une combinaison, avec intervalle, fenêtre et tolérance. Dans l'onglet « Calendriers », « Téléverser un fichier de tâche d'inspection » joint la tâche de la visite : la fiche de l'aéronef propose alors « Obtenir la tâche d'inspection ».
-- Éléments par heures, par dates et par cycles : un intervalle propre à chaque composant (révision moteur, hélice, ELT, étalonnages, pièces à vie limitée).
+Sur la fiche de l'aéronef, les éléments s'affichent en couleur : « En service » (Serviceable), « À inspecter » (Due next inspection), « Sur condition » (On Condition), « En retard » (Overdue) ou « À compléter ». Un élément dont la dernière exécution ou l'intervalle est inconnu reste « À compléter » : aucune échéance n'est inventée. La liste de la flotte montre ce qui reste avant la visite la plus contraignante.
 
-Dans chaque onglet d'éléments, « Nouvel élément par heures », « Nouvel élément par dates » ou « Nouvel élément par cycles » ajoute une ligne : « Élément », « Tâche », dernière exécution (« Heures cellule à la révision », « Date initiale » ou « Cycles cellule à la révision »), intervalle et tolérance. Cochez « Selon condition ? » pour un élément entretenu selon son état plutôt qu'à intervalle fixe. Le menu d'actions de la ligne supprime l'élément.
+## Créer l'inspection initiale
 
-Les éléments s'affichent en couleur : « En service », « À inspecter », « Sur condition », « En retard » ou « À compléter ». Un élément dont la dernière exécution ou l'intervalle est inconnu reste « À compléter » : aucune échéance n'est inventée. La liste de la flotte montre ce qui reste avant la visite la plus contraignante.
+Une fois l'aéronef configuré, créez une inspection initiale pour chaque visite, par exemple la 100 h et la 50 h. Elle fixe le point de départ à partir duquel toutes les inspections suivantes sont calculées.
 
-## Inspections
+1. Ouvrez la fiche de l'aéronef : dans « Aéronefs », cliquez son type ou son indicatif, ou choisissez « Détails de l'aéronef » (« Aircraft details ») dans le menu à trois points.
+2. Sur la tuile d'inspection, cliquez « Créer une inspection initiale » (« Create Initial Inspection »).
+3. Saisissez la date de la dernière inspection faite, puis, selon la visite, les heures et les cycles à cette inspection et les cibles de la prochaine : date, heures ou cycles. Ne laissez pas une cible vide : elle vaudrait 0 et l'échéance serait aussitôt dépassée.
+4. Recommencez pour chaque visite, la plus longue d'abord. « Démarrer une inspection » n'apparaît qu'ensuite.
 
-1. Pour chaque visite, commencez par « Créer une inspection initiale » : la dernière inspection faite et la prochaine cible. Saisissez la date, puis, selon la visite, la date, les heures ou les cycles cibles. Répétez pour chaque visite, la plus longue d'abord : « Démarrer une inspection » n'apparaît qu'ensuite. Ne laissez pas une cible vide : elle vaudrait 0 et l'échéance serait aussitôt dépassée.
-2. « Démarrer une inspection » ouvre quatre étapes : « Pré-vérification », « Atelier », « Éléments » et « Finaliser ». À la soumission, le bon de travail et le rapport d'état sont produits en PDF, et la prochaine échéance avance.
-   - « Pré-vérification » : la visite proposée d'après l'échéance, ou « Tâche personnalisée » pour un bon de travail hors visite, comme la vérification périodique d'un altimètre, d'un transpondeur ou d'une ELT. Indiquez la date, les heures et les cycles, puis cochez les quatre vérifications : consignes de navigabilité, rapports de difficultés en service, publications techniques et défauts récurrents.
-   - « Atelier » : un atelier de votre liste ou « Par le propriétaire ». Les coordonnées se modifient pour cette inspection seulement.
-   - « Éléments » : cochez les éléments faits pendant la visite. Ceux en retard, à inspecter ou sur condition sont proposés ; « Afficher tous les éléments » montre les autres.
-   - « Finaliser » : relisez le récapitulatif, puis cliquez « Soumettre ».
-3. Après les travaux, cliquez « Finaliser l'inspection en cours ». Joignez au besoin le rapport de travail, la tâche d'inspection et le contrôle qualité remis par l'atelier. Cochez les éléments faits et « Journal technique vérifié ? », puis cliquez « Finaliser l'inspection ». La carte d'alerte est produite en PDF. Seuls les éléments cochés avancent.
+![Fiche « Aircraft details » sans inspection : le message « No inspections found » et le bouton « Create Initial Inspection » encadrés](/docs-media/manager/fleet-and-maintenance-create-initial-inspection.jpg)
 
-Une visite remet aussi à zéro les visites à intervalle plus court. Une tâche personnalisée n'en change aucune.
+Une fois enregistrée, l'inspection initiale devient la référence des échéances affichées pour la suite de l'entretien.
 
-Une seule inspection peut être en attente à la fois. Tout membre peut obtenir la dernière carte d'alerte.
+## Démarrer une inspection
 
-Les trois PDF :
+Pour garder votre aéronef sûr et bien entretenu, créez et consignez chaque inspection depuis la fiche de l'aéronef.
 
-- **Bon de travail** : l'organisation, l'aéronef, les cibles, l'atelier, l'inspection demandée et les éléments à faire, avec une ligne de signature pour le PRM (personne responsable de la maintenance). Tant que l'inspection est en attente, « Obtenir le bon de travail » le télécharge.
-- **Rapport d'état** : l'état des calendriers et des éléments de l'aéronef. « Obtenir le rapport d'état » le télécharge pendant l'attente.
-- **Carte d'alerte** : temps total cellule, cycles, dernière inspection, atelier, prochaines visites et éléments en retard ou à inspecter. « Obtenir la dernière carte d'alerte » la télécharge.
+1. Dans « Aéronefs », ouvrez la fiche de l'aéronef. Elle montre la dernière inspection, les prochaines visites prévues et la liste des éléments par heures, par dates et par cycles, avec leur état.
+2. Sur la tuile d'inspection, cliquez « Démarrer une inspection » (« Start Inspection ») pour lancer le parcours en quatre étapes.
 
-« Historique des inspections » liste les inspections passées. Le détail de chacune donne accès à ses fichiers.
+![Fiche « Aircraft details » : dernière inspection 50-Hour, tuiles des visites et bouton « Start Inspection » encadré](/docs-media/manager/fleet-and-maintenance-start-inspection.jpg)
+
+### Étape 1 : pré-vérification
+
+PilotDuty Manager vous propose la visite qui vient d'après les échéances, mais vous pouvez en choisir une autre. Vous pouvez aussi choisir « Tâche personnalisée » pour produire un bon de travail hors visite, par exemple pour la recertification d'un altimètre, d'un transpondeur ou d'une ELT.
+
+Confirmez :
+
+- le type d'inspection ;
+- la date de l'inspection, les heures et les cycles ;
+- que la documentation requise a été vérifiée : consignes de navigabilité, rapports de difficultés en service, publications techniques et défauts récurrents. Les quatre cases sont obligatoires.
+
+Cliquez « Suivant » (« Next »).
+
+![Étape 1 « Pre-inspection check » : la visite 100-Hour / Annual, la date et les quatre cases cochées](/docs-media/manager/fleet-and-maintenance-inspection-step-1-pre-check.png)
+
+### Étape 2 : atelier
+
+Renseignez l'atelier d'entretien : choisissez un atelier de votre liste, ou « Par le propriétaire ». Le nom de l'AMO ou de l'AME, l'adresse, le téléphone et le courriel se remplissent seuls si l'atelier est déjà enregistré. Vous pouvez les modifier pour cette inspection seulement. Cliquez « Suivant ».
+
+![Étape 2 « Workshop details » : l'atelier Acme Shop et ses coordonnées](/docs-media/manager/fleet-and-maintenance-inspection-step-2-workshop.png)
+
+### Étape 3 : éléments
+
+Cochez les éléments par heures, par dates ou par cycles faits aussi pendant cette inspection : vous mettez ainsi à jour plusieurs éléments en une seule démarche. Les éléments en retard, à inspecter ou sur condition sont proposés. « Afficher tous les éléments » (« Show all items ») montre les autres.
+
+![Étape 3 « Special items selection » : les éléments proposés et le bouton « Show all items »](/docs-media/manager/fleet-and-maintenance-inspection-step-3-items.png)
+
+![Étape 3 avec tous les éléments affichés : un élément à inspecter est coché](/docs-media/manager/fleet-and-maintenance-inspection-step-3-all-items.png)
+
+### Étape 4 : finaliser et soumettre
+
+Un récapitulatif complet s'affiche : l'aéronef (type, indicatif, temps cellule, cycles), l'atelier, le type d'inspection, les prochaines cibles et les éléments choisis. Cliquez « Soumettre » (« Submit »).
+
+![Étape 4 « Finalize and Submit Inspection » : le récapitulatif et le bouton « Submit »](/docs-media/manager/fleet-and-maintenance-inspection-step-4-submit.png)
+
+À la soumission, le bon de travail et le rapport d'état sont produits en PDF, et la prochaine échéance de la visite avance. Les éléments cochés, eux, n'avancent qu'à la finalisation de l'inspection. Une visite remet aussi à zéro les visites à intervalle plus court. Une tâche personnalisée n'en change aucune.
+
+## Obtenir le bon de travail et le rapport d'état
+
+Une fois l'inspection soumise, deux nouveaux boutons apparaissent sur la tuile d'inspection : « Obtenir le bon de travail » (« Get work order ») et « Obtenir le rapport d'état » (« Get status report »). Ils restent disponibles tant que l'inspection est en attente.
+
+1. Cliquez « Obtenir le bon de travail » pour télécharger le bon à remettre à l'atelier.
+
+![Tuile d'une inspection en attente : le bouton « Get work order » encadré](/docs-media/manager/fleet-and-maintenance-get-work-order.jpg)
+
+Le bon de travail donne l'organisation, l'aéronef, les cibles, l'atelier, l'inspection demandée et les éléments à faire en trois colonnes, avec une ligne de signature pour le PRM (personne responsable de la maintenance).
+
+![Exemple de bon de travail (Work Order) pour C-FFFF : inspection 100-Hour / Annual demandée, un élément par heures et la ligne de signature du PRM](/docs-media/manager/fleet-and-maintenance-work-order-pdf.jpg)
+
+2. Cliquez « Obtenir le rapport d'état » pour télécharger l'état des calendriers et des éléments de l'aéronef.
+
+![Tuile d'une inspection en attente : le bouton « Get status report » encadré](/docs-media/manager/fleet-and-maintenance-get-status-report.jpg)
+
+![Exemple de rapport d'état (Status Report) pour C-FFFF : tableaux en couleur des visites, des éléments par heures et des éléments par dates](/docs-media/manager/fleet-and-maintenance-status-report-pdf.jpg)
+
+Une fois les travaux faits, passez à l'étape suivante : finaliser l'inspection en cours.
+
+## Finaliser l'inspection en cours
+
+Une fois l'inspection faite physiquement par votre atelier, finalisez-la dans PilotDuty Manager et conservez les documents requis.
+
+1. Sur la fiche de l'aéronef, cliquez le bouton orange « Finaliser l'inspection en cours » (« Complete the pending inspection »). Il n'apparaît que si une inspection a été démarrée sans être finalisée.
+
+![Tuile d'inspection : le bouton orange « Complete the pending inspection » encadré](/docs-media/manager/fleet-and-maintenance-complete-pending-inspection.jpg)
+
+2. Dans la fenêtre qui s'ouvre, joignez au besoin les trois fichiers remis par votre atelier : le rapport de travail (« Work Report File »), la tâche d'inspection (« Inspection Task File ») et le contrôle qualité (« Quality Control »).
+3. Confirmez chaque élément fait : une case par élément choisi, par exemple « Confirm Inspection at 97 hrs ».
+4. Cochez « Journal technique vérifié ? » (« Technical Log Checked? »). Cette case est obligatoire.
+5. Cliquez « Finaliser l'inspection » (« Complete Inspection »).
+
+![Fenêtre « Complete the pending inspection » : trois fichiers à joindre, un élément à confirmer, la case « Technical Log Checked? » et le bouton « Complete Inspection »](/docs-media/manager/fleet-and-maintenance-complete-inspection-window.png)
+
+La finalisation :
+
+- produit la carte d'alerte en PDF ;
+- range l'inspection dans l'historique de l'aéronef ;
+- fait avancer les éléments cochés, et eux seuls. La prochaine échéance de la visite a déjà avancé à la soumission.
+
+Une seule inspection peut être en attente à la fois.
+
+## Obtenir la dernière carte d'alerte
+
+Après la finalisation, cliquez « Obtenir la dernière carte d'alerte » (« Get latest alert card ») sur la tuile d'inspection pour la télécharger. Tout membre peut l'obtenir.
+
+![Tuile d'inspection après la finalisation : le bouton « Get lastest alert card » encadré, sous « Start Inspection »](/docs-media/manager/fleet-and-maintenance-get-alert-card.jpg)
+
+La carte d'alerte donne le temps total cellule, les cycles, la dernière inspection, l'atelier, les prochaines visites avec leurs cibles, et les éléments en retard ou à inspecter.
+
+![Exemple de carte d'alerte (Maintenance Alert Card) pour C-FFFF : l'aéronef, l'atelier, les prochaines inspections et les prochains éléments par dates](/docs-media/manager/fleet-and-maintenance-alert-card-pdf.jpg)
+
+## Historique des inspections
+
+« Historique des inspections » (« Inspection history »), sur la tuile d'inspection, liste les inspections passées, de la plus récente à la plus ancienne. Le détail de chacune donne accès à ses fichiers : bon de travail, rapport d'état, rapport de travail, contrôle qualité, carte d'alerte et tâche d'inspection.
 
 ## Défectuosités
 
@@ -83,21 +255,31 @@ Les trois PDF :
 
 Le parcours va dans un seul sens : Ouvert, En cours, Rectifié, Fermé. Une défectuosité ne se supprime pas. Un courriel part à la création (aux responsables de la maintenance), à la rectification (à l'auteur) et à la signature.
 
-## Ateliers
+## Gérer les ateliers
 
-Dans Paramètres › Organisation › « Ateliers », tenez la liste de vos ateliers (AMO ou AME). Elle est proposée à chaque inspection. L'atelier n'a pas d'accès à PilotDuty.
+Vous enregistrez et gérez vos ateliers fournisseurs directement dans les paramètres de votre organisation. L'atelier n'a pas d'accès à PilotDuty.
 
-1. Cliquez « Ajouter un atelier ».
-2. Pour un organisme de maintenance agréé, cochez « C'est un AMO », puis saisissez le nom de l'AMO, le nom du PRM et le numéro d'AMO. Sinon, saisissez le nom et le numéro de l'AME.
-3. Saisissez l'adresse, le téléphone et le courriel, tous obligatoires, puis enregistrez.
+1. Ouvrez Paramètres › Organisation › « Ateliers » (« Workshops »).
+2. Cliquez « Ajouter un atelier » (« Add Workshop ») pour enregistrer un organisme de maintenance agréé (AMO), interne ou externe, ou un technicien d'entretien (AME).
 
-Le menu d'actions d'un atelier sert à le modifier ou à le supprimer. Le premier atelier de la liste est présélectionné à l'étape « Atelier » d'une inspection, et chaque inspection garde sa propre copie de ses coordonnées.
+![Paramètres, onglet Organization, section Workshops : l'atelier Acme Shop (AMO) et le bouton « Add Workshop » encadré](/docs-media/manager/fleet-and-maintenance-workshops.png)
+
+3. Remplissez le formulaire :
+   - « C'est un AMO » (« isAMO ») : cochez cette case si l'atelier est un organisme de maintenance agréé ;
+   - pour un AMO : le nom de l'atelier (« amoName »), le nom de la personne responsable de la maintenance (« prmName ») et le numéro de certificat de l'AMO (« amoNumber ») ;
+   - sinon : le nom et le numéro de l'AME ;
+   - l'adresse de l'atelier (« shopAddress »), son téléphone (« shopPhone ») et son courriel (« shopEmail »), tous trois obligatoires.
+4. Cliquez « Soumettre » (« submit ») pour enregistrer l'atelier.
+
+![Formulaire « Add Workshop » rempli : isAMO coché, Acme Shop, le PRM, le numéro 23-23, l'adresse, le téléphone et le courriel](/docs-media/manager/fleet-and-maintenance-add-workshop.jpg)
+
+Une fois enregistré, l'atelier est proposé à l'étape « Atelier » de chaque inspection, où le premier de la liste est présélectionné. Ses coordonnées sont copiées dans l'inspection et paraissent sur le bon de travail et la carte d'alerte : chaque inspection garde sa propre copie. Le menu à trois points d'un atelier sert à le modifier ou à le supprimer.
 
 ## À savoir
 
 - Le module ne bloque rien. Une défectuosité No-Go ou une échéance dépassée ne retire pas l'aéronef de la réservation. Pour le bloquer, saisissez une indisponibilité au calendrier : voir [Réservations](/fr/docs/manager/reservations).
 - Aucune alerte d'échéance n'est envoyée, ni par courriel ni par SMS. Les échéances se lisent à l'écran.
 - Tout se compte en heures et cycles cellule. Il n'y a pas de compteur séparé pour le moteur ou l'hélice.
-- Les PDF d'inspection sont en anglais. Une inspection ne se signe pas électroniquement.
+- Les PDF d'inspection sont en anglais, avec le logo de l'organisation s'il existe. Une inspection ne se signe pas électroniquement.
 - Le report d'un item MEL est en cours de développement.
 - Un calendrier d'inspection ne se renomme pas : le supprimer pour le recréer efface ses échéances.

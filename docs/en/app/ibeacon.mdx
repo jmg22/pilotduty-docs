@@ -1,6 +1,6 @@
 ---
 title: "iBeacon"
-description: "Pair a beacon with your aircraft so the app knows when you are on board."
+description: "Add an aircraft, pair a beacon with it so the app knows when you are on board, or set it up for manual start."
 order: 3
 translationKey: app-ibeacon
 updated: 2026-11-01
@@ -11,29 +11,88 @@ An iBeacon placed in the aircraft lets the app know you are on board. Flight rec
 
 Beacon-triggered recording requires PilotDuty+ or PilotDuty Pro.
 
-## Adopting a beacon
+## Adding an aircraft
 
-Adopting a beacon means pairing it with an aircraft in the app.
+Follow these steps to add an aircraft to your PilotDuty logbook and set it up for automatic flight detection with an iBeacon. Without a beacon, you can also set the aircraft up for manual start. Have the aircraft's information ready so you can add it without delay.
 
-1. During the welcome flow, say that your aircraft has a beacon. You can also do this later from the Aircraft tab (airplane icon).
-2. Enter the beacon's identifiers: UUID, major and minor.
-3. Enter the aircraft's registration and type.
-4. Finish setting up the aircraft.
+### Step 1 – Open the Aircraft tab
 
-## Setting up the aircraft
+In the bottom bar, tap the Aircraft tab (airplane icon). It shows the list of your tracked aircraft (“Tracked Aircraft”).
 
-The setup screen asks for:
+### Step 2 – Tap “+”
 
-- the registration and type, both required;
-- the landing gear category;
-- the engine and propeller;
-- the IFR setting;
-- whether the aircraft is flown single-pilot;
-- your status on board.
+At the top right of the “Tracked Aircraft” screen, tap “+” to create an aircraft.
 
-An aircraft picture adapts to the category and number of engines. This information is used to fill in the flights recorded with this aircraft.
+As long as no aircraft is tracked, the screen reminds you that you need a compatible beacon to get the most out of automatic recording, with a “Buy an iBeacon” button.
+
+![Empty “Tracked Aircraft” screen: an arrow points to the “+” button at the top right, above the “Improve your flight tracking experience” message and the “Buy an iBeacon” button](/docs-media/app/ibeacon-tracked-aircraft-add.png)
+
+### Step 3 – Enter the aircraft's information
+
+Fill in the following fields:
+
+- **“Initiator”.** Choose “User initiated” if you don't use a beacon, or “iBeacon” if you do. You will assign it in the next step.
+- **“CallSign”.** The registration, for example C-FFFF. Required.
+- **“Aircraft Type”.** The model, for example C172. Required.
+- **“Takeoff speed (Knots)”.** The aircraft's average rotation speed, in knots. The app uses it to recognize the takeoff.
+
+Then define the aircraft's configuration:
+
+- **“Aircraft Type Category”.** The landing gear category, for example “Tricycle Train”.
+- **“Engine Type”.** The engine, for example “Mono Piston”.
+- **“Propeller Type”.** The propeller, for example “Fixed pitch”.
+- **IFR and “Single Pilot”.** Turn these switches on or off according to the aircraft's capabilities: instrument flight, single-pilot operation.
+
+The app also asks for your status on board. An aircraft picture adapts to the category and number of engines. This information is used to fill in the flights recorded with this aircraft.
+
+![“Edit Area” screen: “Initiator” set to “User initiated”, “CallSign” and “Aircraft Type” fields, “Takeoff speed (Knots)” at 30, category, engine, propeller, IFR and “Single Pilot”](/docs-media/app/ibeacon-edit-aircraft.png)
+
+### Step 4 – Assign a beacon
+
+If you chose “iBeacon” as the initiator:
+
+1. Tap “Adopt an iBeacon”.
+2. The app starts scanning for nearby iBeacons.
+3. When a beacon is detected close by (“Near”), tap “Adopt Nearest iBeacon”.
+
+If the screen asks for the beacon's identifiers instead, enter its UUID, major and minor.
+
+If no beacon is found, make sure that:
+
+- the batteries are properly installed;
+- the protective film is removed;
+- you are close to the beacon.
+
+![“iBeacon Detection” screen: beacon detected “Near”, help message, orange “Adopt Nearest iBeacon” button and red “Close” button](/docs-media/app/ibeacon-detection.png)
+
+### Step 5 – Finish
+
+Once every field is filled in:
+
+- the aircraft appears in the “Tracked Aircraft” list;
+- you can always come back to change its setup, or assign a beacon later.
+
+![“Tracked Aircraft” list with the aircraft C-FFFF, type C172, and its beacon icon](/docs-media/app/ibeacon-tracked-aircraft-list.png)
+
+You're ready. PilotDuty now uses this aircraft profile to log your flight time: automatically with a beacon, or by hand if you chose “User initiated”. See [Automatic recording](/en/docs/app/automatic-recording).
+
+Don't forget to set your location and notification permissions in the Settings tab, under General, so the app works properly in the background. See [Getting started](/en/docs/app/getting-started).
+
+Adding your aircraft lets you keep a complete record of your flight history.
+
+### Your organization's aircraft
 
 If the aircraft belongs to your organization and a beacon is paired with it in PilotDuty Manager, pick it from your organization's aircraft list instead. The app takes over its setup and turns on beacon detection automatically. See [With your organization](/en/docs/app/with-your-organization).
+
+## Adopting a beacon during the welcome flow
+
+You can also adopt your beacon during the welcome flow:
+
+1. Say that your aircraft has a beacon.
+2. Enter the aircraft's registration and type, then adopt the beacon.
+3. Set up the aircraft.
+
+These screens are described in detail in [Getting started](/en/docs/app/getting-started).
 
 ## The false-flight guard
 
@@ -43,7 +102,7 @@ A beacon sometimes stays in the aircraft on the ground, and your iPhone may pass
 - Once airborne, that confirmation holds until you park. A touch-and-go, or losing the beacon signal in flight, does not cut the flight.
 - The app learns each beacon's usual signal. That data stays on your iPhone and is never sent anywhere.
 - The check happens on the iPhone, without a network.
-- If the app doesn't have enough data to decide, it lets the flight through rather than risk missing a real one. You can delete a false flight with a swipe in the approval queue.
+- If the app doesn't have enough data to decide, it lets the flight through rather than risk missing a real one. You can delete a false flight with a swipe to the left in the approval queue.
 
 ## Subscription required
 
@@ -56,6 +115,8 @@ An annual PilotDuty+ or PilotDuty Pro subscription includes a free iBeacon in th
 1. After your purchase, the app asks for your shipping address.
 2. If you skip that step, a dashboard banner reminds you that the address is missing.
 3. Tap the banner to open the form and enter your address.
+
+![“Shipping Address” screen: address, city, postal code and country fields, and the “Next” button](/docs-media/app/getting-started-shipping-address.png)
 
 ## Good to know
 

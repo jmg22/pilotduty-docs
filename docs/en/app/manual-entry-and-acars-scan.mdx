@@ -31,27 +31,88 @@ Manual entry works offline and doesn't require a subscription.
 
 ## Adding a duty event
 
-With duty time turned on (PilotDuty Pro, in beta), the “+” button also lets you add a work, flight or rest event. See [Duty time](/en/docs/app/duty-time).
+With duty time turned on (PilotDuty Pro, in beta), the “+” button also lets you add a work, flight or rest event. The step-by-step guide is in [Duty time](/en/docs/app/duty-time), section “Manually adding an event”.
 
 ## Adding a flight to an event
 
-With duty time turned on, you can add one or more flights to a work or flight event, for example to log each leg of a duty period. The event must not be approved yet: to change an approved event, unapprove it first.
+When editing a flight event, you can add one or more flights to it, to capture the flight time, aircraft and operational data of each one. This requires duty time turned on. The event must not be approved yet: to change an approved event, unapprove it first.
 
-1. On the dashboard, tap the event to open it.
-2. In the flights section, add a flight.
-3. Choose how: by hand, by ADS-B recovery (PilotDuty Pro) or by scan. The scan is offered only when an aircraft is selected.
-4. Fill in or check the flight, as for any other flight.
+### How to add a flight
 
-Repeat for each flight. To remove a flight from the event, swipe it to the left. A flight that is still recording, or that is linked to flight following, can't be removed.
+1. On the dashboard, tap an existing flight event.
+2. Scroll down to the “Flights” section.
+3. Tap “Add Flight”.
+4. Choose how:
+   - “Add Flight Manually”: by hand;
+   - ADS-B recovery, with PilotDuty Pro;
+   - “Scan Flight log (ACARS, IPAD)”: by scan. The scan is offered only when an aircraft is selected.
+
+> Tip: the scan uses your camera to read flight data from an FMS screen or from a flight log shown on an iPad.
+
+![An event's “Add Flight” menu, with the “Add Flight Manually” and “Scan Flight log (ACARS, IPAD)” choices](/docs-media/app/manual-entry-add-flight-options.png)
+
+This screenshot dates from 2025: ADS-B recovery now joins these two choices.
+
+### Adding a flight manually
+
+Once you've chosen a method, fill in the following fields.
+
+**Aircraft info (“Aircraft Info”)**
+
+- the registration;
+- the aircraft type.
+
+**Flight times**
+
+- the off-block time (“Off Block Time”);
+- the takeoff time (“Take Off Time”);
+- the landing time (“Landing Time”);
+- the on-block time (“On Block Time”), optional.
+
+**Details**
+
+- the departure aerodrome (“Departure Airport”), as an ICAO code;
+- the arrival aerodrome (“Arrival Airport”), as an ICAO code;
+- the number of cycles (takeoffs and landings);
+- IFR, night, cross-country and operating rule;
+- single pilot (“Single Pilot”): turn it on if you fly solo.
+
+> Make sure all the times fall between the event's start and stop times.
+
+![The “Edit Flight” screen: registration and type under “Aircraft Info”, departure aerodrome, and the “Off Block”, “Take Off” and “Landing” times](/docs-media/app/manual-entry-edit-flight.png)
+
+### Scanning a flight log from the event
+
+1. Tap “Add Flight”.
+2. Select “Scan Flight log (ACARS, IPAD)”.
+3. Use the camera to scan your screen, for example an FMS screen or a log on an iPad.
+4. Confirm the values read.
+5. Tap “Add this Flight” to save the flight.
+
+The scan is described in detail below, in “Scanning an ACARS screen”.
+
+### Deleting a flight
+
+Swipe a flight in the list to the left to reveal the “Delete” button. A flight that is still recording, or that is linked to flight following, can't be removed.
+
+### Adding several flights
+
+Repeat “Add Flight” as many times as needed within a single flight event, to log each leg of a duty period.
 
 A rest event has no flights.
 
+### Notes
+
+- Events and their flights must be approved from the dashboard before they appear in your logbook or in the Duty tab.
+- If you belong to an organization in PilotDuty Manager, the flights show up in Manager when you approve the event.
+- An approved flight can't be edited until its event is unapproved.
+
 ## Scanning an ACARS screen
 
-The scan uses the camera to read an ACARS, EFIS or iPad screen in the cockpit. It recognizes:
+PilotDuty uses the camera to read flight log screens from onboard systems: the FMS (for example Airbus Honeywell, or ACARS on Boeing), an EFIS screen, an EFB app on an iPad, or a printed flight log. Optical character recognition (OCR) finds the key flight times and the route on its own. It recognizes:
 
 - the four OOOI times: OUT (leaving the gate), OFF (takeoff), ON (landing) and IN (arriving at the gate);
-- the route, from the departure aerodrome to the arrival aerodrome;
+- the route: FROM and TO, the ICAO codes of the departure and destination aerodromes;
 - the flight number;
 - the registration.
 
@@ -63,7 +124,11 @@ The scan uses the camera to read an ACARS, EFIS or iPad screen in the cockpit. I
 4. Check the review screen. Each field shows a confidence gauge. Fix anything that needs it.
 5. Tap “Add this Flight”. The flight lands in the approval queue, not yet approved.
 
-You can also start a scan from a duty event's screen.
+![Scanning the “FLT LOG” screen of an Airbus Honeywell FMS: the “ACARS Data” window shows OUT, OFF, ON, IN, FROM and TO, with the “Add this Flight” button](/docs-media/app/manual-entry-acars-scan.png)
+
+In this 2025 screenshot, the values read appeared in a simple window. The current review screen adds a confidence gauge to each field.
+
+You can also start a scan from a duty event's screen: see “Scanning a flight log from the event” above.
 
 ### Good to know
 
@@ -73,6 +138,7 @@ You can also start a scan from a duty event's screen.
 - The app asks for camera access. If you declined it, the app offers to open iOS Settings so you can allow it.
 - Frame a clear, well-lit screen. The more readable the text, the better the reading.
 - Always double-check values with a low confidence gauge before adding the flight.
+- You can always edit the scanned data by hand once the flight is added.
 
 ## Which method to use
 
