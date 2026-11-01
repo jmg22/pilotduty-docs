@@ -1,0 +1,66 @@
+---
+title: "Suivi de vol"
+description: "Suivre les vols envoyés par l'app iPhone, confirmer l'arrivée en sécurité, prévenir des abonnés par SMS et joindre les contacts d'urgence."
+order: 6
+translationKey: mgr-flight-following
+updated: 2026-11-01
+draft: false
+---
+
+Le suivi de vol donne à votre personnel une vue de sécurité sur chaque vol : position, jalons, confirmation d'arrivée, alertes SMS et contacts d'urgence.
+
+## D'où vient le suivi
+
+Le suivi est créé par l'app iPhone du pilote, jamais par le Manager seul. Quand le suivi vers PilotDuty Manager est activé dans l'app, celle-ci envoie les jalons du vol (roulage, décollage, atterrissage, stationnement) avec leur position. Le Manager les reçoit et les affiche sur la [Feuille de vol](/fr/docs/manager/feuille-de-vol). Pour que le vol paraisse, l'indicatif saisi dans l'app doit correspondre à un aéronef de votre organisation, et le pilote doit en être membre. Voir [Avec l'app iPhone](/fr/docs/manager/avec-l-app-iphone).
+
+## Qui peut le faire
+
+- **Voir les vols et la carte** : tout membre.
+- **Apparier ou désapparier un vol** : Pilote et plus, ou l'équipage ou l'élève de la réservation. Retirer le dernier vol d'une réservation : Dispatch et plus.
+- **Confirmer qu'un pilote est posé en sécurité, voir les contacts d'urgence, gérer les SMS et les abonnés** : Instructeur et plus.
+- **Archiver un suivi** : Dispatch et plus.
+- **Relancer un numéro suspendu (« Réessayer »)** : Copropriétaire et Responsable des opérations.
+
+## Carte et jalons
+
+Sous chaque réservation, une carte par vol change de couleur selon l'état : bleu en préparation, orange en vol, rouge une fois posé sans confirmation, vert une fois la sécurité confirmée. L'affichage « Carte » de la Feuille de vol montre les avions et leurs trajectoires. La position n'existe que si l'iPhone envoie des jalons.
+
+## Appariement avec la réservation
+
+Le Manager rattache seul chaque vol suivi à la réservation confirmée du même aéronef, avec une tolérance de 60 minutes autour de la réservation. Une réservation en attente n'est pas appariée. Un vol sans réservation correspondante paraît dans « Vols non planifiés » : « Assigner le vol non planifié » le rattache à la main, et l'icône de lien brisé (« Désapparier le vol ») retire un vol rattaché par erreur.
+
+## Vol d'équipage
+
+Deux téléphones à bord du même avion, ou un suivi iPhone et un vol saisi au carnet, ne comptent que pour un seul vol. La carte affiche « Vol d'équipage · N membres suivis », avec le rôle et le nom de chacun. Ce regroupement se fait une fois les suivis confirmés en sécurité. Confirmer, archiver ou désapparier agit alors sur tout le groupe.
+
+## Confirmer « posé en sécurité »
+
+L'icône de bouclier de la carte ouvre « Confirmer que ce pilote a atterri et est en sécurité ? ». La confirmation résout l'alerte et la carte passe au vert. « Retirer le statut safe » annule la confirmation et réactive l'alerte. Le pilote peut aussi confirmer depuis son iPhone. Une fois le vol confirmé, Dispatch et plus peuvent archiver un suivi sans intérêt, comme un faux départ : un bouton « Annuler » s'affiche quelques instants, puis le suivi archivé ne s'affiche plus.
+
+## SMS aux abonnés
+
+Dans Paramètres › Organisation, onglet « Suivi de vol SMS » :
+
+1. Activez l'interrupteur de la tuile « Notifications SMS ». Il est éteint par défaut et coupe tous les SMS du suivi de vol, y compris l'alerte de retard.
+2. Cliquez « Ajouter un abonné ». Choisissez un membre de l'organisation, son numéro, la « Langue des SMS », les « Aéronefs surveillés » et les événements, regroupés en « Phases de vol », « Sécurité » et « Système ».
+3. Cochez l'accord du destinataire : « Je confirme que cette personne accepte de recevoir des alertes de vol PilotDuty par SMS et sait qu'elle peut répondre STOP. »
+
+Sept notifications sont offertes : « Suivi démarré », « Décollage », « Atterrissage », « Garé », « Pilote confirmé sain et sauf », « En retard sur la réservation » et « Association échouée ». Une pastille par aéronef indique « Au moins un abonné » ou « Aucun abonné ». Un abonné qui a répondu STOP s'affiche « Retiré (STOP) » : lui seul peut lever ce retrait, en répondant START.
+
+## Alerte de retard
+
+Un contrôle périodique, environ toutes les 15 minutes, repère une réservation confirmée terminée depuis au moins 15 minutes dont le dernier vol apparié n'est pas confirmé en sécurité. Les abonnés qui ont choisi cet événement reçoivent alors « En retard sur la réservation ». L'alerte exige un vol apparié : une réservation sans vol apparié n'en déclenche aucune. Sur la Feuille de vol, l'icône des contacts devient un triangle orange.
+
+## Lien public de suivi
+
+Les SMS « Suivi démarré », « Décollage » et « Atterrissage » contiennent un lien public. Il montre le vol sur une carte, sans compte et sans le nom du pilote. Le lien expire 72 heures après le dernier jalon.
+
+## Contacts d'urgence
+
+L'icône de téléphone de la carte de vol affiche, pour chaque membre d'équipage, son téléphone et son contact d'urgence. Chaque membre saisit son propre contact d'urgence dans son profil. Voir [Membres et rôles](/fr/docs/manager/membres-et-roles).
+
+## À savoir
+
+- Les abonnés sont des membres de l'organisation. Pour prévenir un proche qui n'est pas membre, le pilote utilise l'envoi de SMS de l'app iPhone ; ces envois ne paraissent pas dans le Manager.
+- Numéros nord-américains de 10 chiffres seulement. Une ligne fixe est refusée.
+- Les SMS partent en français ou en anglais. Les autres langues reçoivent l'anglais.

@@ -1,0 +1,77 @@
+---
+title: "Members and roles"
+description: "Invite your organization's members, give them a role and keep your profile up to date."
+order: 2
+translationKey: mgr-members
+updated: 2026-11-01
+draft: false
+---
+
+The Manager lets you invite your members, give them a role and manage your own profile.
+
+## Who can do it
+
+- **Invite a member**: Dispatch and above, for a role strictly lower than their own, never Operations Manager.
+- **See pending invitations**: Dispatch and above. Delete them: Chief Instructor and above.
+- **Change a role, remove a member**: Chief Instructor and above, on a member whose role is strictly lower than their own.
+
+## Invite members
+
+The organization needs an active subscription. See [Subscription](/en/docs/manager/subscription).
+
+1. In your organization settings, open the member list and choose to invite members.
+2. For each person, enter the email address and choose the role (Pilot by default). Add as many lines as you need.
+3. Choose the language of the invitation, then send.
+
+The invitation email carries your organization's logo. A preview window then shows how the new members affect your subscription invoice. Billing changes when the invitee accepts.
+
+An invitation is valid for 7 days. The pending invitations tab lists those not yet accepted, and lets you delete one. To resend an invitation, invite the same address again: a new link replaces the old one.
+
+## Accept an invitation
+
+Open the link in the email. Sign in or create your account with the invited address: only that account can accept. Enter your name, then continue. You land on the Flightsheet. If the link has expired, ask for a new invitation.
+
+## The eleven roles
+
+Each member has one role per organization. Most rights add up from one role to the next, but some are reserved to a list of roles: the Maintenance Manager, for example, manages the fleet but not the booking setup.
+
+| Value | Role | What it allows |
+| --- | --- | --- |
+| 0 | Read-only | View the calendar, the Flightsheet and the fleet, and read their memos. Cannot create bookings. |
+| 100 | Student | Book for themselves (training, rental), manage their own customer record, view their own training record. |
+| 200 | Renter | The same rights as a Student. |
+| 300 | Pilot | See all members and customers, book for another member, create series and unavailabilities, read internal notes, pair a flight, report a defect. |
+| 400 | Instructor | See members' contact details, emergency contacts and files, write in training records, confirm that a pilot has landed safely, manage flight-following text messages. |
+| 500 | Dispatch | See and edit all bookings, invite members, lock the Flightsheet, collect an invoice, publish memos to the whole organization, use the shop when it is on. |
+| 600 | Chief Instructor | Edit the organization settings, change roles, set up booking, connect Stripe, refund invoices, manage prepaid packages and open classes. |
+| 700 | Chief Pilot | The same rights as a Chief Instructor. |
+| 800 | Maintenance Manager | The rights of a Chief Instructor, except booking setup and Stripe. Also: manage aircraft, inspections and maintenance workshops, rectify a defect and sign the return to service. |
+| 900 | Co-owner | The rights of a Chief Instructor, plus rectify a defect, sign the return to service and retry a suspended text-message number. |
+| 1000 | Operations Manager | The owner, one per organization. All rights, including subscribing and creating a Stripe Terminal location. |
+
+## Change a role
+
+In the member list, open the row's action menu, choose to change the role, then confirm. The new role must be strictly lower than yours, and you cannot change your own role. The member is not notified by email.
+
+The Operations Manager role cannot be given through an invitation or a role change: only the Operations Manager can transfer ownership.
+
+## Remove a member
+
+Open the row's action menu, choose to remove the member, then confirm. The person loses access to the organization but keeps their PilotDuty account. No email notifies them.
+
+## Your profile
+
+In your profile settings, under your information:
+
+- **Your name and photo**, shown in member lists.
+- **A phone number**, verified by a code sent by text message. It is not used to sign in.
+- **Communication language**: the language of the booking notifications you receive, separate from the interface language.
+- **Emergency contact**: the person to reach in case of an incident or an overdue flight. Instructors and above can see it.
+
+The email and password tabs are for password accounts. The authentication tab lists your sign-in methods.
+
+## Good to know
+
+- Below the Pilot role, the member list only shows staff (Pilot and above) and yourself. Other members' email, phone and address are reserved to Instructors and above.
+- The emergency contact is saved per organization: enter it again in each one.
+- An invitation's expiry date is not shown.

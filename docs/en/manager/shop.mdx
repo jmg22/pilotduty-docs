@@ -1,0 +1,77 @@
+---
+title: "Shop"
+description: "Sell your items at the counter: activation, items and variants, stock, payment, taxes and credit notes."
+order: 7
+translationKey: mgr-shop
+updated: 2026-11-01
+draft: false
+---
+
+The “Shop” lets your staff sell the organization's items at the counter, in the Manager. It sells items only, and nothing is sold online to the public.
+
+## Turn on the shop
+
+The shop is off by default. It opens in two steps:
+
+1. PilotDuty first authorizes the shop for your organization.
+2. Your organization then turns it on in its general organization settings, in the shop block. This block appears only once the authorization is given.
+
+You also need a Stripe Connect account ready to collect payments: without it, you can neither create an item nor sell, not even for cash. See [Customers and billing](/en/docs/manager/customers-and-billing).
+
+## Who can do it
+
+- **Turn the shop on or off**: Chief Instructor and above.
+- **Manage items and stock, sell, collect payment, issue a credit note**: Dispatch and above.
+- **Create a Stripe Terminal location for a base**: Operations Manager.
+
+The “Shop” menu opens three tabs: counter sale, sales and items.
+
+## Create an item
+
+In the items tab, create a new item. Fill in the name, the optional description, the price before taxes and the tax type: goods, service or non-taxable. Language tabs (English, Français, Español, Deutsch) let you translate it. Taking an item off sale removes it from the counter without losing it, and you can put it back on sale later.
+
+## Options and variants
+
+In the options section, add an option, then its choices: for example a Size option (S, M, L) and a Color option. Each combination becomes a variant, with its own price and an on-sale checkbox. An item has at most 3 options and 100 combinations.
+
+## Track stock
+
+Check the stock-tracking box to follow each variant. The item's stock button lets you record a receipt or a correction, and lists the latest movements. Each variant starts at zero: it stays sold out until a first receipt. Stock never goes below zero. Without tracking, the item sells without limit.
+
+## Sell at the counter
+
+1. In the counter sale tab, choose the base if you have several.
+2. Adjust quantities with the plus and minus buttons.
+3. Calculate the total: the screen shows the subtotal, taxes and invoice total.
+4. Collect payment on the same screen.
+
+The sale goes to the base's walk-in customer: you do not choose a customer record or a buyer name. Once the total is calculated, the sale can no longer be edited: to change it, cancel the sale, which returns the stock, and start again.
+
+## Collect payment
+
+- **Declared methods**: cash, transfer, check or other. No money goes through Stripe: PilotDuty records what your staff declares. In Canadian dollars, the cash amount to collect is rounded to 5 cents.
+- **Card**: collecting on the Terminal opens the Stripe Terminal payment window. You must have turned on Stripe Terminal and created a location for the sale's base. An email for the card receipt is optional. A card already charged is never charged twice.
+
+Collect a declared payment as soon as the total is calculated: it is done on the current sale's screen, not from the sales tab.
+
+## Taxes
+
+Stripe Tax calculates the taxes at the base address. The shop refuses to sell without correct taxes: you need Stripe Tax turned on and a base address. In Canada, a GST/HST number is required, plus a QST number in Quebec. When a sale is refused, a link opens a guide to setting up taxes in Stripe. PilotDuty does not calculate any tax itself.
+
+## Credit notes
+
+To correct a paid sale, open the sales tab, then the sale's details. Choose quantities line by line or credit everything, then show the amount. Leave the restock box checked to return tracked items to stock, then issue the credit note. A sale paid on the Terminal is refunded to the card. A credit note cannot be canceled.
+
+## Sales list
+
+The sales tab shows recent sales, with their status and total: not collected, paid, partly credited, credited or canceled. The invoice and receipt button opens the sale's Stripe document.
+
+## Good to know
+
+- The list shows the last 50 sales, with no filter, search, export or report.
+- An item cannot be deleted: take it off sale.
+- Items have no photo, category or barcode.
+- Stock is shared by the whole organization, not tracked per base.
+- There is no cash register, register closing or change calculation.
+- PilotDuty does not email the invoice. The only message sent is Stripe's card receipt, at the Terminal, if an email is entered.
+- There is no exchange feature: issue a credit note, then make a new sale.

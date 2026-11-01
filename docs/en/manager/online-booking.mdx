@@ -1,0 +1,68 @@
+---
+title: "Online booking"
+description: "The widget to embed in your website: services, cart, payment, passengers, per-seat sales, booking page and open classes."
+order: 4
+translationKey: mgr-online-booking
+updated: 2026-11-01
+draft: false
+---
+
+The booking widget lets your customers book and pay online, without an account, from your website or from a link.
+
+## Who can do it
+
+- **Set up the widget**: Chief Instructor, Chief Pilot, Co-owner and Operations Manager, in the booking settings.
+- **Book**: any visitor, without an account.
+
+## Prepare the widget
+
+1. In the services tab of the booking settings, create your services and mark them as published. Only published services appear in the widget.
+2. For each service, choose the payment methods (online, on site, after the service) and, if needed, require approval.
+3. For online or on-site payment, connect your Stripe account in the payment tab: without it, such a service cannot be published. See [Customers and billing](/en/docs/manager/customers-and-billing).
+4. The ready-to-book card lists what is missing, with a link to fix each item, and gives your organization's widget address.
+
+## Embed the widget in your website
+
+- **Link to a service**: the share and embed action, in the service's menu, gives the public link and the iFrame embed code, with the form language. The customer lands directly on that service.
+- **Embed domains**: if the trusted domain list is empty, any site can embed the widget. Otherwise, only those domains can.
+- **Booking theme**: a color variant of your choice.
+- **Language**: English, French, Spanish or German. The widget has no language selector: the language comes from the link or from the visitor's browser.
+
+## The customer's path
+
+1. **Date, base and service**. Each service card shows its price, its length, and whether it is confirmed instantly or requires approval.
+2. **Aircraft and crew**, if the service offers a choice. Otherwise, they are assigned automatically.
+3. **Departure and destinations**, if the service has them.
+4. **Time slot**: the customer only sees slots that are actually free.
+5. **Passengers**: name, weight in pounds, seat and baggage. Weight and balance is checked before the booking: the customer is told if the aircraft is too heavy or if weight and balance is OK. If the aircraft's record is incomplete, weight and balance shows as not verified: the customer can still book, and you check before the flight.
+6. **Notes**, then add to cart.
+7. **Contact**: contact details, billing address, optional text-message consent, and your terms and conditions, if you have any.
+8. **Payment**: the total with taxes, then pay online, pay on site or pay after the service, depending on the service. Cards go through Stripe, and Stripe Tax calculates the taxes.
+
+The customer and the crew then receive an email. If the service requires approval, the booking stays pending until your team confirms it. See [Bookings](/en/docs/manager/bookings).
+
+## The cart
+
+The cart groups several bookings, paid in a single checkout. Each item holds its spot for 30 minutes, with a countdown, and reaching the contact step adds another 30 minutes. A cart holds only one organization and stays tied to the customer's browser, not to an account.
+
+## Per-seat sales
+
+With a service sold per seat that accepts several bookings to fill the available seats, several customers fill the same departure. The time slot shows the remaining seats, for example 2/4.
+
+## The booking page
+
+Each customer receives by email the link to a personal page, viewable without an account up to 90 days after the booking starts. It shows the booking's status, date, aircraft, crew and total. The customer can add the booking to their calendar (a one-time entry that does not update itself), download their class documents, and write or call you. The page is read-only: the customer cannot cancel or pay there.
+
+## Open classes
+
+Open classes publish your paid ground classes, which the public signs up for online. It is an option your organization turns on itself, with a switch in the booking settings. The “Open Classes” menu then appears for Chief Instructors and above.
+
+- **Create**: create an open class from a ground-class service with open enrollment: room, instructor, topics, date, length, capacity and recurrence.
+- **Publish**: the public catalog lists upcoming classes, with filters by room, topic, instructor and date range. The share button gives the link and the embed code.
+- **Sign up**: with an account or as a guest, then pay online, pay on site or pay after the class. If the class fills up during payment, the invoice is refunded automatically.
+
+## Good to know
+
+- Ground-class services never appear in the widget: they go through open classes.
+- If a slot is taken after payment, nothing is confirmed or refunded automatically: the customer is told your team will contact them, and your staff is alerted.
+- The embed code has a fixed height of 800 pixels.

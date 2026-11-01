@@ -1,0 +1,77 @@
+---
+title: "Membres et rôles"
+description: "Inviter les membres de votre organisation, leur donner un rôle et tenir votre profil à jour."
+order: 2
+translationKey: mgr-members
+updated: 2026-11-01
+draft: false
+---
+
+Le Manager vous permet d'inviter vos membres, de leur donner un rôle et de gérer votre propre profil.
+
+## Qui peut le faire
+
+- **Inviter un membre** : Dispatch et plus, pour un rôle strictement inférieur au sien, jamais Responsable des opérations.
+- **Voir les invitations en attente** : Dispatch et plus. Les supprimer : Instructeur en chef et plus.
+- **Changer un rôle, retirer un membre** : Instructeur en chef et plus, sur un membre de rôle strictement inférieur au sien.
+
+## Inviter des membres
+
+L'organisation doit avoir un abonnement actif. Voir [Abonnement](/fr/docs/manager/abonnement).
+
+1. Dans Paramètres › Organisation › « Membres », cliquez « Inviter des membres ».
+2. Pour chaque personne, saisissez le courriel et choisissez le rôle (Pilote par défaut). « En ajouter un autre » ajoute une ligne.
+3. Choisissez la « Langue de l'invitation », puis cliquez « Envoyer les invitations ».
+
+Le courriel porte le logo de l'organisation. La fenêtre « Aperçu de la facture » montre ensuite l'effet des nouveaux membres sur votre facture d'abonnement, qui change quand l'invité accepte.
+
+Une invitation est valable 7 jours. L'onglet « Invitations en attente » liste celles qui ne sont pas acceptées, et « Supprimer l'invitation » en annule une. Pour renvoyer une invitation, invitez de nouveau la même adresse : un nouveau lien remplace l'ancien.
+
+## Accepter une invitation
+
+Ouvrez le lien du courriel. Connectez-vous ou créez votre compte avec l'adresse invitée : seul ce compte peut accepter. Saisissez votre nom, puis cliquez « Continuer ». Vous arrivez sur la Feuille de vol. Si le lien a expiré, demandez une nouvelle invitation.
+
+## Les onze rôles
+
+Chaque membre a un seul rôle par organisation. La plupart des droits s'ajoutent d'un rôle au suivant, mais certains sont réservés à une liste de rôles : le Responsable maintenance, par exemple, gère la flotte mais pas la configuration des réservations.
+
+| Valeur | Rôle | Ce qu'il permet |
+| --- | --- | --- |
+| 0 | Lecture seule | Consulter le calendrier, la Feuille de vol et la flotte, lire ses mémos. Ne crée pas de réservation. |
+| 100 | Étudiant | Réserver pour soi-même (formation, location), gérer sa fiche client, consulter son dossier de formation. |
+| 200 | Locataire | Les mêmes droits que l'Étudiant. |
+| 300 | Pilote | Voir tous les membres et les clients, réserver pour un autre membre, créer des séries et des indisponibilités, lire les notes internes, apparier un vol, signaler une défectuosité. |
+| 400 | Instructeur | Voir les coordonnées, le contact d'urgence et le dossier des membres, écrire dans les dossiers de formation, confirmer qu'un pilote est posé en sécurité, gérer les SMS de suivi de vol. |
+| 500 | Dispatch | Voir et modifier toutes les réservations, inviter des membres, verrouiller la Feuille de vol, encaisser une facture, publier des mémos à toute l'organisation, utiliser la boutique activée. |
+| 600 | Instructeur en chef | Modifier les réglages de l'organisation, changer les rôles, configurer la réservation, connecter Stripe, rembourser des factures, gérer les forfaits prépayés et les cours ouverts. |
+| 700 | Pilote en chef | Les mêmes droits que l'Instructeur en chef. |
+| 800 | Responsable maintenance | Les droits de l'Instructeur en chef, sauf la configuration de la réservation et Stripe. En plus : gérer les aéronefs, les inspections et les ateliers, rectifier une défectuosité et signer la remise en service. |
+| 900 | Copropriétaire | Les droits de l'Instructeur en chef, plus rectifier une défectuosité, signer la remise en service et relancer un numéro SMS suspendu. |
+| 1000 | Responsable des opérations | Le propriétaire, unique. Tous les droits, dont souscrire l'abonnement et créer un emplacement Stripe Terminal. |
+
+## Changer un rôle
+
+Dans la liste des membres, ouvrez le menu d'actions de la ligne, choisissez « Changer le rôle », puis cliquez « Mettre à jour le rôle ». Le nouveau rôle doit être strictement inférieur au vôtre, et vous ne pouvez pas changer votre propre rôle. Le membre n'est pas averti par courriel.
+
+Le rôle de Responsable des opérations ne s'attribue ni par invitation ni par changement de rôle : seul le Responsable des opérations peut transférer la propriété.
+
+## Retirer un membre
+
+Ouvrez le menu d'actions de la ligne, choisissez « Retirer », puis confirmez avec « Retirer l'utilisateur de l'organisation ». La personne perd l'accès à l'organisation, mais garde son compte PilotDuty. Aucun courriel ne la prévient.
+
+## Votre profil
+
+Dans Paramètres › Profil › « Mes informations » :
+
+- **« Votre nom » et votre photo**, affichés dans les listes de membres.
+- **Un numéro de téléphone**, vérifié par un code SMS. Il ne sert pas à la connexion.
+- **« Langue de communication »** : la langue des notifications de réservation que vous recevez, distincte de la langue de l'interface.
+- **« Contact d'urgence »** : la personne à joindre en cas d'incident ou de vol en retard. Instructeur et plus la voient.
+
+Les onglets « Courriel » et « Mot de passe » servent aux comptes à mot de passe. L'onglet « Authentification » liste vos moyens de connexion.
+
+## À savoir
+
+- Sous le rôle Pilote, la liste des membres ne montre que le personnel (Pilote et plus) et soi-même. Le courriel, le téléphone et l'adresse des autres sont réservés à Instructeur et plus.
+- Le contact d'urgence est enregistré par organisation : refaites-le dans chacune.
+- La date d'expiration d'une invitation n'est pas affichée.

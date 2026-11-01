@@ -1,0 +1,77 @@
+---
+title: "Réservations"
+description: "Le calendrier partagé des aéronefs, des équipages et des salles : créer, déplacer, approuver, annuler et prévenir."
+order: 3
+translationKey: mgr-bookings
+updated: 2026-11-01
+draft: false
+---
+
+Le calendrier « Réservations » est le planning partagé de vos aéronefs, de vos équipages et de vos salles.
+
+## Qui peut le faire
+
+- **Consulter** : tout membre, Lecture seule compris.
+- **Créer** : Étudiant et plus (pour soi-même sous Pilote), selon le rôle minimal du service.
+- **Créer une série ou une indisponibilité** : Pilote et plus.
+- **Modifier** : Dispatch et plus par défaut, ou le pilote et l'instructeur assignés si le service le permet.
+- **Rembourser ou annuler une facture** : Instructeur en chef et plus.
+- **Configurer** (Paramètres › Réservation) : Instructeur en chef, Pilote en chef, Copropriétaire et Responsable des opérations.
+
+## Lire le calendrier
+
+- Vues Mois, Semaine, Jour et Agenda (7 jours). L'interrupteur « Calendrier / Chronologie » passe à une vue horizontale, avec une ligne par ressource.
+- Découpe Tous, Par aéronef, Par pilote ou Par salle, et filtres par aéronef, membre d'équipage, salle, service ou statut.
+- Choix de la base, de la division, et des heures en local ou en UTC.
+- Les bandes hachurées marquent une indisponibilité, et un cadenas une journée verrouillée sur la Feuille de vol.
+
+## Créer une réservation
+
+1. Cliquez « Ajouter », ou cliquez une case vide du calendrier.
+2. Choisissez « Créer une réservation », « Ajouter une indisponibilité » ou « Me bloquer ».
+3. Suivez l'assistant : service, aéronef, équipage, horaire, passagers, client, notes. Depuis une case, une formation ou une location se crée en un seul écran.
+4. À la fin, cochez qui reçoit une confirmation (client, élève, équipage) et choisissez la facturation : « Envoyer la demande de paiement », « Paiement sur place » ou « Sans facture pour l'instant ».
+
+Une réservation créée par le personnel est confirmée tout de suite.
+
+## Créer une série
+
+À l'étape « Récurrence », répétez la réservation tous les N jours, semaines, mois ou ans, jusqu'à un nombre d'occurrences ou une date. Un aperçu liste les conflits avant de valider. Par défaut, une série s'arrête à 52 occurrences. Pour modifier une série, choisissez la portée : cette occurrence, les suivantes ou toute la série.
+
+## Déplacer une réservation
+
+Glissez la réservation pour changer son heure, ou, en vue Jour ou Chronologie, pour la passer à un autre aéronef, pilote ou salle. Étirez-la pour changer sa durée (location, formation…). La fenêtre « Confirmer le changement d'horaire » propose de prévenir les clients et l'équipage.
+
+## Conflits refusés
+
+Le Manager refuse une réservation qui chevauche une autre sur le même aéronef, le même pilote ou membre d'équipage, ou dans une salle pleine ou déjà prise. Il refuse aussi un aéronef bloqué ou un nombre de sièges insuffisant. Le refus nomme la ressource en cause. Hors des heures de la base, du service ou du membre d'équipage, le personnel reçoit un avertissement et peut confirmer avec « Planifier quand même ». En ligne, ces cas sont toujours refusés.
+
+## Statuts et approbation
+
+Une réservation est En attente, Confirmée, Au panier (en ligne, pas encore finalisée) ou Annulée. Si un service est réglé sur « Nécessite une approbation », les réservations de vos clients restent En attente. Pour en confirmer une, ouvrez-la et choisissez Confirmée dans le sélecteur de statut de l'en-tête.
+
+## Annuler
+
+Choisissez Annulée dans le sélecteur de statut. Pour une réservation avec clients ou une série, un parcours guidé traite les remboursements, les factures et les frais d'annulation, et propose « Annuler toutes les occurrences futures ». Pour une série, gardez la page ouverte jusqu'à la fin. Sous Instructeur en chef, décochez les factures à annuler : cette opération lui est réservée. Les frais d'annulation par défaut se règlent dans Paramètres › Réservation, en pourcentage ou en montant fixe, avec un délai d'annulation gratuite.
+
+## Indisponibilités
+
+« Ajouter une indisponibilité » rend un aéronef, une personne ou une salle non réservable. « Me bloquer » vous rend indisponible en deux gestes, pratique sur téléphone. Une indisponibilité vaut pour toutes les bases et divisions, pendant un an au plus.
+
+## Rappels et notifications
+
+L'onglet Notifications de Paramètres › Réservation gère les courriels et les SMS de réservation, par destinataire et par langue.
+
+- **« Délai d'envoi des rappels »** : de 1 à 72 heures avant le début, 24 heures par défaut. Le rappel part pour une réservation confirmée, si son canal est activé, avec un écart possible d'environ une heure.
+- Par défaut, le rappel client part par SMS et le rappel équipage est désactivé.
+- L'éditeur de gabarit personnalise chaque message, langue par langue, avec des variables et un compteur de segments SMS. Tout SMS commence par « PilotDuty: ».
+- « Envoyer un test » vous envoie un courriel d'essai ; un SMS est seulement prévisualisé.
+
+## Confidentialité « Occupé »
+
+Sous Dispatch, vous voyez en entier les réservations où vous êtes équipage, élève ou client. Les autres s'affichent « Occupé » : « Cette réservation ne vous concerne pas : les noms et les détails personnels sont masqués. »
+
+## À savoir
+
+- Une réservation ne se supprime pas : l'annulation est la seule voie.
+- Seule une indisponibilité retire un aéronef de la réservation : une défectuosité ou une inspection en retard ne le fait pas. Voir [Flotte et maintenance](/fr/docs/manager/flotte-et-maintenance).

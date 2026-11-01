@@ -1,0 +1,77 @@
+---
+title: "Clients et facturation"
+description: "Fiches clients, factures Stripe, paiements, remboursements, forfaits prépayés et Stripe Terminal."
+order: 9
+translationKey: mgr-billing
+updated: 2026-11-01
+draft: false
+---
+
+Ce module tient vos fiches clients et fait passer factures, taxes et paiements par le compte Stripe de votre organisation. Sans compte Stripe prêt, les fiches clients fonctionnent, mais aucune facture ni aucun forfait n'est possible.
+
+## Qui peut le faire
+
+- Voir la liste des clients, créer ou modifier une fiche : Pilote et plus.
+- Supprimer une fiche : Instructeur en chef et plus.
+- Connecter Stripe : Instructeur en chef, Pilote en chef, Copropriétaire et Responsable des opérations.
+- Créer une facture : qui peut modifier la réservation.
+- Marquer une facture payée, encaisser au Terminal : Dispatch et plus.
+- Envoyer, annuler ou rembourser une facture, gérer les forfaits prépayés : Instructeur en chef et plus.
+
+Personne n'encaisse, n'annule ni ne rembourse sa propre facture, même avec un rôle élevé.
+
+## Fiches clients
+
+La liste des clients a une recherche par nom, courriel ou téléphone. Une fiche se crée avec « Nouveau client », ou toute seule lors d'une réservation en ligne. Quand Stripe est prêt, elle exige une adresse de facturation (pays, et province ou code postal) pour le calcul des taxes.
+
+La fiche a quatre onglets : « Aperçu », « Réservations », « Prépayé » et « Financier », le relevé des factures du client. Chaque base a aussi une fiche comptoir pour un client de passage.
+
+## Connecter Stripe
+
+1. Ouvrez Paramètres › Réservation › Paiement et cliquez « Connecter le compte Stripe ».
+2. Terminez l'inscription chez Stripe. De retour dans le Manager, cliquez « Actualiser le statut ». L'état doit afficher « Connecté ».
+
+Les taxes sont calculées par Stripe Tax, et vos inscriptions aux taxes se règlent dans Stripe. Si Stripe Tax n'est pas prêt, une alerte s'affiche : réglez-le avant de facturer. Dans « Paramètres de facturation », fixez le « Délai de paiement (jours) ».
+
+## Factures
+
+1. Dans une réservation confirmée, onglet « Clients », menu « Actions », choisissez « Créer une facture ». Vous pouvez aussi partir de la ligne du vol dans la [Feuille de vol](/fr/docs/manager/feuille-de-vol).
+2. Vérifiez les durées. Ajoutez au besoin des frais personnalisés (un montant négatif fait une remise) ou un crédit prépayé.
+3. Cochez « Envoyer automatiquement les courriels de facture » pour que Stripe l'envoie au client.
+
+Chaque client de la réservation reçoit sa propre facture Stripe ; le numéro, la présentation et le PDF viennent de Stripe. Dans l'onglet « Financier », « Voir la facture » et « Télécharger le PDF » l'ouvrent, et le menu permet de l'envoyer ou de la renvoyer. Le client paie par le lien de paiement, qui mène à la page de facture Stripe, sans connexion.
+
+## Paiements
+
+- « Marquer payé » enregistre un paiement reçu hors ligne : « Espèces », « Virement Interac », « Chèque » ou « Autre ». Toute la facture est soldée.
+- Un paiement fait en ligne sur Stripe se reporte sur la facture.
+- « Annuler la facture » annule une facture non payée ; vous pouvez ensuite en créer une nouvelle.
+
+## Remboursements et notes de crédit
+
+« Rembourser » s'ouvre en trois étapes : « Configurer », « Confirmer » et « Résultats ». Choisissez la raison, puis un montant calculé (avec, au besoin, les frais d'annulation du service) ou un « Montant personnalisé ». Le remboursement passe sur la carte si la facture a été payée par carte, sinon par une note de crédit Stripe. Un seul remboursement est possible par client et par facture.
+
+Un remboursement fait hors de Stripe se note avec « Marquer comme remboursée ». Aucune note de crédit n'est alors créée, et le client n'est pas averti.
+
+## Forfaits prépayés
+
+Un forfait prépayé est un crédit en argent payé d'avance par un client et déduit de ses factures.
+
+1. Sur la fiche du client, onglet « Prépayé », cliquez « Nouveau forfait » : nom, montant et mode de paiement (facture Stripe au client, « Marquer payé (comptant / virement) » ou encaissement sur terminal).
+2. Le solde s'active quand le forfait est payé. La taxe s'ajoute à la facture du forfait.
+3. Pour utiliser le crédit, activez « Crédit prépayé » en créant une facture, ou choisissez « Payer avec le prépayé » sur une facture ouverte.
+
+« Ajuster le solde » (raison requise) et « Annuler le forfait » complètent la gestion. L'« Historique des transactions » trace chaque achat, déduction, ajustement et annulation.
+
+## Stripe Terminal
+
+Pour encaisser par carte en personne, le Responsable des opérations active Terminal pour chaque base : Paramètres › Réservation › Paiement, onglet « Stripe Terminal », « Activer Terminal ». Les lecteurs s'enregistrent dans votre tableau de bord Stripe ; PilotDuty n'en vend pas. Ensuite, « Collecter sur terminal » encaisse une facture ou un forfait, avec un reçu par courriel facultatif. Une carte déjà débitée ne l'est jamais deux fois. Terminal fonctionne au Canada et aux États-Unis, par carte seulement, sans pourboire ni paiement partiel.
+
+## À savoir
+
+- Le solde d'un forfait est en argent, jamais en heures, même si certains libellés de l'écran parlent d'heures.
+- Un forfait paie toute la facture ou rien : pas de paiement partiel ni de cumul de forfaits.
+- Rembourser une facture payée avec le prépayé ne rend pas le crédit au forfait.
+- PilotDuty ne fait aucune relance de paiement et ne crée pas seul de facture après un vol.
+- Une seule devise par organisation : pas de multidevise.
+- Les notes d'une fiche client sont visibles par le membre lié à cette fiche.

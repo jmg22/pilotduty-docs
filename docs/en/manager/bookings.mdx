@@ -1,0 +1,77 @@
+---
+title: "Bookings"
+description: "The shared calendar for aircraft, crews and rooms: create, move, approve, cancel and notify."
+order: 3
+translationKey: mgr-bookings
+updated: 2026-11-01
+draft: false
+---
+
+The “Bookings” calendar is the shared schedule of your aircraft, crews and rooms.
+
+## Who can do it
+
+- **View**: every member, Read-only included.
+- **Create**: Student and above (for themselves below Pilot), subject to the service's minimum role.
+- **Create a series or an unavailability**: Pilot and above.
+- **Edit**: Dispatch and above by default, or the assigned pilot and instructor if the service allows it.
+- **Refund or void an invoice**: Chief Instructor and above.
+- **Set up** (booking settings): Chief Instructor, Chief Pilot, Co-owner and Operations Manager.
+
+## Read the calendar
+
+- Month, week, day and agenda views (7 days). A calendar and timeline switch turns on a horizontal view, with one line per resource.
+- Split by all, by aircraft, by pilot or by room, and filter by aircraft, crew member, room, service or status.
+- Choose the base, the division, and local or UTC times.
+- Hatched bands mark an unavailability, and a padlock marks a day locked on the Flightsheet.
+
+## Create a booking
+
+1. Click the add button, or click an empty slot in the calendar.
+2. Choose to create a booking, add an unavailability, or block yourself.
+3. Follow the assistant: service, aircraft, crew, schedule, passengers, customer, notes. From a slot, a training flight or a rental fits on a single screen.
+4. At the end, check who gets a confirmation (customer, student, crew) and choose the billing: send a payment request, pay on site, or no invoice for now.
+
+A booking created by staff is confirmed right away.
+
+## Create a series
+
+At the recurrence step, repeat the booking every N days, weeks, months or years, up to a number of occurrences or a date. A preview lists conflicts before you confirm. By default, a series stops at 52 occurrences. To edit a series, choose the scope: this occurrence, the following ones, or the whole series.
+
+## Move a booking
+
+Drag the booking to change its time or, in day or timeline view, to move it to another aircraft, pilot or room. Stretch it to change its length (rental, training…). A confirmation window offers to notify the customers and the crew.
+
+## Conflicts are refused
+
+The Manager refuses a booking that overlaps another one on the same aircraft, the same pilot or crew member, or in a room that is full or already taken. It also refuses a blocked aircraft or too few seats. The refusal names the resource involved. Outside the hours of the base, the service or the crew member, staff get a warning and can schedule anyway. Online, these cases are always refused.
+
+## Statuses and approval
+
+A booking is pending, confirmed, in a cart (online, not yet completed) or canceled. If a service requires approval, your customers' bookings stay pending. To confirm one, open it and choose confirmed in the status selector at the top.
+
+## Cancel
+
+Choose canceled in the status selector. For a booking with customers or a series, a guided flow handles refunds, invoices and cancellation fees, and offers to cancel all future occurrences. For a series, keep the page open until it finishes. Below Chief Instructor, uncheck the invoices to void: that operation is reserved to Chief Instructors and above. Default cancellation fees are set in the booking settings, as a percentage or a fixed amount, with a free-cancellation window.
+
+## Unavailabilities
+
+Adding an unavailability makes an aircraft, a person or a room unbookable. Blocking yourself makes you unavailable in two steps, handy on a phone. An unavailability applies to all bases and divisions, for one year at most.
+
+## Reminders and notifications
+
+The notifications tab of the booking settings manages booking emails and text messages, by recipient and by language.
+
+- **Reminder lead time**: 1 to 72 hours before the start, 24 hours by default. The reminder goes out for a confirmed booking, if its channel is on, give or take about an hour.
+- By default, the customer reminder goes out by text message and the crew reminder is off.
+- The template editor customizes each message, language by language, with variables and a text-message segment counter. Every text message starts with “PilotDuty:”.
+- Sending a test emails you a sample message; a text message is only previewed.
+
+## Privacy for other members
+
+Below Dispatch, you see in full the bookings where you are crew, student or customer. Others show as busy: names and personal details are hidden.
+
+## Good to know
+
+- A booking cannot be deleted: canceling is the only way.
+- Only an unavailability removes an aircraft from booking: a defect or an overdue inspection does not. See [Fleet and maintenance](/en/docs/manager/fleet-and-maintenance).

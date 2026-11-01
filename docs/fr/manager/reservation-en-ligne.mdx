@@ -1,0 +1,68 @@
+---
+title: "Réservation en ligne"
+description: "Le widget à intégrer à votre site : services, panier, paiement, passagers, vente au siège, page de suivi et cours ouverts."
+order: 4
+translationKey: mgr-online-booking
+updated: 2026-11-01
+draft: false
+---
+
+Le widget de réservation permet à vos clients de réserver et de payer en ligne, sans compte, depuis votre site ou depuis un lien.
+
+## Qui peut le faire
+
+- **Configurer le widget** : Instructeur en chef, Pilote en chef, Copropriétaire et Responsable des opérations, dans Paramètres › Réservation.
+- **Réserver** : tout visiteur, sans compte.
+
+## Préparer le widget
+
+1. Dans l'onglet Service de Paramètres › Réservation, créez vos services et marquez-les « Publié ». Seuls les services publiés paraissent dans le widget.
+2. Pour chaque service, choisissez les modes de paiement (en ligne, sur place, après le service) et, au besoin, « Nécessite une approbation ».
+3. Pour le paiement en ligne ou sur place, connectez votre compte Stripe dans l'onglet Paiement : sans lui, un tel service ne peut pas être publié. Voir [Clients et facturation](/fr/docs/manager/clients-et-facturation).
+4. La carte « Prêt à réserver » liste ce qui manque, avec un lien « Corriger », et donne l'« Adresse du widget de votre organisation ».
+
+## Intégrer le widget à votre site
+
+- **Lien d'un service** : « Partager / Intégrer », dans le menu du service, donne le « Lien public » et le code « Intégration (iFrame) », avec la « Langue du formulaire ». Le client arrive directement sur ce service.
+- **Domaines d'intégration** : si la liste des « Domaines de confiance » est vide, tout site peut intégrer le widget. Sinon, seuls ces domaines le peuvent.
+- **Thème de réservation** : une variante de couleurs au choix.
+- **Langue** : français, anglais, espagnol ou allemand. Le widget n'a pas de sélecteur : la langue vient du lien ou du navigateur du visiteur.
+
+## Le parcours du client
+
+1. **Date, base et service**. Chaque carte de service affiche son prix, sa durée et « Confirmation immédiate » ou « Approbation requise ».
+2. **Aéronef et équipage**, si le service offre un choix. Sinon, l'attribution se fait d'office.
+3. **Départ et destinations**, si le service en a.
+4. **Créneau** : le client voit seulement les créneaux réellement libres.
+5. **Passagers** : nom, poids en livres, siège et bagages. La masse et le centrage sont vérifiés avant la réservation : « L'aéronef est trop lourd » ou « Masse et centrage : OK ». Si la fiche de l'aéronef est incomplète, le client voit « Masse et centrage : non vérifiée » : il peut réserver, et vous vérifiez avant le vol.
+6. **Notes**, puis « Ajouter au panier ».
+7. **Contact** : coordonnées, adresse de facturation, consentement SMS facultatif et conditions générales, si vous en avez.
+8. **Paiement** : le total taxes comprises, puis « Payer en ligne », « Payer sur place » ou « Payer après le service », selon le service. La carte passe par Stripe, et les taxes sont calculées par Stripe Tax.
+
+Le client et l'équipage reçoivent ensuite un courriel. Si le service exige une approbation, la réservation reste en attente jusqu'à ce que votre équipe la confirme. Voir [Réservations](/fr/docs/manager/reservations).
+
+## Le panier
+
+Le panier regroupe plusieurs réservations, réglées en un seul passage. Chaque article retient sa place 30 minutes, avec le compte à rebours « Expire dans… », et l'étape Contact redonne 30 minutes. Un panier ne contient qu'une organisation et reste lié au navigateur du client, pas à un compte.
+
+## Vente au siège
+
+Avec un service vendu au siège qui coche « Accepter plusieurs réservations pour combler les sièges disponibles », plusieurs clients remplissent le même départ. Le créneau affiche les places restantes, par exemple 2/4.
+
+## La page de suivi de réservation
+
+Chaque client reçoit par courriel le lien d'une page personnelle, consultable sans compte jusqu'à 90 jours après le début de la réservation. Il y voit l'état de sa réservation, la date, l'aéronef, l'équipage et le total. Il peut ajouter la réservation à son agenda (ajout ponctuel, sans mise à jour), télécharger ses documents de cours et vous joindre par « Nous écrire » ou « Nous appeler ». La page est en lecture seule : le client n'y annule et n'y paie rien.
+
+## Cours ouverts
+
+Les cours ouverts publient vos cours au sol payants, auxquels le public s'inscrit en ligne. C'est une option que votre organisation active elle-même, par l'interrupteur « Activer la page admin Open Class » de Paramètres › Réservation. Le menu « Cours ouverts » paraît alors pour Instructeur en chef et plus.
+
+- **Créer** : « Créer un cours ouvert », à partir d'un service de cours théorique avec « Inscription ouverte » : salle, instructeur, sujets, date, durée, capacité et récurrence.
+- **Publier** : le catalogue public liste les cours à venir, filtrés par « Salle », « Sujet », « Instructeur » ou « Plage de dates ». « Partager » donne le lien et le code d'intégration.
+- **S'inscrire** : avec un compte ou en invité (« Continuer en tant qu'invité »), puis « Payer en ligne », « Payer sur place » ou « Payer après le cours ». Si le cours se remplit pendant le paiement, la facture est remboursée automatiquement.
+
+## À savoir
+
+- Les services de cours théorique ne paraissent jamais dans le widget : ils passent par les cours ouverts.
+- Si un créneau est pris après le paiement, rien n'est confirmé ni remboursé automatiquement : le client lit que votre équipe le contactera, et votre personnel est alerté.
+- Le code d'intégration a une hauteur fixe de 800 pixels.

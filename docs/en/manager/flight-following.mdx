@@ -1,0 +1,66 @@
+---
+title: "Flight following"
+description: "Follow flights sent by the iPhone app, confirm safe arrival, alert subscribers by text message and reach emergency contacts."
+order: 6
+translationKey: mgr-flight-following
+updated: 2026-11-01
+draft: false
+---
+
+Flight following gives your staff a safety view of every flight: position, milestones, arrival confirmation, text-message alerts and emergency contacts.
+
+## Where tracking comes from
+
+Tracking is created by the pilot's iPhone app, never by the Manager alone. When flight following to PilotDuty Manager is turned on in the app, the app sends the flight's milestones (taxi, takeoff, landing, parking) with their position. The Manager receives them and shows them on the [Flightsheet](/en/docs/manager/flight-sheet). For the flight to appear, the callsign entered in the app must match an aircraft of your organization, and the pilot must be a member. See [With the iPhone app](/en/docs/manager/with-the-iphone-app).
+
+## Who can do it
+
+- **View flights and the map**: every member.
+- **Pair or unpair a flight**: Pilot and above, or the booking's crew or student. Removing the last flight from a booking: Dispatch and above.
+- **Confirm that a pilot has landed safely, see emergency contacts, manage text messages and subscribers**: Instructor and above.
+- **Archive a tracked flight**: Dispatch and above.
+- **Retry a suspended number**: Co-owner and Operations Manager.
+
+## Map and milestones
+
+Under each booking, one card per flight changes color with its status: blue while preparing, orange in flight, red once landed without confirmation, green once safety is confirmed. The map view of the Flightsheet shows the aircraft and their tracks. A position only exists if the iPhone sends milestones.
+
+## Pairing with the booking
+
+The Manager pairs each tracked flight on its own with the confirmed booking of the same aircraft, with a 60-minute tolerance around the booking. A pending booking is not paired. A flight without a matching booking appears among the unscheduled flights: you can assign it to its booking by hand, and the broken-link icon unpairs a flight attached by mistake.
+
+## Crew flights
+
+Two phones aboard the same aircraft, or an iPhone track and a flight entered in the logbook, count as a single flight. The card shows it as a crew flight, with each member's role and name. This grouping happens once the tracks are confirmed safe. Confirming, archiving or unpairing then applies to the whole group.
+
+## Confirm a safe landing
+
+The shield icon on the card asks you to confirm that the pilot has landed and is safe. Confirming resolves the alert and the card turns green. Removing the safe status undoes the confirmation and reactivates the alert. The pilot can also confirm from their iPhone. Once the flight is confirmed, Dispatch and above can archive a track of no interest, such as a false start: an undo button appears for a few moments, then the archived track is no longer shown.
+
+## Text messages to subscribers
+
+In your organization settings, open the flight-following text-message tab:
+
+1. Turn on the text-message notifications switch. It is off by default, and it turns off every flight-following text message, including the overdue alert.
+2. Add a subscriber. Choose a member of the organization, their number, the text-message language, the aircraft to watch and the events, grouped into flight phases, safety and system.
+3. Check the recipient consent box, confirming that the person agrees to receive PilotDuty flight alerts by text message and knows they can reply “STOP”.
+
+Seven notifications are available: tracking started, takeoff, landing, parked, pilot confirmed safe, overdue on booking, and pairing failed. A badge for each aircraft tells whether it has at least one subscriber or none. A subscriber who replied “STOP” shows as withdrawn: only they can lift it, by replying “START”.
+
+## Overdue alert
+
+A periodic check, about every 15 minutes, looks for a confirmed booking that ended at least 15 minutes ago and whose last paired flight is not confirmed safe. Subscribers who chose this event then receive the overdue alert. The alert requires a paired flight: a booking without a paired flight triggers none. On the Flightsheet, the contacts icon turns into an orange triangle.
+
+## Public tracking link
+
+The tracking started, takeoff and landing text messages contain a public link. It shows the flight on a map, without an account and without the pilot's name. The link expires 72 hours after the last milestone.
+
+## Emergency contacts
+
+The phone icon on the flight card shows, for each crew member, their phone number and their emergency contact. Each member enters their own emergency contact in their profile. See [Members and roles](/en/docs/manager/members-and-roles).
+
+## Good to know
+
+- Subscribers are members of the organization. To alert a relative who is not a member, the pilot uses the text-message feature of the iPhone app; those messages do not appear in the Manager.
+- North American 10-digit numbers only. Landlines are refused.
+- Text messages go out in English or French. Other languages receive English.

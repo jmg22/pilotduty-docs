@@ -1,0 +1,72 @@
+---
+title: "Fleet and maintenance"
+description: "Add your aircraft and track their maintenance due dates, inspections and snags."
+order: 8
+translationKey: mgr-maintenance
+updated: 2026-11-01
+draft: false
+---
+
+The Fleet module brings together your aircraft, their hours and cycles, their maintenance program, their inspections and their snags. It keeps you informed: it never blocks a booking or a flight.
+
+## Who can do it
+
+- View the fleet and snags: all members.
+- Create, duplicate or delete an aircraft, manage inspections and workshops: Operations Manager and Maintenance Manager.
+- Edit an aircraft's record (inspection schedules, items): Chief Instructor and above.
+- Report a snag, comment on it, add photos: Pilot and above.
+- Rectify a snag and sign the return to service: Maintenance Manager, Co-owner and Operations Manager.
+
+## Add an aircraft
+
+1. Open the aircraft list and start a new aircraft.
+2. Go through the wizard: identity, aircraft type, operations, counters, maintenance, booking and summary. At the counters step, enter the current airframe time and cycles.
+3. Create the aircraft.
+
+The booking step (seats, fuel, hourly rate, empty weight and arm) only appears for the Operations Manager. An aircraft created without it can be made bookable later: see [Bookings](/en/docs/manager/bookings).
+
+The final screen lists what is left to do, including having pilots import the aircraft into the iPhone app. Write it down: the screen disappears when you leave the page. Duplicating an aircraft copies its configuration and maintenance program, but the copy is not bookable.
+
+## The generic maintenance program
+
+At the maintenance step, PilotDuty suggests a generic program that fits the aircraft's profile: inspections (100-hour/annual, 50-hour, or annual for a glider) and common items. You can also start from an empty list.
+
+Each interval must be confirmed by the person your authority designates: your AME, an A&P or IA, or your CAMO/CAO. For a helicopter, the suggested program is minimal.
+
+## Hours, cycles and due dates
+
+Total airframe time and total airframe cycles update on their own from flights flown by members of the organization.
+
+- Inspection schedules: a recurring inspection by date, by hours, by cycles or a combination, with an interval, a window and a tolerance.
+- Items by hours, by date and by cycles: each component gets its own interval (engine overhaul, propeller, ELT, calibrations, life-limited parts).
+
+Items are color-coded: in service, due for inspection, on condition, overdue, or to complete. An item whose last completion or interval is unknown stays “to complete”: no due date is ever made up. The fleet list shows what remains before each aircraft's most restrictive inspection.
+
+## Inspections
+
+1. For each inspection type, start by creating an initial inspection: the last inspection performed and the next target.
+2. Starting an inspection opens four steps: pre-check, workshop, items and finalize. When you submit, the work order and the status report are generated as PDFs, and the next due date moves forward.
+3. Once the work is done, finalize the pending inspection. Check the items completed and confirm the technical log was reviewed. The alert card is generated as a PDF.
+
+Only one inspection can be pending at a time. Any member can download the latest alert card.
+
+## Snags
+
+1. On the aircraft page, open the snags tab and report a snag: description, severity (No-Go, Go-If or Info), optional ATA chapter and location. Add photos (up to 10) and comments.
+2. The maintenance lead marks the snag in progress, then enters the rectification: corrective action, labor, parts and mechanic.
+3. They then sign the return to service and sign in again. Their electronic signature is recorded and sealed with a fingerprint shown on the snag. The snag moves to closed.
+
+Snags only move forward: open, in progress, rectified, closed. A snag cannot be deleted. An email goes out when a snag is reported (to maintenance leads), when it is rectified (to the reporter) and when it is signed off.
+
+## Workshops
+
+Under Settings › Organization, keep your list of workshops (AMO or AME). It is offered at each inspection. Workshops have no access to PilotDuty.
+
+## Good to know
+
+- The module blocks nothing. A No-Go snag or an overdue item does not take the aircraft off the booking calendar. To block it, add an unavailability to the calendar: see [Bookings](/en/docs/manager/bookings).
+- No due-date alert is sent, by email or text message. Due dates are shown on screen.
+- Everything is counted in airframe hours and cycles. There is no separate engine or propeller counter.
+- Inspection PDFs are in English. Inspections are not signed electronically.
+- MEL item deferral is still in development.
+- An inspection schedule cannot be renamed: deleting and recreating it erases its due dates.

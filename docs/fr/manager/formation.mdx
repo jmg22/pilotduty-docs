@@ -1,0 +1,66 @@
+---
+title: "Formation"
+description: "Dossier de formation (PTR), modèles, étapes, signature électronique et habilitations de formateur."
+order: 11
+translationKey: mgr-training
+updated: 2026-11-01
+draft: false
+---
+
+Le module Formation suit la formation de chaque élève dans un dossier de formation (PTR, Pilot Training Record), appelé « Carnet d'entraînement » à l'écran : vols, cours au sol, exercices, examens et étapes de progression.
+
+## Qui peut le faire
+
+- Lire un dossier : Pilote et plus, et l'élève pour son propre dossier.
+- Écrire dans un dossier et signer une étape : Instructeur, Instructeur en chef et plus, ainsi que Pilote et Dispatch avec une habilitation de formateur en vigueur. Jamais dans son propre dossier.
+- Contre-signer, gérer les modèles et les habilitations, transférer un dossier : Instructeur en chef et plus.
+
+## Modèles
+
+Dans Paramètres › Organisation › « Modèles PTR », cliquez « Nouveau modèle » pour décrire un programme : exercices, étapes, heures exigées et politique de signature. L'éditeur est en anglais. Un dossier se crée toujours à partir d'un modèle de l'organisation.
+
+## Ouvrir un dossier
+
+1. Sur la fiche du pilote, section « Carnets d'entraînement », cliquez « Nouveau PTR ».
+2. Choisissez le modèle. Cochez au besoin « Cet élève continue depuis un PTR papier » ou « M'associer cet élève comme formateur ».
+3. Le contenu du modèle est figé dans le dossier.
+
+Pour un élève qui arrive avec un dossier papier, un Instructeur en chef et plus reprend ses heures, ses cours au sol et ses exercices dans les données de départ, pour qu'ils comptent dans la progression.
+
+## Tenir le dossier
+
+- « Ajouter une entrée de vol » rattache un vol du carnet au dossier, avec les exercices travaillés, les remarques de l'élève et les commentaires de l'instructeur. Depuis la [Feuille de vol](/fr/docs/manager/feuille-de-vol), « Consigner PTR » crée l'entrée préremplie.
+- « Ajouter un cours au sol » et « Ajouter un commentaire » complètent le dossier, avec les examens et documents exigés.
+- La grille d'exercices montre les codes de progression. L'audit compare la formation aux exigences du modèle et affiche un pourcentage et, le cas échéant, le badge « Prêt pour le test en vol ».
+- « Ajouter une étape » : vérification pré-solo, autorisation de premier solo, navigation en solo, examen écrit, vérification pré-test en vol, achèvement de cours, étape personnalisée, entre autres.
+
+## Signer une étape
+
+1. Sur l'étape, l'instructeur clique « E-Sign authorize » (libellé en anglais).
+2. Il lit l'énoncé, coche les exercices, indique sa licence et sa qualification, puis s'authentifie de nouveau (mot de passe, Google ou Apple).
+3. Le serveur enregistre l'identité du signataire, l'énoncé exact, l'objet signé et l'heure, puis scelle le tout par une empreinte SHA-256.
+
+Une étape peut exiger une contre-signature (« Co-sign ») d'un Instructeur en chef et plus. Avant la signature d'un achèvement de cours, le serveur vérifie les étapes signées, les contre-signatures, les heures de vol et de sol, et un certificat médical non expiré.
+
+## PDF vérifiable par code QR
+
+« Télécharger le certificat signé » produit le PDF d'une étape signée : organisation, signataire, énoncé, élève, exercices et code QR. N'importe qui scanne ce code, sans compte, pour ouvrir la page de vérification. « Signature is authentic » veut dire que l'enregistrement existe et que son empreinte correspond.
+
+## Habilitations de formateur
+
+Tout Instructeur est formateur. Pour qu'un autre membre, Pilote et plus, puisse former, un Instructeur en chef et plus ouvre sa fiche, section « Habilitations de formateur », et clique « Accorder une habilitation » : « Qualification d'instructeur », « Type d'avion » ou « Annotation » (train classique, skis, flotteurs, multimoteur, vol de nuit, IFR, voltige), avec une échéance et une preuve facultative. « Retirer » y met fin. La vue « Formateurs » de la liste des pilotes montre qui peut former, et jusqu'à quand.
+
+Un courriel prévient 30 jours avant la fin d'une habilitation, son titulaire et chaque Instructeur en chef et plus, dans la langue de chacun.
+
+## Clore ou transférer un dossier
+
+Un dossier se clôt « Complété », avec, au choix, l'ajout d'une fiche de compétence au dossier du pilote. Il peut aussi passer à Échoué ou Retiré. Pour un élève qui change d'organisation, un Instructeur en chef et plus crée un lien de transfert valable 30 jours, qu'il transmet lui-même.
+
+## À savoir
+
+- Tout n'est pas signé. Les entrées de vol, cours au sol, commentaires, codes de progression, examens, la clôture et la compétence ajoutée à la clôture sont notés, sans signature.
+- La signature électronique est un enregistrement scellé côté serveur, vérifiable par code QR. Ce n'est pas un certificat numérique, et la licence du signataire est déclarée, non vérifiée.
+- Les énoncés et le PDF signé sont en anglais.
+- « Prêt pour le test en vol » est un indicateur : il n'autorise ni ne bloque rien.
+- Une habilitation est une désignation par l'organisation, pas un contrôle réglementaire.
+- Le transfert crée un nouveau dossier à l'organisation d'arrivée, sans les entrées, étapes, signatures ni documents.

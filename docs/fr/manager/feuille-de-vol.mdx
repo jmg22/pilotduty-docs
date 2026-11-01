@@ -1,0 +1,66 @@
+---
+title: "Feuille de vol"
+description: "Rapprocher la journée réservée des vols faits, approuver, facturer, puis verrouiller la journée dans un registre PDF."
+order: 5
+translationKey: mgr-flight-sheet
+updated: 2026-11-01
+draft: false
+---
+
+La Feuille de vol montre, pour une base et une journée, chaque vol réservé et ce qui s'est réellement passé, puis fige la journée dans un registre. C'est la page d'accueil du Manager.
+
+## Qui peut le faire
+
+- **Consulter** : tout membre. Sous Dispatch, les réservations qui ne vous concernent pas s'affichent « Occupé ».
+- **Ajouter un vol au comptoir** : Pilote et plus ; en dessous, à son propre nom.
+- **Marquer une facture payée ou encaisser** : Dispatch et plus, jamais sur sa propre facture.
+- **Verrouiller, déverrouiller, lire le registre et son PDF** : Dispatch et plus.
+- **Régler le verrouillage automatique** : Instructeur en chef et plus.
+
+## Lire la journée
+
+Chaque réservation de vol forme une ligne en trois colonnes : « Horaire », « Aéronef » et « Équipage ». Sous chaque ligne, le bloc « Détails du suivi de vol » donne les temps réels reçus de l'app iPhone : « Off-block », « Décollage », « Atterrissage », « On-block », « Temps en l'air », « Temps de vol ». Choisissez la base, la division, et les heures en local ou en UTC. L'affichage « Carte » montre les avions et leurs trajectoires de la journée.
+
+Les vols suivis sans réservation sont listés dans « Vols non planifiés » : voir [Suivi de vol](/fr/docs/manager/suivi-de-vol).
+
+## Ajouter un vol au comptoir
+
+Le bouton « Ajouter » ouvre « Ajouter une réservation », prérempli avec le jour, la base et la division. Il sert pour un client qui se présente ou pour saisir un vol après coup. Pour un passant sans fiche, choisissez « Client comptoir » : « Passant sans fiche, taxé à l'adresse de la base. Ne reçoit aucun envoi. » Ce choix exige un compte Stripe prêt à encaisser et une adresse de base.
+
+## La ligne de vol
+
+- **« W&B »** : la masse et le centrage d'un coup d'œil. Orange si le carburant n'est pas saisi, rouge « W&B : Échec » hors limites, ambre « W&B : non vérifiée » s'il manque une donnée, vert sinon.
+- **« Carburant à bord »** : saisissez le carburant réellement chargé, avec les repères « Min. requis » et « Capacité utilisable ». « Enregistrer et régénérer le manifeste » met à jour le manifeste des occupants et du chargement, que « Télécharger le manifeste » ouvre.
+
+## Approuver un vol de formation
+
+Sur un vol de formation, l'élève donne son accord et l'instructeur approuve le vol, depuis la ligne. Un clic signe électroniquement. Vous pouvez aussi envoyer la demande par courriel ou par SMS, avec un lien valable 7 jours. L'approbation est refusée (« Approbation impossible ») si le carburant n'est pas saisi ou si la masse et le centrage sont hors limites. « Consigner PTR » inscrit ensuite le vol au dossier de l'élève. Voir [Formation](/fr/docs/manager/formation).
+
+## Facturer depuis la feuille
+
+« Créer une facture » reprend les durées réelles : celles du vol approuvé, sinon du suivi de vol, sinon de la réservation. Le menu « Facture » propose ensuite « Voir la facture », « Télécharger le PDF », « Marquer comme payée (comptant / virement) » et « Encaisser » sur un lecteur Stripe Terminal. Il faut une réservation confirmée et un compte Stripe prêt. Voir [Clients et facturation](/fr/docs/manager/clients-et-facturation).
+
+## Verrouiller la journée
+
+« Verrouiller la feuille » fige la journée de la base dans un registre : réservations confirmées, vols, statistiques et PDF. Il ajoute aussi les heures aux aéronefs et couvre toute la base, quelle que soit la division affichée.
+
+- Dans une organisation à plusieurs bases, la fenêtre « Réviser les vols non planifiés avant de verrouiller » propose une base pour chaque vol non planifié, ou « Exclure ».
+- Le vol d'une personne étrangère à l'organisation porte la mention « Hors registre » : il ne compte ni au registre ni aux heures de l'aéronef.
+- Une journée verrouillée affiche « Verrouillée par X — Version N » et passe en lecture seule. Les notes internes, les factures, les paiements et l'entrée au dossier de formation restent modifiables.
+- « Déverrouiller » rouvre la journée pour la corriger, avec un « Motif (facultatif) » de 200 caractères au plus.
+- « Reverrouiller (vN+1) » ajoute au registre une réservation restée en dehors, sans toucher au reste.
+
+## Verrouillage automatique
+
+Dans Paramètres › Organisation, activez « Verrouillage automatique de la feuille de vol » et choisissez le « Délai de verrouillage automatique » : « À minuit (heure de la base) », ou 6, 12, 24 ou 48 heures après la fin de la journée. La feuille porte alors « Verrouillée par Auto-Lock ». Ce réglage est éteint par défaut.
+
+## Le registre PDF
+
+« Télécharger le PDF » ouvre le registre de la journée verrouillée, en format paysage. Il compte une ligne par vol, avec les colonnes Off Blk, T/O, Ldg, On Blk, Air T., Flt T., Cyc et W/B, puis un résumé par base, par aéronef et par pilote. Le registre est rédigé en anglais.
+
+## À savoir
+
+- Seuls les vols paraissent sur la feuille : un cours au sol ou une indisponibilité n'y figurent pas.
+- Une masse et un centrage « non vérifiée » ne bloquent pas l'approbation de l'instructeur : vérifiez-les avant le vol.
+- Seules les réservations confirmées entrent au registre.
+- Le verrouillage automatique traite la journée terminée la plus récente de chaque base, sans effet rétroactif. Il ne reverrouille pas une journée déverrouillée à la main.

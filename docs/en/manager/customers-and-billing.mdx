@@ -1,0 +1,77 @@
+---
+title: "Customers and billing"
+description: "Customer records, Stripe invoices, payments, refunds, prepaid packages and Stripe Terminal."
+order: 9
+translationKey: mgr-billing
+updated: 2026-11-01
+draft: false
+---
+
+This module keeps your customer records and runs invoices, taxes and payments through your organization's Stripe account. Without a ready Stripe account, customer records still work, but no invoice or package is possible.
+
+## Who can do it
+
+- View the customer list, create or edit a record: Pilot and above.
+- Delete a record: Chief Instructor and above.
+- Connect Stripe: Chief Instructor, Chief Pilot, Co-owner and Operations Manager.
+- Create an invoice: anyone who can edit the booking.
+- Mark an invoice paid, collect on Terminal: Dispatch and above.
+- Send, void or refund an invoice, manage prepaid packages: Chief Instructor and above.
+
+No one can collect, void or refund their own invoice, whatever their role.
+
+## Customer records
+
+The customer list can be searched by name, email or phone. You create a record yourself, or it is created automatically from an online booking. Once Stripe is ready, a record requires a billing address (country, plus province or ZIP code) so taxes can be calculated.
+
+A record has four tabs: overview, bookings, prepaid and financial, which is the customer's statement of invoices. Each base also has a counter record for walk-in customers.
+
+## Connect Stripe
+
+1. Go to Settings › Booking › Payment and connect your Stripe account.
+2. Complete the sign-up with Stripe. Back in the Manager, refresh the status. It should show as connected.
+
+Taxes are calculated by Stripe Tax, and your tax registrations are set up in Stripe. If Stripe Tax is not ready, an alert appears: set it up before you invoice. In the billing settings, set your payment terms in days.
+
+## Invoices
+
+1. In a confirmed booking, open the customers tab and, from the actions menu, create an invoice. You can also start from the flight's row on the [flight sheet](/en/docs/manager/flight-sheet).
+2. Check the durations. Add custom fees if needed (a negative amount lowers the total) or prepaid credit.
+3. Choose to send the invoice emails automatically if you want Stripe to email the customer.
+
+Each customer on the booking gets their own Stripe invoice; the number, layout and PDF come from Stripe. From the financial tab, you can view the invoice, download its PDF, and send or resend it. The customer pays through the payment link, which opens the Stripe invoice page without signing in.
+
+## Payments
+
+- Mark an invoice paid to record a payment received offline: cash, Interac e-Transfer, check or other. The whole invoice is settled.
+- A payment made online through Stripe is reflected on the invoice.
+- Voiding an invoice cancels an unpaid invoice; you can then create a new one.
+
+## Refunds and credit notes
+
+A refund takes three steps: set up, confirm and results. Pick a reason, then a calculated amount (with the service's cancellation fees if needed) or a custom amount. The refund goes back to the card if the invoice was paid by card, otherwise it is issued as a Stripe credit note. Only one refund is possible per customer and per invoice.
+
+A refund made outside Stripe can be recorded by marking the invoice refunded. No credit note is created, and the customer is not notified.
+
+## Prepaid packages
+
+A prepaid package is a money credit the customer pays in advance and that is deducted from their invoices.
+
+1. On the customer record, open the prepaid tab and create a new package: name, amount and payment method (a Stripe invoice sent to the customer, marked paid in cash or by transfer, or collected on a card reader).
+2. The balance becomes active once the package is paid. Tax is added to the package invoice.
+3. To use the credit, turn on prepaid credit when you create an invoice, or pay an open invoice with the prepaid balance.
+
+You can also adjust the balance (a reason is required) or cancel the package. The transaction history records each purchase, deduction, adjustment and cancellation.
+
+## Stripe Terminal
+
+To take card payments in person, the Operations Manager activates Terminal for each base, under Settings › Booking › Payment. Card readers are registered in your Stripe dashboard; PilotDuty does not sell them. You can then collect an invoice or a package on the reader, with an optional email receipt. A card that was already charged is never charged twice. Terminal works in Canada and the United States, card only, with no tips or partial payments.
+
+## Good to know
+
+- A package balance is money, never hours, even if some screen labels mention hours.
+- A package pays the whole invoice or nothing: no partial payment and no combining packages.
+- Refunding an invoice paid with prepaid credit does not return the credit to the package.
+- PilotDuty sends no payment reminders and does not create an invoice on its own after a flight.
+- One currency per organization: no multi-currency.
+- Notes on a customer record are visible to the member linked to that record.

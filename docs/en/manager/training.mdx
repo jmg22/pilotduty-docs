@@ -1,0 +1,66 @@
+---
+title: "Training"
+description: "Pilot training records (PTR), templates, milestones, electronic signature and trainer authorizations."
+order: 11
+translationKey: mgr-training
+updated: 2026-11-01
+draft: false
+---
+
+The Training module tracks each student's training in a pilot training record (PTR): flights, ground school, exercises, exams and progress milestones.
+
+## Who can do it
+
+- Read a record: Pilot and above, and the student for their own record.
+- Write in a record and sign a milestone: Instructor, Chief Instructor and above, as well as Pilot and Dispatch members with an active trainer authorization. Never in your own record.
+- Co-sign, manage templates and trainer authorizations, transfer a record: Chief Instructor and above.
+
+## Templates
+
+Under Settings › Organization, create PTR templates to describe a program: exercises, milestones, required hours and signature policy. The template editor is in English. A record is always created from one of the organization's templates.
+
+## Open a record
+
+1. On the pilot's profile, in the training records section, create a new PTR.
+2. Pick the template. If needed, indicate that the student is continuing from a paper PTR, or pair the student with yourself as trainer.
+3. The template's content is frozen into the record.
+
+For a student who arrives with a paper record, a Chief Instructor and above enters their prior hours, ground school and exercises as starting data, so they count toward progress.
+
+## Keep the record
+
+- A flight entry links a logbook flight to the record, with the exercises covered, the student's remarks and the instructor's comments. From the [flight sheet](/en/docs/manager/flight-sheet), you can log the PTR entry, prefilled.
+- Add ground school sessions, comments, and the required exams and documents.
+- The exercise grid shows progress codes. The audit compares training against the template's requirements, shows a percentage and, when applicable, a ready-for-flight-test badge.
+- Add milestones: pre-solo check, first solo authorization, solo cross-country, written exam, pre-flight-test check, course completion, custom milestone, and more.
+
+## Sign a milestone
+
+1. On the milestone, the instructor clicks “E-Sign authorize”.
+2. They read the statement, check the exercises, enter their licence and rating, then sign in again (password, Google or Apple).
+3. The server records the signer's identity, the exact statement, what was signed and the time, then seals it all with a SHA-256 fingerprint.
+
+A milestone can require a co-signature (“Co-sign”) from a Chief Instructor and above. Before a course completion is signed, the server checks signed milestones, co-signatures, flight and ground hours, and an unexpired medical certificate.
+
+## PDF you can verify by QR code
+
+You can download the PDF of a signed milestone: organization, signer, statement, student, exercises and a QR code. Anyone can scan the code, without an account, to open the verification page. “Signature is authentic” means the record exists and its fingerprint matches.
+
+## Trainer authorizations
+
+Every Instructor is a trainer. For another member, Pilot and above, to train, a Chief Instructor and above opens their profile and grants a trainer authorization: instructor rating, aircraft type, or endorsement (tailwheel, skis, floats, multi-engine, night, IFR, aerobatics), with an expiry date and optional proof. Withdrawing it ends the authorization. The trainers view of the pilot list shows who can train, and until when.
+
+An email goes out 30 days before an authorization ends, to its holder and to each Chief Instructor and above, in each person's language.
+
+## Close or transfer a record
+
+A record can be closed as completed, with the option to add a competency to the pilot's file. It can also be marked failed or withdrawn. For a student moving to another organization, a Chief Instructor and above creates a transfer link valid for 30 days and sends it themselves.
+
+## Good to know
+
+- Not everything is signed. Flight entries, ground school, comments, progress codes, exams, closing a record and the competency added at closing are recorded without a signature.
+- The electronic signature is a sealed server-side record, verifiable by QR code. It is not a digital certificate, and the signer's licence is self-declared, not checked.
+- Statements and signed PDFs are in English.
+- The ready-for-flight-test badge is an indicator: it neither authorizes nor blocks anything.
+- A trainer authorization is a designation by the organization, not a regulatory check.
+- A transfer creates a new record at the receiving organization, without the entries, milestones, signatures or documents.

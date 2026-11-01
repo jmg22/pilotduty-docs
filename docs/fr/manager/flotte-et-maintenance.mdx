@@ -1,0 +1,72 @@
+---
+title: "Flotte et maintenance"
+description: "Ajouter vos aéronefs, suivre leurs échéances d'entretien, leurs inspections et leurs défectuosités."
+order: 8
+translationKey: mgr-maintenance
+updated: 2026-11-01
+draft: false
+---
+
+Le module Flotte réunit vos aéronefs, leurs heures et cycles, leur programme d'entretien, leurs inspections et leurs défectuosités. Il vous informe : il ne bloque aucune réservation ni aucun vol.
+
+## Qui peut le faire
+
+- Consulter la flotte et les défectuosités : tous les membres.
+- Créer, dupliquer ou supprimer un aéronef, gérer les inspections et les ateliers : Responsable des opérations et Responsable maintenance.
+- Modifier la fiche d'un aéronef (calendriers, éléments) : Instructeur en chef et plus.
+- Rapporter une défectuosité, la commenter, ajouter des photos : Pilote et plus.
+- Rectifier une défectuosité et signer la remise en service : Responsable maintenance, Copropriétaire et Responsable des opérations.
+
+## Ajouter un aéronef
+
+1. Ouvrez « Aéronefs », puis cliquez « Nouvel aéronef ».
+2. Suivez les étapes « Identité », « Type d'appareil », « Exploitation », « Compteurs », « Maintenance », « Réservation » et « Récapitulatif ». À l'étape « Compteurs », saisissez le temps cellule et les cycles actuels.
+3. Cliquez « Créer l'aéronef ».
+
+L'étape « Réservation » (sièges, carburant, tarif horaire, masse et bras à vide) n'apparaît qu'au Responsable des opérations. Un aéronef créé sans elle se rend réservable plus tard : voir [Réservations](/fr/docs/manager/reservations).
+
+L'écran de fin liste ce qu'il reste à faire, dont l'import dans l'app iPhone par les pilotes. Notez-le : il disparaît quand vous quittez la page. « Dupliquer l'aéronef » reprend la configuration et le programme d'entretien, mais la copie n'est pas réservable.
+
+## Le programme d'entretien générique
+
+À l'étape « Maintenance », PilotDuty propose un programme générique adapté au profil de l'appareil : des visites (« Visite 100 h / annuelle », « Visite 50 h », ou « Visite annuelle » pour un planeur) et les éléments courants. Vous pouvez aussi « Partir d'une liste vide ».
+
+Chaque intervalle doit être confirmé par la personne désignée selon votre autorité : votre TEA, un A&P ou IA, ou votre CAMO/CAO. Pour un hélicoptère, le programme proposé est minimal.
+
+## Heures, cycles et échéances
+
+Le « Temps cellule total » et les « Cycles cellule total » se mettent à jour seuls à partir des vols des pilotes membres de l'organisation.
+
+- « Nouveau calendrier d'inspection » : une visite périodique par dates, par heures, par cycles ou une combinaison, avec intervalle, fenêtre et tolérance.
+- Éléments par heures, par dates et par cycles : un intervalle propre à chaque composant (révision moteur, hélice, ELT, étalonnages, pièces à vie limitée).
+
+Les éléments s'affichent en couleur : « En service », « À inspecter », « Sur condition », « En retard » ou « À compléter ». Un élément dont la dernière exécution ou l'intervalle est inconnu reste « À compléter » : aucune échéance n'est inventée. La liste de la flotte montre ce qui reste avant la visite la plus contraignante.
+
+## Inspections
+
+1. Pour chaque visite, commencez par « Créer une inspection initiale » : la dernière inspection faite et la prochaine cible.
+2. « Démarrer une inspection » ouvre quatre étapes : « Pré-vérification », « Atelier », « Éléments » et « Finaliser ». À la soumission, le bon de travail et le rapport d'état sont produits en PDF, et la prochaine échéance avance.
+3. Après les travaux, cliquez « Finaliser l'inspection en cours ». Cochez les éléments faits et « Journal technique vérifié ? ». La carte d'alerte est produite en PDF.
+
+Une seule inspection peut être en attente à la fois. Tout membre peut obtenir la dernière carte d'alerte.
+
+## Défectuosités
+
+1. Sur la fiche de l'aéronef, onglet « Défectuosités », cliquez « Rapporter une défectuosité » : description, sévérité (No-Go, Go-If ou Info), chapitre ATA facultatif et lieu. Ajoutez des photos (10 au plus) et des commentaires.
+2. Le responsable de la maintenance clique « Passer en cours », puis saisit la « Rectification » : action corrective, main-d'œuvre, pièces et mécanicien.
+3. Il clique ensuite « Signer la remise en service » et s'authentifie de nouveau. Sa signature électronique est enregistrée et scellée par une empreinte affichée sur la fiche. La défectuosité passe à Fermé.
+
+Le parcours va dans un seul sens : Ouvert, En cours, Rectifié, Fermé. Une défectuosité ne se supprime pas. Un courriel part à la création (aux responsables de la maintenance), à la rectification (à l'auteur) et à la signature.
+
+## Ateliers
+
+Dans Paramètres › Organisation › « Ateliers », tenez la liste de vos ateliers (AMO ou AME). Elle est proposée à chaque inspection. L'atelier n'a pas d'accès à PilotDuty.
+
+## À savoir
+
+- Le module ne bloque rien. Une défectuosité No-Go ou une échéance dépassée ne retire pas l'aéronef de la réservation. Pour le bloquer, saisissez une indisponibilité au calendrier : voir [Réservations](/fr/docs/manager/reservations).
+- Aucune alerte d'échéance n'est envoyée, ni par courriel ni par SMS. Les échéances se lisent à l'écran.
+- Tout se compte en heures et cycles cellule. Il n'y a pas de compteur séparé pour le moteur ou l'hélice.
+- Les PDF d'inspection sont en anglais. Une inspection ne se signe pas électroniquement.
+- Le report d'un item MEL est en cours de développement.
+- Un calendrier d'inspection ne se renomme pas : le supprimer pour le recréer efface ses échéances.

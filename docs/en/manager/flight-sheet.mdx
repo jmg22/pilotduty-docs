@@ -1,0 +1,66 @@
+---
+title: "Flightsheet"
+description: "Match the booked day with the flights flown, approve, invoice, then lock the day in a PDF record."
+order: 5
+translationKey: mgr-flight-sheet
+updated: 2026-11-01
+draft: false
+---
+
+The “Flightsheet” shows, for one base and one day, each booked flight and what actually happened, then freezes the day in a record. It is the Manager's home page.
+
+## Who can do it
+
+- **View**: every member. Below Dispatch, bookings that do not concern you show as busy.
+- **Add a walk-in flight**: Pilot and above; below that, in your own name.
+- **Mark an invoice paid or collect payment**: Dispatch and above, never on their own invoice.
+- **Lock, unlock, read the record and its PDF**: Dispatch and above.
+- **Set up automatic locking**: Chief Instructor and above.
+
+## Read the day
+
+Each flight booking forms a row with three columns: schedule, aircraft and crew. Under each row, the flight-following details give the actual times received from the iPhone app: off-block, takeoff, landing, on-block, air time and flight time. Choose the base, the division, and local or UTC times. The map view shows the day's aircraft and their tracks.
+
+Tracked flights without a booking are listed as unscheduled flights: see [Flight following](/en/docs/manager/flight-following).
+
+## Add a walk-in flight
+
+The add button opens a new booking prefilled with the day, the base and the division. Use it for a customer who walks in, or to enter a flight after the fact. For a passer-by without a record, choose the counter customer: no record is created, the sale is taxed at the base address, and nothing is sent to the customer. This choice requires a Stripe account ready to collect payments and a base address.
+
+## The flight row
+
+- **“W&B”**: weight and balance at a glance. Orange if fuel has not been entered, red for a failure outside the limits, amber if not verified because data is missing, green otherwise.
+- **Fuel on board**: enter the fuel actually loaded, with the minimum required and the usable capacity as guides. Saving regenerates the manifest of occupants and load, which you can then download.
+
+## Approve a training flight
+
+On a training flight, the student gives consent and the instructor approves the flight, from the row. One click signs electronically. You can also send the request by email or text message, with a link valid for 7 days. Approval is refused if fuel has not been entered or if weight and balance is outside the limits. You can then log the flight in the student's training record. See [Training](/en/docs/manager/training).
+
+## Invoice from the sheet
+
+Creating an invoice uses the actual times: those of the approved flight, otherwise of flight following, otherwise of the booking. The invoice menu then lets you view the invoice, download the PDF, mark it paid (cash or transfer) or collect on a Stripe Terminal reader. You need a confirmed booking and a Stripe account that is ready. See [Customers and billing](/en/docs/manager/customers-and-billing).
+
+## Lock the day
+
+Locking the sheet freezes the base's day in a record: confirmed bookings, flights, statistics and PDF. It also adds the hours to the aircraft and covers the whole base, whatever division is displayed.
+
+- In an organization with several bases, a review window suggests a base for each unscheduled flight, or lets you exclude it.
+- A flight by someone outside the organization is marked as off the record: it counts neither in the record nor in the aircraft's hours.
+- A locked day shows who locked it and its version number, and becomes read-only. Internal notes, invoices, payments and the training record entry remain editable.
+- Unlocking reopens the day for corrections, with an optional reason of up to 200 characters.
+- Relocking adds to the record a booking that was left out, without touching the rest, as a new version.
+
+## Automatic locking
+
+In your organization settings, turn on automatic flightsheet locking and choose the delay: at midnight base time, or 6, 12, 24 or 48 hours after the end of the day. The sheet then shows Auto-Lock as the one who locked it. This setting is off by default.
+
+## The PDF record
+
+Downloading the PDF opens the record of the locked day, in landscape format. It has one line per flight, with the columns Off Blk, T/O, Ldg, On Blk, Air T., Flt T., Cyc and W/B, then a summary by base, by aircraft and by pilot. The record is written in English.
+
+## Good to know
+
+- Only flights appear on the sheet: a ground class or an unavailability does not.
+- Weight and balance that is not verified does not block the instructor's approval: check it before the flight.
+- Only confirmed bookings go into the record.
+- Automatic locking handles the most recent completed day of each base, with no retroactive effect. It does not relock a day unlocked by hand.

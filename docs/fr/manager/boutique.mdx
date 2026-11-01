@@ -1,0 +1,77 @@
+---
+title: "Boutique"
+description: "Vendre vos articles au comptoir : activation, articles et variantes, stock, encaissement, taxes et notes de crédit."
+order: 7
+translationKey: mgr-shop
+updated: 2026-11-01
+draft: false
+---
+
+La Boutique permet à votre personnel de vendre les articles de l'organisation au comptoir, dans le Manager. Elle vend des articles seulement, et rien n'est vendu en ligne au public.
+
+## Activer la boutique
+
+La boutique est éteinte par défaut. Elle s'ouvre en deux temps :
+
+1. PilotDuty autorise d'abord la boutique pour votre organisation.
+2. Votre organisation l'active ensuite dans Paramètres › Organisation, onglet Général, bloc « Boutique » : « Activez la vente d'articles au comptoir pour votre organisation. » Ce bloc paraît seulement une fois l'autorisation donnée.
+
+Il faut aussi un compte Stripe Connect prêt à encaisser : sans lui, on ne peut ni créer un article ni vendre, même en espèces. Voir [Clients et facturation](/fr/docs/manager/clients-et-facturation).
+
+## Qui peut le faire
+
+- **Activer ou couper la boutique** : Instructeur en chef et plus.
+- **Gérer les articles et le stock, vendre, encaisser, émettre une note de crédit** : Dispatch et plus.
+- **Créer un emplacement Stripe Terminal pour une base** : Responsable des opérations.
+
+Le menu « Boutique » ouvre trois onglets : « Vente au comptoir », « Ventes » et « Articles ».
+
+## Créer un article
+
+Dans l'onglet « Articles », cliquez « Nouvel article ». Remplissez le « Nom », la « Description (facultative) », le « Prix avant taxes » et le « Type de taxe » : « Bien », « Service » ou « Non taxable ». Des onglets de langue permettent de le traduire. « Retirer de la vente » sort un article du comptoir sans le perdre, et « Remettre en vente » l'y replace.
+
+## Options et variantes
+
+Dans la section « Options », « Ajouter une option » puis « Ajouter un choix » : par exemple une option Taille (S, M, L) et une option Couleur. Chaque combinaison devient une variante, avec son propre prix et une case « En vente ». Un article compte 3 options et 100 combinaisons au plus.
+
+## Suivre le stock
+
+Cochez « Suivre le stock de cet article » pour suivre chaque variante. Le bouton « Stock » de l'article sert à enregistrer une « Réception » ou une « Correction », et liste les « Derniers mouvements ». Chaque variante part de zéro : elle reste « Épuisée » jusqu'à une première réception. Le stock ne descend jamais sous zéro. Sans suivi, l'article se vend sans limite.
+
+## Vendre au comptoir
+
+1. Dans « Vente au comptoir », choisissez la « Base » si vous en avez plusieurs.
+2. Ajustez les quantités avec les boutons plus et moins.
+3. Cliquez « Calculer le total » : l'écran affiche « Sous-total », « Taxes » et « Total de la facture ».
+4. Encaissez dans le même écran.
+
+La vente est faite au client de passage de la base : vous ne choisissez pas de fiche client ni de nom d'acheteur. Une fois le total calculé, la vente ne se modifie plus : pour la changer, cliquez « Annuler la vente », ce qui rend le stock, puis recommencez.
+
+## Encaisser
+
+- **Moyens déclarés** : espèces, virement, chèque ou autre, puis « Encaisser ». Aucun argent ne passe par Stripe : PilotDuty enregistre ce que votre personnel déclare. En dollars canadiens, un encadré « À percevoir en espèces » donne le montant arrondi aux 5 cents.
+- **Carte** : « Encaisser au Terminal » ouvre « Collecter un paiement sur terminal ». Il faut avoir activé Stripe Terminal et créé un emplacement pour la base de la vente. Un courriel pour le reçu de carte est facultatif. Une carte déjà débitée n'est jamais débitée deux fois.
+
+Encaissez avec un moyen déclaré dès que le total est calculé : cet encaissement se fait dans l'écran de la vente en cours, pas depuis l'onglet « Ventes ».
+
+## Taxes
+
+Les taxes sont calculées par Stripe Tax, à l'adresse de la base. La boutique refuse de vendre sans taxes correctes : il faut Stripe Tax actif et une adresse de base. Au Canada, le numéro de TPS/TVH est exigé, et au Québec le numéro de TVQ en plus. En cas de refus, un lien ouvre un guide de configuration des taxes chez Stripe. PilotDuty ne calcule aucune taxe lui-même.
+
+## Notes de crédit
+
+Pour corriger une vente payée, ouvrez « Ventes », puis « Détails ». Choisissez les quantités ligne par ligne ou « Tout créditer », puis cliquez « Voir le montant ». Laissez cochée « Remettre en stock » pour rendre les articles suivis au stock, puis cliquez « Émettre la note de crédit ». Une vente payée au Terminal est remboursée sur la carte. Une note de crédit ne peut pas être annulée.
+
+## Liste des ventes
+
+L'onglet « Ventes » montre les ventes récentes, avec leur état et leur total. États : « Non encaissée », « Payée », « Créditée en partie », « Créditée », « Annulée ». « Facture et reçu » ouvre le document Stripe de la vente.
+
+## À savoir
+
+- La liste affiche les 50 dernières ventes, sans filtre, recherche, export ni rapport.
+- Un article ne se supprime pas : retirez-le de la vente.
+- Les articles n'ont ni photo, ni catégorie, ni code-barres.
+- Le stock est unique pour toute l'organisation, pas par base.
+- Pas de caisse, de fermeture de caisse ni de calcul de la monnaie à rendre.
+- PilotDuty n'envoie pas la facture par courriel. Le seul envoi est le reçu de carte de Stripe, au Terminal, si un courriel est saisi.
+- Pas de fonction d'échange : émettez une note de crédit, puis faites une nouvelle vente.

@@ -1,0 +1,56 @@
+---
+title: "Calendars"
+description: "See your bookings in your calendar, import your busy times and read your airline schedule."
+order: 13
+translationKey: mgr-calendars
+updated: 2026-11-01
+draft: false
+---
+
+This module connects the Manager to your calendars. It publishes your bookings to your personal calendar, imports your busy times and, for an airline pilot, reads the airline schedule. Everything works through iCal links.
+
+## Who can do it
+
+Each member sets up their own calendars, for themselves only, under Settings › Profile. No one can manage another member's calendar.
+
+## See your bookings in your calendar
+
+1. Under Settings › Profile, turn on calendar sync.
+2. Add your private link to your calendar:
+   - Apple Calendar: use the Apple Calendar button;
+   - Google Calendar: use the Google Calendar button, from a computer;
+   - Outlook or another calendar: copy the link and subscribe to it as an internet calendar.
+3. A banner shows the status: active, waiting for the first sync, or your calendar has stopped fetching your bookings.
+
+The feed contains your confirmed and pending bookings, across all your organizations, from 30 days back to 180 days ahead, plus your unavailabilities. Each event shows the status, payment, the number and total weight of passengers (never their names), the location and a link to the Manager. Your calendar refreshes the link on its own; Google Calendar refreshes it every 12 to 24 hours. If your calendar stops reading it, you get an email after 14 days.
+
+## Add a single booking
+
+Confirmation emails include an .ics file and an add-to-calendar block. This is a one-time addition: a schedule change or a cancellation does not follow.
+
+## Import your busy times
+
+Your personal commitments become unavailabilities in your name, so no one books you when you are already busy.
+
+1. In your calendar (Google, iCloud, Outlook or other), copy its private iCal link.
+2. Under Settings › Profile, in the import unavailabilities tile, paste the link and connect your calendar.
+3. The connected calendar panel shows the last import. Replace the link or disconnect as needed; disconnecting removes the imported blocks.
+
+Only start and end times are kept: titles, descriptions, guests and locations are removed when the feed is read. The block is labeled as a personal calendar block and flags the pilot as unavailable when someone tries to book them. Blocks are only created in organizations where you are Pilot and above.
+
+## Airline schedule
+
+This feature is for airline pilots with the PilotDuty Pro personal subscription. On their own pilot profile, in the airline calendar sync section:
+
+1. They turn on the sync, then add an iCal feed: the link from their airline's crew app.
+2. PilotDuty reads the schedule and groups flights by duty period. If needed, the mapping settings adjust how the feed is read.
+3. In the inbox, they review each past duty period, then mark it as checked or reject it. Nothing enters the logbook without their approval.
+
+A source added in the iPhone app also appears in the Manager, and vice versa. Without an active PilotDuty Pro subscription, the section does not appear.
+
+## Good to know
+
+- Only iCal links are supported. There is no sign-in with a Google account.
+- The private link never expires: anyone who has it can see your schedule without a password. Do not share it. If it gets out, regenerate the link, then subscribe your calendar again.
+- The busy-time import covers the next 90 days, one calendar per member. A change can take up to 15 minutes to appear.
+- The airline schedule only feeds the logbook: the Manager does not show your upcoming flights and sends no duty time alerts.

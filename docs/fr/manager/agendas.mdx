@@ -1,0 +1,56 @@
+---
+title: "Agendas"
+description: "Voir vos réservations dans votre agenda, importer vos créneaux occupés et lire l'horaire de votre compagnie."
+order: 13
+translationKey: mgr-calendars
+updated: 2026-11-01
+draft: false
+---
+
+Ce module relie le Manager à vos agendas. Il publie vos réservations vers votre agenda personnel, importe vos créneaux occupés et, pour un pilote de ligne, lit l'horaire de sa compagnie. Tout passe par des liens iCal.
+
+## Qui peut le faire
+
+Chaque membre règle ses agendas pour lui seul, dans Paramètres › Profil. Personne ne gère l'agenda d'un autre membre.
+
+## Voir vos réservations dans votre agenda
+
+1. Dans Paramètres › Profil, tuile « Synchroniser mon agenda », cliquez « Activer la synchronisation ».
+2. Ajoutez « Votre lien privé » à votre agenda :
+   - Apple : « Ajouter à Apple Calendar » ;
+   - Google Agenda : « Ajouter à Google Agenda », depuis un ordinateur ;
+   - Outlook ou un autre agenda : copiez le lien et abonnez-vous à l'agenda par son adresse.
+3. Une bannière indique l'état : « Synchronisation active », « En attente de la première synchronisation » ou « Votre agenda ne récupère plus vos réservations ».
+
+Le flux contient vos réservations confirmées et en attente, dans toutes vos organisations, de 30 jours en arrière à 180 jours en avant, ainsi que vos indisponibilités. Chaque événement indique le statut, le paiement, le nombre et le poids total des passagers (jamais leurs noms), le lieu et un lien vers le Manager. Votre agenda relit le lien tout seul ; Google Agenda le relit toutes les 12 à 24 heures. Si votre agenda cesse de le lire, un courriel vous prévient après 14 jours.
+
+## Ajouter une seule réservation
+
+Les courriels de confirmation contiennent un fichier .ics et un bloc « Ajouter à mon agenda ». C'est un ajout ponctuel : un changement d'horaire ou une annulation ne suit pas.
+
+## Importer vos créneaux occupés
+
+Vos occupations personnelles deviennent des indisponibilités à votre nom, pour qu'on ne vous réserve pas sur une plage déjà prise.
+
+1. Dans votre agenda (Google, iCloud, Outlook ou autre), copiez son lien privé iCal.
+2. Dans Paramètres › Profil, tuile « Importer mes indisponibilités », collez-le dans « Lien privé de l'agenda », puis cliquez « Connecter mon agenda ».
+3. « Agenda connecté » montre le dernier passage. Utilisez au besoin « Remplacer le lien » ou « Déconnecter », qui retire les blocs importés.
+
+Seules l'heure de début et l'heure de fin sont gardées : titres, descriptions, invités et lieux sont supprimés à la lecture. Le bloc s'appelle « Agenda personnel » et signale que le pilote n'est pas disponible quand on essaie de le réserver. Les blocs ne sont créés que dans les organisations où vous êtes Pilote et plus.
+
+## Horaire de compagnie
+
+Cette fonction sert au pilote de ligne qui a l'abonnement personnel PilotDuty Pro. Sur sa propre fiche pilote, section « Synchronisation calendrier airline » :
+
+1. Il clique « Activer la synchronisation », puis « Ajouter un flux iCal » et colle le lien de l'application d'équipage de sa compagnie.
+2. PilotDuty lit l'horaire et regroupe les vols par période de service. Au besoin, « Configurer le mapping » ajuste la lecture du flux.
+3. Dans la « Boîte de réception », il vérifie chaque période passée, puis clique « J'ai vérifié » ou « Rejeter ». Rien n'entre au carnet sans son approbation.
+
+Une source ajoutée dans l'app iPhone apparaît aussi dans le Manager, et inversement. Sans abonnement PilotDuty Pro actif, la section n'apparaît pas.
+
+## À savoir
+
+- Seuls les liens iCal sont acceptés. Il n'y a pas de connexion à un compte Google.
+- Le lien privé n'expire pas : qui le possède voit votre planning sans mot de passe. Ne le partagez pas. S'il circule, cliquez « Régénérer le lien », puis abonnez de nouveau votre agenda.
+- L'import des créneaux occupés couvre les 90 prochains jours, un agenda par membre. Un changement peut prendre jusqu'à 15 minutes à apparaître.
+- L'horaire de compagnie ne sert qu'au carnet : le Manager n'affiche pas vos vols à venir et n'envoie aucune alerte de temps de service.
