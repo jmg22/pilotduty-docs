@@ -1,0 +1,63 @@
+---
+title: "Automatic flight recording"
+description: "How the app detects your flights, what it records and how to help it work well."
+order: 2
+translationKey: app-automatic-recording
+updated: 2026-11-01
+draft: false
+---
+
+PilotDuty records your flights without you touching the app. It recognizes taxi, takeoff, landing and parking, then places the flight in your approval queue.
+
+## Tracked zones
+
+The app starts following your activity when your iPhone enters a tracked zone, and stops when it leaves. There are two kinds of zones:
+
+- **An aerodrome.** A zone around the aerodrome, located by GPS.
+- **An aircraft fitted with an iBeacon.** The app knows you are on board when it picks up the beacon. Beacon-triggered recording requires a PilotDuty+ or PilotDuty Pro subscription. See [iBeacon](/en/docs/app/ibeacon).
+
+Your aircraft and zones are in the Aircraft tab (airplane icon).
+
+## The steps recorded
+
+In an aircraft's zone, the app follows your GPS speed and notes four times:
+
+1. start of taxi (off-block);
+2. takeoff;
+3. landing;
+4. arrival at parking (on-block).
+
+The flight's durations are calculated from these times. The app also notes the GPS positions of the takeoff and landing when they are accurate enough. They are used to draw the flight on the logbook map.
+
+While recording, the dashboard shows a progress bar and the zone's name. The flight in progress appears with an animated indicator and running timers.
+
+Once the aircraft is parked, the app waits for a set delay before closing the flight. You can adjust this delay in the general settings. The flight then joins the approval queue, with its confidence score. See [Review and approval](/en/docs/app/review-and-approval).
+
+## Without a network
+
+Detection works without a network: the flight is saved on your iPhone, then sent to the server when you approve it and a connection is available. Flight following and text messages to your follower do need a network.
+
+## Starting and stopping a session by hand
+
+For an aircraft set up for manual start, the dashboard shows a start button:
+
+1. Tap the start button.
+2. Choose the aircraft from the list.
+3. At the end of the flight, tap the stop button.
+
+This button only appears if at least one of your aircraft is set up for manual start.
+
+## Tips
+
+- **Keep location on “Always”** and leave “Precise Location” on in iOS Settings.
+- **Allow Motion access.** It helps the app tell taxiing from stopping. Without it, the app relies on GPS alone.
+- **Don't force-quit the app**, meaning don't swipe it away in the app switcher, especially before or during a flight. The app has to stay active in the background to follow the flight.
+- **Check that tracking is on** in the app's general settings.
+- **Read the dashboard banner.** It flags anything that can get in the way of recording: GPS, network, permissions, Low Power Mode, an available update. Tap it to see what to do.
+
+## If a flight is missing or looks wrong
+
+- You can add a missed flight by hand, or read it from a cockpit screen with the camera. See [Manual entry and ACARS scan](/en/docs/app/manual-entry-and-acars-scan).
+- With PilotDuty Pro, the app can recover a flight from ADS-B data. See [ADS-B recovery](/en/docs/app/ads-b-recovery).
+- If GPS missed the moment of a step, the app may suggest an estimated time during review.
+- A flight detected by mistake can be deleted with a swipe in the approval queue.

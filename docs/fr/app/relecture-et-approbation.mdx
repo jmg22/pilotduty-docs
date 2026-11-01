@@ -1,0 +1,78 @@
+---
+title: "Relecture et approbation des vols"
+description: "Relire, corriger et approuver les vols détectés avant qu'ils entrent dans votre carnet."
+order: 4
+translationKey: app-review-approval
+updated: 2026-11-01
+draft: false
+---
+
+Chaque vol détecté attend votre approbation avant d'entrer dans votre carnet. Vous le relisez, le corrigez au besoin, puis vous l'approuvez.
+
+## Le tableau de bord
+
+Le tableau de bord (premier onglet, icône de compteur) est votre file d'approbation. Il liste par ordre chronologique les vols et les événements en attente. L'icône de l'onglet porte un badge avec le nombre d'éléments à traiter.
+
+Si le temps de service est activé, un sélecteur permet de passer des vols aux événements de service. Voir [Temps de service](/fr/docs/app/temps-de-service).
+
+Un vol en cours d'enregistrement ne peut être ni approuvé ni supprimé.
+
+## Glisser pour approuver ou supprimer
+
+- Glissez un vol vers la gauche pour l'approuver. L'app demande une confirmation.
+- Glissez-le vers la droite pour le supprimer.
+- Touchez-le pour l'ouvrir et le modifier.
+
+Pour un vol suivi qui attend votre confirmation d'arrivée, le glissement vers la gauche sert à le confirmer « safe ». Voir [Suivi de vol](/fr/docs/app/suivi-de-vol).
+
+Vous pouvez approuver sans réseau. Le vol est envoyé quand le réseau revient.
+
+## Le score de confiance
+
+Pour un vol détecté par GPS, l'app calcule un score de fiabilité pour chacune des quatre heures et pour les deux aérodromes, ainsi qu'un score global.
+
+- Vert : valeur fiable.
+- Jaune : valeur à vérifier.
+- Rouge : valeur peu fiable, relisez-la.
+
+Touchez un anneau de score pour en lire l'explication. Une capsule indique aussi la source du vol (GPS, ADS-B, saisie manuelle ou import) et son pourcentage de confiance.
+
+Quand vous corrigez une heure ou un aérodrome à la main, le score de ce champ disparaît : la valeur n'est plus une mesure. Le score sert à la relecture et ne remonte pas dans PilotDuty Manager.
+
+## Les heures estimées suggérées
+
+Si le GPS a mal capté le moment d'une étape, l'app estime l'heure réelle et vous la propose sous le champ, avec sa marge d'incertitude. Rien ne change tant que vous n'appliquez pas la suggestion.
+
+## Modifier un vol
+
+L'écran du vol permet de modifier :
+
+- les quatre heures (début du roulage, décollage, atterrissage, stationnement) ;
+- les aérodromes de départ et d'arrivée ;
+- l'avion, le type de vol et les comptages ;
+- la catégorie, le moteur et l'hélice ;
+- les remarques et les pièces jointes.
+
+Chaque changement est enregistré tout de suite : il n'y a pas de bouton d'enregistrement. Les durées se recalculent seules. Certains choix dépendent de votre profil, par exemple vos licences ou votre qualification d'instructeur.
+
+Avec PilotDuty Pro, l'écran du vol propose aussi une comparaison avec l'ADS-B. Voir [Récupération ADS-B](/fr/docs/app/recuperation-ads-b).
+
+## Pièces jointes
+
+Vous pouvez joindre à un vol une photo prise avec l'appareil photo, une image de la photothèque ou un fichier (image, PDF ou texte). Touchez une pièce pour l'afficher en plein écran. Vous pouvez aussi la supprimer. L'ajout et la suppression demandent le réseau.
+
+Dans le carnet, le trombone d'un vol affiche ses pièces jointes et ses remarques.
+
+## Désapprouver un vol
+
+Pour corriger un vol déjà approuvé :
+
+1. Dans le carnet, glissez le vol vers la gauche et désapprouvez-le.
+2. Indiquez la raison.
+3. Le vol revient dans la file d'approbation. Corrigez-le, puis approuvez-le de nouveau.
+
+La désapprobation fonctionne aussi sans réseau ; elle s'applique au retour du réseau. Un vol venu de votre horaire de compagnie quitte le carnet et vous est proposé de nouveau à partir de l'horaire.
+
+## Historique des versions
+
+Dans le carnet, appuyez longuement sur un vol, puis choisissez « Voir l'historique des versions ». La chronologie montre chaque version du vol, de la plus récente à la plus ancienne : création, modifications, approbations et désapprobations. Pour chacune, vous voyez la date et l'heure UTC, la raison, l'auteur et les champs modifiés. L'app affiche jusqu'aux 10 versions les plus récentes.

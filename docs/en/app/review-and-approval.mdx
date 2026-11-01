@@ -1,0 +1,78 @@
+---
+title: "Reviewing and approving flights"
+description: "Review, correct and approve detected flights before they go into your logbook."
+order: 4
+translationKey: app-review-approval
+updated: 2026-11-01
+draft: false
+---
+
+Every detected flight waits for your approval before it goes into your logbook. You review it, correct it if needed, then approve it.
+
+## The dashboard
+
+The Dashboard tab (first tab, speedometer icon) is your approval queue. It lists pending flights and events in chronological order. The tab icon shows a badge with the number of items to handle.
+
+If duty time is turned on, a selector lets you switch between flights and duty events. See [Duty time](/en/docs/app/duty-time).
+
+A flight that is still recording can't be approved or deleted.
+
+## Swipe to approve or delete
+
+- Swipe a flight to the left and tap “Approve”. The app asks you to confirm.
+- Swipe it to the right to delete it.
+- Tap it to open and edit it.
+
+For a followed flight waiting for your arrival confirmation, the left swipe shows “Safe” instead. See [Flight following](/en/docs/app/flight-following).
+
+You can approve without a network. The flight is sent once the connection is back.
+
+## The confidence score
+
+For a flight detected by GPS, the app scores the reliability of each of the four times and of both aerodromes, plus an overall score.
+
+- Green: reliable.
+- Yellow: worth checking.
+- Red: unreliable, review this value.
+
+Tap a score ring to read what it means. A capsule also shows the flight's source (GPS, ADS-B, manual entry or import) and its confidence percentage.
+
+When you correct a time or an aerodrome by hand, that field's score disappears: the value is no longer a measurement. The score is a review aid and does not show up in PilotDuty Manager.
+
+## Suggested estimated times
+
+If GPS missed the moment of a step, the app estimates the actual time and suggests it under the field, with its margin of uncertainty. Nothing changes until you tap “Apply”.
+
+## Editing a flight
+
+The flight screen lets you edit:
+
+- the four times (start of taxi, takeoff, landing, parking);
+- the departure and arrival aerodromes;
+- the aircraft, flight type and counts;
+- the category, engine and propeller;
+- the remarks and attachments.
+
+Every change is saved right away; there is no save button. Durations recalculate on their own. Some choices depend on your profile, such as your licenses or your instructor rating.
+
+With PilotDuty Pro, the flight screen also offers an ADS-B comparison. See [ADS-B recovery](/en/docs/app/ads-b-recovery).
+
+## Attachments
+
+You can attach to a flight a photo taken with the camera, an image from your photo library, or a file (image, PDF or text). Tap an attachment to view it full screen. You can also delete it. Adding and deleting attachments requires a network.
+
+In the logbook, a flight's paperclip shows its attachments and remarks.
+
+## Unapproving a flight
+
+To correct a flight you have already approved:
+
+1. In the logbook, swipe the flight to the left and unapprove it.
+2. Enter the reason.
+3. The flight returns to the approval queue. Correct it, then approve it again.
+
+Unapproving also works offline; it takes effect when the connection is back. A flight that came from your airline roster leaves the logbook and is offered to you again from the roster.
+
+## Version history
+
+In the logbook, press and hold a flight, then choose to view its version history. The timeline shows each version of the flight, newest first: creation, edits, approvals and unapprovals. For each one, you see the date and time in UTC, the reason, the author and the fields that changed. The app shows up to the 10 most recent versions.

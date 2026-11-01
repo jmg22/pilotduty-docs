@@ -1,0 +1,63 @@
+---
+title: "Enregistrement automatique des vols"
+description: "Comment l'app détecte vos vols, ce qu'elle enregistre et comment l'aider à bien fonctionner."
+order: 2
+translationKey: app-automatic-recording
+updated: 2026-11-01
+draft: false
+---
+
+PilotDuty enregistre vos vols sans que vous ayez à toucher l'app. Elle reconnaît le roulage, le décollage, l'atterrissage et le stationnement, puis place le vol dans votre file d'approbation.
+
+## Les zones suivies
+
+L'app commence à suivre votre activité quand votre iPhone entre dans une zone suivie, et s'arrête quand il en sort. Il existe deux sortes de zones :
+
+- **Un aérodrome.** Une zone autour de l'aérodrome, repérée par le GPS.
+- **Un avion équipé d'une balise iBeacon.** L'app sait que vous êtes à bord quand elle capte la balise. Le déclenchement par balise demande un abonnement PilotDuty+ ou PilotDuty Pro. Voir [Balise iBeacon](/fr/docs/app/balise-ibeacon).
+
+Vos avions et vos zones se trouvent dans l'onglet des aéronefs (icône d'avion).
+
+## Les étapes enregistrées
+
+Dans la zone d'un avion, l'app suit votre vitesse GPS et note quatre heures :
+
+1. le début du roulage (off-block) ;
+2. le décollage ;
+3. l'atterrissage ;
+4. l'arrivée au stationnement (on-block).
+
+Les durées du vol sont calculées à partir de ces heures. L'app note aussi les positions GPS du décollage et de l'atterrissage quand elles sont assez précises. Elles servent à tracer le vol sur la carte du carnet.
+
+Pendant l'enregistrement, le tableau de bord montre une barre de progression et le nom de la zone. Le vol en cours s'affiche avec un indicateur animé et des chronomètres qui avancent.
+
+Une fois l'avion stationné, l'app attend un délai avant de clore le vol. Ce délai se règle dans les réglages généraux. Le vol rejoint ensuite la file d'approbation, avec son score de confiance. Voir [Relecture et approbation](/fr/docs/app/relecture-et-approbation).
+
+## Sans réseau
+
+La détection fonctionne sans réseau : le vol est enregistré sur votre iPhone, puis envoyé au serveur quand vous l'approuvez et que le réseau est là. Le suivi de vol et les SMS à votre suiveur, eux, ont besoin du réseau.
+
+## Démarrer et arrêter une session à la main
+
+Pour un avion configuré en démarrage manuel, le tableau de bord affiche un bouton de démarrage :
+
+1. Touchez le bouton de démarrage.
+2. Choisissez l'avion dans la liste.
+3. À la fin du vol, touchez le bouton d'arrêt.
+
+Ce bouton n'apparaît que si au moins un de vos avions est en démarrage manuel.
+
+## Conseils
+
+- **Gardez la localisation sur « Toujours »** et laissez « Position exacte » activée dans les Réglages d'iOS.
+- **Accordez l'autorisation Mouvement.** Elle aide l'app à distinguer le roulage de l'arrêt. Sans elle, l'app se fie au GPS seul.
+- **Ne forcez pas la fermeture de l'app**, c'est-à-dire ne la balayez pas vers le haut dans le sélecteur d'apps, surtout avant ou pendant un vol. L'app doit rester active en arrière-plan pour suivre le vol.
+- **Vérifiez que le suivi est activé** dans les réglages généraux de l'app.
+- **Lisez le bandeau du tableau de bord.** Il signale ce qui peut gêner l'enregistrement : GPS, réseau, autorisations, mode économie d'énergie, mise à jour disponible. Touchez-le pour savoir quoi faire.
+
+## Si un vol manque ou semble faux
+
+- Un vol non détecté peut être ajouté à la main, ou lu sur un écran du poste avec la caméra. Voir [Ajout manuel et scan ACARS](/fr/docs/app/ajout-manuel-et-scan-acars).
+- Avec PilotDuty Pro, l'app peut retrouver un vol à partir des données ADS-B. Voir [Récupération ADS-B](/fr/docs/app/recuperation-ads-b).
+- Si le GPS a mal capté une étape, l'app peut vous proposer une heure estimée pendant la relecture.
+- Un vol détecté par erreur se supprime d'un glissement dans la file d'approbation.

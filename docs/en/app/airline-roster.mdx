@@ -1,0 +1,61 @@
+---
+title: "Airline roster (beta)"
+description: "Connect your airline's iCal roster to receive your scheduled flights for approval."
+order: 10
+translationKey: app-roster
+updated: 2026-11-01
+draft: false
+---
+
+Connecting your airline roster brings your scheduled flights into PilotDuty. You review and approve them like your other flights.
+
+With PilotDuty Pro. This feature is in beta.
+
+## Adding a source
+
+You need the iCal link (an address ending in .ics) that your employer provides for your roster.
+
+1. In the Settings tab, open Profile, then the roster sources in the logbook section. You can also choose the airline roster during the welcome flow.
+2. Name the source and paste the iCal link.
+3. If you know it, enter your airline's IATA code. It lets the server fill in more details for your flights.
+4. Set the “Default Info”: category, engine and propeller, flight type, country and operating rule, status, and buffers before and after the flight.
+5. Save.
+
+The server reads your roster, recognizes how your airline lays it out, then prepares the flights and events for approval.
+
+## Privacy
+
+- Your link is encrypted on the server. The app never keeps it in plain text and only shows its last 4 characters.
+- The app doesn't read your iPhone's calendar. It doesn't ask for any calendar permission.
+- Only iCal links are accepted.
+
+## Approving flights and events
+
+Flights and events from your roster appear on the dashboard.
+
+- Swipe left to approve, right to reject.
+- Tap an item to edit it before approving: dates, time zones, acclimatization, remark and flights. Save your changes; saving requires a network.
+- You can remove a single flight from an event with “Delete leg”. If that isn't possible, the app offers to reject the whole event.
+- If the roster changed at the source, a banner tells you. Once you've checked, confirm it in the banner.
+- A magic wand icon marks a flight the server has filled in.
+
+These items aren't recorded live: you can't add a flight to them, stop them or pause them.
+
+If you unapprove a flight that came from the roster, it leaves the logbook and is offered to you again from the roster.
+
+## Managing your sources
+
+In a source's details, you can:
+
+- rename it;
+- turn it off or back on;
+- refresh it right away with “Refresh now”;
+- set the past and future windows to read;
+- rerun the recognition of the roster's layout;
+- delete it.
+
+A source's address can't be changed in the app. Banners flag problems, such as a missing IATA code or a layout that wasn't recognized. You can dismiss them.
+
+## With your organization
+
+If you belong to an organization, a source you add in the app also appears in PilotDuty Manager, and a source added in Manager appears in the app. Flights you approve show up in Manager like your other flights.

@@ -1,0 +1,53 @@
+---
+title: "ADS-B recovery"
+description: "Recover a missed flight or check its times using ADS-B data."
+order: 6
+translationKey: app-adsb
+updated: 2026-11-01
+draft: false
+---
+
+ADS-B recovery finds a flight from the positions the aircraft broadcast over ADS-B. Use it when your iPhone couldn't record the flight, or to check times.
+
+With PilotDuty Pro.
+
+## Recovering a flight by hand
+
+1. Tap “+” on the dashboard, then “Recover Flight ADS-B”.
+2. Choose the aircraft and the time window to search. By default, the window covers 24 hours.
+3. Tap the search button. The app doesn't search on its own when you change the window.
+4. The app lists the rebuilt flights. Tap the one you want.
+
+The flight is created as a draft in the approval queue. It includes the type, registration, cycles, and whether it was day or night. It doesn't go into your logbook until you approve it.
+
+You can also start this recovery from a duty event's screen.
+
+## Automatic rebuild when a flight closes
+
+When a flight ends without a usable GPS track, the app makes a note of it. When you come back to the app, or when you leave the beacon's zone, it queries ADS-B and creates draft flights. It lets you know when it has created at least one.
+
+- The app only keeps flights that match the aircraft and the time window in question. Otherwise, it creates nothing.
+- It discards duplicates and never overwrites an existing flight.
+- If there's no network, it tries again later, for up to 7 days.
+- Like any draft, a rebuilt flight waits for your approval.
+
+## Comparing a flight with ADS-B
+
+On a flight's screen, tap the ADS-B comparison button.
+
+1. The app compares the flight's four times with those of an ADS-B flight.
+2. It only shows fields that are empty or that differ by more than 3 minutes.
+3. Apply the ADS-B time field by field with “Use ADS-B”, or all at once with “Use all”.
+
+Nothing changes unless you act. A flight updated this way then shows ADS-B as its source.
+
+## Limitations
+
+- Recovery requires a network.
+- The app must be able to identify the aircraft: by its ADS-B code when it's known, for example for an organization aircraft, or from its registration.
+- The aircraft must have been picked up by ADS-B receivers. If it wasn't, the app simply says no track was found.
+- Departure and arrival aerodromes only appear if the app recognizes them in its aerodrome database. Otherwise, fill them in during review.
+
+## Data sources
+
+ADS-B data comes from adsb.lol and adsbdb, under the ODbL license. Their attributions are in the Settings tab, in the legal and credits section. See [Settings and feedback](/en/docs/app/settings-and-feedback).

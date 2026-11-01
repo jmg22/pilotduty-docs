@@ -1,0 +1,68 @@
+---
+title: "Manual entry and ACARS scan"
+description: "Add a flight by hand, or read its times from a cockpit screen with the camera."
+order: 5
+translationKey: app-manual-acars
+updated: 2026-11-01
+draft: false
+---
+
+When a flight wasn't detected, you can add it yourself or read its times from a cockpit screen with your iPhone's camera.
+
+## The “+” button
+
+The dashboard's “+” button offers:
+
+- “Add Flight”;
+- “Add Event”, if duty time is turned on;
+- “Recover Flight ADS-B”, with PilotDuty Pro;
+- “Scan Flight log” (ACARS).
+
+## Adding a flight by hand
+
+1. Tap “+”, then “Add Flight”.
+2. Pick one of your aircraft, or enter all of the aircraft's details.
+3. Enter the times and aerodromes. The app prefills the aerodromes from your current location.
+4. Check the aerodrome codes, then confirm.
+
+The flight lands in the approval queue, marked as a manual entry. Review and approve it like a detected flight. See [Review and approval](/en/docs/app/review-and-approval).
+
+Manual entry works offline and doesn't require a subscription.
+
+## Adding a duty event
+
+With duty time turned on (PilotDuty Pro, in beta), the “+” button also lets you add a work, flight or rest event. See [Duty time](/en/docs/app/duty-time).
+
+## Scanning an ACARS screen
+
+The scan uses the camera to read an ACARS, EFIS or iPad screen in the cockpit. It recognizes:
+
+- the four OOOI times: OUT (leaving the gate), OFF (takeoff), ON (landing) and IN (arriving at the gate);
+- the route, from the departure aerodrome to the arrival aerodrome;
+- the flight number;
+- the registration.
+
+### Steps
+
+1. Tap “+”, then “Scan Flight log”.
+2. Choose the aircraft.
+3. Frame the screen inside the reticle. The app captures on its own once it reads all four times steadily. You can also capture manually.
+4. Check the review screen. Each field shows a confidence gauge. Fix anything that needs it.
+5. Tap “Add this Flight”. The flight lands in the approval queue, not yet approved.
+
+You can also start a scan from a duty event's screen.
+
+### Good to know
+
+- The scan doesn't require a subscription.
+- Reading happens entirely on the iPhone. The scan works offline.
+- The app reads the displayed times as UTC and checks that they follow in order: OUT, OFF, ON, then IN.
+- The app asks for camera access. If you declined it, the app offers to open iOS Settings so you can allow it.
+- Always double-check values with a low confidence gauge before adding the flight.
+
+## Which method to use
+
+- You know your times: add the flight by hand.
+- You have an ACARS or EFIS screen in front of you: scan it. It's faster and avoids typos.
+- The flight left no trace and your aircraft transmits ADS-B: with PilotDuty Pro, try [ADS-B recovery](/en/docs/app/ads-b-recovery).
+- You have many past flights to bring over: use [logbook import](/en/docs/app/logbook-import) instead.

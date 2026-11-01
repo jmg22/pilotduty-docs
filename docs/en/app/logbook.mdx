@@ -1,0 +1,73 @@
+---
+title: "Logbook"
+description: "View, filter, map and export your approved flights."
+order: 7
+translationKey: app-logbook
+updated: 2026-11-01
+draft: false
+---
+
+The logbook holds all your approved flights. It shows your totals, your currency, a map of your routes and the export options. You'll find it in the Logbook tab (second tab, book icon).
+
+## Total flight time
+
+The “Total Flight Time” card at the top of the logbook shows the sum of your approved flights, each rounded to the nearest tenth of an hour, plus your initial hours. This total ignores filters and the date range. Tap it to open the summary.
+
+## The flight list
+
+Each flight appears as a tile: block time and air time, departure and arrival, date, day or night, operating rule, IFR or VFR, type, registration, and status (pilot in command or copilot).
+
+- Tap the paperclip to see attachments and remarks.
+- Press and hold to see the version history.
+- Swipe left to unapprove the flight. See [Review and approval](/en/docs/app/review-and-approval).
+
+An indicator flags a flight that hasn't been sent to the server yet.
+
+## Date range and sorting
+
+Limit the list and the map to 1 day, 7 days, 30 days or the whole logbook, or pick a specific date. A button reverses the sort order. Dates follow your local time or UTC setting.
+
+## Filters
+
+The filter button opens a sheet of criteria:
+
+- aircraft type, registration and category;
+- engine and propeller;
+- flight type and status;
+- “IFR only” and “Night only”.
+
+Within one criterion, you can check several values: a flight passes if it matches any of them. Different criteria add up. Active filters appear as tags you can remove one by one, or all at once with the reset button. A flight with an empty field doesn't pass a filter on that field.
+
+## The map
+
+A button switches between the list and the map. The map draws each flight from departure to arrival. The app uses actual GPS positions when it has them, and otherwise the aerodrome's position. A flight with no position and no known aerodrome code isn't drawn. Your current location appears if you've allowed location access. The base map needs a network.
+
+## Summary and currency
+
+The summary shows:
+
+- your night currency: night takeoffs and landings over the last 6 months;
+- your IFR currency: IFR departures and arrivals over the last 6 months;
+- your hours by aircraft type and by registration;
+- your IFR and night totals, and totals by engine, propeller, flight type, status and category;
+- your total hours and total cycles.
+
+## Exporting your logbook
+
+With PilotDuty+ or PilotDuty Pro.
+
+Tap the logbook's share button, then choose “Export to CSV” or “Export to PDF”. The iOS share sheet then opens.
+
+- **CSV.** Exports all your approved flights, regardless of the date range or filters. Columns: date, category, type, registration, status, from, to, time, remarks, day or night, flight rules, engine, propeller, flight type, takeoffs and landings.
+- **PDF.** Produces the logbook for a month you choose. It includes a cover page (cumulative, 12-month and 6-month totals), hours by type, a detailed flight table and an appendix summarizing the version history. Your name and license number come from your profile.
+
+## Initial hours
+
+Enter your hours from before PilotDuty in the Settings tab, under Profile, in the logbook section. The welcome flow only records the total; here, you can break it down:
+
+- total, pilot in command, copilot and student;
+- IFR and night;
+- by engine, propeller, category and flight type;
+- military hours.
+
+These hours are added to the logbook total. No subscription is required.

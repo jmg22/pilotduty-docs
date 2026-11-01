@@ -1,0 +1,62 @@
+---
+title: "iBeacon"
+description: "Pair a beacon with your aircraft so the app knows when you are on board."
+order: 3
+translationKey: app-ibeacon
+updated: 2026-11-01
+draft: false
+---
+
+An iBeacon placed in the aircraft lets the app know you are on board. Flight recording starts when your iPhone picks up the beacon.
+
+Beacon-triggered recording requires PilotDuty+ or PilotDuty Pro.
+
+## Adopting a beacon
+
+Adopting a beacon means pairing it with an aircraft in the app.
+
+1. During the welcome flow, say that your aircraft has a beacon. You can also do this later from the Aircraft tab (airplane icon).
+2. Enter the beacon's identifiers: UUID, major and minor.
+3. Enter the aircraft's registration and type.
+4. Finish setting up the aircraft.
+
+## Setting up the aircraft
+
+The setup screen asks for:
+
+- the registration and type, both required;
+- the landing gear category;
+- the engine and propeller;
+- the IFR setting;
+- whether the aircraft is flown single-pilot;
+- your status on board.
+
+An aircraft picture adapts to the category and number of engines. This information is used to fill in the flights recorded with this aircraft.
+
+If the aircraft belongs to your organization and a beacon is paired with it in PilotDuty Manager, pick it from your organization's aircraft list instead. The app takes over its setup and turns on beacon detection automatically. See [With your organization](/en/docs/app/with-your-organization).
+
+## The false-flight guard
+
+A beacon sometimes stays in the aircraft on the ground, and your iPhone may pass close by, in a car for example. So that a car ride doesn't turn into a flight, the app requires the beacon's presence to be confirmed before it accepts a takeoff.
+
+- The app checks that the beacon is actually in range before it starts tracking.
+- Once airborne, that confirmation holds until you park. A touch-and-go, or losing the beacon signal in flight, does not cut the flight.
+- The app learns each beacon's usual signal. That data stays on your iPhone and is never sent anywhere.
+- The check happens on the iPhone, without a network.
+- If the app doesn't have enough data to decide, it lets the flight through rather than risk missing a real one. You can delete a false flight with a swipe in the approval queue.
+
+## Subscription required
+
+Beacon-triggered recording requires a PilotDuty+ or PilotDuty Pro subscription. Without a subscription, the beacon does not start recording. See [Subscriptions](/en/docs/app/subscriptions).
+
+## Free beacon with an annual subscription
+
+An annual PilotDuty+ or PilotDuty Pro subscription includes a free iBeacon in the first year.
+
+1. After your purchase, the app asks for your shipping address.
+2. If you skip that step, a dashboard banner reminds you that the address is missing.
+3. Tap the banner to open the form and enter your address.
+
+## Good to know
+
+Takeoff and landing are always detected by the iPhone's GPS. Keep location on “Always” and leave “Precise Location” on. See [Automatic recording](/en/docs/app/automatic-recording).

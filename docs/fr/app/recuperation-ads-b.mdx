@@ -1,0 +1,53 @@
+---
+title: "Récupération ADS-B"
+description: "Retrouver un vol manqué ou vérifier ses heures à partir des données ADS-B."
+order: 6
+translationKey: app-adsb
+updated: 2026-11-01
+draft: false
+---
+
+La récupération ADS-B retrouve un vol à partir des positions que l'avion a diffusées en ADS-B. Elle sert quand votre iPhone n'a pas pu enregistrer le vol, ou pour vérifier des heures.
+
+Avec PilotDuty Pro.
+
+## Récupérer un vol à la main
+
+1. Touchez « + » sur le tableau de bord, puis choisissez la récupération par ADS-B.
+2. Choisissez l'avion et la période à examiner. Par défaut, la période couvre 24 heures.
+3. Touchez « Rechercher ». L'app ne lance pas la recherche d'elle-même quand vous changez la période.
+4. L'app affiche les vols reconstitués. Touchez celui qui vous intéresse.
+
+Le vol est créé comme brouillon dans la file d'approbation. Il comprend le type, l'immatriculation, les cycles et l'indication de jour ou de nuit. Il n'entre pas dans votre carnet tant que vous ne l'avez pas approuvé.
+
+Vous pouvez aussi lancer cette récupération depuis l'écran d'un événement de service.
+
+## Reconstitution automatique à la fermeture du vol
+
+Quand un vol se termine sans trace GPS utilisable, l'app le note. Quand vous revenez dans l'app, ou quand vous sortez de la zone de la balise, elle interroge l'ADS-B et crée des vols brouillons. Elle vous prévient quand elle en a créé au moins un.
+
+- L'app ne garde que les vols qui correspondent à l'avion et à la période en cause. Sinon, elle ne crée rien.
+- Elle écarte les doublons et n'écrase jamais un vol existant.
+- Si le réseau manque, elle réessaie plus tard, pendant 7 jours au plus.
+- Comme tout brouillon, le vol reconstitué attend votre approbation.
+
+## Comparer un vol avec l'ADS-B
+
+Dans l'écran d'un vol, touchez « Comparer avec l'ADS-B ».
+
+1. L'app compare les quatre heures du vol à celles d'un vol ADS-B.
+2. Elle n'affiche que les champs vides, ou ceux qui diffèrent de plus de 3 minutes.
+3. Appliquez l'heure ADS-B champ par champ, ou toutes d'un coup.
+
+Rien ne change sans votre action. Un vol modifié de cette façon porte ensuite la source ADS-B.
+
+## Limites
+
+- La récupération demande le réseau.
+- L'app doit pouvoir identifier l'avion : par son code ADS-B quand il est connu, par exemple pour un avion de votre organisation, ou à partir de son immatriculation.
+- L'avion doit avoir été capté par les récepteurs ADS-B. Si ce n'est pas le cas, l'app indique simplement qu'aucune trace n'a été trouvée.
+- Les aérodromes de départ et d'arrivée ne s'affichent que si l'app les reconnaît dans sa base d'aérodromes. Sinon, complétez-les à la relecture.
+
+## Sources des données
+
+Les données ADS-B viennent de adsb.lol et de adsbdb, sous licence ODbL. Leurs mentions figurent dans l'onglet des réglages, section des mentions légales et crédits. Voir [Réglages et commentaires](/fr/docs/app/reglages-et-commentaires).

@@ -1,0 +1,61 @@
+---
+title: "Horaire de compagnie (bêta)"
+description: "Relier l'horaire iCal de votre compagnie pour recevoir vos vols prévus à approuver."
+order: 10
+translationKey: app-roster
+updated: 2026-11-01
+draft: false
+---
+
+Relier l'horaire de votre compagnie fait arriver vos vols prévus dans PilotDuty. Vous les relisez et les approuvez comme vos autres vols.
+
+Avec PilotDuty Pro. Cette fonction est en bêta.
+
+## Ajouter une source
+
+Il vous faut le lien iCal (une adresse qui se termine en .ics) que votre employeur fournit pour votre horaire.
+
+1. Dans l'onglet des réglages, ouvrez Profil, puis les sources d'horaire dans la section du carnet. Vous pouvez aussi choisir l'horaire de compagnie pendant le parcours d'accueil.
+2. Donnez un nom à la source et collez le lien iCal.
+3. Si vous le connaissez, entrez le code IATA de votre compagnie. Il permet au serveur de compléter vos vols.
+4. Réglez les informations par défaut : catégorie, moteur et hélice, type de vol, pays et règle d'exploitation, statut, et marges avant et après le vol.
+5. Enregistrez.
+
+Le serveur lit votre horaire, reconnaît la façon dont votre compagnie le présente, puis prépare les vols et les événements à approuver.
+
+## Confidentialité
+
+- Votre lien est chiffré sur le serveur. L'app ne le garde jamais en clair et n'en affiche que les 4 derniers caractères.
+- L'app ne lit pas le calendrier de votre iPhone. Elle ne demande aucune autorisation de calendrier.
+- Seuls les liens iCal sont acceptés.
+
+## Approuver les vols et les événements
+
+Les vols et les événements de votre horaire apparaissent dans le tableau de bord.
+
+- Glissez vers la gauche pour approuver, vers la droite pour rejeter.
+- Touchez un élément pour le modifier avant de l'approuver : dates, fuseaux horaires, acclimatation, remarque et vols. Enregistrez vos changements ; l'enregistrement demande le réseau.
+- Vous pouvez retirer un seul vol d'un événement. Si ce n'est pas possible, l'app vous propose de rejeter l'événement entier.
+- Si l'horaire a changé à la source, un bandeau vous le signale. Après vérification, touchez « J'ai vérifié ».
+- Une icône de baguette magique marque un vol que le serveur a complété.
+
+Ces éléments ne sont pas enregistrés en direct : vous ne pouvez pas y ajouter de vol, ni les arrêter ou les mettre en pause.
+
+Si vous désapprouvez un vol venu de l'horaire, il quitte le carnet et vous est proposé de nouveau à partir de l'horaire.
+
+## Gérer vos sources
+
+Dans le détail d'une source, vous pouvez :
+
+- la renommer ;
+- la désactiver ou la réactiver ;
+- l'actualiser tout de suite ;
+- régler la période passée et la période future à lire ;
+- relancer la reconnaissance de la présentation de l'horaire ;
+- la supprimer.
+
+L'adresse d'une source ne se modifie pas dans l'app. Des bandeaux signalent un problème, par exemple un code IATA manquant ou une présentation non reconnue. Vous pouvez les masquer.
+
+## Avec votre organisation
+
+Si vous êtes membre d'une organisation, une source ajoutée dans l'app apparaît aussi dans PilotDuty Manager, et une source ajoutée dans le Manager apparaît dans l'app. Les vols que vous approuvez remontent dans le Manager comme vos autres vols.

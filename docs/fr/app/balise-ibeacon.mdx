@@ -1,0 +1,62 @@
+---
+title: "Balise iBeacon"
+description: "Associer une balise à votre avion pour que l'app sache quand vous êtes à bord."
+order: 3
+translationKey: app-ibeacon
+updated: 2026-11-01
+draft: false
+---
+
+Une balise iBeacon placée dans l'avion permet à l'app de savoir que vous êtes à bord. L'enregistrement du vol démarre quand votre iPhone capte la balise.
+
+Avec PilotDuty+ ou PilotDuty Pro pour le déclenchement par balise.
+
+## Adopter une balise
+
+Adopter une balise, c'est l'associer à un avion dans l'app.
+
+1. Pendant le parcours d'accueil, indiquez que votre avion a une balise. Vous pouvez aussi le faire plus tard depuis l'onglet des aéronefs (icône d'avion).
+2. Entrez les identifiants de la balise : UUID, major et minor.
+3. Entrez l'immatriculation et le type de l'avion.
+4. Terminez la configuration de l'avion.
+
+## Configurer l'avion
+
+L'écran de configuration demande :
+
+- l'immatriculation et le type, tous deux obligatoires ;
+- la catégorie de train d'atterrissage ;
+- le moteur et l'hélice ;
+- l'indication IFR ;
+- si l'avion est exploité en monopilote ;
+- votre statut à bord.
+
+Une image de l'avion s'adapte à la catégorie et au nombre de moteurs. Ces informations servent à remplir les vols enregistrés avec cet avion.
+
+Si l'avion appartient à votre organisation et qu'une balise lui est associée dans PilotDuty Manager, choisissez-le plutôt dans la liste des avions de l'organisation. L'app reprend sa configuration et règle la détection par balise d'office. Voir [Avec votre organisation](/fr/docs/app/avec-votre-organisation).
+
+## La garde anti-faux vol
+
+Une balise reste parfois dans l'avion au sol, et votre iPhone peut passer à côté, en voiture par exemple. Pour qu'un trajet en voiture ne devienne pas un vol, l'app exige que la présence de la balise soit confirmée avant d'accepter un décollage.
+
+- L'app vérifie que la balise est réellement à portée avant de démarrer le suivi.
+- Une fois en vol, cette confirmation reste valable jusqu'au stationnement. Un posé-décollé, ou une perte du signal de la balise en vol, n'interrompt pas le vol.
+- L'app apprend le signal habituel de chaque balise. Ces données restent sur votre iPhone et ne sont jamais envoyées.
+- La vérification se fait sur l'iPhone, sans réseau.
+- Si l'app manque de données pour trancher, elle laisse passer le vol plutôt que de risquer d'en manquer un vrai. Un faux vol se supprime d'un glissement dans la file d'approbation.
+
+## Abonnement requis
+
+Le déclenchement de l'enregistrement par balise demande un abonnement PilotDuty+ ou PilotDuty Pro. Sans abonnement, la balise ne déclenche pas l'enregistrement. Voir [Abonnements](/fr/docs/app/abonnements).
+
+## Balise offerte avec l'abonnement annuel
+
+Un abonnement annuel à PilotDuty+ ou à PilotDuty Pro comprend une balise iBeacon offerte la première année.
+
+1. Après l'achat, l'app vous demande votre adresse de livraison.
+2. Si vous passez cette étape, un bandeau du tableau de bord vous rappelle qu'il manque l'adresse.
+3. Touchez le bandeau pour ouvrir le formulaire et entrer l'adresse.
+
+## Bon à savoir
+
+Le décollage et l'atterrissage sont toujours détectés par le GPS de l'iPhone. Gardez la localisation sur « Toujours » et « Position exacte » activée. Voir [Enregistrement automatique](/fr/docs/app/enregistrement-automatique).

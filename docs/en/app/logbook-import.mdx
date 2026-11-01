@@ -1,0 +1,73 @@
+---
+title: "Importing an existing logbook"
+description: "Bring flights from another app or from a paper logbook into PilotDuty."
+order: 8
+translationKey: app-import
+updated: 2026-11-01
+draft: false
+---
+
+Import adds to PilotDuty the flights from a logbook you kept elsewhere: a file exported from another app, or a photo of a paper logbook page.
+
+With PilotDuty+ or PilotDuty Pro.
+
+## Where to find it
+
+In the Settings tab (gear icon), open Profile. Import is in the logbook section.
+
+## Importing a CSV file
+
+The app accepts CSV (or TSV) files exported from three apps:
+
+- LogTen Pro;
+- ForeFlight;
+- MyFlightbook.
+
+### Steps
+
+1. Choose your file's format.
+2. Choose the file. The app sends it to the server, which reads it.
+3. Check the preview: number of rows, valid rows, duplicates, errors and the detected format. The first 5 errors are listed in detail.
+4. Choose how to group rows and how to handle duplicates, then confirm.
+5. The results screen shows what was imported.
+
+### Grouping
+
+The app groups rows automatically, either by flight or by event.
+
+### Duplicates
+
+You have three choices:
+
+- skip exact duplicates;
+- skip exact duplicates and likely duplicates;
+- import everything.
+
+### Good to know
+
+- One file at a time.
+- Import requires a network, because the file is read on the server.
+- If something goes wrong, a link lets you send the team a prefilled feedback report. See [Settings and feedback](/en/docs/app/settings-and-feedback).
+
+## Importing a paper logbook by photo (beta)
+
+This feature is in beta. It reads a paper logbook page, handwritten or printed, and extracts the flight rows.
+
+### Steps
+
+1. Choose import by photo.
+2. Take a photo of the page, or pick one from your photo library. The app shrinks the image before sending it.
+3. The server reads the page and prepares the flight rows.
+4. Review each row. A colored dot shows how confident the reading is: green, yellow or red. Edit rows as needed.
+5. Confirm the import.
+
+### Good to know
+
+- One page per import. Repeat for each page.
+- Each row becomes a flight: grouping is always by flight.
+- The app asks for access to the camera and the photo library.
+- Check rows marked yellow or red carefully.
+
+## After importing
+
+Hours from before PilotDuty that aren't in any file can be entered as initial hours. See [Logbook](/en/docs/app/logbook).

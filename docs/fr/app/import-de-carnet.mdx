@@ -1,0 +1,73 @@
+---
+title: "Importer un carnet existant"
+description: "Reprendre dans PilotDuty les vols d'une autre application ou d'un carnet papier."
+order: 8
+translationKey: app-import
+updated: 2026-11-01
+draft: false
+---
+
+L'import ajoute à PilotDuty les vols d'un carnet que vous teniez ailleurs : un fichier exporté d'une autre application, ou une page de carnet papier prise en photo.
+
+Avec PilotDuty+ ou PilotDuty Pro.
+
+## Où le trouver
+
+Dans l'onglet des réglages (icône d'engrenage), ouvrez Profil. L'import se trouve dans la section du carnet.
+
+## Importer un fichier CSV
+
+L'app accepte les fichiers CSV (ou TSV) exportés de trois applications :
+
+- LogTen Pro ;
+- ForeFlight ;
+- MyFlightbook.
+
+### Étapes
+
+1. Choisissez le format de votre fichier.
+2. Choisissez le fichier. L'app l'envoie au serveur, qui le lit.
+3. Consultez l'aperçu : nombre de lignes, lignes valides, doublons, erreurs et format détecté. Les 5 premières erreurs sont détaillées.
+4. Choisissez le regroupement et le traitement des doublons, puis confirmez.
+5. L'écran de résultat indique ce qui a été importé.
+
+### Regroupement
+
+L'app regroupe les lignes automatiquement, au choix par vol ou par événement.
+
+### Doublons
+
+Trois choix s'offrent à vous :
+
+- ignorer les doublons exacts ;
+- ignorer les doublons exacts et les doublons probables ;
+- tout importer.
+
+### Bon à savoir
+
+- Un seul fichier à la fois.
+- L'import demande le réseau, car la lecture se fait sur le serveur.
+- En cas d'erreur, un lien vous permet d'envoyer un commentaire déjà rempli à l'équipe. Voir [Réglages et commentaires](/fr/docs/app/reglages-et-commentaires).
+
+## Importer un carnet papier par photo (bêta)
+
+Cette fonction est en bêta. Elle lit une page de carnet papier, écrite à la main ou imprimée, et en extrait les lignes de vol.
+
+### Étapes
+
+1. Choisissez l'import par photo.
+2. Prenez la page en photo, ou choisissez la photo dans votre photothèque. L'app réduit l'image avant de l'envoyer.
+3. Le serveur lit la page et prépare les lignes de vol.
+4. Relisez chaque ligne. Une pastille de couleur indique la confiance de la lecture : vert, jaune ou rouge. Modifiez les lignes au besoin.
+5. Confirmez l'import.
+
+### Bon à savoir
+
+- Une page par import. Recommencez pour chaque page.
+- Chaque ligne devient un vol : le regroupement se fait toujours par vol.
+- L'app demande l'accès à la caméra et à la photothèque.
+- Relisez avec soin les lignes marquées en jaune ou en rouge.
+
+## Après l'import
+
+Vos heures d'avant PilotDuty qui ne figurent dans aucun fichier peuvent s'entrer comme heures initiales. Voir [Carnet de vol](/fr/docs/app/carnet-de-vol).

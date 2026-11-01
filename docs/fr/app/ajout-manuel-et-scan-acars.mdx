@@ -1,0 +1,68 @@
+---
+title: "Ajout manuel et scan ACARS"
+description: "Ajouter un vol à la main, ou lire ses heures sur un écran du poste de pilotage avec la caméra."
+order: 5
+translationKey: app-manual-acars
+updated: 2026-11-01
+draft: false
+---
+
+Quand un vol n'a pas été détecté, vous pouvez l'ajouter vous-même ou lire ses heures sur un écran du poste de pilotage avec la caméra de l'iPhone.
+
+## Le bouton « + »
+
+Le bouton « + » du tableau de bord propose :
+
+- l'ajout d'un vol ;
+- l'ajout d'un événement de service, si le temps de service est activé ;
+- la récupération d'un vol par ADS-B, avec PilotDuty Pro ;
+- le scan d'un journal de vol (ACARS).
+
+## Ajouter un vol à la main
+
+1. Touchez « + », puis choisissez l'ajout d'un vol.
+2. Choisissez un de vos avions, ou entrez toutes les informations de l'avion.
+3. Entrez les heures et les aérodromes. L'app pré-remplit les aérodromes à partir de votre position actuelle.
+4. Vérifiez les codes d'aérodrome, puis validez.
+
+Le vol arrive dans la file d'approbation, marqué comme saisie manuelle. Relisez-le et approuvez-le comme un vol détecté. Voir [Relecture et approbation](/fr/docs/app/relecture-et-approbation).
+
+L'ajout manuel fonctionne sans réseau et ne demande aucun abonnement.
+
+## Ajouter un événement de service
+
+Avec le temps de service activé (PilotDuty Pro, en bêta), le bouton « + » permet aussi d'ajouter un événement de travail, de vol ou de repos. Voir [Temps de service](/fr/docs/app/temps-de-service).
+
+## Scanner un écran ACARS
+
+Le scan lit avec la caméra un écran ACARS, EFIS ou iPad du poste de pilotage. Il reconnaît :
+
+- les quatre heures OOOI : OUT (départ du poste), OFF (décollage), ON (atterrissage) et IN (arrivée au poste) ;
+- la route, de l'aérodrome de départ à celui d'arrivée ;
+- le numéro de vol ;
+- l'immatriculation.
+
+### Étapes
+
+1. Touchez « + », puis choisissez le scan du journal de vol.
+2. Choisissez l'avion.
+3. Cadrez l'écran dans le réticule. L'app capture d'elle-même quand elle lit les quatre heures de façon stable. Vous pouvez aussi capturer à la main.
+4. Relisez l'écran de revue. Chaque champ affiche une jauge de confiance. Corrigez ce qui doit l'être.
+5. Ajoutez le vol. Il arrive dans la file d'approbation, non approuvé.
+
+Vous pouvez aussi lancer le scan depuis l'écran d'un événement de service.
+
+### Bon à savoir
+
+- Le scan ne demande aucun abonnement.
+- La lecture se fait entièrement sur l'iPhone. Le scan fonctionne sans réseau.
+- L'app lit les heures affichées comme des heures UTC et vérifie qu'elles se suivent dans l'ordre : OUT, OFF, ON, puis IN.
+- L'app demande l'accès à la caméra. Si vous l'avez refusé, elle vous propose d'ouvrir les Réglages d'iOS pour l'accorder.
+- Relisez toujours les valeurs dont la jauge de confiance est basse avant d'ajouter le vol.
+
+## Quelle méthode choisir
+
+- Vous connaissez vos heures : ajoutez le vol à la main.
+- Vous avez un écran ACARS ou EFIS sous les yeux : scannez-le, c'est plus rapide et cela évite les fautes de frappe.
+- Le vol n'a laissé aucune trace et votre avion émet en ADS-B : avec PilotDuty Pro, essayez la [récupération ADS-B](/fr/docs/app/recuperation-ads-b).
+- Vous avez beaucoup de vols anciens à reprendre : utilisez plutôt l'[import de carnet](/fr/docs/app/import-de-carnet).
